@@ -78,7 +78,7 @@ export default function ExcelToJsonConverter() {
               .toString()
               .toLowerCase()
               .replace(/\s+/g, "")
-              .includes("prioritysector")
+              .includes("prioritysector"),
         );
         const priorityActionIdx = headers.findIndex(
           (h) =>
@@ -92,23 +92,23 @@ export default function ExcelToJsonConverter() {
                 .toString()
                 .toLowerCase()
                 .replace(/\s+/g, "")
-                .includes("priotiyaction"))
+                .includes("priotiyaction")),
         );
         const expectedOutcomeIdx = headers.findIndex(
           (h) =>
             h &&
             (h.toString().toLowerCase().includes("expected outcome") ||
               (h.toString().toLowerCase().includes("expected") &&
-                h.toString().toLowerCase().includes("output")))
+                h.toString().toLowerCase().includes("output"))),
         );
         const kpiIdx = headers.findIndex(
           (h) =>
             h &&
             (h.toString().toLowerCase().includes("key performance") ||
-              h.toString().toLowerCase().includes("indicator"))
+              h.toString().toLowerCase().includes("indicator")),
         );
         const sectorIdx = headers.findIndex(
-          (h) => h && h.toString().toLowerCase().includes("sector:")
+          (h) => h && h.toString().toLowerCase().includes("sector:"),
         );
         const targetGroupsIdx = headers.findIndex(
           (h) =>
@@ -117,7 +117,7 @@ export default function ExcelToJsonConverter() {
               .toString()
               .toLowerCase()
               .replace(/\s+/g, "")
-              .includes("targetgroup")
+              .includes("targetgroup"),
         );
         const sourceFundIdx = headers.findIndex(
           (h) =>
@@ -126,25 +126,25 @@ export default function ExcelToJsonConverter() {
               .toString()
               .toLowerCase()
               .replace(/\s+/g, "")
-              .includes("sourceoffund")
+              .includes("sourceoffund"),
         );
         const levelIdx = headers.findIndex(
-          (h) => h && h.toString().toLowerCase().trim() === "level"
+          (h) => h && h.toString().toLowerCase().trim() === "level",
         );
         const processVsOutputIdx = headers.findIndex(
           (h) =>
             h &&
             h.toString().toLowerCase().includes("process") &&
-            h.toString().toLowerCase().includes("output")
+            h.toString().toLowerCase().includes("output"),
         );
         const specificVsGeneralIdx = headers.findIndex(
           (h) =>
             h &&
             h.toString().toLowerCase().includes("specific") &&
-            h.toString().toLowerCase().includes("general")
+            h.toString().toLowerCase().includes("general"),
         );
         const strengtheningIdx = headers.findIndex(
-          (h) => h && h.toString().toLowerCase().includes("strengthening")
+          (h) => h && h.toString().toLowerCase().includes("strengthening"),
         );
 
         console.log("Column indices:", {
@@ -164,7 +164,6 @@ export default function ExcelToJsonConverter() {
           }
         });
 
-        // Map the data to match your column structure and filter out empty rows
         const formattedData = dataRows
           .map((row) => {
             const record = {
@@ -204,7 +203,7 @@ export default function ExcelToJsonConverter() {
       } catch (error) {
         console.error("Error converting file:", error);
         alert(
-          "Error converting file. Please make sure it's a valid Excel file."
+          "Error converting file. Please make sure it's a valid Excel file.",
         );
       }
     };
@@ -250,7 +249,6 @@ export default function ExcelToJsonConverter() {
             </p>
           </div>
 
-          {/* Upload Section */}
           {!isConverted ? (
             <div className="border-2 border-dashed border-indigo-300 rounded-xl p-12 text-center hover:border-indigo-500 transition-colors">
               <Upload className="w-12 h-12 text-indigo-400 mx-auto mb-4" />
@@ -319,7 +317,6 @@ export default function ExcelToJsonConverter() {
             </div>
           )}
 
-          {/* Column Info */}
           <div className="mt-8 pt-8 border-t border-gray-200">
             <h3 className="text-sm font-semibold text-gray-700 mb-3">
               Expected Columns:
