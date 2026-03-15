@@ -43,7 +43,6 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
         return;
       }
 
-      // Email found — unlock
       onUnlock();
     } catch {
       setError('Network error. Please check your connection and try again.');
@@ -91,9 +90,8 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
               }}
               placeholder="you@example.com"
               autoFocus
-              className={`w-full pl-9 pr-3 py-2.5 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition ${
-                error || notFound ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50'
-              }`}
+              className={`w-full pl-9 pr-3 py-2.5 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition ${error || notFound ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50'
+                }`}
             />
           </div>
           {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
