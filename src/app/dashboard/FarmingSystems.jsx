@@ -201,7 +201,7 @@ const FarmingSystems = () => {
                 {/* Multi-line chart: farming type % trend across age groups */}
                 <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
                     <h2 className="text-xl font-black text-gray-900 mb-1">How does age shift farming type choices?</h2>
-                    <p className="text-sm text-gray-500 mb-6">Each line tracks how the % for one farming type changes across age groups. See where the lines cross — that's where priorities shift.</p>
+                    <p className="text-sm text-gray-500 mb-6">Each line tracks how the % for one farming type changes across age groups. See where the lines cross — that&apos;s where priorities shift.</p>
                     <ChartContainer config={{
                         Subsistence: { color: '#7c3aed' }, Both: { color: '#059669' }, Commercial: { color: '#dc2626' }
                     }} className="h-64">
@@ -224,7 +224,7 @@ const FarmingSystems = () => {
                         </LineChart>
                     </ChartContainer>
                     <div className="mt-4 p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-sm text-emerald-800">
-                        <strong>The "Both" line rises with youth:</strong> Youth are the most likely to combine subsistence and commercial farming (40.1%), while Elderly rely most heavily on subsistence (61.5%).
+                        <strong>The &quot;Both&quot; line rises with youth:</strong> Youth are the most likely to combine subsistence and commercial farming (40.1%), while Elderly rely most heavily on subsistence (61.5%).
                     </div>
                 </div>
 
@@ -290,7 +290,7 @@ const FarmingSystems = () => {
                         <div>
                             <h3 className="text-lg font-black text-gray-900 mb-2">Key Takeaway</h3>
                             <p className="text-gray-700 leading-relaxed">
-                                Subsistence farming — growing food for personal use — is the backbone of this community's food system. Very few people farm commercially. Youth are most likely to combine both types (40.1%), which may indicate a gradual shift toward income-generating agriculture. Supporting this transition with training and market access could have a big impact.
+                                Subsistence farming — growing food for personal use — is the backbone of this community&apos;s food system. Very few people farm commercially. Youth are most likely to combine both types (40.1%), which may indicate a gradual shift toward income-generating agriculture. Supporting this transition with training and market access could have a big impact.
                             </p>
                         </div>
                     </div>

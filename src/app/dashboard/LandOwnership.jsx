@@ -74,7 +74,7 @@ const OwnershipBar = ({ group, owns, doesnt, color, warning }) => (
         </div>
         <div className="flex justify-between text-xs mt-2 text-gray-500">
             <span className="text-green-700 font-semibold">{owns}% own land</span>
-            <span className="text-red-600 font-semibold">{doesnt}% don't own land</span>
+            <span className="text-red-600 font-semibold">{doesnt}% don&apos;t own land</span>
         </div>
     </div>
 );

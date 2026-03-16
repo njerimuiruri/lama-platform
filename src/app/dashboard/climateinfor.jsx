@@ -86,7 +86,7 @@ const ClimateInfoAccessInfographic = () => {
                 {/* Access progress bars */}
                 <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
                     <h2 className="text-xl font-black text-gray-900 mb-1">Do people have access to climate information?</h2>
-                    <p className="text-sm text-gray-500 mb-6">Each bar shows the percentage of that group who answered "Yes, I have access." Green = above 50%, amber = below 50%.</p>
+                    <p className="text-sm text-gray-500 mb-6">Each bar shows the percentage of that group who answered &quot;Yes, I have access.&quot; Green = above 50%, amber = below 50%.</p>
 
                     <div className="space-y-5">
                         {accessGroups.map(({ group, yes, no, color, above50 }) => (
@@ -148,7 +148,7 @@ const ClimateInfoAccessInfographic = () => {
                         </LineChart>
                     </ChartContainer>
                     <div className="mt-4 p-3 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-800">
-                        <strong>The two lines cross at Youth:</strong> Youth is the group where "No Access" overtakes "Has Access" by the largest margin — 56.6% vs 43.4%.
+                        <strong>The two lines cross at Youth:</strong> Youth is the group where &quot;No Access&quot; overtakes &quot;Has Access&quot; by the largest margin — 56.6% vs 43.4%.
                     </div>
                 </div>
 
@@ -178,7 +178,7 @@ const ClimateInfoAccessInfographic = () => {
                         </AreaChart>
                     </ChartContainer>
                     <div className="mt-4 p-3 bg-green-50 rounded-xl border border-green-100 text-sm text-green-800">
-                        <strong>Women access more regularly:</strong> 26.7% of women say "Always" vs 21.0% of men. Men lean more toward "Sometimes" (61.6%).
+                        <strong>Women access more regularly:</strong> 26.7% of women say &quot;Always&quot; vs 21.0% of men. Men lean more toward &quot;Sometimes&quot; (61.6%).
                     </div>
                 </div>
 
@@ -235,10 +235,10 @@ const ClimateInfoAccessInfographic = () => {
 
                     <div className="mt-5 grid md:grid-cols-2 gap-4">
                         <div className="p-3 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-800">
-                            <strong>"Sometimes" dominates everywhere:</strong> More than half of every group accesses climate info only occasionally. Consistency is the biggest gap.
+                            <strong>&quot;Sometimes&quot; dominates everywhere:</strong> More than half of every group accesses climate info only occasionally. Consistency is the biggest gap.
                         </div>
                         <div className="p-3 bg-green-50 rounded-xl border border-green-100 text-sm text-green-800">
-                            <strong>Youth never say "Never":</strong> 0% of youth say they never access climate info — the most hopeful signal in the data. They just need more frequent access.
+                            <strong>Youth never say &quot;Never&quot;:</strong> 0% of youth say they never access climate info — the most hopeful signal in the data. They just need more frequent access.
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@ const ClimateInfoAccessInfographic = () => {
                         <div>
                             <h3 className="text-lg font-black text-gray-900 mb-2">Key Takeaway</h3>
                             <p className="text-gray-700 leading-relaxed">
-                                Access to climate information is a challenge across all groups — only adults cross the 50% threshold. The good news: among those with access, the vast majority use it at least sometimes. The priority should be widening access, especially for youth, women, and the elderly, and then helping people move from "sometimes" to "regularly" engaging with climate information.
+                                Access to climate information is a challenge across all groups — only adults cross the 50% threshold. The good news: among those with access, the vast majority use it at least sometimes. The priority should be widening access, especially for youth, women, and the elderly, and then helping people move from &quot;sometimes&quot; to &quot;regularly&quot; engaging with climate information.
                             </p>
                         </div>
                     </div>

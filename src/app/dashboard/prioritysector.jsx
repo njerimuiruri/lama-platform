@@ -113,7 +113,7 @@ const PrioritySectorsInfographic = () => {
                 {/* Pie chart: overall sector distribution */}
                 <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
                     <h2 className="text-xl font-black text-gray-900 mb-1">Sector share of all participants</h2>
-                    <p className="text-sm text-gray-500 mb-4">The donut shows each sector's share of all 1,603 responses.</p>
+                    <p className="text-sm text-gray-500 mb-4">The donut shows each sector&apos;s share of all 1,603 responses.</p>
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <ChartContainer config={Object.fromEntries(sectorTotals.map(s => [s.short, { color: s.color }]))} className="h-64 w-full md:w-64 flex-shrink-0">
                             <PieChart>
@@ -250,7 +250,7 @@ const PrioritySectorsInfographic = () => {
                         <div>
                             <h3 className="text-lg font-black text-gray-900 mb-2">What does this mean?</h3>
                             <p className="text-gray-700 leading-relaxed">
-                                The percentages show what share of each group (female, male, adults, etc.) is engaged in that sector — not the sector's share of all participants. Agriculture is consistently the top priority across every demographic. Water Security and Forestry are close seconds, reflecting the community's dependence on natural resources for livelihoods.
+                                The percentages show what share of each group (female, male, adults, etc.) is engaged in that sector — not the sector&apos;s share of all participants. Agriculture is consistently the top priority across every demographic. Water Security and Forestry are close seconds, reflecting the community&apos;s dependence on natural resources for livelihoods.
                             </p>
                         </div>
                     </div>
