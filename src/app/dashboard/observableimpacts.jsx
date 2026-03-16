@@ -143,7 +143,7 @@ const ClimateImpactsInfographic = () => {
                         <BarChart
                             data={breakdownView === 'gender' ? genderData : ageData}
                             layout="vertical"
-                            margin={{ top: 5, right: 30, left: 100, bottom: 5 }}
+                            margin={{ top: 5, right: 20, left: 70, bottom: 5 }}
                         >
                             <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#f0f0f0" />
                             <XAxis type="number" tick={{ fontSize: 11 }} label={{ value: 'Number of people', position: 'insideBottom', offset: -3, style: { fontSize: 11, fill: '#9ca3af' } }} />

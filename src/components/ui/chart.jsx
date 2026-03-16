@@ -16,7 +16,7 @@ const ChartContainer = React.forwardRef(({ id, className, children, config = {},
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
   return (
     <ChartContext.Provider value={{ config }}>
-      <div data-chart={chartId} ref={ref} className={cn("flex w-full justify-center text-xs", className)} {...props}>
+      <div data-chart={chartId} ref={ref} className={cn("flex w-full min-w-0 overflow-hidden justify-center text-xs", className)} {...props}>
         <ChartStyle id={chartId} config={config} />
         <RechartsPrimitive.ResponsiveContainer width="100%" height="100%">
           {children}
