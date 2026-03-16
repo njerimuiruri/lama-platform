@@ -1,14 +1,14 @@
 'use client';
 import React, { useState } from 'react';
-import { BarChart, Users, Leaf, Shield, Layers, Eye, CloudRain } from 'lucide-react';
+import { BarChart2, Users, Leaf, Shield, Layers, Eye, CloudRain } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LandOwnership from '../LandOwnership';
 import FarmingSystems from '../FarmingSystems';
-import prioritysector from '../prioritysector';
-
-import observableimpacts from '../observableimpacts';
-import climateinfor from '../climateinfor';
-
+import VulnerabilityStatus from '../VulnerabilityStatus';
+import BarriersMarginalized from '../BarriersMarginalized';
+import PrioritySectors from '../prioritysector';
+import ObservableImpacts from '../observableimpacts';
+import ClimateInfo from '../climateinfor';
 import LamaFooter from '@/components/Footer/footer';
 
 const LandDashboard = () => {
@@ -31,32 +31,31 @@ const LandDashboard = () => {
             id: 'vulnerability-status',
             name: 'Vulnerability Status',
             icon: Shield,
-            component: () => <div className="p-8 text-center text-gray-500">Vulnerability Status component coming soon...</div>
+            component: VulnerabilityStatus,
         },
         {
             id: 'barriers-marginalized',
             name: 'Barriers for Marginalized',
             icon: Layers,
-            component: () => <div className="p-8 text-center text-gray-500">Barriers for Marginalized component coming soon...</div>
+            component: BarriersMarginalized,
         },
         {
             id: 'priority-sectors',
             name: 'Priority Sectors',
-            icon: BarChart,
-            component: prioritysector,
+            icon: BarChart2,
+            component: PrioritySectors,
         },
         {
             id: 'observable-impacts',
             name: 'Observable CC Impacts',
             icon: Eye,
-            component: observableimpacts,
+            component: ObservableImpacts,
         },
         {
             id: 'climate-info',
             name: 'Access Climate Info',
             icon: CloudRain,
-            component: climateinfor,
-
+            component: ClimateInfo,
         }
     ];
 

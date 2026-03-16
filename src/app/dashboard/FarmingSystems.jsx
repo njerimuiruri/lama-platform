@@ -1,548 +1,302 @@
 'use client';
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, Area, AreaChart, ComposedChart, Cell } from 'recharts';
-import { Filter, TrendingUp, Users, PieChart } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
+import { ChartContainer } from '@/components/ui/chart';
+import { Leaf, TrendingUp, ShoppingCart, Info } from 'lucide-react';
 
-const FarmingSystems = () => {
-    const genderFarmingSystems = [
-        { category: 'Female', type: 'Both', count: 100, percent: 35.6 },
-        { category: 'Female', type: 'Commercial', count: 12, percent: 4.3 },
-        { category: 'Female', type: 'Subsistence', count: 169, percent: 60.1 },
-        { category: 'Male', type: 'Both', count: 101, percent: 37.0 },
-        { category: 'Male', type: 'Commercial', count: 23, percent: 8.4 },
-        { category: 'Male', type: 'Subsistence', count: 149, percent: 54.6 }
-    ];
+// ── Data ──────────────────────────────────────────────────────────────────────
+const byGender = [
+    { group: 'Female', Subsistence: 169, Both: 100, Commercial: 12, SubP: 60.1, BothP: 35.6, ComP: 4.3 },
+    { group: 'Male', Subsistence: 149, Both: 101, Commercial: 23, SubP: 54.6, BothP: 37.0, ComP: 8.4 },
+];
 
-    const ageBracketFarmingSystems = [
-        { category: 'adults', type: 'Both', count: 53, percent: 36.6 },
-        { category: 'adults', type: 'Commercial', count: 11, percent: 7.6 },
-        { category: 'adults', type: 'Subsistence', count: 81, percent: 55.9 },
-        { category: 'elderly', type: 'Both', count: 87, percent: 33.9 },
-        { category: 'elderly', type: 'Commercial', count: 12, percent: 4.7 },
-        { category: 'elderly', type: 'Subsistence', count: 158, percent: 61.5 },
-        { category: 'youth', type: 'Both', count: 61, percent: 40.1 },
-        { category: 'youth', type: 'Commercial', count: 12, percent: 7.9 },
-        { category: 'youth', type: 'Subsistence', count: 79, percent: 52.0 }
-    ];
+const byAge = [
+    { group: 'Adults', Subsistence: 81, Both: 53, Commercial: 11, SubP: 55.9, BothP: 36.6, ComP: 7.6 },
+    { group: 'Elderly', Subsistence: 158, Both: 87, Commercial: 12, SubP: 61.5, BothP: 33.9, ComP: 4.7 },
+    { group: 'Youth', Subsistence: 79, Both: 61, Commercial: 12, SubP: 52.0, BothP: 40.1, ComP: 7.9 },
+];
 
-    // Filter states
-    const [activeView, setActiveView] = useState('farming-gender');
-    const [chartType, setChartType] = useState('grouped');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedType, setSelectedType] = useState('all');
-    const [showDataTable, setShowDataTable] = useState(false);
+const COLORS = { Subsistence: '#7c3aed', Both: '#059669', Commercial: '#dc2626' };
 
-    const getColor = (category, type) => {
-        const colorMap = {
-            'Female': '#ec4899', 'Male': '#3b82f6',
-            'adults': '#10b981', 'elderly': '#f59e0b', 'youth': '#8b5cf6',
-            'Both': '#059669', 'Commercial': '#dc2626', 'Subsistence': '#7c3aed'
-        };
-        return colorMap[category] || colorMap[type] || '#6b7280';
-    };
-
-    const CustomTooltip = ({ active, payload, label }) => {
-        if (active && payload && payload.length) {
-            return (
-                <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-xl max-w-xs">
-                    <p className="font-semibold text-gray-800 mb-3 text-center border-b pb-2">{label}</p>
-                    <div className="space-y-2">
-                        {payload.map((entry, index) => {
-                            // Find the original data point
-                            const originalData = getCurrentDataset().find(item =>
-                                (chartType === 'grouped' && item.category === label && item.type === entry.dataKey) ||
-                                (chartType === 'stacked' && item.type === label && item.category === entry.dataKey) ||
-                                (chartType === 'relationship' && item.category === entry.payload.category)
-                            );
-
-                            return (
-                                <div key={index} className="flex items-center justify-between gap-4">
-                                    <div className="flex items-center gap-2">
-                                        <div
-                                            className="w-3 h-3 rounded-full"
-                                            style={{ backgroundColor: entry.color }}
-                                        ></div>
-                                        <span className="text-sm font-medium text-gray-700">
-                                            {entry.dataKey === 'count' ? 'Count' :
-                                                entry.dataKey === 'percent' ? 'Percentage' :
-                                                    entry.dataKey}
-                                        </span>
-                                    </div>
-                                    <div className="text-right">
-                                        <div className="text-sm font-bold text-gray-900">
-                                            {entry.dataKey === 'percent' ? `${entry.value}%` : entry.value}
-                                        </div>
-                                        {originalData && entry.dataKey !== 'percent' && entry.dataKey !== 'count' && (
-                                            <div className="text-xs text-gray-600">
-                                                ({originalData.percent}%)
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            );
-                        })}
-
-                        {chartType === 'relationship' && payload[0]?.payload && (
-                            <div className="mt-3 pt-2 border-t border-gray-200">
-                                <div className="grid grid-cols-2 gap-2 text-xs">
-                                    <div className="text-center">
-                                        <div className="text-gray-600">Type</div>
-                                        <div className="font-medium">{payload[0].payload.type}</div>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="text-gray-600">Category</div>
-                                        <div className="font-medium">{payload[0].payload.category}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+const FarmingTooltip = ({ active, payload, label }) => {
+    if (!active || !payload?.length) return null;
+    return (
+        <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-xl text-sm min-w-[200px]">
+            <p className="font-bold text-gray-800 mb-2 border-b pb-1">{label}</p>
+            {payload.map((e, i) => (
+                <div key={i} className="flex justify-between gap-6 mb-1">
+                    <div className="flex items-center gap-2">
+                        <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: e.color }} />
+                        <span className="text-gray-600">{e.name}</span>
                     </div>
+                    <span className="font-bold text-gray-900">{e.value} people</span>
                 </div>
-            );
-        }
-        return null;
-    };
+            ))}
+        </div>
+    );
+};
 
-    const CustomBarLabel = ({ x, y, width, height, value, payload, dataKey }) => {
-        if (!value || value < 10) return null; // Only show labels for larger values
+// ── Type Summary Cards ────────────────────────────────────────────────────────
+const typeCards = [
+    {
+        key: 'Subsistence',
+        label: 'Subsistence Farming',
+        sublabel: 'Grow food to eat at home',
+        count: 318,
+        percent: 57.4,
+        color: '#7c3aed',
+        bg: 'bg-purple-50',
+        border: 'border-purple-200',
+        icon: Leaf,
+        rank: '#1 Most Common',
+        description: 'People grow food mainly for their own household. Selling is not the goal — feeding the family is.',
+    },
+    {
+        key: 'Both',
+        label: 'Both Types',
+        sublabel: 'Grow food and sell some',
+        count: 201,
+        percent: 36.3,
+        color: '#059669',
+        bg: 'bg-emerald-50',
+        border: 'border-emerald-200',
+        icon: TrendingUp,
+        rank: '#2',
+        description: 'These farmers grow food for the family AND sell some produce. They balance both goals.',
+    },
+    {
+        key: 'Commercial',
+        label: 'Commercial Farming',
+        sublabel: 'Grow food mainly to sell',
+        count: 35,
+        percent: 6.3,
+        color: '#dc2626',
+        bg: 'bg-red-50',
+        border: 'border-red-200',
+        icon: ShoppingCart,
+        rank: 'Least Common',
+        description: 'A small number farm primarily to generate income. This is the least common approach in this community.',
+    },
+];
 
-        const originalData = getCurrentDataset().find(item =>
-            (chartType === 'grouped' && item.category === payload.category && item.type === dataKey) ||
-            (chartType === 'stacked' && item.type === payload.type && item.category === dataKey)
-        );
+// ── Main Component ────────────────────────────────────────────────────────────
+const FarmingSystems = () => {
+    const [breakdownView, setBreakdownView] = useState('gender');
 
-        const displayText = originalData ? `${value} (${originalData.percent}%)` : value;
-
-        return (
-            <text
-                x={x + width / 2}
-                y={y + height / 2}
-                fill="#fff"
-                textAnchor="middle"
-                dy={0}
-                fontSize="11"
-                fontWeight="bold"
-                className="drop-shadow-sm"
-            >
-                {displayText}
-            </text>
-        );
-    };
-
-    const getGroupedData = (dataset) => {
-        const categories = [...new Set(dataset.map(item => item.category))];
-        return categories.map(cat => {
-            const items = dataset.filter(item => item.category === cat);
-            const result = { category: cat };
-            items.forEach(item => {
-                result[item.type] = item.count;
-                result[`${item.type}_percent`] = item.percent;
-            });
-            return result;
-        });
-    };
-
-    const getStackedData = (dataset) => {
-        const types = [...new Set(dataset.map(item => item.type))];
-        return types.map(type => {
-            const items = dataset.filter(item => item.type === type);
-            const result = { type };
-            items.forEach(item => {
-                result[item.category] = item.count;
-            });
-            return result;
-        });
-    };
-
-    const getCurrentDataset = () => {
-        let dataset;
-        switch (activeView) {
-            case 'farming-gender': dataset = genderFarmingSystems; break;
-            case 'farming-age': dataset = ageBracketFarmingSystems; break;
-            default: dataset = genderFarmingSystems;
-        }
-
-        return dataset.filter(item => {
-            const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-            const typeMatch = selectedType === 'all' || item.type === selectedType;
-            return categoryMatch && typeMatch;
-        });
-    };
-
-    const currentData = getCurrentDataset();
-    const groupedData = getGroupedData(currentData);
-    const stackedData = getStackedData(currentData);
-
-    const getOriginalDataset = () => {
-        switch (activeView) {
-            case 'farming-gender': return genderFarmingSystems;
-            case 'farming-age': return ageBracketFarmingSystems;
-            default: return genderFarmingSystems;
-        }
-    };
-
-    const originalData = getOriginalDataset();
-    const categories = [...new Set(originalData.map(item => item.category))];
-    const types = [...new Set(originalData.map(item => item.type))];
+    const chartData = breakdownView === 'gender' ? byGender : byAge;
 
     return (
-        <div className="py-8">
-            {/* Controls Section */}
-            <section className="bg-gray-50 py-8">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                            <div className="grid md:grid-cols-4 gap-6">
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Data View</label>
-                                    <select
-                                        value={activeView}
-                                        onChange={(e) => {
-                                            setActiveView(e.target.value);
-                                            setSelectedCategory('all');
-                                            setSelectedType('all');
-                                        }}
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                    >
-                                        <option value="farming-gender">Farming Systems by Gender</option>
-                                        <option value="farming-age">Farming Systems by Age Bracket</option>
-                                    </select>
+        <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-50 py-10 px-4">
+            <div className="max-w-6xl mx-auto space-y-10">
+
+                {/* Insight banner */}
+                <div className="bg-gradient-to-r from-[#7c3aed] to-purple-700 rounded-2xl p-7 text-white shadow-xl">
+                    <div className="flex items-start gap-4">
+                        <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <Leaf className="w-7 h-7 text-white" />
+                        </div>
+                        <div>
+                            <p className="text-sm font-semibold text-white/70 uppercase tracking-wide mb-1">Key Finding</p>
+                            <h1 className="text-2xl md:text-3xl font-black mb-2">Most people grow food for themselves — very few farm commercially</h1>
+                            <p className="text-white/85 text-base">Over half the community practises subsistence farming. Only 6% farm primarily for commercial income.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Stat cards */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                        { label: 'Total Respondents', value: '554', color: '#6b7280', bg: 'bg-gray-50', border: 'border-gray-200' },
+                        { label: 'Subsistence Farmers', value: '57.4%', color: '#7c3aed', bg: 'bg-purple-50', border: 'border-purple-200', sub: '318 people' },
+                        { label: 'Mixed (Both)', value: '36.3%', color: '#059669', bg: 'bg-emerald-50', border: 'border-emerald-200', sub: '201 people' },
+                        { label: 'Commercial Only', value: '6.3%', color: '#dc2626', bg: 'bg-red-50', border: 'border-red-200', sub: '35 people — least common' },
+                    ].map(({ label, value, color, bg, border, sub }) => (
+                        <div key={label} className={`${bg} border ${border} rounded-2xl p-5 shadow-sm`}>
+                            <p className="text-2xl font-black" style={{ color }}>{value}</p>
+                            <p className="text-sm font-semibold text-gray-700 mt-1">{label}</p>
+                            {sub && <p className="text-xs text-gray-400 mt-0.5">{sub}</p>}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Farming type summary */}
+                <div>
+                    <h2 className="text-xl font-black text-gray-900 mb-1">What type of farming do people practise?</h2>
+                    <p className="text-sm text-gray-500 mb-5">Three types of farming are used in this community. Here is how they compare.</p>
+                    <div className="grid md:grid-cols-3 gap-5">
+                        {typeCards.map(({ key, label, sublabel, count, percent, color, bg, border, icon: Icon, rank, description }) => (
+                            <div key={key} className={`${bg} border-2 ${border} rounded-2xl p-6 shadow-sm`}>
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}20` }}>
+                                        <Icon className="w-6 h-6" style={{ color }} />
+                                    </div>
+                                    <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ backgroundColor: `${color}15`, color }}>{rank}</span>
                                 </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Chart Type</label>
-                                    <select
-                                        value={chartType}
-                                        onChange={(e) => setChartType(e.target.value)}
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                    >
-                                        <option value="grouped">Grouped Comparison</option>
-                                        <option value="stacked">Stacked Distribution</option>
-                                        <option value="relationship">Relationship View</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Filter Category</label>
-                                    <select
-                                        value={selectedCategory}
-                                        onChange={(e) => setSelectedCategory(e.target.value)}
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <option value="all">All Categories</option>
-                                        {categories.map(cat => (
-                                            <option key={cat} value={cat}>{cat}</option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Filter Type</label>
-                                    <select
-                                        value={selectedType}
-                                        onChange={(e) => setSelectedType(e.target.value)}
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <option value="all">All Types</option>
-                                        {types.map(type => (
-                                            <option key={type} value={type}>{type}</option>
-                                        ))}
-                                    </select>
+                                <p className="text-3xl font-black mb-0.5" style={{ color }}>{count}</p>
+                                <p className="text-xs text-gray-400 font-medium mb-3">{percent}% of all respondents</p>
+                                <h3 className="font-bold text-gray-900 mb-1">{label}</h3>
+                                <p className="text-xs text-gray-500 italic mb-3">{sublabel}</p>
+                                <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+                                <div className="mt-4 h-2 bg-white rounded-full overflow-hidden">
+                                    <div className="h-full rounded-full" style={{ width: `${percent}%`, backgroundColor: color }} />
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
 
-                            {(selectedCategory !== 'all' || selectedType !== 'all') && (
-                                <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Filter className="w-4 h-4 text-blue-600" />
-                                        <span className="text-sm font-medium text-blue-800">Active Filters:</span>
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {selectedCategory !== 'all' && (
-                                            <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
-                                                {selectedCategory}
-                                            </span>
-                                        )}
-                                        {selectedType !== 'all' && (
-                                            <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">
-                                                {selectedType}
-                                            </span>
-                                        )}
-                                        <button
-                                            onClick={() => {
-                                                setSelectedCategory('all');
-                                                setSelectedType('all');
-                                            }}
-                                            className="px-3 py-1 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded-full transition-colors"
-                                        >
-                                            Clear All
-                                        </button>
-                                    </div>
-                                    <p className="text-sm text-blue-700 mt-2">
-                                        Showing {currentData.length} records
-                                    </p>
-                                </div>
-                            )}
-
-                            <div className="mt-4">
-                                <button
-                                    onClick={() => setShowDataTable(!showDataTable)}
-                                    className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                {/* Donut chart: overall farming split */}
+                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+                    <h2 className="text-xl font-black text-gray-900 mb-1">Overall farming type split</h2>
+                    <p className="text-sm text-gray-500 mb-4">The donut shows the share of each farming type across all 554 respondents.</p>
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+                        <ChartContainer config={{
+                            Subsistence: { color: '#7c3aed' }, Both: { color: '#059669' }, Commercial: { color: '#dc2626' }
+                        }} className="h-64 w-full md:w-64 flex-shrink-0">
+                            <PieChart>
+                                <Pie
+                                    data={[
+                                        { name: 'Subsistence', value: 57.4, color: '#7c3aed' },
+                                        { name: 'Both Types', value: 36.3, color: '#059669' },
+                                        { name: 'Commercial', value: 6.3, color: '#dc2626' },
+                                    ]}
+                                    cx="50%" cy="50%"
+                                    innerRadius="55%" outerRadius="80%"
+                                    dataKey="value"
+                                    startAngle={90} endAngle={-270}
                                 >
-                                    <PieChart className="w-4 h-4" />
-                                    {showDataTable ? 'Hide' : 'Show'} Data Table
+                                    {[
+                                        { name: 'Subsistence', value: 57.4, color: '#7c3aed' },
+                                        { name: 'Both Types', value: 36.3, color: '#059669' },
+                                        { name: 'Commercial', value: 6.3, color: '#dc2626' },
+                                    ].map((d, i) => <Cell key={i} fill={d.color} stroke="white" strokeWidth={3} />)}
+                                </Pie>
+                                <Tooltip formatter={(v) => [`${v}%`]} />
+                            </PieChart>
+                        </ChartContainer>
+                        <div className="space-y-4 flex-1">
+                            {[
+                                { name: 'Subsistence', pct: 57.4, color: '#7c3aed', desc: 'Grow food for home use' },
+                                { name: 'Both Types', pct: 36.3, color: '#059669', desc: 'Grow for home + sell some' },
+                                { name: 'Commercial', pct: 6.3, color: '#dc2626', desc: 'Grow mainly to sell' },
+                            ].map(d => (
+                                <div key={d.name} className="flex items-center gap-4">
+                                    <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
+                                    <div className="flex-1">
+                                        <div className="flex justify-between mb-1">
+                                            <span className="text-sm font-bold text-gray-800">{d.name}</span>
+                                            <span className="text-sm font-black" style={{ color: d.color }}>{d.pct}%</span>
+                                        </div>
+                                        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                                            <div className="h-full rounded-full" style={{ width: `${d.pct}%`, backgroundColor: d.color }} />
+                                        </div>
+                                        <p className="text-xs text-gray-400 mt-1">{d.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Multi-line chart: farming type % trend across age groups */}
+                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+                    <h2 className="text-xl font-black text-gray-900 mb-1">How does age shift farming type choices?</h2>
+                    <p className="text-sm text-gray-500 mb-6">Each line tracks how the % for one farming type changes across age groups. See where the lines cross — that's where priorities shift.</p>
+                    <ChartContainer config={{
+                        Subsistence: { color: '#7c3aed' }, Both: { color: '#059669' }, Commercial: { color: '#dc2626' }
+                    }} className="h-64">
+                        <LineChart
+                            data={[
+                                { group: 'Adults', Subsistence: 55.9, Both: 36.6, Commercial: 7.6 },
+                                { group: 'Elderly', Subsistence: 61.5, Both: 33.9, Commercial: 4.7 },
+                                { group: 'Youth', Subsistence: 52.0, Both: 40.1, Commercial: 7.9 },
+                            ]}
+                            margin={{ top: 10, right: 30, left: 0, bottom: 10 }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                            <XAxis dataKey="group" tick={{ fontSize: 13, fontWeight: 600, fill: '#374151' }} />
+                            <YAxis tickFormatter={v => `${v}%`} domain={[0, 70]} tick={{ fontSize: 11 }} />
+                            <Tooltip formatter={(v, name) => [`${v}%`, name]} />
+                            <Legend />
+                            <Line type="monotone" dataKey="Subsistence" stroke="#7c3aed" strokeWidth={3} dot={{ r: 6, fill: '#7c3aed', stroke: '#fff', strokeWidth: 2 }} name="Subsistence" />
+                            <Line type="monotone" dataKey="Both" stroke="#059669" strokeWidth={3} dot={{ r: 6, fill: '#059669', stroke: '#fff', strokeWidth: 2 }} name="Both Types" />
+                            <Line type="monotone" dataKey="Commercial" stroke="#dc2626" strokeWidth={3} dot={{ r: 6, fill: '#dc2626', stroke: '#fff', strokeWidth: 2 }} name="Commercial" />
+                        </LineChart>
+                    </ChartContainer>
+                    <div className="mt-4 p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-sm text-emerald-800">
+                        <strong>The "Both" line rises with youth:</strong> Youth are the most likely to combine subsistence and commercial farming (40.1%), while Elderly rely most heavily on subsistence (61.5%).
+                    </div>
+                </div>
+
+                {/* Breakdown by group */}
+                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h2 className="text-xl font-black text-gray-900 mb-1">Does demographic affect farming choice?</h2>
+                            <p className="text-sm text-gray-500">Compare farming types across gender and age groups.</p>
+                        </div>
+                        <div className="flex gap-2">
+                            {['gender', 'age'].map(v => (
+                                <button key={v} onClick={() => setBreakdownView(v)}
+                                    className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${breakdownView === v ? 'bg-[#0d9c5a] text-white shadow-sm' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
+                                    By {v === 'gender' ? 'Gender' : 'Age Group'}
                                 </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <ChartContainer config={{
+                        Subsistence: { color: '#7c3aed' }, Both: { color: '#059669' }, Commercial: { color: '#dc2626' }
+                    }} className="h-72">
+                        <BarChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 10 }}>
+                            <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                            <XAxis dataKey="group" tick={{ fontSize: 13, fontWeight: 600, fill: '#374151' }} />
+                            <YAxis tick={{ fontSize: 11 }} label={{ value: 'Number of people', angle: -90, position: 'insideLeft', offset: 10, style: { fontSize: 11, fill: '#9ca3af' } }} />
+                            <Tooltip content={<FarmingTooltip />} />
+                            <Legend />
+                            <Bar dataKey="Subsistence" fill={COLORS.Subsistence} radius={[4, 4, 0, 0]} name="Subsistence (for home)" />
+                            <Bar dataKey="Both" fill={COLORS.Both} radius={[4, 4, 0, 0]} name="Both types" />
+                            <Bar dataKey="Commercial" fill={COLORS.Commercial} radius={[4, 4, 0, 0]} name="Commercial (to sell)" />
+                        </BarChart>
+                    </ChartContainer>
+
+                    {/* Insight notes per view */}
+                    {breakdownView === 'gender' && (
+                        <div className="mt-5 grid md:grid-cols-2 gap-4">
+                            <div className="p-3 bg-pink-50 rounded-xl border border-pink-100 text-sm text-pink-800">
+                                <strong>Women lean more toward subsistence:</strong> 60.1% of female respondents practise subsistence farming vs 54.6% of males.
                             </div>
+                            <div className="p-3 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-800">
+                                <strong>Men are more likely to farm commercially:</strong> 8.4% of males farm commercially vs 4.3% of females — nearly double.
+                            </div>
+                        </div>
+                    )}
+                    {breakdownView === 'age' && (
+                        <div className="mt-5 grid md:grid-cols-2 gap-4">
+                            <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-sm text-purple-800">
+                                <strong>Youth most likely to do both:</strong> 40.1% of youth practise both farming types — the highest across all age groups. This may signal a move toward commercial activity.
+                            </div>
+                            <div className="p-3 bg-amber-50 rounded-xl border border-amber-100 text-sm text-amber-800">
+                                <strong>Elderly rely most on subsistence:</strong> 61.5% of elderly respondents grow food for home use — the highest subsistence rate of any age group.
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+                {/* Takeaway */}
+                <div className="bg-gradient-to-r from-purple-50 to-violet-50 border-2 border-purple-200 rounded-2xl p-7">
+                    <div className="flex items-start gap-4">
+                        <Info className="w-7 h-7 text-purple-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                            <h3 className="text-lg font-black text-gray-900 mb-2">Key Takeaway</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Subsistence farming — growing food for personal use — is the backbone of this community's food system. Very few people farm commercially. Youth are most likely to combine both types (40.1%), which may indicate a gradual shift toward income-generating agriculture. Supporting this transition with training and market access could have a big impact.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            {/* Charts Section */}
-            <section className="py-12">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                            <div className="flex items-center gap-3 mb-8">
-                                <TrendingUp className="w-6 h-6 text-green-600" />
-                                <h2 className="text-2xl font-bold text-gray-900">
-                                    {activeView.replace('-', ' by ').replace(/\b\w/g, l => l.toUpperCase())}
-                                </h2>
-                                {(selectedCategory !== 'all' || selectedType !== 'all') && (
-                                    <span className="text-sm text-blue-600 font-medium">
-                                        (Filtered View)
-                                    </span>
-                                )}
-                            </div>
-
-                            {currentData.length === 0 && (
-                                <div className="text-center py-12">
-                                    <Filter className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                                    <h3 className="text-lg font-medium text-gray-900 mb-2">No data matches your filters</h3>
-                                    <p className="text-gray-600">Try adjusting your filter criteria to see results.</p>
-                                </div>
-                            )}
-
-                            {currentData.length > 0 && (
-                                <>
-                                    {chartType === 'grouped' && (
-                                        <ResponsiveContainer width="100%" height={500}>
-                                            <BarChart data={groupedData} margin={{ top: 20, right: 30, left: 20, bottom: 80 }}>
-                                                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                                                <XAxis
-                                                    dataKey="category"
-                                                    tick={{ fontSize: 12 }}
-                                                    height={60}
-                                                />
-                                                <YAxis domain={[0, 200]} />
-                                                <Tooltip content={<CustomTooltip />} />
-                                                {types.filter(type => currentData.some(item => item.type === type)).map((type, index) => (
-                                                    <Bar
-                                                        key={type}
-                                                        dataKey={type}
-                                                        fill={getColor(null, type)}
-                                                        radius={[2, 2, 0, 0]}
-                                                        name={type}
-                                                    >
-                                                        <Cell />
-                                                    </Bar>
-                                                ))}
-                                            </BarChart>
-                                        </ResponsiveContainer>
-                                    )}
-
-                                    {chartType === 'stacked' && (
-                                        <ResponsiveContainer width="100%" height={500}>
-                                            <BarChart data={stackedData} margin={{ top: 20, right: 30, left: 20, bottom: 80 }}>
-                                                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                                                <XAxis
-                                                    dataKey="type"
-                                                    tick={{ fontSize: 11 }}
-                                                    angle={-45}
-                                                    textAnchor="end"
-                                                    height={100}
-                                                />
-                                                <YAxis domain={[0, 300]} />
-                                                <Tooltip content={<CustomTooltip />} />
-                                                {categories.filter(cat => currentData.some(item => item.category === cat)).map((category, index) => (
-                                                    <Bar
-                                                        key={category}
-                                                        dataKey={category}
-                                                        stackId="a"
-                                                        fill={getColor(category, null)}
-                                                        name={category}
-                                                    >
-                                                        <Cell />
-                                                    </Bar>
-                                                ))}
-                                            </BarChart>
-                                        </ResponsiveContainer>
-                                    )}
-
-                                    {chartType === 'relationship' && (
-                                        <ResponsiveContainer width="100%" height={500}>
-                                            <ComposedChart data={currentData} margin={{ top: 20, right: 30, left: 20, bottom: 80 }}>
-                                                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                                                <XAxis
-                                                    dataKey="category"
-                                                    tick={{ fontSize: 11 }}
-                                                    height={60}
-                                                />
-                                                <YAxis yAxisId="left" domain={[0, 200]} />
-                                                <YAxis yAxisId="right" orientation="right" domain={[0, 100]} />
-                                                <Tooltip content={<CustomTooltip />} />
-                                                <Bar
-                                                    yAxisId="left"
-                                                    dataKey="count"
-                                                    fill="#16a34a"
-                                                    fillOpacity={0.6}
-                                                    radius={[2, 2, 0, 0]}
-                                                />
-                                                <Line
-                                                    yAxisId="right"
-                                                    type="monotone"
-                                                    dataKey="percent"
-                                                    stroke="#dc2626"
-                                                    strokeWidth={3}
-                                                    dot={{ fill: '#dc2626', strokeWidth: 2, r: 4 }}
-                                                />
-                                            </ComposedChart>
-                                        </ResponsiveContainer>
-                                    )}
-
-                                    {/* Legend */}
-                                    <div className="mt-6 flex flex-wrap justify-center gap-4">
-                                        {(chartType === 'grouped' ?
-                                            types.filter(type => currentData.some(item => item.type === type)) :
-                                            categories.filter(cat => currentData.some(item => item.category === cat))
-                                        ).map((item, index) => (
-                                            <div key={item} className="flex items-center gap-2">
-                                                <div
-                                                    className="w-4 h-4 rounded"
-                                                    style={{ backgroundColor: chartType === 'grouped' ? getColor(null, item) : getColor(item, null) }}
-                                                ></div>
-                                                <span className="text-sm text-gray-600 font-medium">{item}</span>
-                                            </div>
-                                        ))}
-                                        {chartType === 'relationship' && (
-                                            <>
-                                                <div className="flex items-center gap-2 ml-4">
-                                                    <div className="w-4 h-4 bg-green-600 rounded"></div>
-                                                    <span className="text-sm text-gray-600 font-medium">Count</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-4 h-1 bg-red-600 rounded"></div>
-                                                    <span className="text-sm text-gray-600 font-medium">Percentage</span>
-                                                </div>
-                                            </>
-                                        )}
-                                    </div>
-                                </>
-                            )}
-                        </div>
-
-                        {/* Summary Cards */}
-                        {currentData.length > 0 && (
-                            <div className="grid md:grid-cols-4 gap-6 mt-8">
-                                {currentData.slice(0, 4).map((item, index) => (
-                                    <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                                        <div className="flex items-center justify-between mb-4">
-                                            <h3 className="font-semibold text-gray-800 text-sm">{item.category}</h3>
-                                            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: getColor(item.category, item.type) }}></div>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <p className="text-2xl font-bold text-gray-900">{item.count}</p>
-                                            <p className="text-sm text-gray-600">{item.type}</p>
-                                            <div className="w-full bg-gray-200 rounded-full h-2">
-                                                <div
-                                                    className="h-2 rounded-full transition-all duration-300"
-                                                    style={{
-                                                        width: `${item.percent}%`,
-                                                        backgroundColor: getColor(item.category, item.type)
-                                                    }}
-                                                ></div>
-                                            </div>
-                                            <p className="text-sm font-medium text-gray-700">{item.percent}%</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-
-                        {/* Data Table */}
-                        {showDataTable && currentData.length > 0 && (
-                            <div className="mt-8 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                                <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
-                                    <div className="flex items-center gap-3">
-                                        <Users className="w-5 h-5 text-gray-600" />
-                                        <h3 className="text-lg font-semibold text-gray-900">Data Table</h3>
-                                    </div>
-                                </div>
-                                <div className="overflow-x-auto">
-                                    <table className="w-full">
-                                        <thead className="bg-gray-50">
-                                            <tr>
-                                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Category
-                                                </th>
-                                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Farming System
-                                                </th>
-                                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Count
-                                                </th>
-                                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Percentage
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="bg-white divide-y divide-gray-200">
-                                            {currentData.map((item, index) => (
-                                                <tr key={index} className="hover:bg-gray-50 transition-colors">
-                                                    <td className="px-6 py-4 whitespace-nowrap">
-                                                        <div className="flex items-center gap-3">
-                                                            <div
-                                                                className="w-3 h-3 rounded-full"
-                                                                style={{ backgroundColor: getColor(item.category, null) }}
-                                                            ></div>
-                                                            <span className="text-sm font-medium text-gray-900">
-                                                                {item.category}
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap">
-                                                        <span className="text-sm text-gray-700">
-                                                            {item.type}
-                                                        </span>
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap">
-                                                        <span className="text-sm font-semibold text-gray-900">
-                                                            {item.count}
-                                                        </span>
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap">
-                                                        <div className="flex items-center gap-2">
-                                                            <div className="w-16 bg-gray-200 rounded-full h-2">
-                                                                <div
-                                                                    className="h-2 rounded-full"
-                                                                    style={{
-                                                                        width: `${item.percent}%`,
-                                                                        backgroundColor: getColor(item.category, item.type)
-                                                                    }}
-                                                                ></div>
-                                                            </div>
-                                                            <span className="text-sm font-medium text-gray-700">
-                                                                {item.percent}%
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     );
 };
