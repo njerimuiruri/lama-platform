@@ -505,6 +505,53 @@ export default function NAPDataViewer() {
                 {/* Source Selection */}
                 {!selectedSource ? (
                     <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 border border-blue-100">
+                        {/* ── About & How-to Banner ── */}
+                        <div className="mb-6 border border-indigo-200 rounded-xl overflow-hidden">
+                            <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-4 sm:px-5 py-3 flex items-center gap-3">
+                                <FileText className="w-5 h-5 text-white flex-shrink-0" />
+                                <div>
+                                    <h2 className="text-white font-bold text-sm sm:text-base">About National Adaptation Plans (NAPs)</h2>
+                                    <p className="text-indigo-100 text-xs">Kenya&apos;s long-term climate adaptation strategy — what this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-4 sm:p-5 bg-indigo-50 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">What are NAPs?</h3>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                        <strong>National Adaptation Plans (NAPs)</strong> are medium to long-term strategic frameworks developed under the UNFCCC to help countries reduce their vulnerability to climate change. Unlike the NCCAP (which is a 5-year action plan), NAPs take a <strong>broader, longer-term view</strong> — identifying the most critical adaptation needs and embedding climate considerations into national planning.
+                                    </p>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2">
+                                        This page shows the <strong>monitoring indicators</strong> used in Kenya&apos;s NAP frameworks, organised by the source document or thematic area they come from.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">How to use this page</h3>
+                                    <ol className="space-y-1.5 text-xs sm:text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Select a NAP source</strong> — each source is a specific adaptation plan document or thematic framework.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Filter by Thematic Target</strong> or <strong>Indicator Type</strong> to narrow down the results.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>Browse the indicator table</strong> — click any indicator row for full details including sector, data source, and type.</span>
+                                        </li>
+                                    </ol>
+                                    <div className="mt-3 p-2 bg-white border border-indigo-200 rounded-lg text-xs text-gray-600">
+                                        <strong className="text-indigo-700">NAP vs NDC:</strong> NDCs are Kenya&apos;s formal UNFCCC commitments; NAPs are the detailed plans that explain <em>how</em> adaptation will actually be implemented and tracked over time.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="border-t border-indigo-200 px-4 sm:px-5 py-2.5 bg-white flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                                <span><strong className="text-indigo-700">Thematic Target</strong> — The climate challenge area this indicator addresses (e.g. Drought, Flooding, Food Security).</span>
+                                <span><strong className="text-indigo-700">Indicator Type</strong> — Output, Outcome, or Process — describing what stage of change the indicator tracks.</span>
+                                <span><strong className="text-indigo-700">Sector</strong> — The economic or social sector the indicator belongs to (e.g. Water, Health, Agriculture).</span>
+                            </div>
+                        </div>
+
                         <div className="mb-4 sm:mb-6 text-center">
                             <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full mb-2 sm:mb-3">
                                 <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600" />
@@ -649,17 +696,21 @@ export default function NAPDataViewer() {
                                         <table className="w-full">
                                             <thead>
                                                 <tr className="bg-gradient-to-r from-blue-100 to-blue-50">
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider">
-                                                        Indicator
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Adaptation Indicator</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case mt-0.5">The specific action or condition Kenya plans to track under its adaptation plan</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden md:table-cell">
-                                                        Thematic Target
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Thematic Target</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case mt-0.5">The climate challenge area this addresses</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden lg:table-cell">
-                                                        Type
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Indicator Type</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case mt-0.5">Output (direct result), Outcome (change achieved), or Process (step taken)</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden lg:table-cell">
-                                                        Year
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Year</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case mt-0.5">When this plan was published</p>
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -673,7 +724,10 @@ export default function NAPDataViewer() {
                                                             <div className="flex items-start gap-1.5 sm:gap-2">
                                                                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0 mt-1 sm:mt-1.5"></div>
                                                                 <div className="min-w-0">
-                                                                    <span className="text-gray-900 text-xs sm:text-sm leading-snug block">
+                                                                    {item.Sector && (
+                                                                        <span className="text-xs text-gray-400 italic block mb-0.5">Sector: <strong className="text-gray-600 not-italic">{item.Sector}</strong></span>
+                                                                    )}
+                                                                    <span className="text-gray-900 text-xs sm:text-sm leading-snug block font-medium">
                                                                         {item.Indicator || 'N/A'}
                                                                     </span>
                                                                     {/* Mobile-only badges */}

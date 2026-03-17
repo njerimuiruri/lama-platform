@@ -505,6 +505,50 @@ export default function NDCDataViewer() {
                 {/* Source Selection */}
                 {!selectedSource ? (
                     <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 border border-blue-100">
+                        {/* ── About & How-to Banner ── */}
+                        <div className="mb-6 border border-blue-200 rounded-xl overflow-hidden">
+                            <div className="bg-gradient-to-r from-blue-600 to-sky-600 px-4 sm:px-5 py-3 flex items-center gap-3">
+                                <Globe className="w-5 h-5 text-white flex-shrink-0" />
+                                <div>
+                                    <h2 className="text-white font-bold text-sm sm:text-base">About Nationally Determined Contributions (NDCs)</h2>
+                                    <p className="text-blue-100 text-xs">Kenya&apos;s climate commitments to the UNFCCC — what this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-4 sm:p-5 bg-blue-50 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">What are NDCs?</h3>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                        <strong>Nationally Determined Contributions (NDCs)</strong> are the climate commitments each country submits to the United Nations Framework Convention on Climate Change (UNFCCC) under the Paris Agreement. Kenya&apos;s NDC outlines both mitigation targets (reducing emissions) and adaptation plans (building resilience).
+                                    </p>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2">
+                                        This page lets you explore the <strong>measurable indicators</strong> Kenya uses to track progress against its NDC commitments, grouped by the organisation or document that proposed them.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">How to use this page</h3>
+                                    <ol className="space-y-1.5 text-xs sm:text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Select an NDC source</strong> (e.g. a specific government ministry or international body that contributed indicators).</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Filter by Thematic Target</strong> (e.g. Adaptation, Mitigation, Loss &amp; Damage) or <strong>Indicator Type</strong> to narrow your results.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>Browse the indicator table</strong> and click any row for full details including sector, data source, and measurement notes.</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div className="border-t border-blue-200 px-4 sm:px-5 py-2.5 bg-white flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                                <span><strong className="text-blue-700">Thematic Target</strong> — The broad climate goal an indicator is tracking (e.g. Adaptation, Mitigation).</span>
+                                <span><strong className="text-blue-700">Indicator Type</strong> — Whether the indicator measures an output, outcome, or process.</span>
+                                <span><strong className="text-blue-700">Indicator Source</strong> — The document or institution that proposed this indicator.</span>
+                            </div>
+                        </div>
+
                         <div className="mb-4 sm:mb-6 text-center">
                             <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-full mb-2 sm:mb-3">
                                 <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600" />
@@ -649,17 +693,21 @@ export default function NDCDataViewer() {
                                         <table className="w-full">
                                             <thead>
                                                 <tr className="bg-gradient-to-r from-blue-100 to-blue-50">
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider">
-                                                        Indicator
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Indicator</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The specific action or condition Kenya commits to measuring</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden md:table-cell">
-                                                        Thematic Target
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Thematic Target</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The climate area this addresses</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden lg:table-cell">
-                                                        Type
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Type</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Output, Outcome, or Process</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-blue-900 uppercase tracking-wider hidden lg:table-cell">
-                                                        Year
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Year</p>
+                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Document published</p>
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -673,7 +721,10 @@ export default function NDCDataViewer() {
                                                             <div className="flex items-start gap-1.5 sm:gap-2">
                                                                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0 mt-1 sm:mt-1.5"></div>
                                                                 <div className="min-w-0">
-                                                                    <span className="text-gray-900 text-xs sm:text-sm leading-snug block">
+                                                                    {item.Sector && (
+                                                                        <span className="text-xs text-gray-400 italic block mb-0.5">Sector: <strong className="text-gray-600 not-italic">{item.Sector}</strong></span>
+                                                                    )}
+                                                                    <span className="text-gray-900 text-xs sm:text-sm leading-snug block font-medium">
                                                                         {item.Indicator || 'N/A'}
                                                                     </span>
                                                                     {/* Mobile-only badges */}

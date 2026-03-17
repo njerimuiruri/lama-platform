@@ -242,6 +242,59 @@ export default function CIDPExplorer() {
 
                 {/* Sectors View */}
                 {!selectedSector && (
+                    <div>
+                        {/* ── About & How-to Banner ── */}
+                        <div className="mb-6 bg-white border-2 border-emerald-200 rounded-2xl overflow-hidden shadow-sm">
+                            <div className="bg-gradient-to-r from-emerald-600 to-teal-700 px-5 sm:px-6 py-4 flex items-center gap-3">
+                                <div className="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <FileText className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                    <h2 className="text-white font-bold text-base sm:text-lg">About County Integrated Development Plans (CIDPs)</h2>
+                                    <p className="text-emerald-100 text-xs">What this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">What are CIDPs?</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        <strong>County Integrated Development Plans (CIDPs)</strong> are official 5-year development blueprints that every county government in Kenya is required to produce. The current plans cover <strong>2023–2027</strong>.
+                                    </p>
+                                    <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                        Each CIDP sets out what a county plans to achieve across all sectors — from health and education to agriculture and water — and includes <strong>Key Performance Indicators (KPIs)</strong> so progress can be measured and reported publicly.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">How to navigate this page</h3>
+                                    <ol className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Choose a Sector</strong> from the grid below (e.g. Agriculture, Health, Water &amp; Sanitation).</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Select a Priority Area</strong> — a specific focus within that sector (e.g. &quot;Irrigation Development&quot; under Agriculture).</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>View the KPIs</strong> — the exact measurable targets counties have committed to for that priority area.</span>
+                                        </li>
+                                    </ol>
+                                    <p className="text-xs text-gray-500 mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-2">
+                                        <strong>Tip:</strong> Use the search bar above to jump directly to any sector, priority area, or indicator keyword.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="border-t border-emerald-100 px-5 sm:px-6 py-3 bg-emerald-50">
+                                <p className="text-xs text-emerald-800 font-semibold">
+                                    <span className="font-black">KPI (Key Performance Indicator)</span> — A specific, measurable result a county has committed to deliver by 2027, used to hold the county government accountable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {!selectedSector && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                         {filteredData?.length === 0 ? (
                             <div className="col-span-full bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-xl p-8 sm:p-16 text-center border-2 border-dashed border-gray-200">
@@ -371,17 +424,27 @@ export default function CIDPExplorer() {
                                     key={index}
                                     className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md hover:shadow-xl p-3.5 sm:p-5 border-2 border-emerald-100 hover:border-emerald-400 transition-all group"
                                 >
+                                    {/* KPI label */}
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                                            KPI #{index + 1}
+                                        </span>
+                                        <span className="text-xs text-gray-400 italic">Key Performance Indicator</span>
+                                    </div>
+
                                     <div className="flex items-start gap-2.5 sm:gap-3">
                                         <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-md sm:rounded-lg flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-110 transition-transform">
                                             <span className="text-white text-xs font-bold">{index + 1}</span>
                                         </div>
                                         <div className="flex-1 min-w-0">
+                                            {/* What this KPI measures */}
+                                            <p className="text-xs text-gray-400 italic mb-1">What the county commits to measure and deliver by 2027:</p>
                                             <p className="text-gray-900 font-semibold text-xs sm:text-sm leading-relaxed break-words">{indicator.text}</p>
                                             {indicator.source && (
-                                                <p className="text-xs text-gray-500 mt-1.5 sm:mt-2 flex items-center gap-1.5">
-                                                    <div className="w-1 h-1 bg-gray-400 rounded-full flex-shrink-0"></div>
-                                                    <span className="truncate">{indicator.source}</span>
-                                                </p>
+                                                <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+                                                    <span className="text-xs text-gray-400">From:</span>
+                                                    <span className="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 truncate max-w-full">{indicator.source}</span>
+                                                </div>
                                             )}
                                         </div>
                                     </div>

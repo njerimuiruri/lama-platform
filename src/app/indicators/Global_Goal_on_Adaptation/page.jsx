@@ -290,6 +290,55 @@ export default function ClimateIndicatorsExplorer() {
                         </div>
                     )}
 
+                    {/* About Banner */}
+                    {!selectedSector && (
+                        <div className="mb-8 bg-white border-2 border-emerald-200 rounded-2xl overflow-hidden shadow-sm">
+                            <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-5 sm:px-6 py-4 flex items-center gap-3">
+                                <Layers className="w-5 h-5 text-white flex-shrink-0" />
+                                <div>
+                                    <h2 className="text-white font-bold text-base sm:text-lg">About the Global Goal on Adaptation (GGA)</h2>
+                                    <p className="text-emerald-100 text-xs">UAE Framework for Global Climate Resilience, adopted at COP28 — what this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">What is the GGA?</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        The <strong>Global Goal on Adaptation (GGA)</strong>, also called the <strong>UAE Framework for Global Climate Resilience</strong>, was adopted at the UN Climate Conference (COP28) in Dubai in 2023. It sets global targets for adaptation across key sectors — such as water, food, health, ecosystems, and infrastructure — for all countries to work towards.
+                                    </p>
+                                    <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                        This page shows the proposed <strong>indicators</strong> that countries and organisations have suggested for tracking progress towards each GGA sector target. The targets are numbered (e.g. 1(a), 1(b)) following the official COP28 text.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">How to navigate</h3>
+                                    <ol className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Select a Sector Target</strong> below (e.g. 1(a) = Water, 1(b) = Food &amp; Agriculture). Each card shows how many indicators are proposed for that target.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Browse the indicator list</strong> for that target. Toggle between Grid and List view.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>Click any indicator</strong> to view its full metadata — including data source, methodology, and geographic coverage.</span>
+                                        </li>
+                                    </ol>
+                                    <p className="text-xs text-gray-500 mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-2">
+                                        <strong>Tip:</strong> Use the search bar to filter by keyword across all sector targets at once.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="border-t border-emerald-100 px-5 sm:px-6 py-3 bg-emerald-50 flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                                <span><strong className="text-emerald-700">Sector Target</strong> — One of the GGA&apos;s thematic areas (e.g. 1(a) = Water, 1(c) = Health, 1(e) = Ecosystems).</span>
+                                <span><strong className="text-emerald-700">Indicator</strong> — A proposed metric for measuring progress toward that target globally.</span>
+                                <span><strong className="text-emerald-700">Data Source</strong> — The organisation or dataset from which the indicator data would be drawn.</span>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Enhanced Sectors Grid View */}
                     {!selectedSector && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

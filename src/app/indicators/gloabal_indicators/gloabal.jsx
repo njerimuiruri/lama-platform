@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity } from 'lucide-react';
+import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity, Globe } from 'lucide-react';
 import indicatorsData from '../../../../public/documents/MergedIndicatorDatabase_NR.json';
 
 export default function IndicatorDashboard() {
@@ -478,6 +478,54 @@ export default function IndicatorDashboard() {
                             <span>See Data Visualization</span>
                             <ChevronRight className="w-5 h-5" />
                         </button>
+                    </div>
+
+                    {/* ── About & How-to Banner ── */}
+                    <div className="mb-10 bg-white border-2 border-green-200 rounded-2xl overflow-hidden shadow-sm text-left">
+                        <div className="bg-gradient-to-r from-[#0d9c5a] to-[#10b66d] px-5 sm:px-6 py-4 flex items-center gap-3">
+                            <Globe className="w-5 h-5 text-white flex-shrink-0" />
+                            <div>
+                                <h2 className="text-white font-bold text-base sm:text-lg">About the Global Indicators Database</h2>
+                                <p className="text-green-100 text-xs">International climate indicator submissions — what this page shows and how to use it</p>
+                            </div>
+                        </div>
+                        <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 className="font-bold text-gray-900 mb-2 text-sm">What is this database?</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    This database is a <strong>merged collection of climate change indicators submitted by international organisations</strong> — such as UN agencies, research bodies, and global networks. These organisations proposed indicators to help the world measure progress on climate adaptation and resilience.
+                                </p>
+                                <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                    The data is organised by <strong>&quot;Submission&quot;</strong> — each submission is from a specific organisation (e.g. UNEP, WHO, FAO, academic institutions). Each submission contains indicators grouped into <strong>categories</strong> by theme or sector.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-gray-900 mb-2 text-sm">How to use this page</h3>
+                                <ol className="space-y-2 text-sm text-gray-600">
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                        <span><strong>Select an organisation/submission</strong> from the cards below — each card shows the organisation name and how many indicators it submitted.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                        <span><strong>Choose a category</strong> to narrow down to a specific thematic area within that submission.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                        <span><strong>Browse and click indicators</strong> to view full details — including indicator description, methodology, and data source information.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
+                                        <span>Use <strong>&quot;See Data Visualization&quot;</strong> for a visual overview of how indicators are distributed across all organisations.</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div className="border-t border-green-200 px-5 sm:px-6 py-3 bg-green-50 flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                            <span><strong className="text-[#0d9c5a]">Submission</strong> — The organisation that proposed this set of indicators (e.g. UNEP, WHO, a university research group).</span>
+                            <span><strong className="text-[#0d9c5a]">Category</strong> — A thematic grouping within a submission (e.g. &quot;Biodiversity&quot;, &quot;Water Security&quot;).</span>
+                            <span><strong className="text-[#0d9c5a]">Indicator</strong> — A specific, measurable metric proposed for tracking global climate adaptation progress.</span>
+                        </div>
                     </div>
 
                     {/* Submission Cards */}
