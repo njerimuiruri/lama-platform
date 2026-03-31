@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { ChevronRight, ChevronLeft, Home, Search, Target, FileText, Layers, AlertCircle, CheckCircle2, Grid3x3, BarChart3, TrendingUp } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function LAMAIndicatorViewer() {
     const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ export default function LAMAIndicatorViewer() {
 
     // Load data from JSON file
     useEffect(() => {
-        fetch('/documents/lla.json')
+        fetch('/api/indicators/lla')
             .then(response => {
                 if (!response.ok) throw new Error('Failed to load data');
                 return response.json();
@@ -400,6 +401,7 @@ export default function LAMAIndicatorViewer() {
                         </div>
 
                         {/* Raw Indicators Grid */}
+                        <DataGate variant="table" label="LLA Indicator Matrix" description="Register for free to explore all Locally Led Adaptation indicators by sector.">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {filteredRawIndicators.length > 0 ? (
                                 filteredRawIndicators.map((item, index) => {
@@ -473,6 +475,7 @@ export default function LAMAIndicatorViewer() {
                                 </div>
                             )}
                         </div>
+                        </DataGate>
                     </div>
                 )}
 

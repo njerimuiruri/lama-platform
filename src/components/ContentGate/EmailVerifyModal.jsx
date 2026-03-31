@@ -60,14 +60,15 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
             <Mail className="w-5 h-5 text-white" />
           </div>
           <span className="text-sm font-medium uppercase tracking-wide text-green-100">
-            Returning Visitor
+            Welcome Back
           </span>
         </div>
         <h2 className="text-2xl font-bold leading-tight">
-          Welcome Back
+          Continue Where You Left Off
         </h2>
         <p className="mt-2 text-green-100 text-sm leading-relaxed">
-          Enter the email you used to register and we&apos;ll unlock the content instantly.
+          Enter your registered email and get instant access to all climate
+          adaptation data and dashboards.
         </p>
       </div>
 
@@ -100,17 +101,17 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
         {/* Not found message */}
         {notFound && (
           <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3">
-            <p className="text-sm text-amber-800 font-medium">Email not found</p>
+            <p className="text-sm text-amber-800 font-medium">We couldn&apos;t find that email</p>
             <p className="text-xs text-amber-700 mt-0.5">
-              This email isn&apos;t registered yet.{' '}
+              Looks like you haven&apos;t registered yet.{' '}
               <button
                 type="button"
                 onClick={onSwitchMode}
                 className="underline font-semibold hover:text-amber-900 transition-colors"
               >
-                Complete the full form
+                Create your free account
               </button>{' '}
-              to get access.
+              — it only takes a minute.
             </p>
           </div>
         )}
@@ -124,11 +125,11 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
           {loading ? (
             <>
               <Loader2 className="w-4 h-4 animate-spin" />
-              Verifying...
+              Checking...
             </>
           ) : (
             <>
-              Unlock Content
+              Take Me In
               <ChevronRight className="w-4 h-4" />
             </>
           )}
@@ -141,7 +142,7 @@ export default function EmailVerifyModal({ onUnlock, onSwitchMode }) {
           className="w-full flex items-center justify-center gap-2 text-gray-500 hover:text-gray-700 text-sm transition-colors py-1"
         >
           <ArrowLeft className="w-4 h-4" />
-          First time here? Register for access
+          New here? Create your free account
         </button>
       </form>
     </div>

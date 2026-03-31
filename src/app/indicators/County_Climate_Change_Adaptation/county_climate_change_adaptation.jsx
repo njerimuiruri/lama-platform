@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, X, MapPin, Filter, Leaf, ChevronRight, Home, ChevronLeft, BarChart3, PieChart, TrendingUp, Activity, Target, Building2 } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function CountyDataViewer() {
     const [data, setData] = useState([]);
@@ -15,7 +17,7 @@ export default function CountyDataViewer() {
     const [showAllSectors, setShowAllSectors] = useState(false);
 
     useEffect(() => {
-        fetch('/documents/CountyClimateChangeAdaptationCleaned.json')
+        fetch('/api/indicators/ccap')
             .then(response => response.json())
             .then(jsonData => {
                 setData(jsonData);
@@ -393,14 +395,17 @@ export default function CountyDataViewer() {
                         </div>
 
                         {!selectedCounty && (
+                            <div className="flex items-center gap-2 w-full sm:w-auto">
+                            <DownloadButton dataset="ccap" label="Download CSV" />
                             <button
                                 onClick={() => setShowVisualization(true)}
-                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm w-full sm:w-auto justify-center"
+                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm flex-1 sm:flex-none justify-center"
                             >
                                 <PieChart className="w-4 h-4" />
                                 <span className="hidden sm:inline">View Analytics</span>
                                 <span className="sm:hidden">Analytics</span>
                             </button>
+                            </div>
                         )}
                     </div>
                 </div>
@@ -608,6 +613,7 @@ export default function CountyDataViewer() {
                         {/* Data Table */}
                         {filteredData.length > 0 ? (
                             <>
+                                <DataGate variant="table" label="County CCAP Table" description="Register for free to explore county-level climate change adaptation indicators.">
                                 <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-green-100">
                                     <div className="overflow-x-auto">
                                         <table className="w-full">
@@ -662,6 +668,7 @@ export default function CountyDataViewer() {
                                         </table>
                                     </div>
                                 </div>
+                                </DataGate>
 
                                 {/* Pagination */}
                                 {totalPages > 1 && (

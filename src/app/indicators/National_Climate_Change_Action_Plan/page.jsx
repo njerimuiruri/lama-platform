@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Grid3x3, List, FileText, TrendingUp, DollarSign, Target } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LamaFooter from '@/components/Footer/footer';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function NCCAPExplorer() {
     const [data, setData] = useState(null);
@@ -19,7 +20,7 @@ export default function NCCAPExplorer() {
 
     const loadData = async () => {
         try {
-            const response = await fetch('/documents/NCCAP.json');
+            const response = await fetch('/api/indicators/nccap');
             if (!response.ok) throw new Error('Failed to load NCCAP data');
 
             const jsonData = await response.json();
@@ -425,6 +426,7 @@ export default function NCCAPExplorer() {
 
                     {/* KPIs View with Budget & Funding */}
                     {selectedAction && (
+                        <DataGate variant="table" label="NCCAP Action KPIs & Budget" description="Register for free to explore the full KPI details, budgets, and funding sources for each priority action.">
                         <div>
                             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 mb-8 border-2 border-emerald-200 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -mr-32 -mt-32 opacity-30"></div>
@@ -538,6 +540,7 @@ export default function NCCAPExplorer() {
                                 </div>
                             </div>
                         </div>
+                        </DataGate>
                     )}
                 </div>
             </div>

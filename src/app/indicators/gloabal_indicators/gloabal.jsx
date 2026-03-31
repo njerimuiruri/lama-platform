@@ -1,9 +1,10 @@
 "use client";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity, Globe } from 'lucide-react';
-import indicatorsData from '../../../../public/documents/MergedIndicatorDatabase_NR.json';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function IndicatorDashboard() {
+    const [indicatorsData, setIndicatorsData] = useState([]);
     const [selectedSubmission, setSelectedSubmission] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,6 +12,13 @@ export default function IndicatorDashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [showInfographic, setShowInfographic] = useState(false);
     const [showAllOrganizations, setShowAllOrganizations] = useState(false);
+
+    useEffect(() => {
+        fetch('/api/indicators/global')
+            .then(r => r.json())
+            .then(data => Array.isArray(data) ? setIndicatorsData(data) : null)
+            .catch(() => {});
+    }, []);
 
     // Get unique submissions
     const submissions = useMemo(() => {
@@ -656,6 +664,7 @@ export default function IndicatorDashboard() {
                         <p className="text-gray-500">Try adjusting your filters or search term</p>
                     </div>
                 ) : (
+                    <DataGate variant="table" label="Global Indicators Database" description="Register for free to browse and explore the full global climate adaptation indicators database.">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {indicators.map((indicator, index) => (
                             <button
@@ -704,6 +713,7 @@ export default function IndicatorDashboard() {
                             </button>
                         ))}
                     </div>
+                    </DataGate>
                 )}
             </div>
 

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Grid3x3, List, FileText } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function CIDPExplorer() {
     const [data, setData] = useState(null);
@@ -17,7 +18,7 @@ export default function CIDPExplorer() {
 
     const loadData = async () => {
         try {
-            const response = await fetch('/documents/CIDPscleaned.json');
+            const response = await fetch('/api/indicators/cidps');
             if (!response.ok) throw new Error('Failed to load data');
 
             const jsonData = await response.json();
@@ -401,6 +402,7 @@ export default function CIDPExplorer() {
 
                 {/* Indicators View */}
                 {selectedPriority && (
+                    <DataGate variant="table" label="CIDP Indicators" description="Register for free to explore county-level development plan indicators and KPIs.">
                     <div>
                         <div className="bg-white/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-8 mb-4 sm:mb-8 border-2 border-emerald-200 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -mr-16 sm:-mr-32 -mt-16 sm:-mt-32 opacity-30"></div>
@@ -477,6 +479,7 @@ export default function CIDPExplorer() {
                             </div>
                         </div>
                     </div>
+                    </DataGate>
                 )}
             </div>
         </div>

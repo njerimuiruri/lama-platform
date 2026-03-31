@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, X, Globe, Filter, FileText, ChevronRight, Home, ChevronLeft, BarChart3, PieChart, Target, Activity, BookOpen, Calendar } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function NAPDataViewer() {
     const [data, setData] = useState([]);
@@ -16,7 +18,7 @@ export default function NAPDataViewer() {
     const [showAllThematics, setShowAllThematics] = useState(false);
 
     useEffect(() => {
-        fetch('/documents/naps.json')
+        fetch('/api/indicators/naps')
             .then(response => response.json())
             .then(jsonData => {
                 setData(jsonData);
@@ -462,14 +464,17 @@ export default function NAPDataViewer() {
                         </div>
 
                         {!selectedSource && (
+                            <div className="flex items-center gap-2 self-start sm:self-auto">
+                            <DownloadButton dataset="naps" label="Download CSV" />
                             <button
                                 onClick={() => setShowVisualization(true)}
-                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg sm:rounded-xl hover:shadow-lg transition-all font-medium text-sm self-start sm:self-auto"
+                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg sm:rounded-xl hover:shadow-lg transition-all font-medium text-sm"
                             >
                                 <PieChart className="w-4 h-4" />
                                 <span className="hidden xs:inline">View Analytics</span>
                                 <span className="xs:hidden">Analytics</span>
                             </button>
+                            </div>
                         )}
                     </div>
                 </div>
@@ -691,6 +696,7 @@ export default function NAPDataViewer() {
                         {/* Data Table */}
                         {filteredData.length > 0 ? (
                             <>
+                                <DataGate variant="table" label="NAP Indicators Table" description="Register for free to explore all National Adaptation Plan indicators with filters and search.">
                                 <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100">
                                     <div className="overflow-x-auto">
                                         <table className="w-full">
@@ -784,6 +790,7 @@ export default function NAPDataViewer() {
                                         </table>
                                     </div>
                                 </div>
+                                </DataGate>
 
                                 {/* Pagination */}
                                 {totalPages > 1 && (

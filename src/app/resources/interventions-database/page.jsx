@@ -24,6 +24,7 @@ import { Globe, DollarSign, MapPin, Activity, ChevronDown, ChevronUp, Search, Fi
 import projectsData from "../../../../data/data/projects.json";
 import LamaNavbar from "@/components/Navbar/navbar";
 import LamaFooter from "@/components/Footer/footer";
+import DataGate from "@/components/ContentGate/DataGate";
 
 // Dynamically import components with no SSR
 const ClimateMap = dynamic(() => import("@/components/ClimateMap"), {
@@ -599,6 +600,7 @@ export default function ClimateAdaptationDashboard() {
                     )}
 
                     {/* Projects Display with View Toggle */}
+                    <DataGate variant="table" label="Interventions Database" description="Register for free to browse the full climate adaptation interventions database with map view, filters, and export.">
                     <Card className="bg-white shadow-xl mb-8 border-0">
                         <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
                             <div className="flex items-center justify-between flex-wrap gap-4">
@@ -656,6 +658,7 @@ export default function ClimateAdaptationDashboard() {
                             </CardContent>
                         )}
                     </Card>
+                    </DataGate>
                 </div>
             </div>
             <LamaFooter />

@@ -89,15 +89,15 @@ export default function FullFormModal({ onUnlock, onSwitchMode }) {
             <Lock className="w-5 h-5 text-white" />
           </div>
           <span className="text-sm font-medium uppercase tracking-wide text-green-100">
-            Premium Content
+            Africa&apos;s Climate Adaptation Hub
           </span>
         </div>
         <h2 className="text-2xl font-bold leading-tight">
-          Unlock Full Access to LAMA Platform
+          Access the Full LAMA Knowledge Base
         </h2>
         <p className="mt-2 text-green-100 text-sm leading-relaxed">
-          Join researchers, policymakers, and development practitioners accessing
-          climate adaptation data across Africa.
+          Tell us who you are and get instant access to climate adaptation
+          indicators, datasets, and dashboards spanning 54 African countries.
         </p>
       </div>
 
@@ -256,11 +256,11 @@ export default function FullFormModal({ onUnlock, onSwitchMode }) {
           {loading ? (
             <>
               <Loader2 className="w-4 h-4 animate-spin" />
-              Processing...
+              Setting up your access...
             </>
           ) : (
             <>
-              Continue Viewing
+              Get Free Access
               <ChevronRight className="w-4 h-4" />
             </>
           )}
@@ -268,13 +268,13 @@ export default function FullFormModal({ onUnlock, onSwitchMode }) {
 
         {/* Already registered link */}
         <p className="text-center text-sm text-gray-500 pb-2">
-          Already registered?{' '}
+          Visited before?{' '}
           <button
             type="button"
             onClick={onSwitchMode}
             className="text-green-700 hover:text-green-800 font-semibold underline underline-offset-2 transition-colors"
           >
-            Enter your email to unlock
+            Sign in with your email
           </button>
         </p>
       </form>

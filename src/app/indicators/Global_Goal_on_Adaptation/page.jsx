@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Filter, Grid3x3, List } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LamaFooter from '@/components/Footer/footer';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function ClimateIndicatorsExplorer() {
     const [data, setData] = useState(null);
@@ -15,7 +16,7 @@ export default function ClimateIndicatorsExplorer() {
 
     const loadData = useCallback(async () => {
         try {
-            const response = await fetch('/documents/indicators.json');
+            const response = await fetch('/api/indicators/gga');
             if (!response.ok) throw new Error('Failed to load indicators.json');
 
             const jsonData = await response.json();
@@ -482,6 +483,7 @@ export default function ClimateIndicatorsExplorer() {
                                 </div>
                             </div>
 
+                            <DataGate variant="table" label="GGA Indicator Details" description="Register for free to explore the full Global Goal on Adaptation indicator details.">
                             <div className="overflow-x-auto">
                                 <table className="w-full">
                                     <thead>
@@ -518,6 +520,7 @@ export default function ClimateIndicatorsExplorer() {
                                     </tbody>
                                 </table>
                             </div>
+                            </DataGate>
                         </div>
                     )}
                 </div>
