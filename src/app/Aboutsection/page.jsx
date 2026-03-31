@@ -136,7 +136,7 @@ const DataPlatformsSection = () => {
                                 <div className="p-6 bg-gray-50 border-t-2 border-gray-100">
                                     <div className="flex items-center gap-2 mb-4">
                                         <Sparkles className="w-4 h-4 text-emerald-600" />
-                                        <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide">What's inside</h4>
+                                        <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide">What&apos;s inside</h4>
                                     </div>
                                     <div className="space-y-2">
                                         {platform.features.map((feature, idx) => (
