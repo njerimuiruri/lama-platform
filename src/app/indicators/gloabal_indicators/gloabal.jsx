@@ -5,6 +5,7 @@ import DataGate from '@/components/ContentGate/DataGate';
 
 export default function IndicatorDashboard() {
     const [indicatorsData, setIndicatorsData] = useState([]);
+    const [loading, setLoading] = useState(true); // ✅ FIXED: added missing loading state
     const [selectedSubmission, setSelectedSubmission] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -276,7 +277,6 @@ export default function IndicatorDashboard() {
                             </div>
                         </div>
 
-                        {/* Explanation */}
                         <div className="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
                             <p className="text-sm text-gray-700 leading-relaxed">
                                 This chart shows how indicators are distributed across different submitting organizations.
@@ -311,7 +311,6 @@ export default function IndicatorDashboard() {
                                 })}
                         </div>
 
-                        {/* See More/Less Button */}
                         {Object.entries(statistics.submissionCounts).length > 5 && (
                             <div className="mt-6 text-center">
                                 <button
@@ -348,7 +347,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             </div>
 
-                            {/* Explanation */}
                             <div className="mb-6 p-4 bg-green-50 border-l-4 border-[#0d9c5a] rounded-r-lg">
                                 <p className="text-sm text-gray-700 leading-relaxed">
                                     Thematic targets represent key focus areas for climate adaptation. This visualization shows
@@ -392,7 +390,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             </div>
 
-                            {/* Explanation */}
                             <div className="mb-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
                                 <p className="text-sm text-gray-700 leading-relaxed">
                                     Target 9b focuses on food and agriculture. This chart breaks down indicator coverage across
@@ -437,7 +434,6 @@ export default function IndicatorDashboard() {
                             </div>
                         </div>
 
-                        {/* Explanation */}
                         <div className="mb-6 p-4 bg-emerald-50 border-l-4 border-emerald-500 rounded-r-lg">
                             <p className="text-sm text-gray-700 leading-relaxed">
                                 This section maps indicators to the Global Goal on Adaptation (GGA) framework. It shows how indicators
@@ -495,7 +491,6 @@ export default function IndicatorDashboard() {
                             <span className="text-sm font-medium">Select a submission to begin</span>
                         </div>
 
-                        {/* Visualization Button */}
                         <button
                             onClick={() => setShowInfographic(true)}
                             className="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#0d9c5a] to-[#10b66d] text-white rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
@@ -506,7 +501,7 @@ export default function IndicatorDashboard() {
                         </button>
                     </div>
 
-                    {/* ── About & How-to Banner ── */}
+                    {/* About & How-to Banner */}
                     <div className="mb-10 bg-white border-2 border-green-200 rounded-2xl overflow-hidden shadow-sm text-left">
                         <div className="bg-gradient-to-r from-[#0d9c5a] to-[#10b66d] px-5 sm:px-6 py-4 flex items-center gap-3">
                             <Globe className="w-5 h-5 text-white flex-shrink-0" />
@@ -598,13 +593,9 @@ export default function IndicatorDashboard() {
 
     // Step 2: View Indicators
     return (
-
-
-
-
         <div className="min-h-screen bg-gradient-to-br from-[#eefdf5] via-[#f0fdf4] to-[#dcfce7]">
             {/* Header */}
-            <div className="bg-white/80 backdrop-blur-md border-b border-[#0d9c5a]/20  top-0 z-20 shadow-sm">
+            <div className="bg-white/80 backdrop-blur-md border-b border-[#0d9c5a]/20 top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-6 py-6">
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-4">
@@ -770,7 +761,6 @@ export default function IndicatorDashboard() {
 
                         {/* Modal Content */}
                         <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                            {/* Basic Information */}
                             {hasValue(selectedIndicator.Definition) && (
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
@@ -783,7 +773,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             )}
 
-                            {/* Thematic Targets */}
                             {getThematicTargets(selectedIndicator).length > 0 && (
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
@@ -803,7 +792,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             )}
 
-                            {/* Target 9b Relevance */}
                             {getTarget9bData(selectedIndicator).length > 0 && (
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
@@ -823,7 +811,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             )}
 
-                            {/* Adaptation Relevance */}
                             <div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
                                     <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center">
@@ -844,7 +831,6 @@ export default function IndicatorDashboard() {
                                 </div>
                             </div>
 
-                            {/* Additional Fields */}
                             {hasValue(selectedIndicator.Unit) && (
                                 <div className="p-4 bg-gray-50 rounded-lg">
                                     <h4 className="font-semibold text-gray-800 mb-1">Unit</h4>
@@ -864,5 +850,4 @@ export default function IndicatorDashboard() {
             )}
         </div>
     );
-
 }
