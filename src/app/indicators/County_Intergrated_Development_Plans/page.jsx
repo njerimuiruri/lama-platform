@@ -19,7 +19,6 @@ export default function CIDPExplorer() {
     const loadData = async () => {
         try {
             const response = await fetch('/api/indicators/cidps');
-            const response = await fetch('/api/indicators/cidps');
             if (!response.ok) throw new Error('Failed to load data');
 
             const jsonData = await response.json();
