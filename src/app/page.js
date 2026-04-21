@@ -6,11 +6,13 @@ import BlogsPage from "./blogssection/page";
 import LamaFooter from "@/components/Footer/footer";
 import ResearchQuestionsSection from "./researchquestions/page";
 import LockedSection from "@/components/ContentGate/LockedSection";
+import UpcomingEventsBanner from "@/components/UpcomingEventsBanner/UpcomingEventsBanner";
 
 export default function Home() {
   return (
     <>
       <LamaNavbar />
+      <UpcomingEventsBanner />
 
       {/* Always visible — HeroSection + Introducing LAMA + Why LAMA Matters */}
       <HeroSection />

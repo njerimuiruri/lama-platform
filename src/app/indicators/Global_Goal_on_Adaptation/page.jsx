@@ -15,7 +15,7 @@ export default function ClimateIndicatorsExplorer() {
 
     const loadData = useCallback(async () => {
         try {
-            const response = await fetch('/documents/indicators.json');
+            const response = await fetch('/api/indicators/gga');
             if (!response.ok) throw new Error('Failed to load indicators.json');
 
             const jsonData = await response.json();
@@ -183,8 +183,8 @@ export default function ClimateIndicatorsExplorer() {
             <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
                 {/* Enhanced Header */}
                 <div className="bg-white/80 backdrop-blur-lg border-b border-emerald-100 shadow-lg">
-                    <div className="max-w-7xl mx-auto px-6 py-6">
-                        <div className="flex items-center justify-between mb-6">
+                    <div className="max-w-7xl mx-auto px-6 py-3">
+                        <div className="flex items-center justify-between mb-3">
                             <div className="flex items-center gap-4">
                                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-xl">
                                     <Layers className="w-7 h-7 text-white" />

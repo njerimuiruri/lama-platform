@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Grid3x3, List, FileText } from 'lucide-react';
+import LamaNavbar from '@/components/Navbar/navbar';
 
 export default function CIDPExplorer() {
     const [data, setData] = useState(null);
@@ -17,7 +18,7 @@ export default function CIDPExplorer() {
 
     const loadData = async () => {
         try {
-            const response = await fetch('/documents/CIDPscleaned.json');
+            const response = await fetch('/api/indicators/cidps');
             if (!response.ok) throw new Error('Failed to load data');
 
             const jsonData = await response.json();
@@ -125,11 +126,13 @@ export default function CIDPExplorer() {
     }
 
     return (
+        <>
+        <LamaNavbar />
         <div className="min-h-screen bg-[#eefdf5]">
             {/* Header */}
-            <div className="bg-white/90 backdrop-blur-lg border-b border-emerald-200 shadow-lg sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4 sm:mb-6">
+            <div className="bg-white/90 backdrop-blur-lg border-b border-emerald-200 shadow-sm">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3 sm:mb-3">
                         <div className="flex items-center gap-3 sm:gap-4">
                             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
                                 <FileText className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
@@ -417,5 +420,6 @@ export default function CIDPExplorer() {
                 )}
             </div>
         </div>
+        </>
     );
 }

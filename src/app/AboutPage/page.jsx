@@ -127,35 +127,26 @@ const AboutPage = () => {
                         <div className="container mx-auto px-4 sm:px-6">
                             <div className="max-w-7xl mx-auto">
                                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                                    {/* Content Section */}
-                                    <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
+                                    <div className="space-y-6 order-2 lg:order-1">
                                         <div className="inline-flex items-center gap-2 bg-white border border-green-200 rounded-full px-3 sm:px-4 py-2">
                                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                            <span className="text-green-700 text-xs sm:text-sm font-medium">
-                                                About LAMA Platform
-                                            </span>
+                                            <span className="text-green-700 text-xs sm:text-sm font-medium">About LAMA Platform · IDRC-Funded</span>
                                         </div>
 
-                                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">
+                                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
                                             Bridging the Gap Between
                                             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent block">
                                                 Adaptation Needs & Investment
                                             </span>
                                         </h1>
 
-                                        <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
-                                            <p>
-                                                Despite growing interest in accelerating locally led adaptation (LLA), evidence on effective interventions, vulnerability-specific approaches, and investment opportunities remains scarce. This gap is primarily due to the absence of dedicated bottom-up indicators or community-led frameworks and metrics.
-                                            </p>
-                                            <p className="hidden sm:block">
-                                                Africa currently hosts numerous adaptation interventions and projects, each operating in isolation, hindered by geographical, linguistic, ethnic, sectoral, and disciplinary disparities. The LAMA Platform addresses this challenge by fostering learning and consolidation of locally led adaptation indicators across Africa.
-                                            </p>
-                                        </div>
+                                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                                            LAMA is an IDRC-funded programme that builds a shared platform for measuring, learning from, and scaling locally led climate adaptation across Africa.
+                                        </p>
                                     </div>
 
-                                    {/* Image Section */}
                                     <div className="relative order-1 lg:order-2">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-2xl sm:rounded-3xl transform rotate-2 sm:rotate-3"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-2xl sm:rounded-3xl transform rotate-3"></div>
                                         <div className="relative bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl">
                                             <img
                                                 src="/images/fgd1.jpg"
@@ -169,66 +160,48 @@ const AboutPage = () => {
                         </div>
                     </section>
 
-                    {/* The Challenge Section */}
+                    {/* Problem → Challenge → Solution */}
                     <section className="py-12 sm:py-16 lg:py-20">
                         <div className="container mx-auto px-4 sm:px-6">
                             <div className="max-w-6xl mx-auto">
-                                <div className="text-center mb-12 sm:mb-16">
-                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                                        The <span className="text-green-600">Challenge</span> We Address
+                                <div className="text-center mb-10 sm:mb-14">
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                                        Why <span className="text-green-600">LAMA</span> Exists
                                     </h2>
-                                    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                                        Understanding the critical gaps in locally led adaptation measurement and reporting
-                                    </p>
                                 </div>
 
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 sm:p-8 border border-red-100">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                                            Current Reality
-                                        </h3>
-                                        <ul className="space-y-3 text-gray-700">
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Absence of dedicated bottom-up indicators or community-led frameworks</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Projects operate in isolation with limited scope assessment frameworks</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Evaluations confined to project periods, rarely shared or integrated</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Geographical, linguistic, and sectoral disparities hinder collaboration</span>
-                                            </li>
-                                        </ul>
+                                <div className="grid md:grid-cols-3 gap-6">
+                                    {/* The Problem */}
+                                    <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
+                                        <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                                            <span className="text-red-600 font-black text-lg">!</span>
+                                        </div>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-3">The Problem</h3>
+                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                            Africa has hundreds of local climate adaptation projects — but they work in isolation. There is no shared way to measure what works, who it works for, or how much it costs.
+                                        </p>
                                     </div>
 
-                                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-100">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                                            LAMA Solution
-                                        </h3>
-                                        <ul className="space-y-3 text-gray-700">
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Establish a comprehensive platform for learning and consolidation of LLA indicators</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Convene stakeholders to facilitate sharing of experiences, tools, and indicators</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Develop locally led frameworks to inform Global Goal on Adaptation (GGA)</span>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                                                <span>Bridge the gap between adaptation needs and investment opportunities</span>
-                                            </li>
-                                        </ul>
+                                    {/* The Challenge */}
+                                    <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6">
+                                        <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                                            <span className="text-amber-600 font-black text-lg">?</span>
+                                        </div>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-3">The Challenge</h3>
+                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                            Funding decisions are made without community voices. Bottom-up indicators — those that reflect what vulnerable people actually need — are missing from national and global frameworks like NAPs, NDCs, and the GGA.
+                                        </p>
+                                    </div>
+
+                                    {/* The Solution */}
+                                    <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
+                                        <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                                            <span className="text-green-600 font-black text-lg">✓</span>
+                                        </div>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-3">The Solution</h3>
+                                        <p className="text-gray-700 text-sm leading-relaxed">
+                                            LAMA consolidates locally led adaptation data into one accessible platform. It connects community-level evidence to national and global policy, making it easier to track, fund, and scale what works.
+                                        </p>
                                     </div>
                                 </div>
                             </div>

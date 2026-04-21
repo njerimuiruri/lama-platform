@@ -10,9 +10,8 @@ export default function LAMAIndicatorViewer() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Load data from JSON file
     useEffect(() => {
-        fetch('/documents/lla.json')
+        fetch('/api/indicators/lla')
             .then(response => {
                 if (!response.ok) throw new Error('Failed to load data');
                 return response.json();
@@ -22,7 +21,7 @@ export default function LAMAIndicatorViewer() {
                 setLoading(false);
             })
             .catch(err => {
-                console.error('Error loading data:', err);
+                console.error('Error loading LLA data:', err);
                 setError(err.message);
                 setLoading(false);
             });
@@ -175,7 +174,7 @@ export default function LAMAIndicatorViewer() {
                     <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Error Loading Data</h2>
                     <p className="text-gray-600 mb-4">{error}</p>
-                    <p className="text-sm text-gray-500">Please ensure /lla.json file exists and is accessible.</p>
+                    <p className="text-sm text-gray-500">Please check your connection and try refreshing the page.</p>
                 </div>
             </div>
         );

@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ContentGateProvider } from "@/components/ContentGate/ContentGateContext";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <ContentGateProvider>{children}</ContentGateProvider>
+        <ScrollToTop />
       </body>
     </html>
   );

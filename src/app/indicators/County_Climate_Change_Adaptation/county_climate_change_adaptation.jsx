@@ -15,7 +15,7 @@ export default function CountyDataViewer() {
     const [showAllSectors, setShowAllSectors] = useState(false);
 
     useEffect(() => {
-        fetch('/documents/CountyClimateChangeAdaptationCleaned.json')
+        fetch('/api/indicators/ccap')
             .then(response => response.json())
             .then(jsonData => {
                 setData(jsonData);

@@ -142,26 +142,28 @@ const LAMAHeroSection = () => {
 
                     <div className="space-y-8">
 
-                        <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span className="text-green-700 text-sm font-medium">Locally-Led Adaptation Metrics for Africa</span>
+                        <div className="flex flex-wrap items-center gap-3">
+                            <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span className="text-green-700 text-sm font-medium">IDRC-Funded Programme</span>
+                            </div>
                         </div>
 
                         <div className="space-y-4">
-                            <h1 className="text-4xl lg:text-6xl font-black text-gray-900 leading-tight">
+                            <h1 className="text-4xl lg:text-5xl font-black text-gray-900 leading-[1.15]">
                                 <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                                    Locally-Led Adaptation
+                                    Locally Led Adaptation
                                 </span>
                                 <br />
-                                <span className="text-gray-800">Metrics for Africa</span>
-                                <br />
-                                <span className="text-2xl lg:text-3xl font-bold text-green-600">(LAMA)</span>
+                                <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                                    Metrics for Africa Platform
+                                </span>
+                                <span className="text-gray-800"> (LAMA)</span>
                             </h1>
 
                             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-lg">
-                                <em>Aim to develop indicators that capture the effectiveness and inclusiveness of adaptation strategies at the community level.</em>
+                                <em>Aims to develop indicators that capture the effectiveness and inclusiveness of adaptation strategies at the community level.</em>
                             </p>
-
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">

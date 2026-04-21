@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Database, Network, BarChart3, Lightbulb, ArrowRight, Users, Globe, CheckCircle, Zap } from 'lucide-react';
+import { Database, Network, BarChart3, Lightbulb, ArrowRight, Users, Globe, CheckCircle, Zap, Map, BookOpen, Wrench, LayoutDashboard } from 'lucide-react';
 import Link from 'next/link';
+import LamaNavbar from '@/components/Navbar/navbar';
 
 const ComponentsPage = () => {
     const mainComponents = [
@@ -81,18 +82,75 @@ const ComponentsPage = () => {
         }
     ];
 
+    const quickActions = [
+        {
+            icon: <LayoutDashboard className="w-6 h-6" />,
+            title: "Interactive Dashboard",
+            description: "Explore charts and data visualisations across all indicators",
+            href: "/dashboard/sitedashboard",
+            color: "from-green-500 to-emerald-600",
+        },
+        {
+            icon: <BookOpen className="w-6 h-6" />,
+            title: "LLA Interventions Database",
+            description: "Browse the full database of locally led adaptation interventions",
+            href: "/resources/interventions-database",
+            color: "from-blue-500 to-cyan-600",
+        },
+        {
+            icon: <Wrench className="w-6 h-6" />,
+            title: "Tools & Frameworks",
+            description: "Access methodologies, toolkits, and assessment frameworks",
+            href: "/resources/tools-frameworks",
+            color: "from-purple-500 to-indigo-600",
+        },
+        {
+            icon: <Map className="w-6 h-6" />,
+            title: "Intervention Dashboard",
+            description: "View projects on an interactive map across Africa",
+            href: "/resources/interventions-database",
+            color: "from-orange-500 to-red-500",
+        },
+    ];
+
     return (
         <div className="min-h-screen bg-white">
+            <LamaNavbar />
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-white py-20">
+            <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-white py-8">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                             Platform <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Components</span>
                         </h1>
-                        <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-light">
+                        <p className="text-base text-gray-600 leading-relaxed">
                             Interconnected tools and systems supporting locally led adaptation across Africa
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Quick Actions */}
+            <section className="py-12 bg-white border-b border-gray-100">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Quick Actions</h2>
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {quickActions.map((action, i) => (
+                                <Link key={i} href={action.href}>
+                                    <div className="group bg-white border-2 border-gray-100 hover:border-green-300 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer h-full">
+                                        <div className={`inline-flex p-3 bg-gradient-to-r ${action.color} rounded-xl text-white mb-4 group-hover:scale-110 transition-transform duration-200`}>
+                                            {action.icon}
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-green-700 transition-colors">{action.title}</h3>
+                                        <p className="text-xs text-gray-500 leading-relaxed">{action.description}</p>
+                                        <div className="flex items-center gap-1 mt-3 text-green-600 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                                            Open <ArrowRight className="w-3 h-3" />
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

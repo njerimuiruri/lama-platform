@@ -16,7 +16,7 @@ export default function NAPDataViewer() {
     const [showAllThematics, setShowAllThematics] = useState(false);
 
     useEffect(() => {
-        fetch('/documents/naps.json')
+        fetch('/api/indicators/naps')
             .then(response => response.json())
             .then(jsonData => {
                 setData(jsonData);

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, Layers, TrendingUp, Target, Sparkles, BarChart3, Globe, Zap } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
+import PlatformSubNav from '@/components/PlatformSubNav/PlatformSubNav';
 import LamaFooter from '@/components/Footer/footer';
 
 export default function AdaptationToolsFramework() {
@@ -45,6 +46,7 @@ export default function AdaptationToolsFramework() {
 
         <>
             <LamaNavbar />
+            <PlatformSubNav />
             <div className="min-h-screen bg-gradient-to-br from-[#eefdf5] via-white to-emerald-50 relative overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#eefdf5] rounded-full blur-3xl opacity-40 animate-pulse"></div>

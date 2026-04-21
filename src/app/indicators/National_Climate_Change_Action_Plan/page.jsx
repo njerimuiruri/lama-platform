@@ -19,7 +19,7 @@ export default function NCCAPExplorer() {
 
     const loadData = async () => {
         try {
-            const response = await fetch('/documents/NCCAP.json');
+            const response = await fetch('/api/indicators/nccap');
             if (!response.ok) throw new Error('Failed to load NCCAP data');
 
             const jsonData = await response.json();
@@ -152,8 +152,8 @@ export default function NCCAPExplorer() {
             <div className="min-h-screen bg-[#eefdf5]">
                 {/* Header */}
                 <div className="bg-white/90 backdrop-blur-lg border-b border-emerald-200 shadow-lg  top-0 z-50">
-                    <div className="max-w-7xl mx-auto px-6 py-6">
-                        <div className="flex items-center justify-between mb-6">
+                    <div className="max-w-7xl mx-auto px-6 py-3">
+                        <div className="flex items-center justify-between mb-3">
                             <div className="flex items-center gap-4">
                                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl flex items-center justify-center shadow-xl">
                                     <Target className="w-7 h-7 text-white" />

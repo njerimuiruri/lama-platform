@@ -1,9 +1,10 @@
 "use client";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity } from 'lucide-react';
-import indicatorsData from '../../../../public/documents/MergedIndicatorDatabase_NR.json';
 
 export default function IndicatorDashboard() {
+    const [indicatorsData, setIndicatorsData] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [selectedSubmission, setSelectedSubmission] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,6 +12,13 @@ export default function IndicatorDashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [showInfographic, setShowInfographic] = useState(false);
     const [showAllOrganizations, setShowAllOrganizations] = useState(false);
+
+    useEffect(() => {
+        fetch('/api/indicators/global')
+            .then(res => res.json())
+            .then(data => { setIndicatorsData(data); setLoading(false); })
+            .catch(() => setLoading(false));
+    }, []);
 
     // Get unique submissions
     const submissions = useMemo(() => {
@@ -118,7 +126,7 @@ export default function IndicatorDashboard() {
             target9b,
             adaptationRelevance
         };
-    }, []);
+    }, [indicatorsData]);
 
     // Helper to check if a field has a value
     const hasValue = (value) => value && value !== '' && value !== 'NA';
@@ -174,6 +182,17 @@ export default function IndicatorDashboard() {
         setSelectedIndicator(indicator);
         setIsModalOpen(true);
     };
+
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#eefdf5] via-[#f0fdf4] to-[#dcfce7]">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-[#0d9c5a] mx-auto mb-4"></div>
+                    <p className="text-gray-700 text-lg font-medium">Loading Indicators...</p>
+                </div>
+            </div>
+        );
+    }
 
     // Infographic View
     if (showInfographic) {

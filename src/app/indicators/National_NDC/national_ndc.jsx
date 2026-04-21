@@ -16,7 +16,7 @@ export default function NDCDataViewer() {
     const [showAllThematics, setShowAllThematics] = useState(false);
 
     useEffect(() => {
-        fetch('/documents/ndc.json')
+        fetch('/api/indicators/ndc')
             .then(response => response.json())
             .then(jsonData => {
                 setData(jsonData);

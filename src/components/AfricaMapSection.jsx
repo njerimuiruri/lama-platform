@@ -10,8 +10,8 @@ import {
 import Image from 'next/image';
 import {
     Globe, DollarSign, MapPin, TrendingUp, ArrowRight, Info,
-    Shield, Eye, Layers, Award, Target, Users, BookOpen,
-    Sparkles, CheckCircle2
+    Shield, Eye, Layers, Award, Users, BookOpen,
+    Sparkles, CheckCircle2, X, Calendar, Tag, Activity
 } from 'lucide-react';
 
 const GEO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
@@ -359,7 +359,7 @@ const AfricaMapSection = ({ projects = [], mode = 'full' }) => {
                                     </div>
                                     <div className="flex items-start gap-3 min-w-[200px]">
                                         <Info className="w-8 h-8 text-[#0d9c5a] flex-shrink-0 mt-0.5" />
-                                        <p className="text-sm text-gray-700"><strong className="text-gray-900">Hover or click</strong> on any highlighted country or circle to see full details — no technical knowledge needed</p>
+                                        <p className="text-sm text-gray-700"><strong className="text-gray-900">Click</strong> any country or circle to see all projects there — a full list expands below the map</p>
                                     </div>
                                 </div>
 
@@ -506,6 +506,103 @@ const AfricaMapSection = ({ projects = [], mode = 'full' }) => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* ── Country Projects Panel ─────────────────────────────────── */}
+                            {selectedCountry && (() => {
+                                const d = countryData[selectedCountry];
+                                if (!d) return null;
+                                return (
+                                    <div className="mb-8 bg-white rounded-2xl shadow-xl border-2 border-[#0d9c5a] overflow-hidden animate-fadeIn">
+                                        {/* Panel header */}
+                                        <div className="flex items-center justify-between bg-gradient-to-r from-[#0d9c5a] to-emerald-600 px-6 py-4">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                                                    <MapPin className="w-5 h-5 text-white" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-white font-black text-lg leading-tight">{selectedCountry}</h3>
+                                                    <p className="text-green-100 text-sm">
+                                                        {d.count} project{d.count !== 1 ? 's' : ''} · ${d.funding.toFixed(1)}M invested · {d.region}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={() => setSelectedCountry(null)}
+                                                className="text-white/70 hover:text-white transition-colors p-1"
+                                                aria-label="Close"
+                                            >
+                                                <X className="w-6 h-6" />
+                                            </button>
+                                        </div>
+
+                                        {/* Stats row */}
+                                        <div className="grid grid-cols-3 divide-x divide-gray-100 border-b border-gray-100">
+                                            {[
+                                                { icon: Activity, label: 'Projects', value: d.count },
+                                                { icon: DollarSign, label: 'Total invested', value: `$${d.funding.toFixed(1)}M` },
+                                                { icon: Globe, label: 'Region', value: d.region },
+                                            ].map(({ icon: Icon, label, value }) => (
+                                                <div key={label} className="flex items-center gap-3 px-6 py-4">
+                                                    <div className="w-8 h-8 bg-[#eefdf5] rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <Icon className="w-4 h-4 text-[#0d9c5a]" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-xs text-gray-400">{label}</p>
+                                                        <p className="font-bold text-gray-900 text-sm">{value}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Project list */}
+                                        <div className="divide-y divide-gray-100 max-h-[480px] overflow-y-auto">
+                                            {d.projects.map((proj, i) => (
+                                                <div key={i} className="px-6 py-5 hover:bg-[#eefdf5] transition-colors">
+                                                    <div className="flex items-start gap-3 mb-3">
+                                                        <span className="w-6 h-6 bg-[#0d9c5a] rounded-full text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                            {i + 1}
+                                                        </span>
+                                                        <h4 className="font-bold text-gray-900 text-sm leading-snug">
+                                                            {proj['Adaptation Interventions']}
+                                                        </h4>
+                                                    </div>
+                                                    <div className="ml-9 flex flex-wrap gap-x-6 gap-y-1.5 text-xs text-gray-500">
+                                                        {proj['Thematic Area(s)'] && (
+                                                            <span className="flex items-center gap-1">
+                                                                <Tag className="w-3 h-3 text-[#0d9c5a]" />
+                                                                {proj['Thematic Area(s)']}
+                                                            </span>
+                                                        )}
+                                                        {proj.Funders && (
+                                                            <span className="flex items-center gap-1">
+                                                                <Users className="w-3 h-3 text-[#0d9c5a]" />
+                                                                {proj.Funders}
+                                                            </span>
+                                                        )}
+                                                        {proj.Period && (
+                                                            <span className="flex items-center gap-1">
+                                                                <Calendar className="w-3 h-3 text-[#0d9c5a]" />
+                                                                {proj.Period}
+                                                            </span>
+                                                        )}
+                                                        {proj['Project Amount ($ Million)'] && (
+                                                            <span className="flex items-center gap-1">
+                                                                <DollarSign className="w-3 h-3 text-[#0d9c5a]" />
+                                                                ${proj['Project Amount ($ Million)']}M
+                                                            </span>
+                                                        )}
+                                                        {proj['Implementation Status'] && (
+                                                            <span className={`px-2 py-0.5 rounded-full font-semibold ${proj['Implementation Status'] === 'Under Implementation' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                                                                {proj['Implementation Status']}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })()}
 
                             {/* Where is the work happening + Which countries lead */}
                             <div className="grid lg:grid-cols-2 gap-8 mb-12">

@@ -52,8 +52,8 @@ const LamaNavbar = () => {
       href: "/AboutPage",
     },
     {
-      name: "Program",
-      icon: <GraduationCap className="w-4 h-4" />,
+      name: "Events",
+      icon: <Calendar className="w-4 h-4" />,
       href: "/programmes",
     },
     {

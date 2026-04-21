@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo, lazy, Suspense, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import dynamic from 'next/dynamic';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -23,23 +23,21 @@ import { Button } from "@/components/ui/button";
 import { Globe, DollarSign, MapPin, Activity, ChevronDown, ChevronUp, Search, Filter, X, Table as TableIcon, List } from "lucide-react";
 import projectsData from "../../../../data/data/projects.json";
 import LamaNavbar from "@/components/Navbar/navbar";
+import PlatformSubNav from "@/components/PlatformSubNav/PlatformSubNav";
 import LamaFooter from "@/components/Footer/footer";
 
-// Dynamically import components with no SSR
-const ClimateMap = dynamic(() => import("@/components/ClimateMap"), {
+// Dynamically import InterventionsMap with no SSR
+const InterventionsMap = dynamic(() => import("@/components/InterventionsMap/InterventionsMap"), {
     ssr: false,
-    loading: () => <MapLoader />
-});
-
-// Loading component for the map
-const MapLoader = () => (
-    <div className="h-[600px] w-full bg-gradient-to-br from-blue-50 to-green-50 rounded-xl flex items-center justify-center">
-        <div className="text-center space-y-3">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="text-gray-600 font-medium">Loading interactive map...</p>
+    loading: () => (
+        <div className="h-[600px] w-full bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl flex items-center justify-center">
+            <div className="text-center space-y-3">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+                <p className="text-gray-600 font-medium">Loading interactive map...</p>
+            </div>
         </div>
-    </div>
-);
+    ),
+});
 
 export default function ClimateAdaptationDashboard() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -376,6 +374,7 @@ export default function ClimateAdaptationDashboard() {
     return (
         <>
             <LamaNavbar />
+            <PlatformSubNav />
 
             <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
                 <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -593,7 +592,7 @@ export default function ClimateAdaptationDashboard() {
                                 </div>
                             </CardHeader>
                             <CardContent className="p-6">
-                                <ClimateMap projects={filteredProjects} hoveredProject={hoveredProject} />
+                                <InterventionsMap projects={filteredProjects} />
                             </CardContent>
                         </Card>
                     )}
