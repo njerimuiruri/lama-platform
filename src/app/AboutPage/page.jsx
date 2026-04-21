@@ -178,7 +178,7 @@ const AboutPage = () => {
                                         </div>
                                         <h3 className="text-lg font-bold text-gray-900 mb-3">The Problem</h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            Africa has hundreds of local climate adaptation projects — but they work in isolation. There is no shared way to measure what works, who it works for, or how much it costs.
+                                            Africa has hundreds of local climate adaptation projects , but they work in isolation. There is no shared way to measure what works, who it works for, or how much it costs.
                                         </p>
                                     </div>
 
@@ -189,7 +189,7 @@ const AboutPage = () => {
                                         </div>
                                         <h3 className="text-lg font-bold text-gray-900 mb-3">The Challenge</h3>
                                         <p className="text-gray-700 text-sm leading-relaxed">
-                                            Funding decisions are made without community voices. Bottom-up indicators — those that reflect what vulnerable people actually need — are missing from national and global frameworks like NAPs, NDCs, and the GGA.
+                                            Funding decisions are made without community voices. Bottom-up indicators , those that reflect what vulnerable people actually need , are missing from national and global frameworks like NAPs, NDCs, and the GGA.
                                         </p>
                                     </div>
 

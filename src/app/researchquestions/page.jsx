@@ -49,7 +49,7 @@ const ResearchQuestionsSection = () => {
                         </h2>
 
                         <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-                            Our research is driven by critical questions that help us understand and improve locally led adaptation metrics for small-scale fisheries and vulnerable communities
+                            Our research is driven by critical questions that help us understand and improve locally led adaptation metrics for small-scale farmers and vulnerable communities
                         </p>
                     </div>
 

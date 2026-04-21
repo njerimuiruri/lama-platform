@@ -165,8 +165,8 @@ const AfricaMapSection = ({ projects = [], mode = 'full' }) => {
 
     const features = [
         { icon: Shield, title: 'Equity & Inclusivity', description: 'Co-creating metrics with vulnerable communities to ensure their voices shape adaptation strategies', stat: '50% of 1.5B', statLabel: 'vulnerable farmers', color: 'from-emerald-500 to-green-600' },
-        { icon: Eye, title: 'Real-time Tracking', description: 'Monitor expenditures, budget allocation, and policy integration with transparent, accessible dashboards', stat: 'Live Data', statLabel: 'tracking system', color: 'from-blue-500 to-cyan-600' },
-        { icon: Layers, title: 'Knowledge Sharing', description: 'Simplified presentation of indicators, sectors, and budgets — your one-stop shop for LLA resources', stat: 'All-in-One', statLabel: 'platform hub', color: 'from-purple-500 to-pink-600' },
+        { icon: Eye, title: 'Real-time Tracking & Reporting', description: 'Monitor expenditures, budget allocation, and policy integration with transparent, accessible dashboards', stat: 'Live Data', statLabel: 'tracking system', color: 'from-blue-500 to-cyan-600' },
+        { icon: Layers, title: 'Knowledge Sharing and Learning', description: 'Simplified presentation of indicators, sectors, and budgets — your one-stop shop for LLA resources', stat: 'All-in-One', statLabel: 'platform hub', color: 'from-purple-500 to-pink-600' },
         { icon: Award, title: 'Expert Network', description: 'Guided by 10+ African adaptation experts linking local metrics to global frameworks', stat: '10+ Experts', statLabel: 'advisory group', color: 'from-orange-500 to-red-600' },
     ];
 
@@ -269,7 +269,7 @@ const AfricaMapSection = ({ projects = [], mode = 'full' }) => {
                         <section className="mb-20">
                             <div className="text-center mb-12">
                                 <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-                                    Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d9c5a] to-emerald-600">LAMA Matters</span>
+                                    Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d9c5a] to-emerald-600">LAMA  Matters </span>
                                 </h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                                     Four transformative pillars creating real impact for climate adaptation
