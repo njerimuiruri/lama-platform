@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Grid3x3, List, FileText, TrendingUp, DollarSign, Target } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LamaFooter from '@/components/Footer/footer';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function NCCAPExplorer() {
     const [data, setData] = useState(null);
@@ -263,6 +264,56 @@ export default function NCCAPExplorer() {
                         </div>
                     )}
 
+                    {/* About Banner — shown only when no sector is selected */}
+                    {!selectedSector && (
+                        <div className="mb-8 bg-white border-2 border-emerald-200 rounded-2xl overflow-hidden shadow-sm">
+                            <div className="bg-gradient-to-r from-emerald-700 to-teal-700 px-5 sm:px-6 py-4 flex items-center gap-3">
+                                <TrendingUp className="w-5 h-5 text-white flex-shrink-0" />
+                                <div>
+                                    <h2 className="text-white font-bold text-base sm:text-lg">About the National Climate Change Action Plan (NCCAP)</h2>
+                                    <p className="text-emerald-100 text-xs">Kenya&apos;s 5-year plan for implementing the Climate Change Act — what this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">What is the NCCAP?</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        The <strong>National Climate Change Action Plan (NCCAP)</strong> is Kenya&apos;s official roadmap for implementing the Climate Change Act. The current plan spans <strong>2023–2027</strong> and sets out concrete actions the government will take across key sectors.
+                                    </p>
+                                    <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                        For each action, the NCCAP defines an <strong>expected outcome</strong>, an estimated <strong>budget</strong>, and <strong>Key Performance Indicators (KPIs)</strong> — so it is clear what success looks like and how it will be measured.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm">How to navigate this page</h3>
+                                    <ol className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-700 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Select a Priority Sector</strong> below (e.g. Energy, Water, Agriculture, Forestry). These are the sectors the NCCAP focuses on.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-700 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Choose a Priority Action</strong> — a specific initiative within that sector (e.g. &quot;Expand solar energy access in rural areas&quot;).</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-700 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>View the KPIs</strong> — each action&apos;s measurable targets, expected outcomes, and implementation details.</span>
+                                        </li>
+                                    </ol>
+                                    <p className="text-xs text-gray-500 mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-2">
+                                        <strong>Tip:</strong> Use the search bar to quickly find actions or indicators by keyword.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="border-t border-emerald-100 px-5 sm:px-6 py-3 bg-emerald-50 flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                                <span><strong className="text-emerald-700">Priority Sector</strong> — A key area of Kenya&apos;s economy or environment where climate action is needed.</span>
+                                <span><strong className="text-emerald-700">Priority Action</strong> — A specific project or programme within a sector.</span>
+                                <span><strong className="text-emerald-700">Expected Outcome</strong> — What the action is intended to achieve by 2027.</span>
+                                <span><strong className="text-emerald-700">KPI</strong> — The measurable result used to confirm the outcome was achieved.</span>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Priority Sectors View */}
                     {!selectedSector && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -375,6 +426,7 @@ export default function NCCAPExplorer() {
 
                     {/* KPIs View with Budget & Funding */}
                     {selectedAction && (
+                        <DataGate variant="table" label="NCCAP Action KPIs & Budget" description="Register for free to explore the full KPI details, budgets, and funding sources for each priority action.">
                         <div>
                             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 mb-8 border-2 border-emerald-200 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -mr-32 -mt-32 opacity-30"></div>
@@ -408,19 +460,24 @@ export default function NCCAPExplorer() {
                                                 <span className="text-white text-sm font-bold">{index + 1}</span>
                                             </div>
                                             <div className="flex-1">
+                                                {/* KPI label */}
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">KPI #{index + 1}</span>
+                                                    <span className="text-xs text-gray-400 italic">A measurable result this action aims to achieve</span>
+                                                </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2 leading-relaxed">{indicator.text}</h3>
 
                                                 <div className="flex flex-wrap gap-3 mb-4">
                                                     {indicator.targetGroups && (
                                                         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-50 text-teal-700 text-xs font-semibold rounded-lg border border-teal-200">
                                                             <Target className="w-3 h-3" />
-                                                            {indicator.targetGroups}
+                                                            <span>Target group: {indicator.targetGroups}</span>
                                                         </span>
                                                     )}
                                                     {indicator.sourceOfFund && (
                                                         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-lg border border-blue-200">
                                                             <DollarSign className="w-3 h-3" />
-                                                            {indicator.sourceOfFund}
+                                                            <span>Funded by: {indicator.sourceOfFund}</span>
                                                         </span>
                                                     )}
                                                 </div>
@@ -428,7 +485,10 @@ export default function NCCAPExplorer() {
                                                 {indicator.budget && Object.keys(indicator.budget).length > 0 && (
                                                     <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-200">
                                                         <div className="flex items-center justify-between mb-3">
-                                                            <h4 className="text-xs font-bold text-emerald-800 uppercase">Indicative Budget (KES Millions)</h4>
+                                                            <div>
+                                                                <h4 className="text-xs font-bold text-emerald-800 uppercase">Indicative Budget (KES Millions)</h4>
+                                                                <p className="text-xs text-emerald-600 italic mt-0.5">The estimated annual funding needed to achieve this KPI</p>
+                                                            </div>
                                                             <div className="flex items-center gap-2 bg-white px-3 py-1 rounded-lg shadow-sm">
                                                                 <DollarSign className="w-4 h-4 text-emerald-600" />
                                                                 <span className="text-sm font-bold text-emerald-700">
@@ -480,6 +540,7 @@ export default function NCCAPExplorer() {
                                 </div>
                             </div>
                         </div>
+                        </DataGate>
                     )}
                 </div>
             </div>

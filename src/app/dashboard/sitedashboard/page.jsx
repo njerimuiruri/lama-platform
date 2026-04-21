@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BarChart2, Users, Leaf, Shield, Layers, Eye, CloudRain, Database, Map, Wrench, BookOpen, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import LamaNavbar from '@/components/Navbar/navbar';
+import DataGate from '@/components/ContentGate/DataGate';
 import LandOwnership from '../LandOwnership';
 import FarmingSystems from '../FarmingSystems';
 import VulnerabilityStatus from '../VulnerabilityStatus';
@@ -104,7 +105,9 @@ const LandDashboard = () => {
 
                     {/* Tab Content */}
                     <section className="min-h-screen">
-                        <ActiveComponent />
+                        <DataGate variant="chart" label="Land Systems Analytics" description="Register for free to explore full interactive charts on land ownership, farming systems, climate impacts, and more across Kenya.">
+                            <ActiveComponent />
+                        </DataGate>
                     </section>
 
                     {/* Components Navigation */}

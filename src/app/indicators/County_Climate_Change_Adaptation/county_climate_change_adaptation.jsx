@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, X, MapPin, Filter, Leaf, ChevronRight, Home, ChevronLeft, BarChart3, PieChart, TrendingUp, Activity, Target, Building2 } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function CountyDataViewer() {
     const [data, setData] = useState([]);
@@ -393,14 +395,17 @@ export default function CountyDataViewer() {
                         </div>
 
                         {!selectedCounty && (
+                            <div className="flex items-center gap-2 w-full sm:w-auto">
+                            <DownloadButton dataset="ccap" label="Download CSV" />
                             <button
                                 onClick={() => setShowVisualization(true)}
-                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm w-full sm:w-auto justify-center"
+                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm flex-1 sm:flex-none justify-center"
                             >
                                 <PieChart className="w-4 h-4" />
                                 <span className="hidden sm:inline">View Analytics</span>
                                 <span className="sm:hidden">Analytics</span>
                             </button>
+                            </div>
                         )}
                     </div>
                 </div>
@@ -436,6 +441,54 @@ export default function CountyDataViewer() {
                 {/* County Selection */}
                 {!selectedCounty ? (
                     <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 border border-green-100">
+                        {/* ── About & How-to Banner ── */}
+                        <div className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl overflow-hidden">
+                            <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-4 sm:px-5 py-3 flex items-center gap-3">
+                                <Leaf className="w-5 h-5 text-white flex-shrink-0" />
+                                <div>
+                                    <h2 className="text-white font-bold text-sm sm:text-base">About County Climate Change Adaptation Plans (CCAPs)</h2>
+                                    <p className="text-green-100 text-xs">What this page shows and how to use it</p>
+                                </div>
+                            </div>
+                            <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">What are CCAPs?</h3>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                        <strong>County Climate Change Adaptation Plans (CCAPs)</strong> are county-level strategies that detail specific activities counties are undertaking to adapt to climate change — such as restoring water catchments, training farmers on drought-resistant crops, or building early-warning systems.
+                                    </p>
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2">
+                                        Each activity has an associated <strong>indicator</strong> that shows how progress will be measured, making it possible to monitor whether adaptation is actually happening.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1.5 text-xs sm:text-sm">How to use this page</h3>
+                                    <ol className="space-y-1.5 text-xs sm:text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Select a county</strong> from the grid below to view its adaptation activities.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Filter by Strategic Sector</strong> (e.g. Water, Agriculture, Energy) to narrow down activities.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>Browse the table</strong> showing each adaptation activity and its monitoring indicator. Use the search box to find specific topics.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-4 h-4 sm:w-5 sm:h-5 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
+                                            <span><strong>View Analytics</strong> (button top-right) for a visual summary of adaptation coverage by county and sector.</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div className="border-t border-green-200 px-4 sm:px-5 py-2.5 bg-green-50 flex flex-wrap gap-4 text-xs text-gray-700">
+                                <span><strong className="text-green-700">Activity</strong> — A specific adaptation action a county is taking (e.g. &quot;Construct sand dams&quot;).</span>
+                                <span><strong className="text-green-700">Indicator</strong> — How that activity&apos;s success is measured (e.g. &quot;Number of sand dams constructed&quot;).</span>
+                                <span><strong className="text-green-700">Strategic Sector</strong> — The broad theme the activity falls under (e.g. Water, Agriculture, Health).</span>
+                            </div>
+                        </div>
+
                         <div className="mb-4 sm:mb-6 text-center">
                             <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-green-100 rounded-full mb-3">
                                 <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-green-600" />
@@ -560,19 +613,23 @@ export default function CountyDataViewer() {
                         {/* Data Table */}
                         {filteredData.length > 0 ? (
                             <>
+                                <DataGate variant="table" label="County CCAP Table" description="Register for free to explore county-level climate change adaptation indicators.">
                                 <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-green-100">
                                     <div className="overflow-x-auto">
                                         <table className="w-full">
                                             <thead>
                                                 <tr className="bg-gradient-to-r from-green-100 to-green-50">
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-green-900 uppercase tracking-wider">
-                                                        Strategic Sector
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Strategic Sector</p>
+                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">The broad climate theme (e.g. Water, Agriculture)</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-green-900 uppercase tracking-wider">
-                                                        Sector
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Sub-Sector</p>
+                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">Specific area within the strategic sector</p>
                                                     </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs font-bold text-green-900 uppercase tracking-wider">
-                                                        Indicators
+                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Monitoring Indicator</p>
+                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">How the county will measure if this adaptation is working</p>
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -600,7 +657,8 @@ export default function CountyDataViewer() {
                                                             )}
                                                         </td>
                                                         <td className="px-3 sm:px-4 py-3">
-                                                            <p className="text-gray-700 text-xs sm:text-sm leading-snug line-clamp-2 sm:line-clamp-none">
+                                                            <p className="text-xs text-gray-400 italic mb-0.5">Measures whether this adaptation activity is succeeding:</p>
+                                                            <p className="text-gray-800 text-xs sm:text-sm leading-snug font-medium line-clamp-2 sm:line-clamp-none">
                                                                 {item.Indicators?.trim() || 'No indicators specified'}
                                                             </p>
                                                         </td>
@@ -610,6 +668,7 @@ export default function CountyDataViewer() {
                                         </table>
                                     </div>
                                 </div>
+                                </DataGate>
 
                                 {/* Pagination */}
                                 {totalPages > 1 && (

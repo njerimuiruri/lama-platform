@@ -29,7 +29,19 @@ export async function POST(request) {
     }
 
     if (data.found) {
-      return NextResponse.json({ found: true }, { status: 200 });
+      const response = NextResponse.json({ found: true }, { status: 200 });
+
+      if (data.access_token) {
+        response.cookies.set('lama_token', data.access_token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'lax',
+          path: '/',
+          maxAge: 60 * 60 * 8, // 8 hours
+        });
+      }
+
+      return response;
     }
 
     return NextResponse.json({ found: false }, { status: 404 });

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useMemo, useEffect } from 'react';
-import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity } from 'lucide-react';
+import { ChevronRight, Search, X, FileText, Target, Layers, CheckCircle2, Building2, Sparkles, TrendingUp, BarChart3, PieChart, Activity, Globe } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function IndicatorDashboard() {
     const [indicatorsData, setIndicatorsData] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [selectedSubmission, setSelectedSubmission] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -18,6 +18,13 @@ export default function IndicatorDashboard() {
             .then(res => res.json())
             .then(data => { setIndicatorsData(data); setLoading(false); })
             .catch(() => setLoading(false));
+    }, []);
+
+    useEffect(() => {
+        fetch('/api/indicators/global')
+            .then(r => r.json())
+            .then(data => Array.isArray(data) ? setIndicatorsData(data) : null)
+            .catch(() => { });
     }, []);
 
     // Get unique submissions
@@ -499,6 +506,54 @@ export default function IndicatorDashboard() {
                         </button>
                     </div>
 
+                    {/* ── About & How-to Banner ── */}
+                    <div className="mb-10 bg-white border-2 border-green-200 rounded-2xl overflow-hidden shadow-sm text-left">
+                        <div className="bg-gradient-to-r from-[#0d9c5a] to-[#10b66d] px-5 sm:px-6 py-4 flex items-center gap-3">
+                            <Globe className="w-5 h-5 text-white flex-shrink-0" />
+                            <div>
+                                <h2 className="text-white font-bold text-base sm:text-lg">About the Global Indicators Database</h2>
+                                <p className="text-green-100 text-xs">International climate indicator submissions — what this page shows and how to use it</p>
+                            </div>
+                        </div>
+                        <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 className="font-bold text-gray-900 mb-2 text-sm">What is this database?</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    This database is a <strong>merged collection of climate change indicators submitted by international organisations</strong> — such as UN agencies, research bodies, and global networks. These organisations proposed indicators to help the world measure progress on climate adaptation and resilience.
+                                </p>
+                                <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                    The data is organised by <strong>&quot;Submission&quot;</strong> — each submission is from a specific organisation (e.g. UNEP, WHO, FAO, academic institutions). Each submission contains indicators grouped into <strong>categories</strong> by theme or sector.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-gray-900 mb-2 text-sm">How to use this page</h3>
+                                <ol className="space-y-2 text-sm text-gray-600">
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                        <span><strong>Select an organisation/submission</strong> from the cards below — each card shows the organisation name and how many indicators it submitted.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                        <span><strong>Choose a category</strong> to narrow down to a specific thematic area within that submission.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                        <span><strong>Browse and click indicators</strong> to view full details — including indicator description, methodology, and data source information.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="w-5 h-5 bg-[#0d9c5a] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
+                                        <span>Use <strong>&quot;See Data Visualization&quot;</strong> for a visual overview of how indicators are distributed across all organisations.</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div className="border-t border-green-200 px-5 sm:px-6 py-3 bg-green-50 flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-700">
+                            <span><strong className="text-[#0d9c5a]">Submission</strong> — The organisation that proposed this set of indicators (e.g. UNEP, WHO, a university research group).</span>
+                            <span><strong className="text-[#0d9c5a]">Category</strong> — A thematic grouping within a submission (e.g. &quot;Biodiversity&quot;, &quot;Water Security&quot;).</span>
+                            <span><strong className="text-[#0d9c5a]">Indicator</strong> — A specific, measurable metric proposed for tracking global climate adaptation progress.</span>
+                        </div>
+                    </div>
+
                     {/* Submission Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         {submissions.map((submission) => {
@@ -627,54 +682,56 @@ export default function IndicatorDashboard() {
                         <p className="text-gray-500">Try adjusting your filters or search term</p>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {indicators.map((indicator, index) => (
-                            <button
-                                key={index}
-                                onClick={() => openIndicatorModal(indicator)}
-                                className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#0d9c5a] text-left"
-                            >
-                                <div className="flex items-start gap-4 mb-4">
-                                    <div className="w-10 h-10 bg-gradient-to-br from-[#0d9c5a] to-[#10b66d] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                        <FileText className="w-5 h-5 text-white" />
+                    <DataGate variant="table" label="Global Indicators Database" description="Register for free to browse and explore the full global climate adaptation indicators database.">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {indicators.map((indicator, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => openIndicatorModal(indicator)}
+                                    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#0d9c5a] text-left"
+                                >
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="w-10 h-10 bg-gradient-to-br from-[#0d9c5a] to-[#10b66d] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                            <FileText className="w-5 h-5 text-white" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#0d9c5a] transition-colors">
+                                                {indicator.Indicator || 'Unnamed Indicator'}
+                                            </h3>
+                                            {indicator.Category && (
+                                                <span className="inline-block px-3 py-1 bg-[#eefdf5] text-[#0d9c5a] text-xs font-semibold rounded-full">
+                                                    {indicator.Category}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="flex-1 min-w-0">
-                                        <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#0d9c5a] transition-colors">
-                                            {indicator.Indicator || 'Unnamed Indicator'}
-                                        </h3>
-                                        {indicator.Category && (
-                                            <span className="inline-block px-3 py-1 bg-[#eefdf5] text-[#0d9c5a] text-xs font-semibold rounded-full">
-                                                {indicator.Category}
-                                            </span>
+
+                                    <div className="space-y-2 text-sm text-gray-600">
+                                        {indicator['Indicator ID'] && (
+                                            <div className="flex items-center gap-2">
+                                                <span className="font-medium text-gray-700">ID:</span>
+                                                <span>{indicator['Indicator ID']}</span>
+                                            </div>
+                                        )}
+
+                                        {getThematicTargets(indicator).length > 0 && (
+                                            <div className="flex items-start gap-2">
+                                                <Target className="w-4 h-4 text-[#0d9c5a] mt-0.5 flex-shrink-0" />
+                                                <span className="text-xs">
+                                                    {getThematicTargets(indicator).length} thematic target{getThematicTargets(indicator).length !== 1 ? 's' : ''}
+                                                </span>
+                                            </div>
                                         )}
                                     </div>
-                                </div>
 
-                                <div className="space-y-2 text-sm text-gray-600">
-                                    {indicator['Indicator ID'] && (
-                                        <div className="flex items-center gap-2">
-                                            <span className="font-medium text-gray-700">ID:</span>
-                                            <span>{indicator['Indicator ID']}</span>
-                                        </div>
-                                    )}
-
-                                    {getThematicTargets(indicator).length > 0 && (
-                                        <div className="flex items-start gap-2">
-                                            <Target className="w-4 h-4 text-[#0d9c5a] mt-0.5 flex-shrink-0" />
-                                            <span className="text-xs">
-                                                {getThematicTargets(indicator).length} thematic target{getThematicTargets(indicator).length !== 1 ? 's' : ''}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="mt-4 flex items-center text-[#0d9c5a] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <span>View details</span>
-                                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                                </div>
-                            </button>
-                        ))}
-                    </div>
+                                    <div className="mt-4 flex items-center text-[#0d9c5a] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span>View details</span>
+                                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </DataGate>
                 )}
             </div>
 

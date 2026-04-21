@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useMemo } from 'react';
 import { ChevronRight, ChevronLeft, Home, Search, Target, FileText, Layers, AlertCircle, CheckCircle2, Grid3x3, BarChart3, TrendingUp } from 'lucide-react';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function LAMAIndicatorViewer() {
     const [data, setData] = useState(null);
@@ -241,6 +242,81 @@ export default function LAMAIndicatorViewer() {
                 {/* View 1: Thematic Sectors */}
                 {!selectedSector && (
                     <div>
+                        {/* ── About & How-to Banner ── */}
+                        <div className="mb-8 bg-white border-2 border-emerald-200 rounded-2xl overflow-hidden shadow-sm">
+                            {/* Banner header */}
+                            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-6 py-4 flex items-center gap-3">
+                                <div className="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <Layers className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                    <h2 className="text-white font-bold text-base sm:text-lg">About the LLA Indicator Matrix</h2>
+                                    <p className="text-emerald-100 text-xs">Locally Led Adaptation — what this page shows and how to use it</p>
+                                </div>
+                            </div>
+
+                            <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* What is this? */}
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                                        <span className="w-5 h-5 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xs font-black">?</span>
+                                        What is this page?
+                                    </h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        The <strong>LLA (Locally Led Adaptation) Indicator Matrix</strong> is a database of climate adaptation indicators gathered from communities and grassroots organisations across Kenya. &quot;Locally led&quot; means the data and priorities come from the people most affected by climate change — farmers, women groups, pastoralists, and local leaders.
+                                    </p>
+                                    <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                                        The indicators are grouped into <strong>{thematicSectors.length} thematic sectors</strong> — broad topic areas like Water, Agriculture, or Health — so you can focus on the issues most relevant to you.
+                                    </p>
+                                </div>
+
+                                {/* How to navigate */}
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                                        <span className="w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-xs font-black">→</span>
+                                        How to navigate
+                                    </h3>
+                                    <ol className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                                            <span><strong>Pick a thematic sector</strong> below (e.g. &quot;Water&quot; or &quot;Agriculture &amp; Food Security&quot;).</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                                            <span><strong>Browse the raw indicators</strong> listed for that sector. Use the search box to filter by keyword.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="w-5 h-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                                            <span><strong>Click any indicator</strong> to view its full details: the original wording, an amended version, how it is measured, and which adaptation target it supports.</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            {/* Glossary strip */}
+                            <div className="border-t border-emerald-100 px-5 sm:px-6 py-4 bg-emerald-50">
+                                <p className="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-3">Key terms — what each field means</p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                    <div className="bg-white rounded-xl border border-indigo-200 p-3">
+                                        <p className="text-xs font-bold text-indigo-700 mb-1">Raw Indicator</p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">The indicator exactly as it was originally collected or proposed by communities and local actors — unedited source wording.</p>
+                                    </div>
+                                    <div className="bg-white rounded-xl border border-emerald-200 p-3">
+                                        <p className="text-xs font-bold text-emerald-700 mb-1">Amended Indicator</p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">A refined, clearer version of the raw indicator — standardised language to make it easier to measure and compare across regions.</p>
+                                    </div>
+                                    <div className="bg-white rounded-xl border border-blue-200 p-3">
+                                        <p className="text-xs font-bold text-blue-700 mb-1">Measurement Unit</p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">How the indicator is quantified — e.g., percentage (%), number of households, litres per day, or tonnes per hectare.</p>
+                                    </div>
+                                    <div className="bg-white rounded-xl border border-amber-200 p-3">
+                                        <p className="text-xs font-bold text-amber-700 mb-1">Target Relevance</p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">Which national or global adaptation target this indicator helps track — linking community data to broader policy goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="mb-6 text-center">
                             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Select a Thematic Sector</h2>
                             <p className="text-gray-600 text-sm sm:text-base">Explore indicators organized by adaptation themes</p>
@@ -324,6 +400,7 @@ export default function LAMAIndicatorViewer() {
                         </div>
 
                         {/* Raw Indicators Grid */}
+                        <DataGate variant="table" label="LLA Indicator Matrix" description="Register for free to explore all Locally Led Adaptation indicators by sector.">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {filteredRawIndicators.length > 0 ? (
                                 filteredRawIndicators.map((item, index) => {
@@ -353,15 +430,31 @@ export default function LAMAIndicatorViewer() {
                                                     <ChevronRight className={`w-5 h-5 ${colors.text} opacity-0 group-hover:opacity-100 transition-opacity`} />
                                                 </div> */}
 
+                                                {/* Type badge */}
+                                                <div className="flex items-center justify-between mb-2">
+                                                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${colors.bg} ${colors.text}`}>
+                                                        Adaptation Indicator
+                                                    </span>
+                                                    {item.hasAmended && (
+                                                        <span className="text-xs font-semibold text-green-600 flex items-center gap-1">
+                                                            <CheckCircle2 className="w-3 h-3" />
+                                                            Has refined version
+                                                        </span>
+                                                    )}
+                                                </div>
+
                                                 {/* Indicator Text */}
-                                                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-3 line-clamp-3 min-h-[3.5rem] group-hover:text-emerald-600 transition-colors">
+                                                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1 line-clamp-3 min-h-[3.5rem] group-hover:text-emerald-600 transition-colors">
                                                     {item.rawIndicator}
                                                 </h3>
+                                                <p className="text-xs text-gray-400 italic mb-3">What field workers measured in the {selectedSector} sector</p>
 
                                                 {/* Stats */}
-                                                <div className="flex items-center justify-between text-xs">
-                                                    <span className="text-gray-600">Total entries:</span>
-                                                    <span className={`font-bold ${colors.text}`}>{item.count}</span>
+                                                <div className="flex items-center justify-between text-xs pt-2 border-t border-gray-100">
+                                                    <span className="text-gray-500">Found in <strong className={`${colors.text}`}>{item.count}</strong> data {item.count === 1 ? 'record' : 'records'}</span>
+                                                    <span className={`font-semibold ${colors.text} flex items-center gap-1`}>
+                                                        View details <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                                                    </span>
                                                 </div>
                                             </div>
                                         </button>
@@ -381,6 +474,7 @@ export default function LAMAIndicatorViewer() {
                                 </div>
                             )}
                         </div>
+                        </DataGate>
                     </div>
                 )}
 
@@ -432,23 +526,25 @@ export default function LAMAIndicatorViewer() {
                                     <div className="grid grid-cols-1 gap-4">
                                         {/* Raw Indicator */}
                                         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-4 border border-indigo-200">
-                                            <div className="flex items-center gap-2 mb-2">
+                                            <div className="flex items-center gap-2 mb-1">
                                                 <Target className="w-4 h-4 text-indigo-600 flex-shrink-0" />
                                                 <h4 className="font-bold text-gray-900 text-sm">Raw Indicator</h4>
                                             </div>
+                                            <p className="text-xs text-indigo-500 italic mb-2">The exact wording used when this was measured in the field — the original, unedited statement</p>
                                             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{selectedIndicator}</p>
                                         </div>
 
                                         {/* Amended Indicator */}
                                         <div className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-4 border border-emerald-200">
-                                            <div className="flex items-center gap-2 mb-2">
+                                            <div className="flex items-center gap-2 mb-1">
                                                 <TrendingUp className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                                                 <h4 className="font-bold text-gray-900 text-sm">Amended Indicator</h4>
                                             </div>
+                                            <p className="text-xs text-emerald-600 italic mb-2">A refined, standardised version of the raw indicator — reworded so it can be consistently measured and compared across regions</p>
                                             {detail.amendedIndicator ? (
                                                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{detail.amendedIndicator}</p>
                                             ) : (
-                                                <p className="text-gray-400 italic text-sm">Not specified</p>
+                                                <p className="text-gray-400 italic text-sm">Not yet refined — the raw indicator is used as-is</p>
                                             )}
                                         </div>
 
@@ -456,27 +552,29 @@ export default function LAMAIndicatorViewer() {
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             {/* Measurement Unit */}
                                             <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
-                                                <div className="flex items-center gap-2 mb-2">
+                                                <div className="flex items-center gap-2 mb-1">
                                                     <Grid3x3 className="w-4 h-4 text-blue-600 flex-shrink-0" />
                                                     <h4 className="font-bold text-gray-900 text-sm">Measurement Unit</h4>
                                                 </div>
+                                                <p className="text-xs text-blue-500 italic mb-2">How progress on this indicator is counted or quantified (e.g. %, number of households, litres/day)</p>
                                                 {detail.possibleMeasurementUnit ? (
                                                     <p className="text-gray-700 font-medium text-sm sm:text-base">{detail.possibleMeasurementUnit}</p>
                                                 ) : (
-                                                    <p className="text-gray-400 italic text-sm">Not specified</p>
+                                                    <p className="text-gray-400 italic text-sm">Unit not yet defined</p>
                                                 )}
                                             </div>
 
                                             {/* Target Relevance */}
                                             <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
-                                                <div className="flex items-center gap-2 mb-2">
+                                                <div className="flex items-center gap-2 mb-1">
                                                     <Target className="w-4 h-4 text-amber-600 flex-shrink-0" />
                                                     <h4 className="font-bold text-gray-900 text-sm">Target Relevance</h4>
                                                 </div>
+                                                <p className="text-xs text-amber-600 italic mb-2">Which national or global adaptation goal this indicator helps track — linking community data to official policy targets</p>
                                                 {detail.targetRelevance ? (
                                                     <p className="text-gray-700 font-medium text-sm sm:text-base">{detail.targetRelevance}</p>
                                                 ) : (
-                                                    <p className="text-gray-400 italic text-sm">Not specified</p>
+                                                    <p className="text-gray-400 italic text-sm">Target relevance not yet mapped</p>
                                                 )}
                                             </div>
                                         </div>

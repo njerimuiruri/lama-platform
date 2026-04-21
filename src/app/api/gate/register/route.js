@@ -31,7 +31,19 @@ export async function POST(request) {
       );
     }
 
-    return NextResponse.json({ success: true }, { status: 200 });
+    const response = NextResponse.json({ success: true }, { status: 200 });
+
+    if (data.access_token) {
+      response.cookies.set('lama_token', data.access_token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 60 * 60 * 8, // 8 hours
+      });
+    }
+
+    return response;
   } catch (err) {
     console.error('[ContentGate] Registration error:', err);
     return NextResponse.json({ message: 'Internal server error.' }, { status: 500 });

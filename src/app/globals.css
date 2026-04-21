@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Phase 6 — Data protection: disable text selection and printing on gated data */
+.lama-protected-data {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media print {
+  .lama-protected-data {
+    display: none !important;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

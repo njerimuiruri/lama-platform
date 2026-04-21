@@ -1,6 +1,6 @@
 // src/app/Aboutsection/page.jsx
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Globe, MapPin, Layers, TrendingUp, Database, Loader, ChevronRight, Sparkles } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import projectsData from '../../../data/data/projects.json';
@@ -19,118 +19,15 @@ const AfricaMapSection = dynamic(() => import('@/components/AfricaMapSection'), 
 });
 
 const DataPlatformsSection = () => {
-    const [countyData, setCountyData] = useState([]);
-    const [indicatorsData, setIndicatorsData] = useState([]);
+    const [stats, setStats] = useState({ ndc: 0, naps: 0, nccap: 0, cidps: 0, ccap: 0, lla: 0, gga: 0, global: 0 });
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const loadData = async () => {
-            try {
-                const [countyResponse, indicatorsResponse] = await Promise.all([
-                    fetch('/documents/CountyClimateChangeAdaptationCleaned.json'),
-                    fetch('/documents/indicators.json')
-                ]);
-
-                const countyJson = await countyResponse.json();
-                const indicatorsJson = await indicatorsResponse.json();
-
-                setCountyData(countyJson);
-                setIndicatorsData(indicatorsJson);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error loading data:', error);
-                setLoading(false);
-            }
-        };
-
-        loadData();
+        fetch('/api/public/stats')
+            .then(r => r.json())
+            .then(data => { setStats(data); setLoading(false); })
+            .catch(() => setLoading(false));
     }, []);
-
-    // Process county data
-    const countyStats = useMemo(() => {
-        if (!countyData || countyData.length === 0) return { counties: [], totalCounties: 0, totalInitiatives: 0, sectors: 0 };
-
-        const counties = [...new Set(countyData.map(item => item.Organisations))];
-        const sectors = [...new Set(countyData.map(item => item.StrategicSector).filter(Boolean))];
-
-        const topCounties = counties.map(county => ({
-            name: county,
-            initiatives: countyData.filter(item => item.Organisations === county).length
-        })).sort((a, b) => b.initiatives - a.initiatives).slice(0, 4);
-
-        return {
-            counties: topCounties,
-            totalCounties: counties.length,
-            totalInitiatives: countyData.length,
-            sectors: sectors.length
-        };
-    }, [countyData]);
-
-    // Process indicators data
-    const indicatorsStats = useMemo(() => {
-        if (!indicatorsData || indicatorsData.length === 0) return { sectors: [], totalSectors: 0, totalIndicators: 0 };
-
-        const sectorsMap = {};
-        let indicatorCount = 0;
-
-        indicatorsData.forEach((row) => {
-            if (row.type === 'data') {
-                const indicatorId = String(row['Indicator ID'] || '').trim();
-                const match = indicatorId.match(/^(\d+)\(([a-z])\)/i);
-
-                if (match) {
-                    const sectorNum = match[1];
-                    const sectorLetter = match[2];
-                    const sectorKey = `${sectorNum}${sectorLetter}`;
-
-                    if (!sectorsMap[sectorKey]) {
-                        sectorsMap[sectorKey] = {
-                            id: sectorKey,
-                            label: `${sectorNum}(${sectorLetter})`,
-                            name: indicatorId,
-                            indicatorCount: 0
-                        };
-                    }
-                }
-            } else if (row.type === 'indicator') {
-                indicatorCount++;
-                const sectorLabel = row.sectorLabel?.split(' - ')[0];
-                if (sectorLabel && sectorsMap[sectorLabel]) {
-                    sectorsMap[sectorLabel].indicatorCount++;
-                    if (!sectorsMap[sectorLabel].shortName && row.sectorLabel?.includes(' - ')) {
-                        sectorsMap[sectorLabel].shortName = row.sectorLabel.split(' - ')[1];
-                    }
-                }
-            }
-        });
-
-        const sectors = Object.values(sectorsMap).slice(0, 4);
-
-        return {
-            sectors,
-            totalSectors: Object.keys(sectorsMap).length,
-            totalIndicators: indicatorCount
-        };
-    }, [indicatorsData]);
-
-    if (loading) {
-        return (
-            <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 flex items-center justify-center">
-                <div className="text-center">
-                    <div className="relative">
-                        <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-2xl mx-auto mb-6 animate-pulse">
-                            <Database className="w-10 h-10 text-white" />
-                        </div>
-                        <div className="absolute inset-0 w-20 h-20 mx-auto">
-                            <Loader className="w-20 h-20 text-emerald-600 animate-spin" />
-                        </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Loading Data Platforms</h3>
-                    <p className="text-gray-600">Please wait while we fetch the latest data...</p>
-                </div>
-            </div>
-        );
-    }
 
     const platforms = [
         {
@@ -138,38 +35,40 @@ const DataPlatformsSection = () => {
             title: "Global Goal on Adaptation",
             description: "Explore comprehensive climate indicators organized by sectors. Navigate through detailed frameworks linking local metrics to global adaptation goals.",
             stats: [
-                { label: "Sectors", value: indicatorsStats.totalSectors, color: "from-emerald-500 to-teal-600" },
-                { label: "Indicators", value: indicatorsStats.totalIndicators, color: "from-blue-500 to-cyan-600" },
-                { label: "Frameworks", value: "NAPs, NDCs, GGA", color: "from-purple-500 to-pink-600" }
+                { label: "GGA Records", value: loading ? '…' : stats.gga, color: "from-emerald-500 to-teal-600" },
+                { label: "NDC Records", value: loading ? '…' : stats.ndc, color: "from-blue-500 to-cyan-600" },
+                { label: "NAP Records", value: loading ? '…' : stats.naps, color: "from-purple-500 to-pink-600" }
             ],
             route: "/indicators/Global_Goal_on_Adaptation",
             gradient: "from-emerald-50 to-teal-50",
             borderColor: "border-emerald-200",
             hoverColor: "hover:border-emerald-400",
             buttonColor: "from-emerald-500 to-teal-600",
-            preview: {
-                type: "sectors",
-                items: indicatorsStats.sectors
-            }
+            features: [
+                "Sector-by-sector breakdown",
+                "Linked to NAPs, NDCs & NCCAP",
+                "Downloadable CSV with watermark"
+            ]
         },
         {
             icon: MapPin,
             title: "County Climate Adaptation",
             description: "Discover climate initiatives across all Kenyan counties. Filter by strategic sectors, track indicators, and explore adaptation activities at the local level.",
             stats: [
-                { label: "Counties", value: countyStats.totalCounties, color: "from-green-500 to-emerald-600" },
-                { label: "Initiatives", value: countyStats.totalInitiatives, color: "from-teal-500 to-cyan-600" },
-                { label: "Sectors", value: countyStats.sectors, color: "from-lime-500 to-green-600" }
+                { label: "CCAP Records", value: loading ? '…' : stats.ccap, color: "from-green-500 to-emerald-600" },
+                { label: "CIDP Records", value: loading ? '…' : stats.cidps, color: "from-teal-500 to-cyan-600" },
+                { label: "LLA Records", value: loading ? '…' : stats.lla, color: "from-lime-500 to-green-600" }
             ],
             route: "/indicators/County_Climate_Change_Adaptation",
             gradient: "from-green-50 to-emerald-50",
             borderColor: "border-green-200",
             hoverColor: "hover:border-green-400",
             buttonColor: "from-green-500 to-emerald-600",
-            preview: {
-                type: "counties",
-                items: countyStats.counties
-            }
+            features: [
+                "All 47 Kenyan counties",
+                "Strategic sector filters",
+                "County-level KPI tracking"
+            ]
         }
     ];
 
@@ -206,7 +105,7 @@ const DataPlatformsSection = () => {
                                 key={index}
                                 className={`group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 ${platform.borderColor} ${platform.hoverColor}`}
                             >
-                                {/* Header with gradient */}
+                                {/* Header */}
                                 <div className={`bg-gradient-to-br ${platform.gradient} p-8 border-b-2 ${platform.borderColor}`}>
                                     <div className="flex items-start justify-between mb-4">
                                         <div className={`w-16 h-16 bg-gradient-to-br ${platform.stats[0].color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
@@ -233,40 +132,17 @@ const DataPlatformsSection = () => {
                                     ))}
                                 </div>
 
-                                {/* Preview Section */}
+                                {/* Features */}
                                 <div className="p-6 bg-gray-50 border-t-2 border-gray-100">
                                     <div className="flex items-center gap-2 mb-4">
                                         <Sparkles className="w-4 h-4 text-emerald-600" />
-                                        <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                                            {platform.preview.type === 'sectors' ? 'Sample Sectors' : 'Top Counties'}
-                                        </h4>
+                                        <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide">What&apos;s inside</h4>
                                     </div>
                                     <div className="space-y-2">
-                                        {platform.preview.items.map((item, idx) => (
-                                            <div
-                                                key={idx}
-                                                className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 hover:border-emerald-300 hover:shadow-md transition-all duration-300"
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <div className={`w-8 h-8 bg-gradient-to-br ${platform.stats[0].color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                                                        <span className="text-white text-xs font-bold">
-                                                            {platform.preview.type === 'sectors' ? item.label || idx + 1 : idx + 1}
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm font-bold text-gray-900">
-                                                            {platform.preview.type === 'sectors' ? (item.shortName || item.name) : item.name}
-                                                        </p>
-                                                        {platform.preview.type === 'sectors' && item.label && (
-                                                            <p className="text-xs text-gray-500">Sector {item.label}</p>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold">
-                                                        {platform.preview.type === 'sectors' ? `${item.indicatorCount || 0} indicators` : `${item.initiatives} initiatives`}
-                                                    </span>
-                                                </div>
+                                        {platform.features.map((feature, idx) => (
+                                            <div key={idx} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200">
+                                                <div className={`w-2 h-2 bg-gradient-to-br ${platform.stats[0].color} rounded-full flex-shrink-0`} />
+                                                <p className="text-sm font-medium text-gray-700">{feature}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -298,9 +174,7 @@ const DataPlatformsSection = () => {
                             <span className="text-white text-sm font-semibold">Live Data</span>
                         </div>
 
-                        <h3 className="text-3xl md:text-4xl font-black mb-4">
-                            Real-Time Climate Insights
-                        </h3>
+                        <h3 className="text-3xl md:text-4xl font-black mb-4">Real-Time Climate Insights</h3>
                         <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
                             Our platforms are continuously updated with the latest climate adaptation data, ensuring you have access to the most current information for informed decision-making.
                         </p>
