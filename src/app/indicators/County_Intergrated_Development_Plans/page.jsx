@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Search, Layers, AlertCircle, Loader, ArrowLeft, X, Grid3x3, List, FileText } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
+import DataGate from '@/components/ContentGate/DataGate';
 
 export default function CIDPExplorer() {
     const [data, setData] = useState(null);
