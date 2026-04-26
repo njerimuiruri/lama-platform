@@ -122,11 +122,7 @@ const LAMAHeroSection = () => {
             title: "A video showing azolla farm ",
             subtitle: "Bottom-up indicators that capture local resilience"
         },
-        // {
-        //     src: "video10.mp4",
-        //     title: "People primarily use iron sheets for housing due to a combination of affordability, durability, and weather resistance, making them a practical and accessible material, especially in developing regions impacted by climate change. ",
-        //     subtitle: "Bridging community needs with national adaptation plans"
-        // }
+
     ];
 
 
