@@ -11,7 +11,7 @@ const UPCOMING_EVENTS = [
     name: "LAMA Webinar",
     date: "30th April 2026 · 2:00 – 4:00 PM",
     location: "Online",
-    description: "Connecting researchers, practitioners, and communities driving locally led climate adaptation across Africa.",
+    description: "The State of Locally Led Adaptation Measurement in Africa (SAMA) — Leveraging on the LAMA digital platform.",
     image: "/images/lama-webiner.jpeg",
   },
 ];

@@ -9,7 +9,8 @@ export default function UpcomingEventsBanner() {
   if (dismissed) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-green-50 via-emerald-50 to-white border-b border-green-200">
+    <>
+    <div className="fixed top-14 sm:top-16 inset-x-0 z-40 bg-gradient-to-r from-green-50 via-emerald-50 to-white border-b border-green-200">
       {/* Green left accent bar */}
       <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-green-500 to-emerald-600" />
 
@@ -38,7 +39,11 @@ export default function UpcomingEventsBanner() {
           <div className="flex-1 min-w-0 flex items-center gap-2 flex-wrap">
             <span className="font-semibold text-gray-900 text-sm">LAMA Webinar</span>
             <span className="text-gray-300 hidden sm:inline">·</span>
-            <span className="text-gray-500 text-sm hidden sm:inline">Connecting researchers &amp; communities driving climate adaptation across Africa</span>
+            <span className="hidden sm:inline leading-tight">
+              <span className="font-semibold text-gray-700 text-xs uppercase tracking-wide">The State of Locally Led Adaptation Measurement in Africa (SAMA)</span>
+              <span className="text-gray-400 mx-1">·</span>
+              <span className="text-gray-500 text-sm">Leveraging on the LAMA digital platform</span>
+            </span>
             <span className="inline-flex items-center gap-1 text-gray-400 text-xs">
               <Calendar className="w-3 h-3" /> 30th April 2026 · 2:00–4:00 PM
             </span>
@@ -65,5 +70,8 @@ export default function UpcomingEventsBanner() {
         </div>
       </div>
     </div>
+    {/* Spacer so page content sits below the fixed banner */}
+    <div className="h-14 sm:h-16" />
+    </>
   );
 }

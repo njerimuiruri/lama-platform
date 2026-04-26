@@ -162,7 +162,7 @@ const LAMAHeroSection = () => {
                             </h1>
 
                             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-lg">
-                                <em>Aims to develop indicators that capture the effectiveness and inclusiveness of adaptation strategies at the community level.</em>
+                                <em>Aims to co-develop indicators that capture the effectiveness and inclusiveness of adaptation strategies at the community level.</em>
                             </p>
                         </div>
 

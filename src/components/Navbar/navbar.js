@@ -8,16 +8,13 @@ import {
   ChevronRight,
   Menu,
   X,
-  Users,
   Target,
   Database,
-  FileText,
+  BookOpen,
   Calendar,
   Camera,
-  Mail,
   Home,
   Info,
-  GraduationCap,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -31,12 +28,15 @@ const LamaNavbar = () => {
   const getActiveTab = () => {
     if (pathname === "/") return "Home";
     if (pathname.startsWith("/AboutPage")) return "About";
-    if (pathname.startsWith("/dashboard")) return "Dashboard";
-    if (pathname.startsWith("/resources")) return "Resources";
-    if (pathname.startsWith("/stakeholders")) return "Stakeholders";
-    if (pathname.startsWith("/activities")) return "Activities";
-    if (pathname.startsWith("/gallery")) return "Gallery";
+    if (pathname.startsWith("/programmes")) return "Events";
+    if (pathname.startsWith("/dashboard")) return "Components";
+    if (pathname.startsWith("/resources/interventions-database")) return "Components";
+    if (pathname.startsWith("/resources/tools-frameworks")) return "Components";
+    if (pathname.startsWith("/resources/advisory_outputs")) return "Components";
+    if (pathname.startsWith("/resources/publications")) return "Resources";
+    if (pathname.startsWith("/stakeholders")) return "Resources";
     if (pathname.startsWith("/indicators")) return "Indicators";
+    if (pathname.startsWith("/gallery")) return "Gallery";
     return "";
   };
 
@@ -62,7 +62,7 @@ const LamaNavbar = () => {
       href: "/dashboard/sitedashboard",
       subItems: [
         {
-          name: "Interactive dashboard",
+          name: "Interactive Dashboard",
           href: "/dashboard/sitedashboard",
         },
         {
@@ -74,6 +74,17 @@ const LamaNavbar = () => {
           name: "Tools & Frameworks",
           href: "/resources/tools-frameworks",
           description: "Guides, documents, data",
+        },
+        {
+          name: "Stakeholders",
+          isNested: true,
+          nestedItems: [
+            {
+              name: "Expert Advisory",
+              href: "/resources/advisory_outputs",
+              description: "Advisory & expert group outputs",
+            },
+          ],
         },
       ],
     },
@@ -144,18 +155,19 @@ const LamaNavbar = () => {
       ],
     },
     {
-      name: "Stakeholders",
-      icon: <Users className="w-4 h-4" />,
-      href: "/resources/advisory_outputs",
+      name: "Resources",
+      icon: <BookOpen className="w-4 h-4" />,
+      href: "/resources/publications",
       subItems: [
         {
-          name: "Advisory/Expert Group Outputs",
-          href: "/resources/advisory_outputs",
+          name: "Publications",
+          href: "/resources/publications",
+          description: "Research publications and reports",
         },
         {
-          name: "LAMA Diaries & Blogs",
+          name: "Diaries",
           href: "/stakeholders/diaries-blogs",
-          description: "Voices of women, youth, communities, experts",
+          description: "LAMA Diaries & Blogs",
         },
       ],
     },
@@ -198,7 +210,8 @@ const LamaNavbar = () => {
   const activeTab = getActiveTab();
 
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50 w-full">
+    <>
+    <nav className="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-200 shadow-sm w-full">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo Section */}
@@ -486,6 +499,9 @@ const LamaNavbar = () => {
         </div>
       )}
     </nav>
+    {/* Spacer so page content sits below the fixed navbar */}
+    <div className="h-14 sm:h-16" />
+    </>
   );
 };
 
