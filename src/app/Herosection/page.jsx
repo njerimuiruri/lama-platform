@@ -1,40 +1,22 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause, ArrowRight, BarChart3, Users, Target, Globe } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const VideoCarousel = ({ videos, currentSlide, onSlideChange, isPlaying, onPlayPause }) => {
-    const videoRefs = useRef([]);
-
-    useEffect(() => {
-        videoRefs.current.forEach((video, index) => {
-            if (video) {
-                if (index === currentSlide && isPlaying) {
-                    video.currentTime = 0;
-                    video.play().catch(console.log);
-                } else {
-                    video.pause();
-                    video.currentTime = 0;
-                }
-            }
+    const getYouTubeEmbedUrl = (url, index) => {
+        const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/);
+        const videoId = match?.[1] || url;
+        const params = new URLSearchParams({
+            autoplay: index === currentSlide && isPlaying ? '1' : '0',
+            mute: '1',
+            controls: '1',
+            rel: '0',
+            modestbranding: '1',
+            playsinline: '1',
         });
-    }, [currentSlide, isPlaying]);
 
-    useEffect(() => {
-        const currentVideo = videoRefs.current[currentSlide];
-        if (currentVideo) {
-            if (isPlaying) {
-                currentVideo.play().catch(console.log);
-            } else {
-                currentVideo.pause();
-            }
-        }
-    }, [isPlaying]);
-
-    const handleVideoEnded = () => {
-        // Advance to the next slide when current video ends
-        onSlideChange((currentSlide + 1) % videos.length);
+        return `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
     };
 
     return (
@@ -45,21 +27,18 @@ const VideoCarousel = ({ videos, currentSlide, onSlideChange, isPlaying, onPlayP
             >
                 {videos.map((video, index) => (
                     <div key={index} className="min-w-full h-full relative bg-gray-900">
-                        <video
-                            ref={el => videoRefs.current[index] = el}
+                        <iframe
+                            key={`${video.src}-${index === currentSlide}-${isPlaying}`}
+                            src={getYouTubeEmbedUrl(video.src, index)}
+                            title={video.title}
                             className="w-full h-full object-cover"
-                            // Removed `loop` so the video ends naturally and triggers onEnded
-                            muted
-                            playsInline
-                            preload="metadata"
-                            onEnded={index === currentSlide ? handleVideoEnded : undefined}
-                        >
-                            <source src={`/videos/${video.src}`} type="video/mp4" />
-                        </video>
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                        />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
-                        <div className="absolute bottom-8 left-8 right-8 text-white">
+                        <div className="pointer-events-none absolute bottom-8 left-8 right-8 text-white">
                             <h3 className="text-2xl font-bold mb-2">{video.title}</h3>
                             {/* <p className="text-base text-gray-200 opacity-90">{video.subtitle}</p> */}
                         </div>
@@ -69,14 +48,16 @@ const VideoCarousel = ({ videos, currentSlide, onSlideChange, isPlaying, onPlayP
 
             <button
                 onClick={() => onSlideChange((currentSlide - 1 + videos.length) % videos.length)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200 disabled:opacity-40"
+                disabled={videos.length <= 1}
             >
                 <ChevronLeft size={20} />
             </button>
 
             <button
                 onClick={() => onSlideChange((currentSlide + 1) % videos.length)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200 disabled:opacity-40"
+                disabled={videos.length <= 1}
             >
                 <ChevronRight size={20} />
             </button>
@@ -108,21 +89,20 @@ const LAMAHeroSection = () => {
 
     const videos = [
         {
-            src: "clip1.mp4",
+            src: "https://youtu.be/V6b8uOlE06I",
             title: "Locally Led Action",
-            subtitle: "Communities leading their own climate adaptation strategies"
+            subtitle: "Mixed Farming Success: How One Farmer Earns KSh 30,000 Monthly"
         },
         {
-            src: "clip2.mp4",
-            title: "Video shows solar panels and water harvesting tanks",
-            subtitle: "Inclusive dialogue for equitable climate solutions"
+            src: "https://youtu.be/aeJUfc2-wAQ",
+            title: "Locally Led Action",
+            subtitle: "Mixed Farming Success: How One Farmer Earns KSh 30,000 Monthly"
         },
         {
-            src: "clip3.mp4",
-            title: "A video showing azolla farm ",
-            subtitle: "Bottom-up indicators that capture local resilience"
+            src: "https://youtu.be/Q6snkwUYFYg",
+            title: "Locally Led Action",
+            subtitle: "Mixed Farming Success: How One Farmer Earns KSh 30,000 Monthly"
         },
-
     ];
 
 

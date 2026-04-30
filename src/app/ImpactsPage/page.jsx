@@ -3,7 +3,28 @@ import { useState } from "react"
 import { Play, Eye, Clock, MapPin, ChevronDown, X, CloudRain, Droplets, Sprout, Leaf } from "lucide-react"
 
 /* ─────────────────────────────────────────────
-   VIDEO MODAL — native <video> for local files
+   Helper: extract YouTube video ID from any
+   youtu.be or youtube.com URL
+───────────────────────────────────────────── */
+const getYouTubeId = (url) => {
+    const match = url.match(
+        /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/
+    )
+    return match ? match[1] : null
+}
+
+const getEmbedUrl = (url) => {
+    const id = getYouTubeId(url)
+    return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : url
+}
+
+const getThumbnailUrl = (url) => {
+    const id = getYouTubeId(url)
+    return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null
+}
+
+/* ─────────────────────────────────────────────
+   VIDEO MODAL — YouTube iframe
 ───────────────────────────────────────────── */
 const VideoModal = ({ video, onClose }) => (
     <div
@@ -14,20 +35,19 @@ const VideoModal = ({ video, onClose }) => (
             className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
         >
-            <div className="relative bg-black rounded-t-2xl overflow-hidden">
+            <div className="relative bg-black rounded-t-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white p-2 rounded-full transition-colors shadow"
                 >
                     <X className="w-5 h-5 text-black" />
                 </button>
-                <video
-                    src={video.videoUrl}
-                    className="w-full"
-                    style={{ maxHeight: "500px" }}
-                    autoPlay
-                    controls
-                    playsInline
+                <iframe
+                    src={getEmbedUrl(video.videoUrl)}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title={video.title}
                 />
             </div>
 
@@ -54,29 +74,30 @@ const VideoModal = ({ video, onClose }) => (
 )
 
 /* ─────────────────────────────────────────────
-   VIDEO CARD — hover preview + click to open
+   VIDEO CARD — YouTube thumbnail + click to open
 ───────────────────────────────────────────── */
 const VideoCard = ({ video, onClick }) => {
     const Icon = video.icon
+    const thumbnail = getThumbnailUrl(video.videoUrl)
 
     return (
-        <div className="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+        <div
+            className="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             onClick={onClick}
         >
-            {/* Thumbnail / video preview */}
+            {/* Thumbnail */}
             <div className="relative h-52 bg-gray-900 overflow-hidden">
-                <video
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    src={video.videoUrl}
-                    muted
-                    playsInline
-                    preload="metadata"
-                    onMouseEnter={(e) => e.currentTarget.play().catch(() => { })}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.pause()
-                        e.currentTarget.currentTime = 0
-                    }}
-                />
+                {thumbnail ? (
+                    <img
+                        src={thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                ) : (
+                    <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+                        <Play className="w-10 h-10 text-gray-500" />
+                    </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
                 {/* Category badge */}
@@ -86,7 +107,7 @@ const VideoCard = ({ video, onClick }) => {
                     </span>
                 </div>
 
-                {/* Play button — always visible, grows on hover */}
+                {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 bg-white/90 group-hover:bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <Play className="w-5 h-5 text-green-600 ml-0.5" fill="currentColor" />
@@ -101,7 +122,6 @@ const VideoCard = ({ video, onClick }) => {
 
             {/* Card body */}
             <div className="p-5">
-                {/* Icon row */}
                 {Icon && (
                     <div className="inline-flex p-2 bg-green-50 rounded-lg mb-3">
                         <Icon className="w-4 h-4 text-green-600" />
@@ -127,129 +147,113 @@ const VideoCard = ({ video, onClick }) => {
 }
 
 /* ─────────────────────────────────────────────
+   FEATURED VIDEO — YouTube thumbnail + iframe modal
+───────────────────────────────────────────── */
+const FeaturedVideoPreview = ({ video, onPlay }) => {
+    const thumbnail = getThumbnailUrl(video.videoUrl)
+
+    return (
+        <div className="relative group">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-900 h-80">
+                {thumbnail ? (
+                    <img
+                        src={thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                ) : (
+                    <div className="w-full h-full bg-gray-800" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <button
+                        onClick={onPlay}
+                        className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300"
+                    >
+                        <Play className="w-8 h-8 text-green-600 ml-1" fill="currentColor" />
+                    </button>
+                </div>
+                <div className="absolute bottom-4 left-4 flex items-center gap-4 text-white text-sm">
+                    <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{video.duration}</span>
+                    <span className="flex items-center gap-1"><Eye className="w-4 h-4" />{video.views} views</span>
+                </div>
+            </div>
+            <div className="absolute -top-4 left-4">
+                <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow">
+                    {video.category}
+                </span>
+            </div>
+        </div>
+    )
+}
+
+/* ─────────────────────────────────────────────
    MAIN PAGE
 ───────────────────────────────────────────── */
 const ImpactsPage = () => {
     const [showMoreVideos, setShowMoreVideos] = useState(false)
     const [playingVideo, setPlayingVideo] = useState(null)
 
-    /* Featured video — Nyakach water harvesting */
+    /* ── Featured video ── */
     const featuredImpact = {
-        title: "Water Harvesting & Community Resilience in Nyakach",
+        title: "Chief's Call to Action: Building Climate Resilience in Nyakach",
         description:
-            "Witness how the Lama community in Nyakach, Kisumu County is transforming water access through locally led adaptation. From drawing water at household wells to establishing communal water tanks and cattle water points, this story captures the voices of local champions and LLAs building lasting water resilience.",
+            "A community chief in Nyakach takes a bold stand — rallying local leaders, households, and youth to unite around climate resilience. From mobilising resources to championing locally led adaptation, this is a powerful call to action that puts community leadership at the heart of climate response.",
         location: "Nyakach, Kisumu County",
         duration: "3:42",
         views: "1.2K",
         category: "Community Leadership",
-        videoUrl: "/videos/clip3.mp4",
+        videoUrl: "https://youtu.be/GKLoHlussZ8",
         highlights: [
-            "Household wells serving local families",
-            "Communal water tanks installed",
-            "Cattle water points established",
-            "Local champions driving LLA visions",
+            "Chief leads community mobilisation",
+            "Locally driven climate action plans",
+            "Youth and elders united",
+            "Resilience built from the ground up",
         ],
     }
 
-    /* ── 4 real community videos ── */
+    /* ── Community videos ── */
     const communityVideos = [
         {
             id: 1,
-            title: "Youth Voices: Dams, Weather Forecasting & Climate Information",
+            title: "Solar-Powered Water Pumping: A Game-Changer for Rural Homes",
             description:
-                "A young leader from Nandi voices the community's urgent call for dams and accessible climate services — including weather forecasting and effective dissemination of climate information. Community groups list what they need, making this a powerful and authentic illustration of locally driven climate visions.",
-            location: "Nandi County",
+                "Discover how solar-powered water pumping is transforming daily life in rural communities. Families no longer walk miles for water — clean, reliable supply is now at their doorstep, powered by the sun and driven by community ingenuity.",
+            location: "Nyakach, Kisumu County",
             duration: "4:10",
             views: "980",
-            category: "Youth Leadership",
+            category: "Clean Energy",
             icon: CloudRain,
-            videoUrl: "/videos/clip3.mp4",
+            videoUrl: "https://youtu.be/Y7cFeFWqRN4",
         },
         {
             id: 2,
-            title: "Lake Backflow Impacts: Vulnerability in Sangorota",
+            title: "Fast-Growing Azolla: The Farming Hack Producing Bulk Feed in Days",
             description:
-                "A male community member from Sangorota speaks candidly about the devastating impacts and vulnerabilities caused by lake backflow. His firsthand account reveals how rising waters have reshaped livelihoods, farmland, and everyday life in the area.",
-            location: "Sangorota, Kisumu County",
+                "Meet Azolla — the fast-growing aquatic fern that is revolutionising livestock feeding across rural Kenya. Farmers are producing bulk, protein-rich animal feed within days, cutting costs and boosting productivity in a simple, climate-smart solution.",
+            location: "Kisumu County",
             duration: "3:55",
             views: "1.1K",
-            category: "Impacts & Vulnerability",
-            icon: Droplets,
-            videoUrl: "/videos/clip3.mp4",
+            category: "Adaptive Agriculture",
+            icon: Sprout,
+            videoUrl: "https://youtu.be/w71w7FBV5C4",
         },
         {
             id: 3,
-            title: "A Woman Farmer's Story: Land, Rain & Adaptive Farming",
+            title: "Planting 100 Trees a Month: Community Chief Leads Climate Action Initiative",
             description:
-                "A woman from Sango area walks her land and farms, explaining how the area flourishes with moderate rain and sun. Having mastered current farming trends, she blends organic and inorganic fertilizers to enhance productivity — a living model of adaptive, community-rooted agriculture.",
-            location: "Sango Area, Sangorota",
+                "One chief, one mission — 100 trees planted every month. This inspiring story follows a community chief who has made tree planting a cornerstone of local climate action, mobilising households and schools to restore landscapes and fight back against deforestation.",
+            location: "Nyakach, Kisumu County",
             duration: "5:20",
             views: "1.4K",
-            category: "Adaptive Agriculture",
-            icon: Sprout,
-            videoUrl: "/videos/clip3.mp4",
+            category: "Local Champions",
+            icon: Leaf,
+            videoUrl: "https://youtu.be/l_IOUtxsGtU",
         },
-        // {
-        //     id: 4,
-        //     title: "Local Champions: Crop Calendar Mastery & Organic Farming",
-        //     description:
-        //         "Local women show how mastering the crop calendar allows them to plant early and stay ahead of the seasons. By choosing organic fertilizers, they protect harvests from the scorching effects of drought — a compelling story of climate-smart, women-led agriculture in action.",
-        //     location: "Sangorota, Kisumu County",
-        //     duration: "4:48",
-        //     views: "1.6K",
-        //     category: "Local Champions",
-        //     icon: Leaf,
-        //     videoUrl: "/Video/video4.mp4",
-        // },
     ]
 
-    /* Additional videos shown after "Show More" */
-    // const additionalVideos = [
-    //     {
-    //         id: 5,
-    //         title: "Building Drought Resilience in the Horn of Africa",
-    //         duration: "7:15",
-    //         views: "3.2K",
-    //         location: "Ethiopia",
-    //         description: "Community-led drought resilience strategies transforming livelihoods across the Horn of Africa.",
-    //         category: "Resilience",
-    //         icon: null,
-    //         videoUrl: "/Video/video5.mp4",
-    //     },
-    //     {
-    //         id: 6,
-    //         title: "Community-Based Forest Conservation",
-    //         duration: "6:48",
-    //         views: "2.1K",
-    //         location: "Uganda",
-    //         description: "How forest communities in Uganda are protecting biodiversity while adapting to climate change.",
-    //         category: "Conservation",
-    //         icon: null,
-    //         videoUrl: "/Video/video6.mp4",
-    //     },
-    //     {
-    //         id: 7,
-    //         title: "Women Farmers: Climate Champions",
-    //         duration: "5:52",
-    //         views: "2.9K",
-    //         location: "Tanzania",
-    //         description: "Women farmers in Tanzania leading the way in climate-smart agriculture and food security.",
-    //         category: "Women Leadership",
-    //         icon: null,
-    //         videoUrl: "/Video/video7.mp4",
-    //     },
-    //     {
-    //         id: 8,
-    //         title: "Renewable Energy in Rural Communities",
-    //         duration: "8:10",
-    //         views: "3.5K",
-    //         location: "Mali",
-    //         description: "Solar-powered solutions helping rural Mali communities adapt to and mitigate climate change.",
-    //         category: "Clean Energy",
-    //         icon: null,
-    //         videoUrl: "/Video/video8.mp4",
-    //     },
-    // ]
+    /* ── Additional videos shown after "Show More" — add more YouTube URLs here ── */
+    const additionalVideos = []
 
     const displayedVideos = showMoreVideos
         ? [...communityVideos, ...additionalVideos]
@@ -293,40 +297,10 @@ const ImpactsPage = () => {
                         <div className="max-w-6xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Preview */}
-                                <div className="relative group">
-                                    <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-900 h-80">
-                                        <video
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                            src={featuredImpact.videoUrl}
-                                            muted
-                                            playsInline
-                                            preload="metadata"
-                                            onMouseEnter={(e) => e.currentTarget.play().catch(() => { })}
-                                            onMouseLeave={(e) => {
-                                                e.currentTarget.pause()
-                                                e.currentTarget.currentTime = 0
-                                            }}
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <button
-                                                onClick={() => setPlayingVideo(featuredImpact)}
-                                                className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300"
-                                            >
-                                                <Play className="w-8 h-8 text-green-600 ml-1" fill="currentColor" />
-                                            </button>
-                                        </div>
-                                        <div className="absolute bottom-4 left-4 flex items-center gap-4 text-white text-sm">
-                                            <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{featuredImpact.duration}</span>
-                                            <span className="flex items-center gap-1"><Eye className="w-4 h-4" />{featuredImpact.views} views</span>
-                                        </div>
-                                    </div>
-                                    <div className="absolute -top-4 left-4">
-                                        <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow">
-                                            {featuredImpact.category}
-                                        </span>
-                                    </div>
-                                </div>
+                                <FeaturedVideoPreview
+                                    video={featuredImpact}
+                                    onPlay={() => setPlayingVideo(featuredImpact)}
+                                />
 
                                 {/* Info */}
                                 <div>
@@ -375,24 +349,26 @@ const ImpactsPage = () => {
                                 ))}
                             </div>
 
-                            {/* Show more / less */}
-                            <div className="flex justify-center">
-                                {!showMoreVideos ? (
-                                    <button
-                                        onClick={() => setShowMoreVideos(true)}
-                                        className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
-                                    >
-                                        Show More Videos <ChevronDown className="w-5 h-5" />
-                                    </button>
-                                ) : (
-                                    <button
-                                        onClick={() => setShowMoreVideos(false)}
-                                        className="inline-flex items-center gap-2 bg-gray-200 text-gray-800 px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
-                                    >
-                                        Show Less <ChevronDown className="w-5 h-5 rotate-180" />
-                                    </button>
-                                )}
-                            </div>
+                            {/* Show more / less — only shown when additionalVideos has entries */}
+                            {additionalVideos.length > 0 && (
+                                <div className="flex justify-center">
+                                    {!showMoreVideos ? (
+                                        <button
+                                            onClick={() => setShowMoreVideos(true)}
+                                            className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
+                                        >
+                                            Show More Videos <ChevronDown className="w-5 h-5" />
+                                        </button>
+                                    ) : (
+                                        <button
+                                            onClick={() => setShowMoreVideos(false)}
+                                            className="inline-flex items-center gap-2 bg-gray-200 text-gray-800 px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
+                                        >
+                                            Show Less <ChevronDown className="w-5 h-5 rotate-180" />
+                                        </button>
+                                    )}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </section>

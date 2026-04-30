@@ -1,5 +1,4 @@
 // Gallery data configuration
-// Add your actual images to public/assets/images/ and videos to public/assets/videos/
 
 export const pictures = [
   {
@@ -77,55 +76,55 @@ export const pictures = [
   {
     id: 13,
     url: "/images/DSC_0279.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 13",
     description: "Waterfall scene",
   },
   {
     id: 14,
     url: "/images/DSC_0303.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 14",
     description: "Waterfall scene",
   },
   {
     id: 15,
     url: "/images/DSC_0311.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 15",
     description: "Waterfall scene",
   },
   {
     id: 16,
     url: "/images/DSC_0318.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 16",
     description: "Waterfall scene",
   },
   {
     id: 17,
     url: "/images/lreb.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 17",
     description: "Waterfall scene",
   },
   {
     id: 18,
     url: "/images/lreb1.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 18",
     description: "Waterfall scene",
   },
   {
     id: 19,
     url: "/images/lreb2.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 19",
     description: "Waterfall scene",
   },
   {
     id: 20,
     url: "/images/lreb3.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 20",
     description: "Waterfall scene",
   },
   {
     id: 21,
     url: "/images/lreb4.jpg",
-    title: "Landscape View 12",
+    title: "Landscape View 21",
     description: "Waterfall scene",
   },
 ];
@@ -133,67 +132,38 @@ export const pictures = [
 export const videos = [
   {
     id: 1,
-    thumbnail: "/assets/videos/thumbnails/video-1-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Project Overview",
-    description: "Introduction to our latest project",
-    duration: "3:45",
+    youtubeId: "GKLoHlussZ8",
+    thumbnail: "https://img.youtube.com/vi/GKLoHlussZ8/hqdefault.jpg",
+    title: "Chief's Call to Action: Building Climate Resilience in Nyakach",
+    description:
+      "A community chief in Nyakach rallies local leaders, households, and youth to unite around climate resilience and locally led adaptation.",
+    duration: "3:42",
   },
   {
     id: 2,
-    thumbnail: "/assets/videos/thumbnails/video-2-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Behind the Scenes",
-    description: "A look at our work process",
-    duration: "5:20",
+    youtubeId: "Y7cFeFWqRN4",
+    thumbnail: "https://img.youtube.com/vi/Y7cFeFWqRN4/hqdefault.jpg",
+    title: "Solar-Powered Water Pumping: A Game-Changer for Rural Homes",
+    description:
+      "Discover how solar-powered water pumping is transforming daily life — clean, reliable supply now at families' doorsteps, powered by the sun.",
+    duration: "4:10",
   },
   {
     id: 3,
-    thumbnail: "/assets/videos/thumbnails/video-3-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Team Highlights",
-    description: "Meet our amazing team",
-    duration: "2:15",
-  },
-  {
-    id: 4,
-    thumbnail: "/assets/videos/thumbnails/video-4-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Success Stories",
-    description: "Client testimonials and results",
-    duration: "4:30",
-  },
-  {
-    id: 5,
-    thumbnail: "/assets/videos/thumbnails/video-5-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Innovation Showcase",
-    description: "Our latest innovations",
-    duration: "6:10",
-  },
-  {
-    id: 6,
-    thumbnail: "/assets/videos/thumbnails/video-6-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Event Coverage",
-    description: "Highlights from recent events",
+    youtubeId: "w71w7FBV5C4",
+    thumbnail: "https://img.youtube.com/vi/w71w7FBV5C4/hqdefault.jpg",
+    title: "Fast-Growing Azolla: The Farming Hack Producing Bulk Feed in Days",
+    description:
+      "Meet Azolla — the fast-growing aquatic fern revolutionising livestock feeding across rural Kenya with protein-rich animal feed produced in days.",
     duration: "3:55",
   },
   {
-    id: 7,
-    thumbnail: "/assets/videos/thumbnails/video-7-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Product Demo",
-    description: "See our products in action",
-    duration: "4:45",
+    id: 4,
+    youtubeId: "l_IOUtxsGtU",
+    thumbnail: "https://img.youtube.com/vi/l_IOUtxsGtU/hqdefault.jpg",
+    title: "Planting 100 Trees a Month: Community Chief Leads Climate Action",
+    description:
+      "One chief, one mission — 100 trees planted every month. An inspiring story of community-led reforestation and climate action.",
+    duration: "5:20",
   },
-  {
-    id: 8,
-    thumbnail: "/assets/videos/thumbnails/video-8-thumb.jpg",
-    youtubeId: "dQw4w9WgXcQ", // Replace with your YouTube video ID
-    title: "Tutorial Series",
-    description: "Learn how to use our platform",
-    duration: "7:20",
-  },
-  // Add more videos as needed
 ];
