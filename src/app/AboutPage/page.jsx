@@ -149,7 +149,7 @@ const AboutPage = () => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-2xl sm:rounded-3xl transform rotate-3"></div>
                                         <div className="relative bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl">
                                             <img
-                                                src="/images/fgd1.jpg"
+                                                src="/images/lamapic.jpeg"
                                                 alt="Community collaboration in climate adaptation"
                                                 className="rounded-xl sm:rounded-2xl w-full h-64 sm:h-80 object-cover"
                                             />
