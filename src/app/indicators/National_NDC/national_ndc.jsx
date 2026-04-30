@@ -465,15 +465,15 @@ export default function NDCDataViewer() {
 
                         {!selectedSource && (
                             <div className="flex items-center gap-2 self-start sm:self-auto">
-                            <DownloadButton dataset="ndc" label="Download CSV" />
-                            <button
-                                onClick={() => setShowVisualization(true)}
-                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg sm:rounded-xl hover:shadow-lg transition-all font-medium text-sm"
-                            >
-                                <PieChart className="w-4 h-4" />
-                                <span className="hidden xs:inline">View Analytics</span>
-                                <span className="xs:hidden">Analytics</span>
-                            </button>
+                                {/* <DownloadButton dataset="ndc" label="Download CSV" /> */}
+                                <button
+                                    onClick={() => setShowVisualization(true)}
+                                    className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg sm:rounded-xl hover:shadow-lg transition-all font-medium text-sm"
+                                >
+                                    <PieChart className="w-4 h-4" />
+                                    <span className="hidden xs:inline">View Analytics</span>
+                                    <span className="xs:hidden">Analytics</span>
+                                </button>
                             </div>
                         )}
                     </div>
@@ -694,99 +694,99 @@ export default function NDCDataViewer() {
                         {filteredData.length > 0 ? (
                             <>
                                 <DataGate variant="table" label="NDC Indicators Table" description="Register for free to explore all Nationally Determined Contribution indicators with filters and search.">
-                                <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100">
-                                    <div className="overflow-x-auto">
-                                        <table className="w-full">
-                                            <thead>
-                                                <tr className="bg-gradient-to-r from-blue-100 to-blue-50">
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
-                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Indicator</p>
-                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The specific action or condition Kenya commits to measuring</p>
-                                                    </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">
-                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Thematic Target</p>
-                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The climate area this addresses</p>
-                                                    </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
-                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Type</p>
-                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Output, Outcome, or Process</p>
-                                                    </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
-                                                        <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Year</p>
-                                                        <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Document published</p>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {currentItems.map((item, index) => (
-                                                    <tr
-                                                        key={index}
-                                                        className="border-b border-blue-50 hover:bg-blue-50 transition-colors"
-                                                    >
-                                                        <td className="px-3 sm:px-4 py-2.5 sm:py-3">
-                                                            <div className="flex items-start gap-1.5 sm:gap-2">
-                                                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0 mt-1 sm:mt-1.5"></div>
-                                                                <div className="min-w-0">
-                                                                    {item.Sector && (
-                                                                        <span className="text-xs text-gray-400 italic block mb-0.5">Sector: <strong className="text-gray-600 not-italic">{item.Sector}</strong></span>
-                                                                    )}
-                                                                    <span className="text-gray-900 text-xs sm:text-sm leading-snug block font-medium">
-                                                                        {item.Indicator || 'N/A'}
-                                                                    </span>
-                                                                    {/* Mobile-only badges */}
-                                                                    <div className="flex flex-wrap gap-1.5 mt-2 md:hidden">
-                                                                        {item['Thematic Target'] && (
-                                                                            <span className="inline-flex items-center px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-semibold">
-                                                                                {item['Thematic Target']}
-                                                                            </span>
+                                    <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100">
+                                        <div className="overflow-x-auto">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr className="bg-gradient-to-r from-blue-100 to-blue-50">
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                            <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Indicator</p>
+                                                            <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The specific action or condition Kenya commits to measuring</p>
+                                                        </th>
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">
+                                                            <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Thematic Target</p>
+                                                            <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">The climate area this addresses</p>
+                                                        </th>
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                            <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Type</p>
+                                                            <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Output, Outcome, or Process</p>
+                                                        </th>
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left hidden lg:table-cell">
+                                                            <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Year</p>
+                                                            <p className="text-xs text-blue-500 font-normal normal-case tracking-normal mt-0.5">Document published</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {currentItems.map((item, index) => (
+                                                        <tr
+                                                            key={index}
+                                                            className="border-b border-blue-50 hover:bg-blue-50 transition-colors"
+                                                        >
+                                                            <td className="px-3 sm:px-4 py-2.5 sm:py-3">
+                                                                <div className="flex items-start gap-1.5 sm:gap-2">
+                                                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full flex-shrink-0 mt-1 sm:mt-1.5"></div>
+                                                                    <div className="min-w-0">
+                                                                        {item.Sector && (
+                                                                            <span className="text-xs text-gray-400 italic block mb-0.5">Sector: <strong className="text-gray-600 not-italic">{item.Sector}</strong></span>
                                                                         )}
-                                                                        {item['Indicator Type'] && (
-                                                                            <span className="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs font-semibold capitalize lg:hidden">
-                                                                                {item['Indicator Type']}
-                                                                            </span>
-                                                                        )}
-                                                                        {item['Document  publication  year'] && (
-                                                                            <span className="inline-flex items-center px-2 py-0.5 bg-purple-100 text-purple-800 rounded text-xs font-semibold lg:hidden">
-                                                                                {item['Document  publication  year']}
-                                                                            </span>
-                                                                        )}
+                                                                        <span className="text-gray-900 text-xs sm:text-sm leading-snug block font-medium">
+                                                                            {item.Indicator || 'N/A'}
+                                                                        </span>
+                                                                        {/* Mobile-only badges */}
+                                                                        <div className="flex flex-wrap gap-1.5 mt-2 md:hidden">
+                                                                            {item['Thematic Target'] && (
+                                                                                <span className="inline-flex items-center px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-semibold">
+                                                                                    {item['Thematic Target']}
+                                                                                </span>
+                                                                            )}
+                                                                            {item['Indicator Type'] && (
+                                                                                <span className="inline-flex items-center px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs font-semibold capitalize lg:hidden">
+                                                                                    {item['Indicator Type']}
+                                                                                </span>
+                                                                            )}
+                                                                            {item['Document  publication  year'] && (
+                                                                                <span className="inline-flex items-center px-2 py-0.5 bg-purple-100 text-purple-800 rounded text-xs font-semibold lg:hidden">
+                                                                                    {item['Document  publication  year']}
+                                                                                </span>
+                                                                            )}
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </td>
-                                                        <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden md:table-cell">
-                                                            {item['Thematic Target'] ? (
-                                                                <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold">
-                                                                    {item['Thematic Target']}
-                                                                </span>
-                                                            ) : (
-                                                                <span className="text-gray-400">—</span>
-                                                            )}
-                                                        </td>
-                                                        <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden lg:table-cell">
-                                                            {item['Indicator Type'] ? (
-                                                                <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-semibold capitalize">
-                                                                    {item['Indicator Type']}
-                                                                </span>
-                                                            ) : (
-                                                                <span className="text-gray-400">—</span>
-                                                            )}
-                                                        </td>
-                                                        <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden lg:table-cell">
-                                                            {item['Document  publication  year'] ? (
-                                                                <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-purple-100 text-purple-800 rounded-lg text-xs font-semibold">
-                                                                    {item['Document  publication  year']}
-                                                                </span>
-                                                            ) : (
-                                                                <span className="text-gray-400">—</span>
-                                                            )}
-                                                        </td>
-                                                    </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
+                                                            </td>
+                                                            <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden md:table-cell">
+                                                                {item['Thematic Target'] ? (
+                                                                    <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold">
+                                                                        {item['Thematic Target']}
+                                                                    </span>
+                                                                ) : (
+                                                                    <span className="text-gray-400">—</span>
+                                                                )}
+                                                            </td>
+                                                            <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden lg:table-cell">
+                                                                {item['Indicator Type'] ? (
+                                                                    <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-semibold capitalize">
+                                                                        {item['Indicator Type']}
+                                                                    </span>
+                                                                ) : (
+                                                                    <span className="text-gray-400">—</span>
+                                                                )}
+                                                            </td>
+                                                            <td className="px-3 sm:px-4 py-2.5 sm:py-3 hidden lg:table-cell">
+                                                                {item['Document  publication  year'] ? (
+                                                                    <span className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-purple-100 text-purple-800 rounded-lg text-xs font-semibold">
+                                                                        {item['Document  publication  year']}
+                                                                    </span>
+                                                                ) : (
+                                                                    <span className="text-gray-400">—</span>
+                                                                )}
+                                                            </td>
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                </div>
                                 </DataGate>
 
                                 {/* Pagination */}

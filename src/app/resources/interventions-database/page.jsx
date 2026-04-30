@@ -397,7 +397,7 @@ export default function ClimateAdaptationDashboard() {
                             </CardHeader>
                             <CardContent>
                                 <div className="text-3xl font-bold">{statistics.totalProjects}</div>
-                                <p className="text-xs text-blue-100 mt-1">Active initiatives</p>
+                                <p className="text-xs text-blue-100 mt-1">Initiatives</p>
                             </CardContent>
                         </Card>
 
@@ -600,63 +600,63 @@ export default function ClimateAdaptationDashboard() {
 
                     {/* Projects Display with View Toggle */}
                     <DataGate variant="table" label="Interventions Database" description="Register for free to browse the full climate adaptation interventions database with map view, filters, and export.">
-                    <Card className="bg-white shadow-xl mb-8 border-0">
-                        <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
-                            <div className="flex items-center justify-between flex-wrap gap-4">
-                                <div className="flex items-center gap-3">
-                                    <CardTitle className="text-xl font-bold text-gray-900">
-                                        Projects {viewMode === "table" ? "Table" : "List"}
-                                    </CardTitle>
-                                    <Badge variant="secondary" className="bg-blue-100 text-blue-700">
-                                        {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
-                                    </Badge>
+                        <Card className="bg-white shadow-xl mb-8 border-0">
+                            <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
+                                <div className="flex items-center justify-between flex-wrap gap-4">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-xl font-bold text-gray-900">
+                                            Projects {viewMode === "table" ? "Table" : "List"}
+                                        </CardTitle>
+                                        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                                            {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+                                        </Badge>
+                                    </div>
+                                    <div className="flex gap-2">
+                                        <Button
+                                            variant={viewMode === "list" ? "default" : "outline"}
+                                            onClick={() => setViewMode("list")}
+                                            className="hover:bg-blue-50"
+                                            size="sm"
+                                        >
+                                            <List className="h-4 w-4 mr-2" />
+                                            List
+                                        </Button>
+                                        <Button
+                                            variant={viewMode === "table" ? "default" : "outline"}
+                                            onClick={() => setViewMode("table")}
+                                            className="hover:bg-blue-50"
+                                            size="sm"
+                                        >
+                                            <TableIcon className="h-4 w-4 mr-2" />
+                                            Table
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            onClick={() => setShowTable(!showTable)}
+                                            className="hover:bg-blue-50"
+                                            size="sm"
+                                        >
+                                            {showTable ? (
+                                                <>
+                                                    <ChevronUp className="h-4 w-4 mr-2" />
+                                                    Hide Projects
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <ChevronDown className="h-4 w-4 mr-2" />
+                                                    Show Projects
+                                                </>
+                                            )}
+                                        </Button>
+                                    </div>
                                 </div>
-                                <div className="flex gap-2">
-                                    <Button
-                                        variant={viewMode === "list" ? "default" : "outline"}
-                                        onClick={() => setViewMode("list")}
-                                        className="hover:bg-blue-50"
-                                        size="sm"
-                                    >
-                                        <List className="h-4 w-4 mr-2" />
-                                        List
-                                    </Button>
-                                    <Button
-                                        variant={viewMode === "table" ? "default" : "outline"}
-                                        onClick={() => setViewMode("table")}
-                                        className="hover:bg-blue-50"
-                                        size="sm"
-                                    >
-                                        <TableIcon className="h-4 w-4 mr-2" />
-                                        Table
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => setShowTable(!showTable)}
-                                        className="hover:bg-blue-50"
-                                        size="sm"
-                                    >
-                                        {showTable ? (
-                                            <>
-                                                <ChevronUp className="h-4 w-4 mr-2" />
-                                                Hide Projects
-                                            </>
-                                        ) : (
-                                            <>
-                                                <ChevronDown className="h-4 w-4 mr-2" />
-                                                Show Projects
-                                            </>
-                                        )}
-                                    </Button>
-                                </div>
-                            </div>
-                        </CardHeader>
-                        {showTable && (
-                            <CardContent className="pt-6">
-                                {viewMode === "list" ? renderListView() : renderTableView()}
-                            </CardContent>
-                        )}
-                    </Card>
+                            </CardHeader>
+                            {showTable && (
+                                <CardContent className="pt-6">
+                                    {viewMode === "list" ? renderListView() : renderTableView()}
+                                </CardContent>
+                            )}
+                        </Card>
                     </DataGate>
                 </div>
             </div>

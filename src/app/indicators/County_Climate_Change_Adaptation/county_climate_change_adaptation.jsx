@@ -194,7 +194,7 @@ export default function CountyDataViewer() {
                         <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border-2 border-green-500/20">
                             <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-green-600 mb-2" />
                             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-600 mb-1">{statistics.totalInitiatives}</h3>
-                            <p className="text-xs sm:text-sm text-gray-600 font-medium">Total Initiatives</p>
+                            <p className="text-xs sm:text-sm text-gray-600 font-medium">Total Indicators</p>
                         </div>
 
                         <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border-2 border-blue-200">
@@ -223,14 +223,14 @@ export default function CountyDataViewer() {
                                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                             </div>
                             <div>
-                                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Initiatives by County</h2>
+                                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Indicators by County</h2>
                                 <p className="text-xs sm:text-sm text-gray-600">Distribution across all counties</p>
                             </div>
                         </div>
 
                         <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                                This chart shows the number of climate adaptation initiatives per county, helping identify
+                                This chart shows the number of climate adaptation indicators per county, helping identify
                                 which regions have the most comprehensive climate action plans.
                             </p>
                         </div>
@@ -244,7 +244,7 @@ export default function CountyDataViewer() {
                                         <div key={county}>
                                             <div className="flex items-center justify-between mb-2">
                                                 <span className="font-semibold text-gray-800 text-sm sm:text-base">{county}</span>
-                                                <span className="text-xs sm:text-sm font-bold text-green-600 whitespace-nowrap ml-2">{count} initiatives</span>
+                                                <span className="text-xs sm:text-sm font-bold text-green-600 whitespace-nowrap ml-2">{count} indicators</span>
                                             </div>
                                             <div className="w-full bg-gray-100 rounded-full h-2.5 sm:h-3 overflow-hidden">
                                                 <div
@@ -390,21 +390,21 @@ export default function CountyDataViewer() {
                             </div>
                             <div>
                                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">County Climate Change Adaptation</h1>
-                                <p className="text-gray-600 text-xs sm:text-sm mt-1">Explore climate initiatives across Kenyan counties</p>
+                                <p className="text-gray-600 text-xs sm:text-sm mt-1">Explore climate indicators across Kenyan counties</p>
                             </div>
                         </div>
 
                         {!selectedCounty && (
                             <div className="flex items-center gap-2 w-full sm:w-auto">
-                            <DownloadButton dataset="ccap" label="Download CSV" />
-                            <button
-                                onClick={() => setShowVisualization(true)}
-                                className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm flex-1 sm:flex-none justify-center"
-                            >
-                                <PieChart className="w-4 h-4" />
-                                <span className="hidden sm:inline">View Analytics</span>
-                                <span className="sm:hidden">Analytics</span>
-                            </button>
+                                {/* <DownloadButton dataset="ccap" label="Download CSV" /> */}
+                                <button
+                                    onClick={() => setShowVisualization(true)}
+                                    className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:shadow-lg transition-all font-medium text-sm flex-1 sm:flex-none justify-center"
+                                >
+                                    <PieChart className="w-4 h-4" />
+                                    <span className="hidden sm:inline">View Analytics</span>
+                                    <span className="sm:hidden">Analytics</span>
+                                </button>
                             </div>
                         )}
                     </div>
@@ -494,7 +494,7 @@ export default function CountyDataViewer() {
                                 <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-green-600" />
                             </div>
                             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Select Your County</h2>
-                            <p className="text-gray-600 text-sm">Choose a county to explore climate initiatives</p>
+                            <p className="text-gray-600 text-sm">Choose a county to explore climate indicators</p>
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3">
@@ -512,7 +512,7 @@ export default function CountyDataViewer() {
                                                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-green-700" />
                                             </div>
                                             <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1 line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem]">{county}</h3>
-                                            <p className="text-xs text-green-600 font-semibold">{count} initiatives</p>
+                                            <p className="text-xs text-green-600 font-semibold">{count} indicators</p>
                                         </div>
                                     </button>
                                 );
@@ -530,7 +530,7 @@ export default function CountyDataViewer() {
                                     </div>
                                     <div>
                                         <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{selectedCounty}</h2>
-                                        <p className="text-green-600 font-semibold text-xs sm:text-sm">{filteredData.length} initiatives</p>
+                                        <p className="text-green-600 font-semibold text-xs sm:text-sm">{filteredData.length} indicators</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-2 w-full sm:w-auto">
@@ -614,60 +614,60 @@ export default function CountyDataViewer() {
                         {filteredData.length > 0 ? (
                             <>
                                 <DataGate variant="table" label="County CCAP Table" description="Register for free to explore county-level climate change adaptation indicators.">
-                                <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-green-100">
-                                    <div className="overflow-x-auto">
-                                        <table className="w-full">
-                                            <thead>
-                                                <tr className="bg-gradient-to-r from-green-100 to-green-50">
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
-                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Strategic Sector</p>
-                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">The broad climate theme (e.g. Water, Agriculture)</p>
-                                                    </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
-                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Sub-Sector</p>
-                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">Specific area within the strategic sector</p>
-                                                    </th>
-                                                    <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
-                                                        <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Monitoring Indicator</p>
-                                                        <p className="text-xs text-green-600 font-normal normal-case mt-0.5">How the county will measure if this adaptation is working</p>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {currentItems.map((item, index) => (
-                                                    <tr
-                                                        key={index}
-                                                        className="border-b border-green-50 hover:bg-green-50 transition-colors"
-                                                    >
-                                                        <td className="px-3 sm:px-4 py-3">
-                                                            <div className="flex items-center gap-2">
-                                                                <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                                                                <span className="font-semibold text-gray-900 text-xs sm:text-sm">
-                                                                    {item.StrategicSector || 'N/A'}
-                                                                </span>
-                                                            </div>
-                                                        </td>
-                                                        <td className="px-3 sm:px-4 py-3">
-                                                            {item.Sector ? (
-                                                                <span className="inline-flex items-center px-2 sm:px-3 py-1 bg-green-100 text-green-800 rounded-lg text-xs font-semibold">
-                                                                    {item.Sector}
-                                                                </span>
-                                                            ) : (
-                                                                <span className="text-gray-400">—</span>
-                                                            )}
-                                                        </td>
-                                                        <td className="px-3 sm:px-4 py-3">
-                                                            <p className="text-xs text-gray-400 italic mb-0.5">Measures whether this adaptation activity is succeeding:</p>
-                                                            <p className="text-gray-800 text-xs sm:text-sm leading-snug font-medium line-clamp-2 sm:line-clamp-none">
-                                                                {item.Indicators?.trim() || 'No indicators specified'}
-                                                            </p>
-                                                        </td>
+                                    <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-green-100">
+                                        <div className="overflow-x-auto">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr className="bg-gradient-to-r from-green-100 to-green-50">
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                            <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Strategic Sector</p>
+                                                            <p className="text-xs text-green-600 font-normal normal-case mt-0.5">The broad climate theme (e.g. Water, Agriculture)</p>
+                                                        </th>
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                            <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Sub-Sector</p>
+                                                            <p className="text-xs text-green-600 font-normal normal-case mt-0.5">Specific area within the strategic sector</p>
+                                                        </th>
+                                                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left">
+                                                            <p className="text-xs font-bold text-green-900 uppercase tracking-wider">Monitoring Indicator</p>
+                                                            <p className="text-xs text-green-600 font-normal normal-case mt-0.5">How the county will measure if this adaptation is working</p>
+                                                        </th>
                                                     </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
+                                                </thead>
+                                                <tbody>
+                                                    {currentItems.map((item, index) => (
+                                                        <tr
+                                                            key={index}
+                                                            className="border-b border-green-50 hover:bg-green-50 transition-colors"
+                                                        >
+                                                            <td className="px-3 sm:px-4 py-3">
+                                                                <div className="flex items-center gap-2">
+                                                                    <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                                                                    <span className="font-semibold text-gray-900 text-xs sm:text-sm">
+                                                                        {item.StrategicSector || 'N/A'}
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td className="px-3 sm:px-4 py-3">
+                                                                {item.Sector ? (
+                                                                    <span className="inline-flex items-center px-2 sm:px-3 py-1 bg-green-100 text-green-800 rounded-lg text-xs font-semibold">
+                                                                        {item.Sector}
+                                                                    </span>
+                                                                ) : (
+                                                                    <span className="text-gray-400">—</span>
+                                                                )}
+                                                            </td>
+                                                            <td className="px-3 sm:px-4 py-3">
+                                                                <p className="text-xs text-gray-400 italic mb-0.5">Measures whether this adaptation activity is succeeding:</p>
+                                                                <p className="text-gray-800 text-xs sm:text-sm leading-snug font-medium line-clamp-2 sm:line-clamp-none">
+                                                                    {item.Indicators?.trim() || 'No indicators specified'}
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                </div>
                                 </DataGate>
 
                                 {/* Pagination */}
