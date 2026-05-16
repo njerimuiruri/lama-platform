@@ -14,7 +14,7 @@ const highlights = [
   "Standardised climate indicators handbook",
   "Digital MERL data collection & reporting tool",
   "Strengthened transparency & accountability",
-  ""Informed decision-making across Kenya\u2019s climate actions"",
+  "Informed decision-making across Kenya\u2019s climate actions",
 ];
 
 export default function MerlSpotlightSection() {
