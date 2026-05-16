@@ -6,17 +6,17 @@ import BlogsPage from "./blogssection/page";
 import LamaFooter from "@/components/Footer/footer";
 import ResearchQuestionsSection from "./researchquestions/page";
 import LockedSection from "@/components/ContentGate/LockedSection";
-import UpcomingEventsBanner from "@/components/UpcomingEventsBanner/UpcomingEventsBanner";
+import MerlSpotlightSection from "@/components/MerlSpotlightSection/MerlSpotlightSection";
 
 export default function Home() {
   return (
     <>
       <LamaNavbar />
-      <UpcomingEventsBanner />
 
       {/* Always visible — HeroSection + Introducing LAMA + Why LAMA Matters */}
       <HeroSection />
       <AboutSection mode="intro-only" />
+      <MerlSpotlightSection />
 
       {/* Locked: blurred teaser starts with the map snippet */}
       <LockedSection>
