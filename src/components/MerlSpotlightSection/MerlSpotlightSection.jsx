@@ -52,7 +52,7 @@ export default function MerlSpotlightSection() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-8" style={{ fontSize: 15.5, lineHeight: 1.9 }}>
-              Kenya's Ministry of Environment, Climate Change, Natural Resources and Forestry (MECCF)
+              Kenya&apos;s Ministry of Environment, Climate Change, Natural Resources and Forestry (MECCF)
               has formed a landmark multi-partner initiative — co-led with{" "}
               <strong className="text-gray-900 font-semibold">SouthSouthNorth (SSN)</strong>,{" "}
               the <strong className="text-gray-900 font-semibold">Climate and Development Knowledge Network (CDKN)</strong>,
