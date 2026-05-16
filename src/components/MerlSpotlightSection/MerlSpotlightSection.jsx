@@ -65,7 +65,7 @@ export default function MerlSpotlightSection() {
               <strong className="text-emerald-600 font-semibold">Locally Led Adaptation Metrics for Africa (LAMA) Platform</strong>.
               Together, this coalition is co-developing a standardised indicators handbook and a digital
               Monitoring, Evaluation, Reporting, and Learning (MERL) tool — ultimately promoting
-              greater transparency, accountability, and "Informed decision-making across Kenya\u2019s climate actions".
+              greater transparency, accountability, and informed decision-making across Kenya&apos;s climate actions.
             </p>
 
             {/* Deliverables */}
@@ -88,12 +88,6 @@ export default function MerlSpotlightSection() {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
-              {/* <Link
-                href="/dashboard"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm"
-              >
-                Explore the LAMA Dashboard <ArrowRight size={15} />
-              </Link> */}
               <a
                 href="https://cdkn.org/story/measuring-impact-kenyas-innovative-approach-tracking-and-reporting-climate-action-impact/"
                 target="_blank"
@@ -156,29 +150,6 @@ export default function MerlSpotlightSection() {
                 </p>
               </div>
             </div>
-
-            {/* Stats strip */}
-            {/* <div className="grid grid-cols-2 gap-3 mt-4">
-              {[
-                { value: "6", label: "Partner organisations" },
-                { value: "47", label: "Kenya counties" },
-                { value: "2025", label: "Initiative year" },
-                { value: "1st", label: "National MERL tool" },
-              ].map(({ value, label }) => (
-                <div
-                  key={label}
-                  className="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center"
-                >
-                  <p
-                    className="font-bold text-gray-900 m-0 leading-none"
-                    style={{ fontFamily: "'Georgia', serif", fontSize: 26 }}
-                  >
-                    {value}
-                  </p>
-                  <p className="text-xs text-gray-400 mt-1 m-0 leading-snug">{label}</p>
-                </div>
-              ))}
-            </div> */}
           </div>
 
         </div>
