@@ -47,7 +47,7 @@ export default function MerlSpotlightSection() {
                 letterSpacing: "-0.01em",
               }}
             >
-              LAMA Platform Engaged in Kenya's National
+              LAMA Platform Engaged in Kenya&apos;s National
               Climate Monitoring, Evaluation, Reporting &amp; Learning Initiative
             </h2>
 
