@@ -14,7 +14,7 @@ const highlights = [
   "Standardised climate indicators handbook",
   "Digital MERL data collection & reporting tool",
   "Strengthened transparency & accountability",
-  "Informed decision-making across Kenya's climate actions",
+  ""Informed decision-making across Kenya\u2019s climate actions"",
 ];
 
 export default function MerlSpotlightSection() {
@@ -65,7 +65,7 @@ export default function MerlSpotlightSection() {
               <strong className="text-emerald-600 font-semibold">Locally Led Adaptation Metrics for Africa (LAMA) Platform</strong>.
               Together, this coalition is co-developing a standardised indicators handbook and a digital
               Monitoring, Evaluation, Reporting, and Learning (MERL) tool — ultimately promoting
-              greater transparency, accountability, and informed decision-making across Kenya's climate actions.
+              greater transparency, accountability, and "Informed decision-making across Kenya\u2019s climate actions".
             </p>
 
             {/* Deliverables */}
