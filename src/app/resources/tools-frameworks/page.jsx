@@ -94,7 +94,7 @@ export default function AdaptationToolsFramework() {
                                             <div className="text-center">
                                                 <div className="relative">
                                                     <Loader2 className="w-16 h-16 animate-spin text-emerald-600 mx-auto mb-4" />
-                                                    <Sparkles className="w-6 h-6 text-teal-500 absolute top-0 right-0 animate-pulse" />
+                                                    {/* <Sparkles className="w-6 h-6 text-teal-500 absolute top-0 right-0 animate-pulse" /> */}
                                                 </div>
                                                 <p className="text-gray-700 font-semibold text-lg mb-2">Loading your data...</p>
                                                 <p className="text-gray-500 text-sm">Preparing interactive visualizations</p>
@@ -161,7 +161,7 @@ export default function AdaptationToolsFramework() {
                                         {/* Animated indicator */}
                                         <div className={`mt-6 flex items-center gap-2 text-emerald-600 font-medium text-sm transition-all duration-300 ${activeCard === index ? 'translate-x-2' : ''}`}>
                                             <span>Learn more</span>
-                                            <Sparkles className="w-4 h-4" />
+                                            {/* <Sparkles className="w-4 h-4" /> */}
                                         </div>
                                     </div>
                                 </div>

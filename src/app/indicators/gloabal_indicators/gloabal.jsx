@@ -487,7 +487,7 @@ export default function IndicatorDashboard() {
                             Explore {indicatorsData.length.toLocaleString()} global indicators
                         </p>
                         <div className="flex items-center justify-center gap-2 text-[#0d9c5a]">
-                            <Sparkles className="w-5 h-5" />
+                            {/* <Sparkles className="w-5 h-5" /> */}
                             <span className="text-sm font-medium">Select a submission to begin</span>
                         </div>
 

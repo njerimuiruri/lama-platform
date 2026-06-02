@@ -4,6 +4,16 @@ import { join } from 'path';
 
 const BACKEND = process.env.BACKEND_URL || 'http://localhost:3001';
 
+async function fetchCommunityRows(dataset) {
+  try {
+    const res = await fetch(`${BACKEND}/public/contributions/${dataset}`, { cache: 'no-store' });
+    if (!res.ok) return [];
+    return await res.json();
+  } catch {
+    return [];
+  }
+}
+
 export async function proxyIndicator(endpoint, fallbackFile) {
   try {
     const all = [];
@@ -26,17 +36,25 @@ export async function proxyIndicator(endpoint, fallbackFile) {
       page++;
     }
 
-    if (all.length > 0) return NextResponse.json(all);
+    let lamaRows = all;
 
-    // Backend unavailable or empty — fall back to local file
-    console.warn(`[/api/indicators/${endpoint}] falling back to ${fallbackFile}`);
-    const raw = readFileSync(join(process.cwd(), 'public', 'documents', fallbackFile), 'utf-8');
-    return NextResponse.json(JSON.parse(raw));
+    if (lamaRows.length === 0) {
+      console.warn(`[/api/indicators/${endpoint}] falling back to ${fallbackFile}`);
+      const raw = readFileSync(join(process.cwd(), 'public', 'documents', fallbackFile), 'utf-8');
+      lamaRows = JSON.parse(raw);
+    }
+
+    // Tag LAMA rows and merge with approved community contributions
+    const tagged = lamaRows.map((r) => ({ ...r, _source: 'lama' }));
+    const community = await fetchCommunityRows(endpoint);
+
+    return NextResponse.json([...tagged, ...community]);
   } catch (err) {
     console.warn(`[/api/indicators/${endpoint}] backend error, using local file:`, err.message);
     try {
       const raw = readFileSync(join(process.cwd(), 'public', 'documents', fallbackFile), 'utf-8');
-      return NextResponse.json(JSON.parse(raw));
+      const lamaRows = JSON.parse(raw).map((r) => ({ ...r, _source: 'lama' }));
+      return NextResponse.json(lamaRows);
     } catch (fileErr) {
       console.error(`[/api/indicators/${endpoint}] local fallback failed:`, fileErr.message);
       return NextResponse.json({ message: 'Data unavailable.' }, { status: 500 });

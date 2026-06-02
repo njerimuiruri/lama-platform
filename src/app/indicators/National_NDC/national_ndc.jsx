@@ -16,6 +16,7 @@ export default function NDCDataViewer() {
     const [itemsPerPage, setItemsPerPage] = useState(10);
     const [showVisualization, setShowVisualization] = useState(false);
     const [showAllThematics, setShowAllThematics] = useState(false);
+    const [dataSourceFilter, setDataSourceFilter] = useState('all'); // 'all' | 'lama' | 'community'
 
     useEffect(() => {
         fetch('/api/indicators/ndc')
@@ -38,8 +39,14 @@ export default function NDCDataViewer() {
 
     const indicatorTypes = ['All', ...new Set(data.map(item => item['Indicator Type']).filter(Boolean))].sort();
 
+    const communityCount = data.filter(item => item._source === 'community').length;
+
     useEffect(() => {
         let filtered = data;
+
+        if (dataSourceFilter !== 'all') {
+            filtered = filtered.filter(item => (item._source || 'lama') === dataSourceFilter);
+        }
 
         if (selectedSource) {
             filtered = filtered.filter(item => item['Indicator source'] === selectedSource);
@@ -64,7 +71,7 @@ export default function NDCDataViewer() {
 
         setFilteredData(filtered);
         setCurrentPage(1);
-    }, [selectedSource, searchTerm, selectedThematic, selectedIndicatorType, data]);
+    }, [selectedSource, searchTerm, selectedThematic, selectedIndicatorType, data, dataSourceFilter]);
 
     // Calculate statistics for visualization
     const statistics = useMemo(() => {
@@ -617,6 +624,30 @@ export default function NDCDataViewer() {
                                 </div>
                             </div>
 
+                            {/* Data Source Filter — shows only when community data exists */}
+                            {communityCount > 0 && (
+                                <div className="flex items-center gap-2 flex-wrap mb-2">
+                                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Source:</span>
+                                    {[
+                                        { id: 'all', label: `All (${data.length})` },
+                                        { id: 'lama', label: `LAMA Research (${data.length - communityCount})` },
+                                        { id: 'community', label: `Community (${communityCount})` },
+                                    ].map(({ id, label }) => (
+                                        <button
+                                            key={id}
+                                            onClick={() => setDataSourceFilter(id)}
+                                            className={`px-3 py-1 text-xs font-semibold rounded-full transition-colors ${
+                                                dataSourceFilter === id
+                                                    ? 'bg-blue-600 text-white'
+                                                    : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                                            }`}
+                                        >
+                                            {label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+
                             {/* Filters Row */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                                 <div className="relative">
@@ -733,6 +764,11 @@ export default function NDCDataViewer() {
                                                                         <span className="text-gray-900 text-xs sm:text-sm leading-snug block font-medium">
                                                                             {item.Indicator || 'N/A'}
                                                                         </span>
+                                                                        {item._source === 'community' && (
+                                                                            <span className="inline-flex items-center px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-[10px] font-semibold mt-1">
+                                                                                Community
+                                                                            </span>
+                                                                        )}
                                                                         {/* Mobile-only badges */}
                                                                         <div className="flex flex-wrap gap-1.5 mt-2 md:hidden">
                                                                             {item['Thematic Target'] && (
