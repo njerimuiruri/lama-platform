@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { ArrowRight, Database, FileText, Globe, Map, Layers, Target, BarChart2, TrendingUp } from 'lucide-react';
+import { ArrowRight, Database, FileText, Globe, Map, Layers, Target, BarChart2, TrendingUp, Link2 } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LamaFooter from '@/components/Footer/footer';
 
@@ -86,6 +86,12 @@ const INDICATOR_GROUPS = [
         description: "International climate metrics and benchmarks for tracking global adaptation progress.",
         href: "/indicators/gloabal_indicators",
         icon: TrendingUp,
+      },
+      {
+        name: "MECCF × GGA Crosswalk",
+        description: "Kenya's MECCF priority indicators linked to the Global Goal on Adaptation's 59 indicators.",
+        href: "/indicators/GGA_MECCF_Crosswalk",
+        icon: Link2,
       },
     ],
   },

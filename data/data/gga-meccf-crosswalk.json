@@ -1,0 +1,647 @@
+{
+  "meta": {
+    "title": "MECCF Priority Indicators – GGA Crosswalk",
+    "subtitle": "Kenya Ministry of Environment, Climate Change and Forestry (MECCF) national/county priority indicators, linked to the UNFCCC Global Goal on Adaptation (GGA) 59-indicator framework",
+    "lastUpdated": "2026-08-25",
+    "sources": [
+      {
+        "id": "meccf",
+        "label": "MECCF Priority Indicators",
+        "shortLabel": "MECCF",
+        "description": "Kenya's national climate change adaptation and mitigation indicators, defined by the Ministry of Environment, Climate Change and Forestry for the 2026 reporting cycle. Includes county-level roll-ups.",
+        "status": "active",
+        "count": 9
+      },
+      {
+        "id": "gga",
+        "label": "Global Goal on Adaptation (59 Indicators)",
+        "shortLabel": "GGA",
+        "description": "The UNFCCC's global adaptation indicator framework (UAE Framework for Global Climate Resilience, adopted COP28), spanning 11 thematic and dimensional targets.",
+        "status": "active",
+        "count": 59
+      },
+      {
+        "id": "fgd_hh",
+        "label": "FGD & Household Survey Indicators",
+        "shortLabel": "FGD / HH",
+        "description": "Community-level indicators to be derived from Focus Group Discussions (FGDs) and Household (HH) surveys, refining and grounding the national indicators in lived experience.",
+        "status": "pending",
+        "count": 0
+      }
+    ],
+    "methodologyNote": "Each indicator set is retained in its original, distinct form so that provenance stays traceable back to its source (MECCF, GGA, or future FGD/HH data). A harmonized view sits on top, showing where MECCF's priority indicators map onto GGA's global framework — without collapsing or replacing the underlying source data. This dual structure keeps the methodology auditable as FGD/HH-derived indicators are added."
+  },
+  "meccfIndicators": [
+    {
+      "id": "meccf-1",
+      "name": "Percentage of Compliant Meteorological Stations Meeting World Meteorological Organization (WMO) Standards",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output ☐ Outcome ☐ Impact ☐ Input",
+      "thematicArea": "Climate Change Impacts",
+      "numerator": "Number of operational meteorological stations in the official KMD National Meteorological Station Inventory assessed during the reporting period and found compliant with applicable WMO standards.",
+      "denominator": "Total number of operational meteorological stations listed in the official KMD National Meteorological Station Inventory during the reporting period.",
+      "unit": "Percentage (%)",
+      "links": [
+        {
+          "ggaCode": "10(a).c",
+          "relationship": "direct",
+          "note": "Both track the establishment/quality of monitoring infrastructure used for hazard forecasting."
+        },
+        {
+          "ggaCode": "10(a).f",
+          "relationship": "partial",
+          "note": "WMO-compliant stations are a precondition for the climate information services this GGA indicator tracks."
+        }
+      ],
+      "plainSummary": "In plain terms: what share of Kenya's weather stations meet the international quality standard for reliable forecasts and warnings."
+    },
+    {
+      "id": "meccf-2",
+      "name": "Number of Multihazard Early Warning Bulletins Produced",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☐ Input ☑ Output ☐ Outcome ☐ Impact",
+      "thematicArea": "Climate Change Adaptation (Early Warning / Disaster Risk Reduction)",
+      "numerator": "Number of officially approved multihazard early warning bulletins issued by KMD during the reporting period.",
+      "denominator": "Not applicable.",
+      "unit": "Number of bulletins.",
+      "links": [
+        {
+          "ggaCode": "10(a).a",
+          "relationship": "direct",
+          "note": "Bulletin production is a direct output of an established multi-hazard early warning system."
+        },
+        {
+          "ggaCode": "10(a).d",
+          "relationship": "partial",
+          "note": "Bulletins are the mechanism by which population coverage under this indicator is achieved."
+        }
+      ],
+      "plainSummary": "In plain terms: how many official alerts the Kenya Meteorological Department issues to warn people about floods, droughts, storms and other hazards."
+    },
+    {
+      "id": "meccf-3",
+      "name": "Amount of Climate Finance Disbursed (United States Dollars (USD)",
+      "classification": [
+        "Input"
+      ],
+      "rawClassification": "☑ Input ☐ Output ☐ Outcome ☐ Impact",
+      "thematicArea": "Climate Finance",
+      "numerator": "Total amount (USD) of climate finance disbursed during the reporting period for eligible climate actions across Kenya.",
+      "denominator": "Not applicable.",
+      "unit": "United States Dollars (USD).",
+      "links": [
+        {
+          "ggaCode": "10(c).d",
+          "relationship": "direct",
+          "note": "Both track finance disbursed/received for adaptation implementation."
+        }
+      ],
+      "plainSummary": "In plain terms: how much money (in US dollars) was actually spent on climate action during the reporting period."
+    },
+    {
+      "id": "meccf-4",
+      "name": "Number of counties with operational Climate Information Services (CIS)",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☐ Input ☑ Output ☐ Outcome ☐ Impact",
+      "thematicArea": "Climate Change Adaptation and Climate Information Services",
+      "numerator": "Number of counties whose Climate Information Service satisfies all nationally approved minimum operational functionality criteria during the reporting period.",
+      "denominator": "Not applicable",
+      "unit": "Number of counties",
+      "links": [
+        {
+          "ggaCode": "10(a).f",
+          "relationship": "direct",
+          "note": "County CIS operationalization is Kenya's sub-national tracking of this GGA target."
+        }
+      ],
+      "plainSummary": "In plain terms: how many of Kenya's 47 counties have a fully working local climate information service that residents can rely on."
+    },
+    {
+      "id": "meccf-5",
+      "name": "Number of counties that have established institutional frameworks for climate change knowledge management",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output",
+      "thematicArea": "Climate Change Adaptation and Mitigation",
+      "numerator": "Number of counties whose institutional frameworks satisfy all nationally approved minimum operational standards for climate change knowledge management.",
+      "denominator": "Not applicable",
+      "unit": "Number",
+      "links": [
+        {
+          "ggaCode": "10(d).a",
+          "relationship": "partial",
+          "note": "Knowledge management frameworks are a building block for a functioning MEL system."
+        },
+        {
+          "ggaCode": "10(d).b",
+          "relationship": "partial",
+          "note": "County-level institutional frameworks feed into national MEL operationalization."
+        }
+      ],
+      "plainSummary": "In plain terms: how many counties have a proper system in place for organising, storing and sharing climate knowledge."
+    },
+    {
+      "id": "meccf-6",
+      "name": "Number of counties that have established operational multi-hazard early warning systems (EWS)",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output",
+      "thematicArea": "Climate Change Adaptation",
+      "numerator": "Number of counties with operational multi-hazard early warning systems meeting all nationally approved minimum operational standards.",
+      "denominator": "Not applicable",
+      "unit": "Number",
+      "links": [
+        {
+          "ggaCode": "10(a).a",
+          "relationship": "direct",
+          "note": "County-level tracking of the same multi-hazard EWS establishment target."
+        }
+      ],
+      "plainSummary": "In plain terms: how many counties have a working system that warns residents before a disaster strikes."
+    },
+    {
+      "id": "meccf-7",
+      "name": "Number of counties that have conducted validated climate risk and vulnerability assessments",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output",
+      "thematicArea": "Address Climate Change Impacts",
+      "numerator": "Number of counties with completed and validated climate risk and vulnerability assessment reports meeting nationally approved standards.",
+      "denominator": "Total number of counties in Kenya (47).",
+      "unit": "Not applicable",
+      "links": [
+        {
+          "ggaCode": "10(a).b",
+          "relationship": "direct",
+          "note": "Both track completion of climate hazard, impact and vulnerability assessments."
+        }
+      ],
+      "plainSummary": "In plain terms: how many counties have completed an approved study of their climate risks and who is most vulnerable to them."
+    },
+    {
+      "id": "meccf-8",
+      "name": "Total greenhouse gas (GHG) emissions abated against the Business-as-Usual (BAU) scenario",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output",
+      "thematicArea": "Climate Change Mitigation",
+      "numerator": "Total greenhouse gas emissions reduced (MtCO₂e) relative to the approved BAU emissions projection for the reporting year.",
+      "denominator": "Not applicable.",
+      "unit": "Million tonnes of carbon dioxide equivalent (MtCO₂e).",
+      "links": [],
+      "outOfGgaScope": true,
+      "scopeNote": "The GGA's 59 indicators cover adaptation only; this is a mitigation indicator (tracked separately, e.g. against Kenya's NDC mitigation targets) and has no direct GGA counterpart.",
+      "plainSummary": "In plain terms: how much Kenya has cut its greenhouse gas emissions compared to what they would have been without climate action."
+    },
+    {
+      "id": "meccf-9",
+      "name": "Number of state and non-state actors that have submitted climate change reports",
+      "classification": [
+        "Output"
+      ],
+      "rawClassification": "☑ Output ☐ Input ☐ Outcome ☐ Impact",
+      "thematicArea": "Climate Change Mitigation and Adaptation",
+      "numerator": "Number of eligible state and non-state actors that submitted climate change reports during the reporting period.",
+      "denominator": "Total number of eligible state and non-state actors required to submit climate change reports during the reporting period.",
+      "unit": "Number (with reporting coverage expressed as a percentage where applicable).",
+      "links": [
+        {
+          "ggaCode": "10(d).c",
+          "relationship": "direct",
+          "note": "Both track periodic publication/submission of adaptation-related reporting."
+        },
+        {
+          "ggaCode": "10(c).a",
+          "relationship": "partial",
+          "note": "Reporting compliance is one proxy for how well national adaptation plans are being implemented."
+        }
+      ],
+      "plainSummary": "In plain terms: how many government bodies, companies and organisations submitted the climate reports they are required to file."
+    }
+  ],
+  "ggaIndicators": [
+    {
+      "seq": 1,
+      "code": "9(a).a",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Level of water stress, including as an outcome of adaptation actions where applicable, accounting for relevant climate hazard intensity and/or frequency"
+    },
+    {
+      "seq": 2,
+      "code": "9(a).b",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Level of water use efficiency, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 3,
+      "code": "9(a).c",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Proportion of critical water and sanitation infrastructure systems that are resilient to climate-related hazards under different warming scenarios, as appropriate for regions and contexts, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 4,
+      "code": "9(a).d",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Proportion of the total area of basins and cryosphere for which a climate adaptation plan has been developed and implemented on the basis of different warming scenarios, as appropriate for regions and contexts where applicable"
+    },
+    {
+      "seq": 5,
+      "code": "9(a).e",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Proportion of the population using safe and affordable potable water services that are climate-resilient, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 6,
+      "code": "9(a).f",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Proportion of the population using sanitation services that are safely managed and climate-resilient, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 7,
+      "code": "9(a).g",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Extent of measures taken to improve and extend water, sanitation and hygiene (WASH) services to populations disproportionately affected by climate change and to vulnerable groups relative to needs"
+    },
+    {
+      "seq": 8,
+      "code": "9(a).h",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Proportion of bodies of water with good ambient water quality for drinking water supply, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 9,
+      "code": "9(a).i",
+      "targetCode": "9(a)",
+      "targetName": "Water & Sanitation",
+      "text": "Number of people per 100,000 supported in planned relocation processes in response to water-related hazards, where adaptation measures were taken to ensure safety of populations"
+    },
+    {
+      "seq": 10,
+      "code": "9(b).a",
+      "targetCode": "9(b)",
+      "targetName": "Food & Agriculture",
+      "text": "Proportion of area under management for food and agricultural production utilizing practices and technologies relevant to climate change adaptation"
+    },
+    {
+      "seq": 11,
+      "code": "9(b).b",
+      "targetCode": "9(b)",
+      "targetName": "Food & Agriculture",
+      "text": "Extent of implementation of institutional frameworks for knowledge transfer, research and development (R&D), and extension services supporting climate change adaptation in the areas of food and agriculture relative to needs"
+    },
+    {
+      "seq": 12,
+      "code": "9(b).c",
+      "targetCode": "9(b)",
+      "targetName": "Food & Agriculture",
+      "text": "Level of degraded areas that are under management for food and agricultural production, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 13,
+      "code": "9(b).d",
+      "targetCode": "9(b)",
+      "targetName": "Food & Agriculture",
+      "text": "Level of food and agricultural yield in areas that are under management for food and agricultural production, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 14,
+      "code": "9(b).e",
+      "targetCode": "9(b)",
+      "targetName": "Food & Agriculture",
+      "text": "Proportion of the population with equitable access to adequate food and nutrition, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 15,
+      "code": "9(c).a",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Rate of mortality associated with climate impacts compared with counterfactual rates, including as an outcome of adaptation actions or coverage of early warning systems where applicable"
+    },
+    {
+      "seq": 16,
+      "code": "9(c).b",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Level of incidence of climate-sensitive infectious diseases, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 17,
+      "code": "9(c).c",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Rate of morbidity associated with climate impacts compared with counterfactual rates, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 18,
+      "code": "9(c).d",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Proportion of the population vulnerable to climate change with access to mental health and psychosocial support"
+    },
+    {
+      "seq": 19,
+      "code": "9(c).e",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Extent to which climate health services have remained at full capacity during and following climate-related events relative to pre-event service capacity"
+    },
+    {
+      "seq": 20,
+      "code": "9(c).f",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Percentage of health facilities that are resilient to climate-related hazards under different warming scenarios, as appropriate for regions and contexts, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 21,
+      "code": "9(c).g",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Coverage of essential health services that are supported by adaptation measures to ensure continuity during and following climate-related events"
+    },
+    {
+      "seq": 22,
+      "code": "9(c).h",
+      "targetCode": "9(c)",
+      "targetName": "Health",
+      "text": "Proportion of health practitioners who have received capacity-building support pertaining to climate change adaptation and health"
+    },
+    {
+      "seq": 23,
+      "code": "9(d).a",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Proportion of climate-resilient ecosystems that are providing services to populations that depend on them"
+    },
+    {
+      "seq": 24,
+      "code": "9(d).b",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Proportion of ecosystem areas with adaptation actions implemented towards enhanced resilience and services"
+    },
+    {
+      "seq": 25,
+      "code": "9(d).c",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Level of resilience of ecosystems, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 26,
+      "code": "9(d).d",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Level of threat status of ecosystems, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 27,
+      "code": "9(d).e",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Level of threat status of species, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 28,
+      "code": "9(d).f",
+      "targetCode": "9(d)",
+      "targetName": "Ecosystems & Biodiversity",
+      "text": "Level of adaptive capacity, resilience and vulnerability to climate impacts resulting from the implementation of ecosystem-based adaptation (EbA) actions and nature-based solutions (NbS) according to information reported by Parties, as appropriate"
+    },
+    {
+      "seq": 29,
+      "code": "9(e).a",
+      "targetCode": "9(e)",
+      "targetName": "Infrastructure & Settlements",
+      "text": "Proportion of settlement upgrading programmes implemented that include climate change adaptation measures and maintain sustained engagement at the local level"
+    },
+    {
+      "seq": 30,
+      "code": "9(e).b",
+      "targetCode": "9(e)",
+      "targetName": "Infrastructure & Settlements",
+      "text": "Proportion of infrastructure and human settlements vulnerable to climate-related hazards and other extreme events relocated to a safer location"
+    },
+    {
+      "seq": 31,
+      "code": "9(f).a",
+      "targetCode": "9(f)",
+      "targetName": "Poverty & Livelihoods",
+      "text": "Level of population living in poverty, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 32,
+      "code": "9(f).b",
+      "targetCode": "9(f)",
+      "targetName": "Poverty & Livelihoods",
+      "text": "Proportion of the population in climate-vulnerable areas with access to social protection services"
+    },
+    {
+      "seq": 33,
+      "code": "9(f).c",
+      "targetCode": "9(f)",
+      "targetName": "Poverty & Livelihoods",
+      "text": "Level of social protection systems that consider climate risk management aspects and can respond to climate change impacts"
+    },
+    {
+      "seq": 34,
+      "code": "9(g).a",
+      "targetCode": "9(g)",
+      "targetName": "Cultural Heritage",
+      "text": "Percentage of at-risk cultural and natural heritage sites and elements with adaptation measures implemented to enhance resilience to climate-related hazards under different warming scenarios, as appropriate for regions and contexts, guided by traditional, local or Indigenous Peoples’ knowledge and practices, disaggregated, as appropriate, by tangible and intangible cultural elements"
+    },
+    {
+      "seq": 35,
+      "code": "9(g).b",
+      "targetCode": "9(g)",
+      "targetName": "Cultural Heritage",
+      "text": "Proportion of cultural heritage protected from climate impacts through digitization measures for preservation and recovery and by storing movable heritage in climate-resilient facilities"
+    },
+    {
+      "seq": 36,
+      "code": "9(g).c",
+      "targetCode": "9(g)",
+      "targetName": "Cultural Heritage",
+      "text": "Percentage of cultural heritage and sites with adaptation measures and emergency preparedness plans in place for climate change related hazards under different warming scenarios, as appropriate for regions and contexts"
+    },
+    {
+      "seq": 37,
+      "code": "9(g).d",
+      "targetCode": "9(g)",
+      "targetName": "Cultural Heritage",
+      "text": "Level of establishment of institutional arrangements for the provision of regular training on climate change adaptation that incorporates guidance from traditional, local and Indigenous Peoples’ knowledge where applicable"
+    },
+    {
+      "seq": 38,
+      "code": "9(g).e",
+      "targetCode": "9(g)",
+      "targetName": "Cultural Heritage",
+      "text": "Percentage of climate adaptation measures focused on cultural heritage that maintain sustained engagement with Indigenous Peoples and/or local communities"
+    },
+    {
+      "seq": 39,
+      "code": "10(a).a",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Level of establishment of multi-hazard early warning systems"
+    },
+    {
+      "seq": 40,
+      "code": "10(a).b",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Level of conduct of assessments of climate hazards, climate change impacts, and exposure to risks and vulnerabilities based on different global warming scenarios, as appropriate for regions and contexts"
+    },
+    {
+      "seq": 41,
+      "code": "10(a).c",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Level of establishment of multi-hazard monitoring and impact-based forecasting systems, including monitoring stations"
+    },
+    {
+      "seq": 42,
+      "code": "10(a).d",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Number of people per 100,000 that are covered by early warning information through local governments or through national dissemination mechanisms"
+    },
+    {
+      "seq": 43,
+      "code": "10(a).e",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Percentage of the population in a country exposed to or at risk from climate-related disasters protected through pre-emptive evacuation measures following early warning"
+    },
+    {
+      "seq": 44,
+      "code": "10(a).f",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Level of establishment of climate information services for risk reduction and systematic observation to support improved climate-related data, information and services"
+    },
+    {
+      "seq": 45,
+      "code": "10(a).g",
+      "targetCode": "10(a)",
+      "targetName": "Impact, Vulnerability & Risk Assessment",
+      "text": "Extent of usage of climate risk information and comprehensive risk assessment based on different global warming scenarios, as appropriate for regions and contexts, to inform formulation of national adaptation plans, policy instruments, and planning processes and/or strategies"
+    },
+    {
+      "seq": 46,
+      "code": "10(b).a",
+      "targetCode": "10(b)",
+      "targetName": "Planning",
+      "text": "Status of having national adaptation plans, policy instruments, and planning processes and/or strategies in place"
+    },
+    {
+      "seq": 47,
+      "code": "10(b).b",
+      "targetCode": "10(b)",
+      "targetName": "Planning",
+      "text": "Status of having gender-responsive adaptation plans, policy instruments, and planning processes and/or strategies in place"
+    },
+    {
+      "seq": 48,
+      "code": "10(b).c",
+      "targetCode": "10(b)",
+      "targetName": "Planning",
+      "text": "Existence of national adaptation plans, policy instruments, planning processes and strategies that have been informed by traditional knowledge, knowledge of Indigenous Peoples and local knowledge systems"
+    },
+    {
+      "seq": 49,
+      "code": "10(c).a",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Extent of implementation of national adaptation plans, policies and strategies relative to planned implementation thereof"
+    },
+    {
+      "seq": 50,
+      "code": "10(c).b",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Number of deaths and missing persons associated with climate-related hazards, per 100,000 people, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 51,
+      "code": "10(c).c",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Net savings as a percentage of gross domestic product from avoided losses, including as an outcome of adaptation actions where applicable"
+    },
+    {
+      "seq": 52,
+      "code": "10(c).d",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Amount of finance for climate adaptation reported in line with chapters IV, V and VI, as relevant and as appropriate, of the annex to decision 18/CMA.1, disaggregated by the parameters listed in paragraphs 123, 125, 133 and 134, as applicable, of the same decision, which includes the amount of international public finance for climate adaptation provided by developed countries and received by developing countries for the implementation of national adaptation plans, policy instruments, and planning processes and/or strategies"
+    },
+    {
+      "seq": 53,
+      "code": "10(c).e",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Technology development and transfer for climate adaptation reported in line with chapters IV, V and VI, as relevant and as appropriate, of the annex to decision 18/CMA.1, disaggregated by the parameters listed in paragraphs 127, 136 and 138, as applicable, of the same decision, which includes technology development and transfer support for climate adaptation provided by developed countries and needed and received by developing countries for the implementation of national adaptation plans, policy instruments, and planning processes and/or strategies"
+    },
+    {
+      "seq": 54,
+      "code": "10(c).f",
+      "targetCode": "10(c)",
+      "targetName": "Implementation",
+      "text": "Capacity-building for climate adaptation reported in line with chapters IV, V and VI, as relevant and as appropriate, of the annex to decision 18/CMA.1, disaggregated by the parameters listed in paragraphs 129, 140 and 142, as applicable, of the same decision, which includes capacity-building support for climate adaptation provided by developed countries and needed and received by developing countries for the implementation of national adaptation plans, policy instruments, and planning processes and/or strategies"
+    },
+    {
+      "seq": 55,
+      "code": "10(d).a",
+      "targetCode": "10(d)",
+      "targetName": "Monitoring, Evaluation & Learning",
+      "text": "Extent of design of a system for monitoring, evaluation and learning for national adaptation efforts relative to needs"
+    },
+    {
+      "seq": 56,
+      "code": "10(d).b",
+      "targetCode": "10(d)",
+      "targetName": "Monitoring, Evaluation & Learning",
+      "text": "Level of operationalization of a system for monitoring, evaluation and learning for national adaptation efforts"
+    },
+    {
+      "seq": 57,
+      "code": "10(d).c",
+      "targetCode": "10(d)",
+      "targetName": "Monitoring, Evaluation & Learning",
+      "text": "Level of periodic publication of monitoring, evaluation and learning findings regarding the implementation of national adaptation efforts"
+    },
+    {
+      "seq": 58,
+      "code": "10(d).d",
+      "targetCode": "10(d)",
+      "targetName": "Monitoring, Evaluation & Learning",
+      "text": "Level of integration of monitoring, evaluation and learning system findings into national adaptation efforts"
+    },
+    {
+      "seq": 59,
+      "code": "10(d).e",
+      "targetCode": "10(d)",
+      "targetName": "Monitoring, Evaluation & Learning",
+      "text": "Level of institutional capacity to fully operate systems for monitoring, evaluation and learning for national adaptation efforts"
+    }
+  ]
+}
