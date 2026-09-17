@@ -1,0 +1,3170 @@
+[
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Pollution of water sources",
+      "sectorAffected": "Water supply, health",
+      "responseStrategy": "Building of gabbions, conservation of catchment areas",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions, proportion of vulnerable catchment areas under conservation efforts",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increasing pollution of water sources and springs",
+      "sectorAffected": "Water supply, health",
+      "responseStrategy": "Building of gabbions, conservation of catchment areas",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions, proportion of vulnerable catchment areas under conservation efforts",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of tomatoes processing plant",
+      "priorityIndicators": "Number of operational tomatoes processing plant; quantity in tonnes of tomatoes processed in a year",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Water supply, health",
+      "responseStrategy": "Building of gabbions, tree planting especially Eucalyptus, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased and recurrent flooding events",
+      "sectorAffected": "Water supply, health",
+      "responseStrategy": "Building of gabbions, tree planting especially Eucalyptus, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of coffee plantations",
+      "priorityIndicators": "Area in hectares of coffee plantations; % increase in the amountof coffee production per year",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Impassable roads during rainy seasons",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Investing in greenhouses",
+      "priorityIndicators": "Number of greenhouses established; proportion of grenhouse agricultural production per year",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Infrastructure collapse",
+      "sectorAffected": "Transports and trade",
+      "responseStrategy": "Construction of bridges",
+      "keyIndicators": "Number of flood resistant bridges constructed at strategic areas",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increasing infrastructure collapse including bridges and buildings",
+      "sectorAffected": "Transports and trade",
+      "responseStrategy": "Construction of bridges",
+      "keyIndicators": "Number of flood resistant bridges constructed at strategic areas",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Large scale maize plantations",
+      "priorityIndicators": "Area in hectares of agricultural land under maize production",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Tree plantation",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased frequency of mudslides",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Tree plantation",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Adoption of agroforestry",
+      "priorityIndicators": "Area in hectares of agricultural land under agroforestry practise",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Health risks especially to women and PWDs",
+      "sectorAffected": "Health",
+      "responseStrategy": "Installation of chlorine dispensers at community water sources/springs",
+      "keyIndicators": "% of community water points with functional chlorine dispensers",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Occurrence of water related diseases causing health risks especially to women and PWDs",
+      "sectorAffected": "Health",
+      "responseStrategy": "Installation of chlorine dispensers at community water sources/springs",
+      "keyIndicators": "% of community water points with functional chlorine dispensers",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of railways",
+      "priorityIndicators": "Length in kilometres of railway line",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural land under cover cropping, Number of farmers practicing cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduction in soil fertility due to excessive erosion",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural land under cover cropping, Number of farmers practicing cover cropping",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Dam construction for rainwater harvesting",
+      "priorityIndicators": "Number of completed dams; total volume of rainwater harvested in constructed dams",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Planting drought tolerant crops",
+      "keyIndicators": "% of farmers who have adopted drought tolerant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Prolonged and recurrent dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Planting drought tolerant crops",
+      "keyIndicators": "% of farmers who have adopted drought tolerant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "controlled gulley through tree planting",
+      "priorityIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "protection of catchment areas",
+      "priorityIndicators": "Area in hectares of catchment areas under active protection",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping, use fertilizers",
+      "keyIndicators": "% of farmers using fertilizers; tonnage of ferilizers distributed to farmers by government agencies",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping, use fertilizers",
+      "keyIndicators": "% of farmers using fertilizers; tonnage of ferilizers distributed to farmers by government agencies",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Replacing Eucalyptus and Blue gum with Indigenous tree species",
+      "priorityIndicators": "Number of Indigenous tree species planted to replace Eucalyptus and Blue gum",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Use of organic fertilizers",
+      "keyIndicators": "% of farmers using organic fertilizers; proportion of agricultural land under organic fertilizers by each farmer",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Decline in crop yields and losses due to flooding and droughts",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Use of organic fertilizers",
+      "keyIndicators": "% of farmers using organic fertilizers; proportion of agricultural land under organic fertilizers by each farmer",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Upgrading roads (from murram to tarmac)",
+      "priorityIndicators": "Distance in Km of murram road upgraded to tarmac",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Irrigation",
+      "keyIndicators": "Proportion of agricultural land under irrigation; number of farmers practising irrigation farming",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Irrigation",
+      "keyIndicators": "Proportion of agricultural land under irrigation; number of farmers practising irrigation farming",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "increased road networks",
+      "priorityIndicators": "Distance in km of additional road networks",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Planting early maturing varieties",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Planting early maturing varieties",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "building gabions",
+      "priorityIndicators": "Distance in km of roads cambered with flood proof gabbions",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Long rain seasons",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Flood resistant crops",
+      "keyIndicators": "Number of farmers using flood resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Long and heavy rain seasons",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Flood resistant crops",
+      "keyIndicators": "Number of farmers using flood resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "building modern schools",
+      "priorityIndicators": "Number of schools equiped with modern infrastructures; number of learners accessing digital learning infrastructures in schools",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Poor timing of the agricultural calendar",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "CIS from KMD",
+      "keyIndicators": "Proportion of farmers by age, gender, and ability accessing CIS",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Changes in seasonal calenders",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "CIS from KMD",
+      "keyIndicators": "Proportion of farmers by age, gender, and ability accessing CIS",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of bridges",
+      "priorityIndicators": "Number of bridges constructed",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Adoption of alternative sources of livelihood",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased cases of livestock deaths",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Adoption of alternative sources of livelihood",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishing of factories",
+      "priorityIndicators": "Number of operational factories",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": "Food security, income, culture",
+      "responseStrategy": "Preservation of Indigenous seeds",
+      "keyIndicators": "Amount of Indigenous seeds preserved in KGs for the locally valued varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": "Food security, income, culture",
+      "responseStrategy": "Preservation of Indigenous seeds",
+      "keyIndicators": "Amount of Indigenous seeds preserved in KGs for the locally valued varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Bringing silt to lower lands",
+      "sectorAffected": null,
+      "responseStrategy": "Gabbions, tree planting, Digging terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Bringing silt to lower lands",
+      "sectorAffected": null,
+      "responseStrategy": "Gabbions, tree planting, Digging terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Increased mining/sand harvesting activities",
+      "sectorAffected": "Ecosystem, water, biodiversity",
+      "responseStrategy": "Not mentioned",
+      "keyIndicators": "Number of mining sites restored/reclaimed",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased mining activities and sand harvesting in rivers",
+      "sectorAffected": "Ecosystem, water, biodiversity",
+      "responseStrategy": "Not mentioned",
+      "keyIndicators": "Number of mining sites restored/reclaimed",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Decline in river waters/decline in water quality",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Water level of rivers has gone down/rivers/springs drying up",
+      "sectorAffected": "Ecosystem, water, biodiversity",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water resources put under protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water level of rivers has gone down and some rivers/springs drying up",
+      "sectorAffected": "Ecosystem, water, biodiversity",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water resources put under protection",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Hamisi",
+    "last10Years": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water sources",
+      "responseStrategy": "Cutting down Blue gams and eucalyptus along rivers",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Eucalyptus menace which has dominated the county",
+      "sectorAffected": "Forests, water sources",
+      "responseStrategy": "Cutting down Blue gams and eucalyptus along rivers",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Frequent and intense flooding events",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "ICT hubs built on all wards",
+      "priorityIndicators": "% of wards that have operational ICT hubs",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Destruction of murram roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "construction of modern facilities and specialized centers like eye clinics",
+      "priorityIndicators": "Number specialized health centres in the Sub-county",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Number of trees planted, % of land area under cover cropping practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Number of trees planted, % of land area under cover cropping practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Busali Hospital",
+      "priorityIndicators": "Presence of operational Busali Hospital",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Use of early maturing varieties",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Frequent and intense dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Early maturing crops",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "symbolic State House",
+      "priorityIndicators": "Presence of functional symbol State House",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increasing cases of water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "reclaiming and restoring mining sites through growing of bamboo and indigenous trees",
+      "priorityIndicators": "Area in hectares of mining sites restored; number of Indigenous trees grown",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "substituting the eucalyptus plantations with native ones to safeguard water sources and biodiversity",
+      "priorityIndicators": "Number of Indigenous tress grown disagregated by species",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Alternative livelihood sources",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Diversifying livelihoods",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "road systems",
+      "priorityIndicators": "Distance in km of resilient road networks",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Loss of income",
+      "sectorAffected": "Family livelihood, mental health",
+      "responseStrategy": "Resistant crops",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Loss of income due to agricultural losses",
+      "sectorAffected": "Family livelihood, mental health",
+      "responseStrategy": "Adoption of resistant varieties",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "bus terminals on major roads",
+      "priorityIndicators": "Number of operational bus terminals established",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": "Land revegetation",
+      "keyIndicators": "Area of degraded lands that has been revegetated",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Recurrent Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": "Revegetation",
+      "keyIndicators": "Area of degraded lands that has been revegetated",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "a modern stadium in Chavakali",
+      "priorityIndicators": "Presence of a modern stadium in Chavakali",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Use of traditional leafy vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Adoption of African Indigenous leafy vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "setting up of industries such as a tea factory, agro-processing and employment",
+      "priorityIndicators": "Number of industries established; proportion of agricultural produce directed to value addition in agro processing plants",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Use resistant crops",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Adoption of resistant varieties",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "water supply",
+      "priorityIndicators": "Number of community water supply points",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Recurrent hailstorms",
+      "sectorAffected": null,
+      "responseStrategy": "Not mentioned",
+      "keyIndicators": "N/A",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Recurrent hailstorms",
+      "sectorAffected": null,
+      "responseStrategy": "Not mentioned",
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "shift to cash crops (tea)",
+      "priorityIndicators": "Proportion of farmers practising commercial farming",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Long rain seasons",
+      "sectorAffected": null,
+      "responseStrategy": "Use of resistant crops",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Long rain seasons",
+      "sectorAffected": null,
+      "responseStrategy": "Adoption of resistant varieties",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": null,
+      "responseStrategy": "Use of traditional vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": null,
+      "responseStrategy": "Adoption of Indigenous vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Depression and stress to farmers",
+      "sectorAffected": null,
+      "responseStrategy": "Seeking guidance and counselling",
+      "keyIndicators": "Number of individuals disagreggated by age, gender, and ability seeking mental health services; proportion health facilities offfering mental health services; number of mental health awareness programs conducted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Depression and stress to farmers",
+      "sectorAffected": null,
+      "responseStrategy": "Seeking counselling from health facilities",
+      "keyIndicators": "Number of individuals disagreggated by age, gender, and ability seeking mental health services; proportion health facilities offfering mental health services; number of mental health awareness programs conducted",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Loss of income resulting to increased poverty",
+      "sectorAffected": null,
+      "responseStrategy": "Looking for other sources of income",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Loss of income resulting to increased poverty",
+      "sectorAffected": null,
+      "responseStrategy": "Diversifying sources of livelihoods",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Bringing silt to lower lands",
+      "sectorAffected": null,
+      "responseStrategy": "Gabbions, tree planting, Digging terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Bringing silt to lower lands",
+      "sectorAffected": null,
+      "responseStrategy": "Gabbions, tree planting, Digging terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Infrastructure collapse",
+      "sectorAffected": null,
+      "responseStrategy": "Building flood proof infrastructures",
+      "keyIndicators": "% of available infrastructures that upgraded to be flood resistant",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Infrastructure collapse due to heavy rainfall and increased floods",
+      "sectorAffected": null,
+      "responseStrategy": "Building resistant infrastructures",
+      "keyIndicators": "% of available infrastructures that upgraded to be flood resistant",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": null,
+      "responseStrategy": "Use smart practices",
+      "keyIndicators": "% of farmers reporting practising CSAs",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": null,
+      "responseStrategy": "Adoption of climate-smart practices",
+      "keyIndicators": "% of farmers reporting practising CSAs",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil erosion/degradation",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Increased sand harvesting activities",
+      "sectorAffected": null,
+      "responseStrategy": "Stop sand harvesting along rivers",
+      "keyIndicators": "% reduction in sand harvesting along riparian areas",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased sand harvesting activities",
+      "sectorAffected": null,
+      "responseStrategy": "Decreasing sand harvesting near rives",
+      "keyIndicators": "% reduction in sand harvesting along riparian areas",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Decline in river waters/decline in water quality",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Water level of rivers has gone down/rivers have become seasonal",
+      "sectorAffected": null,
+      "responseStrategy": "Planting trees",
+      "keyIndicators": "Number of rivers under restoration interventions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water level of rivers has gone down/rivers have become seasonal",
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Number of rivers under restoration interventions",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Decline in river waters/decline in water quality",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Pollution of water acquifers",
+      "sectorAffected": null,
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Pollution of water acquifers and springs due to floods",
+      "sectorAffected": null,
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Extreme hot and cold weather",
+    "ward": "Sabatia Sub-County",
+    "last10Years": {
+      "impact": "Extreme hot and cold temperatures",
+      "sectorAffected": "Health, livestock, food system",
+      "responseStrategy": "Planting trees",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Extreme hot and cold temperatures",
+      "sectorAffected": "Health, livestock, food system",
+      "responseStrategy": "Planting trees",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of modern markets",
+      "priorityIndicators": "Number of modern markets constructed per ward",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Last mile electricity connectivity",
+      "priorityIndicators": "Number households connected through the last mile electricity connectivity",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Number of trees planted, % of land area under cover cropping practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Number of trees planted, % of land area under cover cropping practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Upgrading murram roads to tarmac roads",
+      "priorityIndicators": "Distance in km of murram roads upgraded to tarmac",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Use of early maturing varieties",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Adoption of early maturing varieties",
+      "keyIndicators": "% of farmers using early maturing varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of fish depots",
+      "priorityIndicators": "Number of fish depots established",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes and rainwater harvesting",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of Educational centers like Vihiga County Vocational Training College and TRELIS Collge",
+      "priorityIndicators": "Number operational institutions of higher learning established; number of students enrolled in local institutions of higher learning",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Protection of water bodies",
+      "priorityIndicators": "Area in hectares of water catchment areas under active protection; number of community water points fenced",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Use of diversified sources of livelihood and adoption of resistant crop varieties",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Diversifying livelihood sources",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of fish ponds",
+      "priorityIndicators": "Number of fish ponds constructed: quantity in kgs of fish production per year from fish ponds",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": "Tree planting to revegetate degraded areas",
+      "keyIndicators": "Area of degraded lands that has been revegetated in ha",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": "Revegetating degraded lands",
+      "keyIndicators": "Area of degraded lands that has been revegetated in ha",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of agricultural processing plants",
+      "priorityIndicators": "Number of operational agricultural processing plants; proportion of agricultural produce directed to value addition plants",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Adoption of Africa leafy vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of bus stations and roadside structures to support small scale traders",
+      "priorityIndicators": "Number of bus stations established at strategic locations; number of small scale traders using established sheds on roadsides",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": null,
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Use of resistant crop varieties",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of bridges",
+      "priorityIndicators": "Number of bridges constructed",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": "Food security, Cultural heritage",
+      "responseStrategy": null,
+      "keyIndicators": "Number of farmers using indigenous crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": "Food security, Cultural heritage",
+      "responseStrategy": "Use of indigenous crops",
+      "keyIndicators": "Number of farmers using indigenous crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of tea collection centres",
+      "priorityIndicators": "Number of tea collection centres established",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Livelihoods",
+      "responseStrategy": null,
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Livelihoods",
+      "responseStrategy": "Use of resistant crop varieties",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of the ministry of mining offices",
+      "priorityIndicators": "Number of government offices localized in the sub-county",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Decline in river waters/decline in water quality",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Water level of rivers has gone down/rivers have become seasonal",
+      "sectorAffected": "Water supply, ecosystem and biodiversity",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water level of rivers has gone down/rivers have become seasonal",
+      "sectorAffected": "Water supply, ecosystem and biodiversity",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Modern hospitals and specialized clinics",
+      "priorityIndicators": "Number of health centres upgraded with modern equipments; number of specailized clinics established",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Decline in river waters/decline in water quality",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Pollution of water acquifers",
+      "sectorAffected": "Water supply, ecosystem and biodiversity",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of pollution to acquifers diverted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Pollution of water acquifers",
+      "sectorAffected": "Water supply, ecosystem and biodiversity",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of pollution to acquifers diverted",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of vegetable plantations",
+      "priorityIndicators": "Quantity in kg of vegetables produced per year",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Luanda Sub-County",
+    "last10Years": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Increased flooding",
+      "sectorAffected": "Agriculture, transport, trades",
+      "responseStrategy": "Building of gabbions, tree planting, terraces",
+      "keyIndicators": "Number of trees planted, % of land area under terracing practices; % of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "development of green spaces and parks",
+      "priorityIndicators": "Area in hectares of green spaces established; presence of a park in the sub-county",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructures (Roads and bridges)",
+      "responseStrategy": "Building gabbions",
+      "keyIndicators": "% of roads exposed to flooding events equiped with gabbions",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "reestablishment of Maragoli Forest",
+      "priorityIndicators": "Number of trees grown/ area in hectares of Maragoli forest restored",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture, forestry and tree cover",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishing colleges and schools which will include the vocational centers",
+      "priorityIndicators": "Number of colleges and vocational training centres established; number of learners enrolled in local colleges and vocational training centres",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": null,
+      "keyIndicators": "% of farmers that have adopted early maturing varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Prolonged dry spells",
+      "sectorAffected": "Agriculture, water supply",
+      "responseStrategy": "Adoption of early maturing varieties",
+      "keyIndicators": "% of farmers that have adopted early maturing varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Creation of modern markets and malls",
+      "priorityIndicators": "Number of modern markets and malls constructed",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": null,
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Livestock",
+      "responseStrategy": "Drilling boreholes",
+      "keyIndicators": "Number of boreholes drilled",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of a miller company and a sugar factory,",
+      "priorityIndicators": "Number of operational factories in the sub-county",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agricultural productivity",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Proportion of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Have a railway line and train station with strong road networks and terminal stations",
+      "priorityIndicators": "Length in km of the constructed railway line; number of train stations established",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Food security, income",
+      "responseStrategy": "Diversifying livelihood sources",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "Length in km of new road networks",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Loss of income",
+      "sectorAffected": "Family livelihood, mental health",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Loss of income",
+      "sectorAffected": "Family livelihood, mental health",
+      "responseStrategy": "Diversifying livelihood sources",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Establishment of stadiums",
+      "priorityIndicators": "Number of modern stadiums constructed",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": null,
+      "keyIndicators": "Area of degraded lands that has been revegetated in ha",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Mudslides",
+      "sectorAffected": "Agriculture, water sources",
+      "responseStrategy": "Land restoration and revegetation",
+      "keyIndicators": "Area of degraded lands that has been revegetated in ha",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Construction of an airstrip",
+      "priorityIndicators": "Number of airstrips constructed; number of passengers using the airstrip per year",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced production of leafy vegetables",
+      "sectorAffected": "Food and nutritional security, cultural heritage",
+      "responseStrategy": "Adoption of Africa leafy vegetables",
+      "keyIndicators": "Proportion of farmers that is growing Indigenous African leafy vegetables",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": null,
+      "keyIndicators": "% of farmers that have adopted early maturing varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Irregular rainfall patterns",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Adoption of early maturing varieties",
+      "keyIndicators": "% of farmers that have adopted early maturing varieties",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Recurrent hailstorms",
+      "sectorAffected": "Health, ecosystem and biodiversity",
+      "responseStrategy": null,
+      "keyIndicators": "N/A",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Recurrent hailstorms",
+      "sectorAffected": "Health, ecosystem and biodiversity",
+      "responseStrategy": "Not mentioned",
+      "keyIndicators": "N/A",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Long rain seasons",
+      "sectorAffected": "Water, health",
+      "responseStrategy": null,
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Long rain seasons",
+      "sectorAffected": "Water, health",
+      "responseStrategy": "Adoption of resistant crops",
+      "keyIndicators": "Number of farmers using resistant crops",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Poor timing of the agricultural calendar",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of farmers disagreggated by age, gender, and ability accessing actionable CIS",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Poor timing of the agricultural calendar",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Using CIS from KMD",
+      "keyIndicators": "Proportion of farmers disagreggated by age, gender, and ability accessing actionable CIS",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": null,
+      "keyIndicators": "% of farmers practising CSA practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Agriculture, food security",
+      "responseStrategy": "Adoption of CSA practices",
+      "keyIndicators": "% of farmers practising CSA practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Loss of income resulting to increased poverty",
+      "sectorAffected": "Livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Loss of income resulting to increased poverty",
+      "sectorAffected": "Livelihood",
+      "responseStrategy": "Diversifying livelihood sources",
+      "keyIndicators": "Number of households with diversified sources of livelihoods",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Pollution of water acquifers",
+      "sectorAffected": "Water supply, biodiversity, ecosystem",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Pollution of water acquifers",
+      "sectorAffected": "Water supply, biodiversity, ecosystem",
+      "responseStrategy": "Protection of water sources",
+      "keyIndicators": "Proportion of water springs and acquifers put under protection",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Vihiga Sub-County",
+    "last10Years": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Eucalyptus menace",
+      "sectorAffected": "Forests, water",
+      "responseStrategy": "Replacing Eucalyptus with Indigenous Spp",
+      "keyIndicators": "Number of Eucalyptus and blue gum trees cut and replaced with Indigenous species",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, ecosystem and biodiversity",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Drought",
+      "sectorAffected": null,
+      "responseStrategy": "Tree Planting (pine, euphorbia)",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Droughts",
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "Improve irrigation Schemes",
+      "priorityIndicators": "Percentage of farmers transitioning to improved irrigation schemes",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Irrigation Scheme",
+      "keyIndicators": "Proportion of farmers practsing irrigation farming",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Irrigation Schemes",
+      "keyIndicators": "Percentage of farmers using irrigation farming",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Environmnetal degradation",
+      "likelySectorsAffected": null,
+      "proposedResponse": "Creating awareness on environmental degradation",
+      "priorityIndicators": "Number of individuals reached through environmental awareness campaigns against environmental degradation",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Drought Resistant Crops (Cassava, Vegetables)",
+      "keyIndicators": "% of farmers who have adopted drought tolerant crops",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Use of Drought Resistant Crops such Cassava",
+      "keyIndicators": "Percentage of smallholder farmers permanently transitioning a portion of their land from vulnerable staples (e.g., maize) to drought-tolerant varieties (e.g., early-maturing cassava).",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Floods",
+      "likelySectorsAffected": "Agriculture and food security; water supply; ecosystem and biodiversity; health",
+      "proposedResponse": "Building gabbions",
+      "priorityIndicators": "Total length of gabions successfully installed in target flood-prone areas",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Use of drought resistant vegetables",
+      "keyIndicators": "Percentage of smallholder farmers permanently transitioning a portion of their land from vulnerable vegetables to drought-tolerant varieties (e.g., Africa leafy vegetables).",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Agriculture and food security; water supply; ecosystem and biodiversity; health",
+      "proposedResponse": "Dams Construction",
+      "priorityIndicators": "Measuring the number of additional days a community has access to water during a meteorological drought compared to pre-dam baselines.",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Drought",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": "Floods",
+      "sectorAffected": null,
+      "responseStrategy": "Building gabions",
+      "keyIndicators": "Total length of gabions successfully installed in target flood-prone areas",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Agriculture and food security; water supply; ecosystem and biodiversity; health",
+      "proposedResponse": null,
+      "priorityIndicators": "The percentage reduction in flood-prone zones downstream during peak seasonal flows.",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, education, water supply, health, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Construction of Terraces",
+      "keyIndicators": "The percentage of agricultural land on slopes equipped with soil and water conservation terraces",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Agriculture and food security; infrastructure; water supply",
+      "proposedResponse": null,
+      "priorityIndicators": "The decrease in exposed assets, livestock, and displaced households during heavy rainfall events.",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Construction of flood resistant infrastructures",
+      "keyIndicators": "Proportion of constructed infrastructures are flood proof/resistant",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Infrastructure and transport",
+      "proposedResponse": "Cambered beds construction in roads to manage surface run-offs",
+      "priorityIndicators": "Percentage reduction in the number of extreme rainfall events that result in localized urban flooding",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Floods",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Tree Planting",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Infrastructure and transport",
+      "proposedResponse": null,
+      "priorityIndicators": "The number of years the road surface lasts without climate-related damage (e.g., rutting or washouts caused by standing water)",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil degradation and Erosion",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Soil degradation and erosion",
+      "sectorAffected": null,
+      "responseStrategy": "Use of fertilizers",
+      "keyIndicators": "% of farmers using fertilizers disagreggated by fertilizer type (organic or inorganic or both)",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Soil degradation and erosion",
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "Encourage crop rotation and minimum tillage",
+      "priorityIndicators": "The percentage of farmers in a targeted ward/subcounty actively practicing minimum tillage and crop rotation",
+      "indicatorTypology": "Process"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil degradation and Erosion",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "The total hectares of farmland under minimum tillage and diversified crop rotation systems",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil degradation and Erosion",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of agricultural lands under crop rotation practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Crop Rotation",
+      "keyIndicators": "Proportion of agricultural lands under crop rotation practices",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "Introduce traditional casting methods of planting",
+      "priorityIndicators": "Percentage of farmers practising traditional casting methods of planting grains",
+      "indicatorTypology": "Process"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil degradation and Erosion",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "The totale hectares of farmland that has been grown through traditional casting methods",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil degradation and Erosion",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "% of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Terraces",
+      "keyIndicators": "The percentage of agricultural land on slopes equipped with soil and water conservation terraces",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Water Pollution",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households with acess to treated water",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water pollution",
+      "sectorAffected": null,
+      "responseStrategy": "Water Treatment",
+      "keyIndicators": "Number of households with acess to treated water",
+      "indicatorTypology": "Impact"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Water pollution",
+      "likelySectorsAffected": "Health, water",
+      "proposedResponse": "Penalizing the polluters through polluters pay principle",
+      "priorityIndicators": "Amount of pollution abated as a result of stringent enforcement of polluter pays principle",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Water Pollution",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, health, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Number of awareness programs conducted; number of peaople reached",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Creating Awareness",
+      "keyIndicators": "Number of awareness programs conducted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Health, ecosystem and biodiversity",
+      "proposedResponse": "Provision of tap water for the communities",
+      "priorityIndicators": "Number of household with access to piped water that meets minimum quality standards",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of forested lands fenced",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Defforestation",
+      "sectorAffected": null,
+      "responseStrategy": "Fencing of forests",
+      "keyIndicators": "Proportion of forested lands fenced",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Deforestation",
+      "likelySectorsAffected": "Ecosystem and biodiversity",
+      "proposedResponse": "Enforcement rules and regulations",
+      "priorityIndicators": "Number of enforcment officers that ensure that environment laws and regulations are adhered to;",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "% of loggers with valid licence from goverment authority",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Issuance of logging licence",
+      "keyIndicators": "% of loggers with valid licence from goverment authority",
+      "indicatorTypology": "Process"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Ecosystem and biodiversity",
+      "proposedResponse": "Use other clean sources of fuel i.e biogas",
+      "priorityIndicators": "Percentage of households using alternative sources of clean energy",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "Percentage reduction in deforestation rate per year",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Female -below 30 years",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Planting of trees",
+      "priorityIndicators": "Number of trees planted",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "Female -below 30 years",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Number of trees grown disagregated by species and survival rate; proportion of forested land restored under reforestation program in ha",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Afforestation",
+      "keyIndicators": "Number of trees grown disagregated by species and survival rate; proportion of forested land restored under reforestation program in ha",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Food Scarcity due to drought",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "% of farmers using drought resistant Indigenous varieties",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Drought",
+      "sectorAffected": "Food and nutritional security",
+      "responseStrategy": "Planting drought resistant crops",
+      "keyIndicators": "Percentage of farmers transitioning to use drought resistant crops in their farmlands",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Food insecurity",
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "By using irrigations techniques such as drip irrigation or mulching",
+      "priorityIndicators": "Total area of farmlands under climate-smart irrigation practices (e.g. drip irrigatiom) in hectare",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Food Scarcity due to drought",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Food and nutritional security",
+      "responseStrategy": "Seasonal forecasts",
+      "keyIndicators": "Percentage of the community adjusting planting dates (or crop varieties) at least two weeks before the onset of the rainy season, driven by seasonal forecasts.",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Food insecurity",
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "Seasonal forecast",
+      "priorityIndicators": "Percentage of the community adjusting planting dates (or crop varieties) at least two weeks before the onset of the rainy season, driven by seasonal forecasts.",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Food Scarcity due to drought",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "The percentage of households receiving localized meteorological advisories (e.g., via SMS or extension officers).",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Food Scarcity due to drought",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Food and nutritional security",
+      "responseStrategy": "Planting of Indigenous varieties of crops and vegetables",
+      "keyIndicators": "Percentage of farmers transitioning to use traditional African crops and vegatables in their farmlands",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of gazetted forests under protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Deforestation",
+      "sectorAffected": "Ecosystem and biodiversity",
+      "responseStrategy": "Protecting existing forest",
+      "keyIndicators": "Proportion of forests under active protection",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Deforestation",
+      "likelySectorsAffected": "Ecosystem and biodiversity",
+      "proposedResponse": "Afforestation",
+      "priorityIndicators": "Total area in hectare of afforested landscapes",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Deforestation",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Number of indigenous trees by species planted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Planting more indigenous frees",
+      "keyIndicators": "Number of indigenous trees by species planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, health, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Number of new regulations protecting forests and watersheds",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Streams reduction",
+      "sectorAffected": null,
+      "responseStrategy": "Environmental Policing",
+      "keyIndicators": "The percentage of environmental violation cases that result in conviction or cessation orders issued.",
+      "indicatorTypology": "Process"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Degradation of catchment areas",
+      "likelySectorsAffected": "Water supply",
+      "proposedResponse": "Ending human activities near Streams and water catchment areas.",
+      "priorityIndicators": "Square kilometers of deforested catchment areas naturally or artificially regenerated due to restricted human encroachment",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Hectares of unauthorized agricultural or built encroachment removed from designated stream buffer zones.",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "Kilometers of stream protected or the percentage of households relocated/activities halted within the designated (30 meter to 50 meter ) riparian buffer zones (standard ecosystem-based adaptation guidelines).",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": null,
+      "priorityIndicators": "Riparian Buffer Zone Recovery Rate (%)",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Size of lands under afforestation in ha",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Water level depletion",
+      "sectorAffected": "Water, Ecosystem and biodiversity",
+      "responseStrategy": "Afforestation/Reafforestation",
+      "keyIndicators": "The percentage of the target catchment that is newly forested",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Water level depletion",
+      "likelySectorsAffected": "Water supply; health",
+      "proposedResponse": "Proper water and land managements",
+      "priorityIndicators": "Amount of wastes in tonnes diverted from dumpsites",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Size of of degraded forest lands under reafforestation programs in ha",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Size of of degraded forest lands under reafforestation programs in ha",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Wetland degradation",
+      "likelySectorsAffected": "Ecosystem and biodiversity; water supply",
+      "proposedResponse": "Protection of wetlands.",
+      "priorityIndicators": "Proportion of wetland areas in Ha under protection",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Streams Reduction/Water level depletion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of wetlands under active protection",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Wet land protection",
+      "keyIndicators": "Proportion of wetlands under active protection",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Land degradation",
+      "likelySectorsAffected": "Ecosystem and biodiversity",
+      "proposedResponse": "Protection of vegetations/landcover",
+      "priorityIndicators": "Percentage of national land that is vegetated",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil Erosion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of agricultural land under sustainable land management practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Soil erosion",
+      "sectorAffected": "Food security and agriculture, ecosystem and biodiversity",
+      "responseStrategy": "Land management",
+      "keyIndicators": "Percentage of agricultural land under sustainable land management practices",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": "Agriculture and food security",
+      "proposedResponse": "Enhancing soil structure",
+      "priorityIndicators": "Change in Soil Structure Index (SSI)",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil Erosion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, water supply, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Percentage of land area under terracing practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Terrace farming",
+      "keyIndicators": "Percentage of land area under terracing practices",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "Soil erosion",
+      "likelySectorsAffected": "Food security and agriculture, ecosystem and biodiversity",
+      "proposedResponse": "Restoring vegetation to increase resilience against soil erosion",
+      "priorityIndicators": "Change in soil erosion index based on the Universal Soil Loss Equation",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Soil Erosion",
+    "ward": "KIDERI (Female 30-60 Yrs)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": null,
+      "keyIndicators": "Percentage of agricultural lands under cover cropping",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Ground Cover & Mulching",
+      "keyIndicators": "Percentage of agricultural lands under cover cropping",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Water Scarcity",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Water access",
+      "responseStrategy": "Proper water harvesting",
+      "keyIndicators": "Number households practising domestic rain water harvesting",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Water scarcity",
+      "sectorAffected": "Water access",
+      "responseStrategy": "Water piping in every homestead",
+      "keyIndicators": "Percentage of households that have accessible piped water",
+      "indicatorTypology": "Impact"
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Water Piping in every Homestead/Households.",
+      "priorityIndicators": "Number of households receiving piped water",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Water Scarcity",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Water access",
+      "responseStrategy": "Drilling of enough boreholes",
+      "keyIndicators": "Number of boreholes drilled per ward",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Reduced Agriculture yields",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Poverty and livelihood, agriculture and food security, health",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of agricultural land under CSA practices",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Incorporate smart Agriculture",
+      "keyIndicators": "Proportion of agricultural land under CSA practices",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Incorporate proper irrigation Methods",
+      "priorityIndicators": "Number of farmers that are practising irrigation farming",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Increased financial obligations and reduced farm income",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Poverty and livelihood, agriculture and food security",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households practising income savigs/ % increase in membership of saving groups",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Encourage Saving habits.",
+      "keyIndicators": "Number of households practising income savigs/ % increase in membership of saving groups",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Invest in profitable business.",
+      "priorityIndicators": "% Growth in annual household profit",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Mental health and Emotional Stress.",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Health, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of individuals receiving mental health services",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Involve guidance and counselling expert",
+      "keyIndicators": "Number of individuals receiving mental health services",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Planning of future life amicably under uncertainty",
+      "priorityIndicators": "% increase in household income",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Mental health and Emotional Stress.",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Regular check -up in suitable and well-equiped health facilities",
+      "priorityIndicators": "Number of individuals receving mental health services",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Reduced land for farming /investment",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Poverty and livelihood, agriculture and food security",
+      "responseStrategy": null,
+      "keyIndicators": "Number of farmers that have adopted modern farming techniques",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Incorporate modern farming Techniques.",
+      "keyIndicators": "Number of farmers that have adopted modern farming techniques",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Proper investment on profitable farming in suitable facility.",
+      "priorityIndicators": "Annual increase in income from agricultural enterprise",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Male-Adults (30-60 years)",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Agriculture and food security, education, poverty and lievelihoods, water supply, health, ecosystem and biodiversity, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of constructed infrastructures i.e roads, schools, health facilities are climate resistant",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Enhance modern Infrastructure i.e proper roads good health, facilities modern Schools/ colleges",
+      "keyIndicators": "Proportion of constructed infrastructures i.e roads, schools, health facilities are climate resistant",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Provision of adequate finance for infrastructure development.",
+      "priorityIndicators": "Proportion of annual budget allocated to infrastructural development; increase in length (km) in the county's resilient road infrastructure",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Lack of clean water during drought seasons",
+      "sectorAffected": "Health, education, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of households with accessible tap water systems disagregated by gender, age, and ability",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Need for allocation of tap water in households especially PWDs homes",
+      "keyIndicators": "Number of households with accessible tap water systems disagregated by gender, age, and ability",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "To have a county that is disability friendly leveraging on the existing structures put in place, so as to enhance quality healthcare services & social well-being, inclusion in decision making, finances, government allocations as per the Constitution of Kenya.",
+      "priorityIndicators": "Proportion of PWDs involved in decision making in county government plans; % increase in finance allocations to PWDs in county budget; proportion of healthcare infrastructures that are disability friendly",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Inhaling poisonous gasses when they burn plastics",
+      "sectorAffected": "Health",
+      "responseStrategy": null,
+      "keyIndicators": "Number of disability mainstreaming awareness creation programs conducted",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Sensitisation on disability needs on the ground involving all stakeholders",
+      "keyIndicators": "Number of disability mainstreaming awareness creation programs conducted",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "To have a well-established disability empowerment program that can assist on economic status of the livelihoods of PWDs.",
+      "priorityIndicators": "% of empowerment programs that supports PWDs; number of PWDs receiving financial support from empowerment programs",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Poor road systems and inaccessible during rainy seasons",
+      "sectorAffected": "Agriculture and food security, education, transport and infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of roads and culverts that are disability friendly",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Avoid constructions of very big culverts as the PWDs have problems crossing such big ones",
+      "keyIndicators": "Proportion of roads and culverts that are disability friendly",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "A well enhanced support in schools for children living with disabilities",
+      "priorityIndicators": "Number of schools with functional support system for children with disabilities; number of children living with disabilities attending schools due to available support",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Poor infrastructures in government Offices; i.e not well designated for disability movement",
+      "sectorAffected": "Health, education, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of individuals reached in climate change awareness creation programs",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "More community sensitisation forums on effects of climate change",
+      "keyIndicators": "Number of individuals reached in climate change awareness creation programs",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Poor access to Communication systems (No Sign Interpreters in almost all meetings)",
+      "sectorAffected": "Health, education, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of sign language interpreters trained",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "More Sign language interpreters to be trained",
+      "keyIndicators": "Number of sign language interpreters trained",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Weather changes always come with different diseases",
+      "sectorAffected": "Health, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "% of health facilities with constructed ramps which acccessible to PWDs",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Construction of ramps in all health facilities including beds that are disability friendly",
+      "keyIndicators": "% of health facilities with constructed ramps which acccessible to PWDs",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Jiggers’ infestation in the communities affects the blind more than others with physical challenges",
+      "sectorAffected": "Health, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of individuals reached during mobile outreach campaigns disgregated by gender, age, and ability status",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Mobile outreach activities from Ministry of Health, provision of wheelchairs to those who can’t move",
+      "keyIndicators": "Number of individuals reached during mobile outreach campaigns disgregated by gender, age, and ability status",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Lack of supply of food during drought. The physically challenged can’t fetch water nor practice irrigation",
+      "sectorAffected": "Health, education, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of PWDs involved in decision making for climate adaptation",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Need to engage in Obutaa family meetings",
+      "keyIndicators": "Number of PWDs involved in decision making for climate adaptation",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "PWDS/Elderly",
+    "last10Years": {
+      "impact": "Albino families face many challenges during drought as Their skin needs regular care",
+      "sectorAffected": "Health, education, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of PWDs receiving PPEs and materials",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Provision of safe equipment/oil for albinos",
+      "keyIndicators": "Number of PWDs receiving PPEs and materials",
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Orushaa MEN below 30yrs -Youths",
+    "last10Years": {
+      "impact": "Low production especially youth in Agriculture",
+      "sectorAffected": "Poverty and livelihood, agriculture and food security, health",
+      "responseStrategy": null,
+      "keyIndicators": "Number of youths trained on CSA techniques; proportion of youths that are investing in CSA",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Sensitize the youth on smart Agricultural Farming Techniques",
+      "keyIndicators": "Number of youths trained on CSA techniques; proportion of youths that are investing in CSA",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Youth are leaders in Climate Action",
+      "priorityIndicators": "Number of youths leading climate actions",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Orushaa MEN below 30yrs -Youths",
+    "last10Years": {
+      "impact": "Need for youth in environmental activism",
+      "sectorAffected": "Education",
+      "responseStrategy": null,
+      "keyIndicators": "Proportion of youths in environmental activism",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Encourage more youth to Join environmental activism",
+      "keyIndicators": "Proportion of youths in environmental activism",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Youth people innovate green solutions",
+      "priorityIndicators": "Number of green inovations/solutions that are youth-led",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Orushaa MEN below 30yrs -Youths",
+    "last10Years": {
+      "impact": "Mental Health Strain",
+      "sectorAffected": "Health, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "% change in number of youth and PWD reported bieng stigmazed",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Break stigma",
+      "keyIndicators": "% change in number of youth and PWD reported bieng stigmazed",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": null,
+      "likelySectorsAffected": null,
+      "proposedResponse": "Climate education is part of every School Policies",
+      "priorityIndicators": "Proportion of learning areas in schools that integrates climate education",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Orushaa MEN below 30yrs -Youths",
+    "last10Years": {
+      "impact": "Drugs & Substance abuse",
+      "sectorAffected": "Health, poverty and livelihood",
+      "responseStrategy": null,
+      "keyIndicators": "Number of green jobs created; proportion of youths employed in the green economy",
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": null,
+      "responseStrategy": "Green Jobs for the Youth",
+      "keyIndicators": "Number of green jobs created; proportion of youths employed in the green economy",
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazardImpact": "N/A",
+      "likelySectorsAffected": "N/A",
+      "proposedResponse": "Youth voices Shape Climate",
+      "priorityIndicators": "Number of active youth-led initiatives that shapes climate change discourse",
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Vihiga",
+    "climateHazard": "Improper infrastructure",
+    "ward": "Orushaa MEN below 30yrs -Youths",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": {
+      "projectedHazardImpact": "N/A",
+      "likelySectorsAffected": "Infrastrucuture",
+      "proposedResponse": "More stadiums and IT HUB To be built",
+      "priorityIndicators": "Number of modern stadium constructed/ Number of operationa IT hubs established in a Ward",
+      "indicatorTypology": null
+    }
+  }
+]

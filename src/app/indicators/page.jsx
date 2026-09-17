@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { ArrowRight, Database, FileText, Globe, Map, Layers, Target, BarChart2, TrendingUp, Link2 } from 'lucide-react';
+import { ArrowRight, Database, FileText, Globe, Map, Layers, Target, BarChart2, TrendingUp, Link2, Users2 } from 'lucide-react';
 import LamaNavbar from '@/components/Navbar/navbar';
 import LamaFooter from '@/components/Footer/footer';
 
@@ -12,6 +12,12 @@ const INDICATOR_GROUPS = [
     bg: "bg-green-50",
     border: "border-green-200",
     items: [
+      {
+        name: "FGD Indicators",
+        description: "Community-level indicators from Focus Group Discussions in Kisumu, Nandi & Vihiga — tracked across Last 10 Years, Currently, and Future Resilience.",
+        href: "/indicators/FGD-indicator",
+        icon: Users2,
+      },
       {
         name: "LLA Indicators",
         description: "Locally-led adaptation metrics and frameworks for tracking climate action across Africa.",

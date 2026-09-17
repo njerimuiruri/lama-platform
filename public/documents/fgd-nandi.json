@@ -1,0 +1,617 @@
+[
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "land slides",
+      "sectorAffected": "Environment Health",
+      "responseStrategy": "Planting of trees",
+      "keyIndicators": "Number of gabbions build",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "damage lands",
+      "sectorAffected": "Environment AGriculture health",
+      "responseStrategy": "destruction of crops and farmlands causing death",
+      "keyIndicators": "number of trees planted higher grounds",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "severe flooding in the area",
+      "projectedImpact": "reduced agricultural productivity ,loss of lives and displacements",
+      "sector": "Agriculture ,health ,Environment",
+      "proposedResponse": "introduction of flood control systems and drainages within the affected areas",
+      "priorityIndicators": "Afforestation",
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "Quarrying",
+      "sectorAffected": "Environment Health",
+      "responseStrategy": "Planting of trees",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "damaged lands",
+      "sectorAffected": "environment health",
+      "responseStrategy": "unrefiiled quarres",
+      "keyIndicators": "number of quarres to be landfilled",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "severe flooding in the area",
+      "projectedImpact": "destruction of infrastructure ,roads ,bridges",
+      "sector": "Evironment ,Health",
+      "proposedResponse": "introduction of trees nursery to raise alot of seedlings",
+      "priorityIndicators": "source for ponds as a flood prone system",
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "Poor road infrastructure",
+      "sectorAffected": "Environment Health,Water supply",
+      "responseStrategy": "construct new roads and buid brigdes",
+      "keyIndicators": "Number of bridges constructed",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "impassable roads during rainy seasons in the area",
+      "sectorAffected": "infrastructure ,environment",
+      "responseStrategy": "buid and tarmac new roads",
+      "keyIndicators": "number of roads structued",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "washed roads leading to impassible areas",
+      "projectedImpact": "disrupted transport ,severe flooding",
+      "sector": "Environment Health,Water suppl",
+      "proposedResponse": "building of trees ,building raised roads ,building gabbions",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "Hailstorms and srtong winds",
+      "sectorAffected": "Health ,Environment Agriculture",
+      "responseStrategy": "tree planting",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "Damage crops",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "destruction of crops",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "severe destruction of environment",
+      "projectedImpact": "loss of vegetation cover and natural habitats",
+      "sector": "Health ,Environment Agriculture",
+      "proposedResponse": "planting of trees in deforestated and degraded areas to restover the cover",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "Damaged tree plantations",
+      "sectorAffected": "Environment Agriculture",
+      "responseStrategy": "Cover cropping, tree plantation",
+      "keyIndicators": "Number of trees planted",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "damaged crops ,lands",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Reduction in soil fertility due to excessive erosion",
+      "keyIndicators": "number of trees planted",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "destructruction of crops",
+      "projectedImpact": "increased poverty levels,food insecurity",
+      "sector": "Environment Agriculture",
+      "proposedResponse": "employment creation programs",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "ollesos",
+    "last10Years": {
+      "impact": "Poor sanitation",
+      "sectorAffected": "environment ,climate ,health",
+      "responseStrategy": "clean markets and proper disposal of wastes",
+      "keyIndicators": "Number of people affected in the comunity",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "dirty markets",
+      "sectorAffected": "Health Agriculuture ,",
+      "responseStrategy": "leading to water borne diseases",
+      "keyIndicators": "improved sanitation practices",
+      "indicatorTypology": "outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "pollution of of environment ,water",
+      "projectedImpact": "long term public health risk ,increased water borne disease",
+      "sector": "environment ,climate ,health",
+      "proposedResponse": "disease survaillance and ealy warning systems",
+      "priorityIndicators": null,
+      "indicatorTypology": "outcome"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Nandi Hills",
+    "last10Years": {
+      "impact": "poor roads",
+      "sectorAffected": "Infrastructure ,Environment",
+      "responseStrategy": "buid new roads",
+      "keyIndicators": "number of roads constructed",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Infrastructure ,Environment",
+      "responseStrategy": "murram and tarmac roads",
+      "keyIndicators": "number of murramed roads constructed",
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "impassible roads",
+      "projectedImpact": "delayed emergency response and aid delivery",
+      "sector": "Infrastructure ,Environment",
+      "proposedResponse": "community based disaster preparedness",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Nandi Hills",
+    "last10Years": {
+      "impact": "Polluted dams",
+      "sectorAffected": "Environment ,climate ,health",
+      "responseStrategy": "spray the dams",
+      "keyIndicators": "number of people affected",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "death of animals and spread of diseases",
+      "sectorAffected": "Environment ,Health",
+      "responseStrategy": "This leads to spread of water diseases",
+      "keyIndicators": "reduced incidence of water borne diseases",
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "death of animals",
+      "projectedImpact": "reduced food supply",
+      "sector": "Infrastructure ,Environment",
+      "proposedResponse": "wste reduction strategies",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Nandi Hills",
+    "last10Years": {
+      "impact": "Hailstones",
+      "sectorAffected": "Agriculture Environment",
+      "responseStrategy": null,
+      "keyIndicators": "number of crops and livestock affected",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "Destruction of crops",
+      "sectorAffected": "Agriculture ,Environment",
+      "responseStrategy": "destruction of crops and loose soil",
+      "keyIndicators": "reduced crop destruction ,improved soil stability",
+      "indicatorTypology": "outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "destruction of crops death of animals",
+      "projectedImpact": "increased poverty and economic vulnarability",
+      "sector": "Environment ,climate ,health",
+      "proposedResponse": "agricultural support",
+      "priorityIndicators": null,
+      "indicatorTypology": "outcome"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Kipyok (chepkunyuk)ward",
+    "last10Years": {
+      "impact": "soil erosion",
+      "sectorAffected": "Agriculture ,",
+      "responseStrategy": "planting trees and cover crops",
+      "keyIndicators": "number of trees planted",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "destruction of frtile lands",
+      "sectorAffected": "Agriculture ,Environment",
+      "responseStrategy": "soil degradation ,reduced soil fertility .loss of productive land",
+      "keyIndicators": "reduced soil degradation",
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "soil gradation",
+      "projectedImpact": "food insecurity ,food insecurity",
+      "sector": "Agriculture",
+      "proposedResponse": "food storage and preservation ,use of kitchen garden,irrigation farming",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Kipyok (chepkunyuk)ward",
+    "last10Years": {
+      "impact": "Bad roads",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Murraming the roads",
+      "keyIndicators": "number of roads murramed",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "a number of roads are exposed",
+      "sectorAffected": "Infrastructure ,Environment",
+      "responseStrategy": "Destruction of roads",
+      "keyIndicators": "reduced road damage",
+      "indicatorTypology": "outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "construction of gabbions",
+      "projectedImpact": "reduced environmental degradation",
+      "sector": "Infrastructure",
+      "proposedResponse": "sustainable land use practices",
+      "priorityIndicators": null,
+      "indicatorTypology": "outcome"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Floods",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Floods",
+      "sectorAffected": "Agriculture,Environment ,Health Infrastructure",
+      "responseStrategy": "building gabbions",
+      "keyIndicators": "number of gabbions constructed",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "a number of roads are exposed",
+      "sectorAffected": "Agriculture,Environment ,Health Infrastructure",
+      "responseStrategy": "Destroys land ,roads ,infrastructure",
+      "keyIndicators": "destruction of lands",
+      "indicatorTypology": "outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "construction of bridges and gabbions",
+      "projectedImpact": "reduced economic losses and transport disruption",
+      "sector": "Agriculture,Environment ,Health Infrastructure",
+      "proposedResponse": "regular maintainance of roads",
+      "priorityIndicators": null,
+      "indicatorTypology": "outcome"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Erosion",
+      "sectorAffected": "Environment Agriculture",
+      "responseStrategy": "planting cover crops",
+      "keyIndicators": "increased soiil structure",
+      "indicatorTypology": "impact"
+    },
+    "currentSituation": {
+      "impact": "destruction of fertile lands",
+      "sectorAffected": "Environment Agriculture",
+      "responseStrategy": "Destroys fertile lands ,makes the land weaker",
+      "keyIndicators": null,
+      "indicatorTypology": "outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "building of gabbions",
+      "projectedImpact": "improved community resilience to flooding",
+      "sector": "Environment ,Agriculture",
+      "proposedResponse": "improved drainage system",
+      "priorityIndicators": null,
+      "indicatorTypology": "outcome"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Land slides",
+      "sectorAffected": "Environment Health Agriculture",
+      "responseStrategy": "Planting trees moving to raised lands",
+      "keyIndicators": "number of trees planted",
+      "indicatorTypology": "outcome"
+    },
+    "currentSituation": {
+      "impact": "planting trees",
+      "sectorAffected": "Environment Health Agriculture",
+      "responseStrategy": "Destroys good fertile lands for agriculture",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "planting of trees",
+      "projectedImpact": "sustained agricultural productivity and land stability",
+      "sector": "Environment Health Agriculture",
+      "proposedResponse": "use of crop rotation ,agroforestry soil conservation",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Frost",
+      "sectorAffected": "Environment",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Environment",
+      "responseStrategy": "Destroys plants",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": null,
+      "sector": "Environment",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Thunder &Lightnening",
+      "sectorAffected": "Environment",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Environment",
+      "responseStrategy": "can cause death",
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": null,
+      "sector": "Environment",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Drought",
+    "ward": "Kapchorwa",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Kapchorwa",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Kapchorwa",
+    "last10Years": null,
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "chepkunyuk",
+    "last10Years": {
+      "impact": "Havy rainfall",
+      "sectorAffected": "Environment Health Agriculture",
+      "responseStrategy": "Planting crops that can survive during heavy rains",
+      "keyIndicators": "increased yields ,increased soil structure",
+      "indicatorTypology": "impact"
+    },
+    "currentSituation": {
+      "impact": "planting trees ,crops",
+      "sectorAffected": "Environment Health Agriculture",
+      "responseStrategy": "destroys crops",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "planting plants that can stand harsh conditions",
+      "projectedImpact": "reduced long term environmental damage",
+      "sector": "Environment Health Agriculture",
+      "proposedResponse": "afforestation and reforestation",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "chepkunyuk",
+    "last10Years": {
+      "impact": "Droughts",
+      "sectorAffected": "Environment Health Agriculture ,water supply",
+      "responseStrategy": "planting drought tolerant crops",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "currentSituation": {
+      "impact": "construction of dams",
+      "sectorAffected": "Environment Health Agriculture ,water supply",
+      "responseStrategy": "kill animals ,plants",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "constrution of dams to harvest water during floods",
+      "projectedImpact": "long term climate adaptation and sustainability",
+      "sector": "Environment Health Agriculture ,water supply",
+      "proposedResponse": "use of climate smart agriculture",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "chepkunyuk",
+    "last10Years": {
+      "impact": "Frosts",
+      "sectorAffected": "Environmment",
+      "responseStrategy": "planting crops thatcan survive during frosts",
+      "keyIndicators": "increased yieds",
+      "indicatorTypology": "impact"
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Environment ,Health",
+      "responseStrategy": "destroys crops",
+      "keyIndicators": null,
+      "indicatorTypology": "impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "planting of cover crops",
+      "projectedImpact": null,
+      "sector": "Environment ,Health",
+      "proposedResponse": "improved soil fertility",
+      "priorityIndicators": null,
+      "indicatorTypology": "impact"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Soil erosion",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": "Soil degradation",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Planting cover crops",
+      "keyIndicators": "increased yied",
+      "indicatorTypology": "output"
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "destruction of crops",
+      "keyIndicators": null,
+      "indicatorTypology": "ouput"
+    },
+    "futureResilience": {
+      "projectedHazard": "planting of cover crops",
+      "projectedImpact": null,
+      "sector": "Agriculture",
+      "proposedResponse": "moisture conservation",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  },
+  {
+    "county": "Nandi",
+    "climateHazard": "Soil erosion",
+    "ward": "Kapchorwa",
+    "last10Years": {
+      "impact": null,
+      "sectorAffected": "Environment",
+      "responseStrategy": "Planting trees",
+      "keyIndicators": "number of trees planted",
+      "indicatorTypology": "output"
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Environment",
+      "responseStrategy": "destruction of trees",
+      "keyIndicators": null,
+      "indicatorTypology": "output"
+    },
+    "futureResilience": {
+      "projectedHazard": "planting of trees",
+      "projectedImpact": null,
+      "sector": "Environment",
+      "proposedResponse": "moisture conservation",
+      "priorityIndicators": null,
+      "indicatorTypology": "output"
+    }
+  }
+]

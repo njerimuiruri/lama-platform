@@ -95,6 +95,12 @@ const LamaNavbar = () => {
       href: "/indicators",
       subItems: [
         {
+          name: "FGD Indicators",
+          href: "/indicators/FGD-indicator",
+          description: "Focus Group Discussion data — Kisumu, Nandi, Vihiga",
+          isCategory: true,
+        },
+        {
           name: "LLA Indicators",
           href: "/indicators/Lama-indicator",
           description: "Locally-led adaptation metrics",
@@ -280,29 +286,26 @@ const LamaNavbar = () => {
                               {item.subItems.map((subItem) => (
                                 <div key={subItem.name}>
                                   {subItem.isNested ? (
-                                    <div className="relative group/nested">
+                                    <div className="group/nested">
                                       <div className="p-2 xl:p-2.5 rounded-md bg-green-50 hover:bg-green-100 border border-green-200 transition-colors duration-150 cursor-pointer flex items-center justify-between">
                                         <div>
-                                          <div className="font-semibold text-green-700 text-xs xl:text-sm leading-tight flex items-center gap-1">
+                                          <div className="font-semibold text-green-700 text-xs xl:text-sm leading-tight">
                                             {subItem.name}
-                                            <span className="text-[10px] bg-green-200 text-green-800 px-1.5 py-0.5 rounded">
-                                              hover
-                                            </span>
                                           </div>
                                         </div>
-                                        <ChevronRight className="w-4 h-4 text-green-600 animate-pulse group-hover/nested:animate-none" />
+                                        <ChevronRight className="w-4 h-4 text-green-600 transition-transform duration-200 group-hover/nested:rotate-90" />
                                       </div>
 
-                                      {/* Nested Dropdown */}
-                                      <div className="absolute left-full top-0 ml-2 w-72 xl:w-80 bg-white rounded-lg shadow-xl border-2 border-green-200 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
-                                        <div className="p-2 xl:p-3 bg-gradient-to-br from-green-50 to-white rounded-lg">
-                                          <div className="space-y-1">
+                                      {/* Nested items expand inline below, never off-screen */}
+                                      <div className="grid grid-rows-[0fr] group-hover/nested:grid-rows-[1fr] transition-all duration-200">
+                                        <div className="overflow-hidden">
+                                          <div className="pt-1 pl-3 space-y-1">
                                             {subItem.nestedItems.map(
                                               (nestedItem) => (
                                                 <Link
                                                   key={nestedItem.name}
                                                   href={nestedItem.href}
-                                                  className="block p-2 xl:p-2.5 rounded-md bg-white hover:bg-green-50 border border-transparent hover:border-green-200 transition-colors duration-150 group/item shadow-sm"
+                                                  className="block p-2 xl:p-2.5 rounded-md bg-white hover:bg-green-50 border border-gray-100 hover:border-green-200 transition-colors duration-150 group/item shadow-sm"
                                                 >
                                                   <div className="font-medium text-gray-900 text-xs xl:text-sm leading-tight group-hover/item:text-green-700 transition-colors">
                                                     {nestedItem.name}

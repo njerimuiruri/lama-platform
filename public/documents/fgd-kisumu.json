@@ -1,0 +1,900 @@
+[
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "No flash floods or back-flow",
+      "sectorAffected": "Water suppy",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "No. of gabions built",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Frequent flash floods and rising lake levels are causing backflow.",
+      "sectorAffected": "Water supply , Infrastructure, Agriculture",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads, gullies formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Flash floods from the River Awach and Sondu are affecting homesteads near Lake Victoria.",
+      "projectedImpact": null,
+      "sector": "Water supply, Infrastructure, Agriculture",
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Roads and drainage systems were stable.",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "No. of gabions built",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Formation of deep gullies and road erosion.",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads, gullies formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Washed-out feeder roads are disrupting access to markets and schools.",
+      "projectedImpact": null,
+      "sector": "Water supply, Infrastructure, Agriculture",
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Minimal soil erosion or gully formation.",
+      "sectorAffected": "Ecosystems and Biodiversity",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "No. of gabions built",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Increased runoff destroys crops and infrastructure.",
+      "sectorAffected": "Agriculture and Infrastrucure",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads, gullies formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": null,
+      "sector": "Water supply, Infrastructure, Agriculture",
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Water borne diseases",
+      "sectorAffected": "Health",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Digging terraces",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazard": "Securing tree seedlings for planting was difficult due to lack of money",
+      "projectedImpact": null,
+      "sector": "Income",
+      "proposedResponse": "Securing tree seedlings for planting was difficult due to lack of money",
+      "priorityIndicators": "No.of tree seedlings planted",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Infrastructure collapse",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Relocation",
+      "keyIndicators": "No. of people relocated",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Planting trees that consume a lot of water",
+      "sectorAffected": "Forest and Ecosytems,",
+      "responseStrategy": "Planting of treees",
+      "keyIndicators": "No. of trees planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Building of gabions required resources in form of money",
+      "projectedImpact": null,
+      "sector": "Income, Infrastructure",
+      "proposedResponse": "Building of gabions required resources in form of money",
+      "priorityIndicators": "No. of gabions built",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Flood water brought fish",
+      "sectorAffected": "Agriculture , Income",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Building of gabions along the banks of Sondu Miriu",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Buildig gabions",
+      "keyIndicators": "No. of gabions dug",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Scarcity of land due to dense population",
+      "projectedImpact": null,
+      "sector": "Human settlements",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Washing away of top soil resulting in low crop yields",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Digging terraces",
+      "keyIndicators": "Yields produced No. of terraces dug",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Relocating to upper lands",
+      "sectorAffected": "Human settlements",
+      "responseStrategy": "Relocation",
+      "keyIndicators": "No. of people relocated",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South East",
+    "last10Years": {
+      "impact": "Limited flooding events;",
+      "sectorAffected": "Water suppy",
+      "responseStrategy": "Digging trenches",
+      "keyIndicators": "Trenches dug",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Frequent flash floods and lake backflow;",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Proper waste disposal",
+      "keyIndicators": "At least one borehole dug after every year",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Severe flooding & land degradation",
+      "projectedImpact": null,
+      "sector": "Water, Agriculture",
+      "proposedResponse": "Irrigation, boreholes, flood control",
+      "priorityIndicators": "\"30% of gabions constructed along existing roads and rivers 5% of water pans distillated \" % boreholes, reduced erosion \"Provision of water bins withing our markets",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South East",
+    "last10Years": {
+      "impact": "controlled water flow and minimal erosion",
+      "sectorAffected": "Water suppy",
+      "responseStrategy": "Constructiion of gabion boxes Planting cover groups",
+      "keyIndicators": "No. of gabions constructed Crop varieties planted",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "increased soil erosion,",
+      "sectorAffected": "Ecosystems and Biodiversity, Agriculture",
+      "responseStrategy": "Constructiion of gabion boxes",
+      "keyIndicators": "No. of gabions constructed",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "South East",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": "damaged roads, and farmlands",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "North",
+    "last10Years": {
+      "impact": "Minimal flooding and no major erosion incidents reported",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Construction of gabions",
+      "keyIndicators": "No.of gabions constructed",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Frequent flash floods and lake backflow, leading to road damage, erosion, and displacement of households.",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Dykes and drainage",
+      "keyIndicators": "No. of dykes constructed",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Sevevre flood risks",
+      "projectedImpact": null,
+      "sector": "Agriculture and water",
+      "proposedResponse": "Flood barrires Wetland restorarions",
+      "priorityIndicators": "No. of wetlands restored Flood barries constructed",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Floods",
+    "ward": "West",
+    "last10Years": {
+      "impact": "Minimal flooding; stable water levels; no major backflow incidents from the lake.",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Construction of gabions",
+      "keyIndicators": "No.of gabions constructed",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Frequent flash floods; lake backflow affecting farmlands and settlements; increased erosion and poor road conditions.",
+      "sectorAffected": "Infrastructure , Agriculture",
+      "responseStrategy": "Limited internention",
+      "keyIndicators": "Poor roads",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Increased flood intensity",
+      "projectedImpact": null,
+      "sector": "Agriculture and Infrastructure",
+      "proposedResponse": "Flood control,, Afforestaion",
+      "priorityIndicators": "% flood control measures Trees planted",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Prolonged dry spells with limited forest cover.",
+      "sectorAffected": "Ecosystems and Biodiversity",
+      "responseStrategy": "Minimal interventions needed",
+      "keyIndicators": "No. of intervetnions intervened",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Cyclic (patterned) dry spells occurring more regularly.",
+      "sectorAffected": "Water supply, Infrastructure, Agriculture",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads , Gulleys formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Farmers now harvest rainwater and use small dams for irrigation.",
+      "projectedImpact": null,
+      "sector": "Water supply, Infrastructure, Agriculture",
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Water scarcity is affecting domestic and livestock use.",
+      "sectorAffected": "Water supply,",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Improved forest cover from community tree planting and restoration projects.",
+      "sectorAffected": "Ecosystems and Biodivrsity",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads , Gulleys formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Tree planting by youth groups like KOJET Rural Organization(tree nursery), enhancing soil stability.",
+      "projectedImpact": null,
+      "sector": "Forest and Ecosystems",
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved, No of trees planted",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Declining soil moisture and crop yield.",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": "minimal erosion",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Increased access to water through boreholes, wells, dams, and pans.",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Gabions, drainage improvement, relocation",
+      "keyIndicators": "Washed roads , Gulleys formed",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": null,
+      "sector": null,
+      "proposedResponse": "Flood control systems, afforestation, drainage",
+      "priorityIndicators": "% roads protected, reduced flood damage, water systems improved, No. of trees planted",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Malnutritional diseases are still there but they have reduced in number compared to the last 10 years",
+      "sectorAffected": "Health",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Planting of more variety of drought tolerant crops like millet, sorghum,and improved maize varieties",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Bulding of gabions",
+      "keyIndicators": "No. of gabions built",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Drought resistant crop seeds are expensive",
+      "projectedImpact": null,
+      "sector": "Agriculture",
+      "proposedResponse": "Afforestaion",
+      "priorityIndicators": "No of trees planted",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Reduced crop yields(it is more severe compared to the last 10 years)",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": "Reduced yields",
+      "indicatorTypology": "Impact"
+    },
+    "currentSituation": {
+      "impact": "Digging of water pans",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Digging of water pans",
+      "keyIndicators": "No. of water pans dug",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Lack of water makes both crops and trees to wilt and die",
+      "projectedImpact": null,
+      "sector": "Agriculture , Water supply,",
+      "proposedResponse": "Bulding of gabions",
+      "priorityIndicators": "% of gabions constructed",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Loss of income",
+      "sectorAffected": "Income",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Planting of trees(agroforestry trees)",
+      "sectorAffected": "Ecosystems and Biodiversity",
+      "responseStrategy": "Tree planting",
+      "keyIndicators": "Reduced erosion",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "It is very expensive to dig water pans",
+      "projectedImpact": null,
+      "sector": "Infrastructure, Water supply",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Lack of water",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Construction of water pans and boreholes",
+      "keyIndicators": "No. of water pans and boreheoles constructed",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Severe drought impacts",
+      "sectorAffected": "Water snd Agriculture",
+      "responseStrategy": "Water pans Agroforestry",
+      "keyIndicators": "No. of waterpans constructed No. of trees planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "The roads are impassable using motorcycles",
+      "projectedImpact": null,
+      "sector": "Infrastructure",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "South East",
+    "last10Years": {
+      "impact": "Occasional dry spells; moderate access to water sources",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Construction of water pans and boreholes",
+      "keyIndicators": "Controlled flow",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Extended dry spells leading to water shortages, reduced crop yields, and livestock stress",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Plantiing of drought tolerant crops Construction of water pans Introduction of modrn irrigation systems",
+      "keyIndicators": "Continous practising of drought resisitnce crops",
+      "indicatorTypology": "Impact"
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": null,
+      "sector": null,
+      "proposedResponse": null,
+      "priorityIndicators": "30% of gabions constructed along existing roads and rivers 5% of water pans distillated",
+      "indicatorTypology": "Output"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "North",
+    "last10Years": {
+      "impact": "Moderate drought events and sustainable access to water sources",
+      "sectorAffected": "Water supply",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Severe droughts causing crop losses and reduced water availability despite increased boreholes and pans",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Constructions of boreholes",
+      "keyIndicators": "No.of boreholes constructed",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": null,
+      "projectedImpact": "Incresed severity",
+      "sector": "Water",
+      "proposedResponse": "Water storge systems",
+      "priorityIndicators": "Water access rate",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Drought",
+    "ward": "West",
+    "last10Years": {
+      "impact": "Moderate droughts with stable rainfall distribution; sufficient water sources.",
+      "sectorAffected": "Water Supply",
+      "responseStrategy": "Boreholes",
+      "keyIndicators": "No. of boreholes constructed",
+      "indicatorTypology": "Output"
+    },
+    "currentSituation": {
+      "impact": "Extended dry spells leading to water shortages, reduced crop yields, and livestock stress",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Constructions of boreholes",
+      "keyIndicators": "No.of boreholes constructed",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Irregular rainfall affects planting seasons and yields.",
+      "sectorAffected": "Water Supply, Agriculture",
+      "responseStrategy": "Indegenous forcasting",
+      "keyIndicators": "Yield stability",
+      "indicatorTypology": "Impact"
+    },
+    "currentSituation": {
+      "impact": "Highly unpredictable rainfall and seasonal variability.",
+      "sectorAffected": "Water supply",
+      "responseStrategy": "Difficult planning",
+      "keyIndicators": "No. of losses",
+      "indicatorTypology": "Impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "Farmers planting maize in February only for the rains to delay until April.",
+      "projectedImpact": null,
+      "sector": "Agriculture",
+      "proposedResponse": "Climate information systems",
+      "priorityIndicators": "% of farmers using forecasting",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "Central",
+    "last10Years": {
+      "impact": "Farmers relied on indigenous weather forecasting methods, for example, when an old lady feels the knees stretching it means rain is about to fall",
+      "sectorAffected": "Agrocultrue, Water",
+      "responseStrategy": "Indegenous forcasting",
+      "keyIndicators": "Yield stability",
+      "indicatorTypology": "Impact"
+    },
+    "currentSituation": {
+      "impact": "Difficulties in planning farm activities due to unreliable onset and cessation of rains.",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Difficult planning",
+      "keyIndicators": "No. of losses",
+      "indicatorTypology": "Impact"
+    },
+    "futureResilience": {
+      "projectedHazard": "Harvest losses due to unexpected mid-season dry spells or excessive rain.",
+      "projectedImpact": null,
+      "sector": "Water supply",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Poor timing of the agricultural calendar",
+      "sectorAffected": "Agroculture",
+      "responseStrategy": "Crop diversification",
+      "keyIndicators": "Yield stability",
+      "indicatorTypology": "Impact"
+    },
+    "currentSituation": {
+      "impact": "Planting short season crops",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Improve seeds",
+      "keyIndicators": "Cost barriers",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Lack of climate alert information",
+      "projectedImpact": null,
+      "sector": "Climate informtion systems",
+      "proposedResponse": "Early warning systems",
+      "priorityIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Agriculture , Income",
+      "responseStrategy": "Crop diversification",
+      "keyIndicators": "Yield stability",
+      "indicatorTypology": "Impact"
+    },
+    "currentSituation": {
+      "impact": "Planting of drought resistant crops",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Improve seeds",
+      "keyIndicators": "Cost barriers",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Acquiring of short season crops, improved seed varieties of crops and fruits is expensive",
+      "projectedImpact": null,
+      "sector": "Income, Agriculture",
+      "proposedResponse": "Crop diversification",
+      "priorityIndicators": "Amount of income",
+      "indicatorTypology": "Impact"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Decline of indigenous crops",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Planting of improved variety of crops and fruits",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": {
+      "projectedHazard": "Lack of early warning systems",
+      "projectedImpact": null,
+      "sector": null,
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Depression and stress to farmers",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Mixed farming and crop diversification",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Loss of income resulting to increased poverty",
+      "sectorAffected": "Income",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": null,
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "South East",
+    "last10Years": {
+      "impact": "Occasional dry spells; moderate access to water sources.",
+      "sectorAffected": "Water Supply",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": null,
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Increasing unpredictabilitty",
+      "projectedImpact": "Poor planning",
+      "sector": "Agriculture",
+      "proposedResponse": "Need for early warning systems & resilient crops",
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "North",
+    "last10Years": {
+      "impact": "Predictable seasons guiding planting and harvesting cycles.",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Unreliable rainfall patterns causing poor agricultural planning and productivity",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Increasing unpredictabilitty",
+      "projectedImpact": "Poor planning",
+      "sector": "Agriculture",
+      "proposedResponse": "Need fpr early warning systems and resilient crops",
+      "priorityIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Unpredictable Rainfall Patterns",
+    "ward": "West",
+    "last10Years": {
+      "impact": "Predictable rainfall seasons supporting planned agricultural activities",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Highly unpredictable rainfall patterns, causing uncertainty in planting and harvesting schedules",
+      "sectorAffected": "Agriculture , Water supply",
+      "responseStrategy": "Need fpr early warning systems and resilient crops",
+      "keyIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    },
+    "futureResilience": {
+      "projectedHazard": "Increasing unpredictabilitty",
+      "projectedImpact": "Poor planning",
+      "sector": "Agriculture",
+      "proposedResponse": "Need fpr early warning systems and resilient crops",
+      "priorityIndicators": "Access to climate information",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Soil erosion",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Bringing silt to lower lands",
+      "sectorAffected": "Infrastrucure",
+      "responseStrategy": "Digging terraces",
+      "keyIndicators": "Soil loss",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Severe erosion",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Digging of terraces",
+      "keyIndicators": "Terraces dug",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Increase of soil erosion is still persistent due to the topography of the area",
+      "projectedImpact": null,
+      "sector": "Ecosystems and Biodiversity",
+      "proposedResponse": "Large scale conservations",
+      "priorityIndicators": "Reduced erosion rate",
+      "indicatorTypology": "Outcome"
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Soil erosion",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Infrastructure collapse",
+      "sectorAffected": "Infrastrucure",
+      "responseStrategy": null,
+      "keyIndicators": null,
+      "indicatorTypology": null
+    },
+    "currentSituation": {
+      "impact": "Severe erosion",
+      "sectorAffected": "Ecosystems and Biodiversity",
+      "responseStrategy": "Planting cover crops",
+      "keyIndicators": "Species of cover crops planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": {
+      "projectedHazard": "Digging of terraces and construction of gabions is expensive",
+      "projectedImpact": null,
+      "sector": "Infrastructure",
+      "proposedResponse": null,
+      "priorityIndicators": null,
+      "indicatorTypology": null
+    }
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Soil erosion",
+    "ward": "South West",
+    "last10Years": {
+      "impact": "Reduced crop yields",
+      "sectorAffected": "Agriculture",
+      "responseStrategy": "Building terraces",
+      "keyIndicators": "Soil loss",
+      "indicatorTypology": "Outcome"
+    },
+    "currentSituation": {
+      "impact": "Severe erosion",
+      "sectorAffected": "Infrastructure",
+      "responseStrategy": "Building of gabions",
+      "keyIndicators": "Gabions built",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  },
+  {
+    "county": "Kisumu",
+    "climateHazard": "Soil erosion",
+    "ward": "South West",
+    "last10Years": null,
+    "currentSituation": {
+      "impact": "Severe erosion",
+      "sectorAffected": "Ecosystems and Biodiversity",
+      "responseStrategy": "Planting of trees",
+      "keyIndicators": "No. of tress planted",
+      "indicatorTypology": "Output"
+    },
+    "futureResilience": null
+  }
+]
