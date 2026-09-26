@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw survey exports contain personal data (names, phones, GPS) — never commit
+/data/data/LAMA_22_06_26*.xlsx
+/data/data/*_FULL.*
+
+# Excel lock files
+~$*

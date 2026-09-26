@@ -1,683 +1,333 @@
 'use client';
-import { useState, useMemo, useEffect } from "react";
-import dynamic from 'next/dynamic';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Globe, DollarSign, MapPin, Activity, ChevronDown, ChevronUp, Search, Filter, X, Table as TableIcon, List } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import dynamic from "next/dynamic";
+import { ChevronLeft, ChevronRight, LayoutList, Search, Table as TableIcon, X } from "lucide-react";
 import projectsData from "../../../../data/data/projects.json";
 import LamaNavbar from "@/components/Navbar/navbar";
 import PlatformSubNav from "@/components/PlatformSubNav/PlatformSubNav";
 import LamaFooter from "@/components/Footer/footer";
 import DataGate from "@/components/ContentGate/DataGate";
+import { formatMoney } from "@/lib/formatMoney";
+import { amountOf, cleanValue, normaliseCountry, normaliseRegion, startYear } from "@/lib/projectData";
 
-// Dynamically import InterventionsMap with no SSR
 const InterventionsMap = dynamic(() => import("@/components/InterventionsMap/InterventionsMap"), {
     ssr: false,
-    loading: () => (
-        <div className="h-[600px] w-full bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl flex items-center justify-center">
-            <div className="text-center space-y-3">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
-                <p className="text-gray-600 font-medium">Loading interactive map...</p>
-            </div>
-        </div>
-    ),
+    loading: () => <div className="aspect-[600/660] rounded-2xl bg-gray-100 animate-pulse" />,
 });
 
-export default function ClimateAdaptationDashboard() {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selectedCountry, setSelectedCountry] = useState("all");
-    const [selectedTheme, setSelectedTheme] = useState("all");
-    const [selectedRegion, setSelectedRegion] = useState("all");
-    const [selectedPeriod, setSelectedPeriod] = useState("all");
-    const [isClient, setIsClient] = useState(false);
-    const [showTable, setShowTable] = useState(false);
-    const [showFilters, setShowFilters] = useState(true);
-    const [hoveredProject, setHoveredProject] = useState(null);
-    const [viewMode, setViewMode] = useState("list"); // "list" or "table"
+const PAGE_SIZE = 10;
+const STATUS_ONGOING = "Under Implementation";
 
-    const projects = projectsData;
+// One clean record per project
+const PROJECTS = projectsData.map((p, i) => ({
+    id: i,
+    title: p["Adaptation Interventions"],
+    country: normaliseCountry(p.Country),
+    region: normaliseRegion(p.Region),
+    theme: cleanValue(p["Thematic Area(s)"]) ?? "Other",
+    funder: cleanValue(p.Funders),
+    instrument: cleanValue(p.Instruments),
+    amount: amountOf(p),
+    period: cleanValue(p.Period),
+    start: startYear(p),
+    status: p["Implementation Status"] === STATUS_ONGOING ? "Ongoing" : "Approved",
+    raw: p,
+}));
 
+const optionsFor = (key) => {
+    const counts = {};
+    PROJECTS.forEach(p => { counts[p[key]] = (counts[p[key]] || 0) + 1; });
+    return Object.entries(counts).sort((a, b) => a[0].localeCompare(b[0])).map(([value, count]) => ({ value, count }));
+};
+const REGIONS = optionsFor("region");
+const COUNTRIES = optionsFor("country");
+const THEMES = optionsFor("theme");
+
+const SORTS = {
+    amount: { label: "Largest first", fn: (a, b) => b.amount - a.amount },
+    newest: { label: "Newest first", fn: (a, b) => b.start - a.start },
+    title: { label: "A–Z", fn: (a, b) => a.title.localeCompare(b.title) },
+};
+
+const EMPTY_FILTERS = { search: "", region: "", country: "", theme: "", status: "" };
+
+function FilterSelect({ label, value, onChange, options, allLabel }) {
+    return (
+        <label className="block">
+            <span className="sr-only">{label}</span>
+            <select
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                className={`w-full h-10 rounded-lg border bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 ${value ? "border-emerald-300 text-gray-900" : "border-gray-200 text-gray-600"}`}
+            >
+                <option value="">{allLabel}</option>
+                {options.map(o => (
+                    <option key={o.value} value={o.value}>{o.value} ({o.count})</option>
+                ))}
+            </select>
+        </label>
+    );
+}
+
+function StatusPill({ status }) {
+    return (
+        <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ${status === "Ongoing" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${status === "Ongoing" ? "bg-emerald-500" : "bg-amber-500"}`} />
+            {status}
+        </span>
+    );
+}
+
+function ProjectRow({ project, onHover }) {
+    const details = [project.region, project.theme, project.funder && `Funded by ${project.funder}`].filter(Boolean);
+    return (
+        <li
+            className="group flex items-start justify-between gap-4 px-4 sm:px-5 py-4 hover:bg-emerald-50/40 transition-colors"
+            onMouseEnter={() => onHover(project.country)}
+            onMouseLeave={() => onHover(null)}
+        >
+            <div className="min-w-0">
+                <h3 className="text-[15px] font-semibold text-gray-900 leading-snug">{project.title}</h3>
+                <p className="mt-1 text-xs text-gray-500 leading-relaxed">
+                    <span className="font-semibold text-gray-700">{project.country}</span>
+                    {details.map(d => <span key={d}> · {d}</span>)}
+                </p>
+            </div>
+            <div className="flex-shrink-0 text-right space-y-1">
+                <p className="text-sm font-semibold text-gray-900 tabular-nums">{project.amount > 0 ? formatMoney(project.amount) : "—"}</p>
+                {project.period && <p className="text-xs text-gray-500 tabular-nums">{project.period}</p>}
+                <StatusPill status={project.status} />
+            </div>
+        </li>
+    );
+}
+
+export default function InterventionsDatabase() {
+    const [filters, setFilters] = useState(EMPTY_FILTERS);
+    const [sort, setSort] = useState("amount");
+    const [view, setView] = useState("cards");
+    const [page, setPage] = useState(0);
+    const [hoveredCountry, setHoveredCountry] = useState(null);
+
+    // Pre-select a country when linked from elsewhere (?country=Kenya)
     useEffect(() => {
-        setIsClient(true);
+        const param = new URLSearchParams(window.location.search).get("country");
+        const country = param && normaliseCountry(param);
+        if (country && COUNTRIES.some(c => c.value === country)) setFilters(f => ({ ...f, country }));
     }, []);
 
-    const filteredProjects = useMemo(() => {
-        return projects.filter((project) => {
-            const matchesSearch =
-                searchQuery === "" ||
-                project["Adaptation Interventions"].toLowerCase().includes(searchQuery.toLowerCase()) ||
-                project["Country"].toLowerCase().includes(searchQuery.toLowerCase()) ||
-                project["Funders"].toLowerCase().includes(searchQuery.toLowerCase());
-
-            const matchesCountry =
-                selectedCountry === "all" || project["Country"] === selectedCountry;
-
-            const matchesTheme =
-                selectedTheme === "all" || project["Thematic Area(s)"] === selectedTheme;
-
-            const matchesRegion =
-                selectedRegion === "all" || project["Region"] === selectedRegion;
-
-            const matchesPeriod =
-                selectedPeriod === "all" || project["Period"] === selectedPeriod;
-
-            return matchesSearch && matchesCountry && matchesTheme && matchesRegion && matchesPeriod;
-        });
-    }, [projects, searchQuery, selectedCountry, selectedTheme, selectedRegion, selectedPeriod]);
-
-    const projectsByCountry = useMemo(() => {
-        const grouped = {};
-        projects.forEach(project => {
-            if (!grouped[project.Country]) {
-                grouped[project.Country] = [];
-            }
-            grouped[project.Country].push(project);
-        });
-        return grouped;
-    }, [projects]);
-
-    const statistics = useMemo(() => {
-        const totalProjects = filteredProjects.length;
-        const totalFunding = filteredProjects.reduce(
-            (sum, project) => sum + parseFloat(project["Project Amount ($ Million)"] || "0"),
-            0
-        );
-
-        const uniqueCountries = selectedPeriod === "all"
-            ? Object.keys(projectsByCountry).length
-            : new Set(filteredProjects.map((project) => project["Country"])).size;
-
-        const activeProjects = filteredProjects.filter(
-            (project) => project["Implementation Status"] === "Under Implementation"
-        ).length;
-
-        return {
-            totalProjects,
-            totalFunding,
-            uniqueCountries,
-            activeProjects,
-        };
-    }, [filteredProjects, projectsByCountry, selectedPeriod]);
-
-    const countries = useMemo(() => {
-        const uniqueCountries = new Set(projects.map((project) => project["Country"]));
-        return Array.from(uniqueCountries).sort();
-    }, [projects]);
-
-    const themes = useMemo(() => {
-        const uniqueThemes = new Set(projects.map((project) => project["Thematic Area(s)"]));
-        return Array.from(uniqueThemes).sort();
-    }, [projects]);
-
-    const regions = useMemo(() => {
-        const uniqueRegions = new Set(projects.map((project) => project["Region"]));
-        return Array.from(uniqueRegions).sort();
-    }, [projects]);
-
-    const periods = useMemo(() => {
-        const uniquePeriods = new Set(projects.map((project) => project["Period"]));
-        return Array.from(uniquePeriods).sort((a, b) => {
-            const getStartYear = (period) => {
-                const year = period.split('-')[0];
-                return parseInt(year) || 0;
-            };
-            return getStartYear(a) - getStartYear(b);
-        });
-    }, [projects]);
-
-    const clearFilters = () => {
-        setSearchQuery("");
-        setSelectedCountry("all");
-        setSelectedTheme("all");
-        setSelectedRegion("all");
-        setSelectedPeriod("all");
+    const setFilter = (key, value) => {
+        setFilters(f => ({ ...f, [key]: value }));
+        setPage(0);
     };
+    const clearFilters = () => { setFilters(EMPTY_FILTERS); setPage(0); };
 
-    const hasActiveFilters = searchQuery || selectedCountry !== "all" || selectedTheme !== "all" ||
-        selectedRegion !== "all" || selectedPeriod !== "all";
+    const filtered = useMemo(() => {
+        const q = filters.search.trim().toLowerCase();
+        return PROJECTS.filter(p =>
+            (!q || [p.title, p.country, p.funder ?? ""].some(v => v.toLowerCase().includes(q))) &&
+            (!filters.region || p.region === filters.region) &&
+            (!filters.country || p.country === filters.country) &&
+            (!filters.theme || p.theme === filters.theme) &&
+            (!filters.status || p.status === filters.status)
+        ).sort(SORTS[sort].fn);
+    }, [filters, sort]);
 
-    const renderListView = () => {
-        if (selectedPeriod === "all") {
-            const filteredCountries = countries.filter(country =>
-                projectsByCountry[country]?.some(project =>
-                    filteredProjects.some(filteredProject =>
-                        filteredProject["Adaptation Interventions"] === project["Adaptation Interventions"]
-                    )
-                )
-            );
+    const summary = useMemo(() => ({
+        countries: new Set(filtered.map(p => p.country)).size,
+        amount: filtered.reduce((s, p) => s + p.amount, 0),
+        ongoing: filtered.filter(p => p.status === "Ongoing").length,
+    }), [filtered]);
 
-            if (filteredCountries.length === 0) {
-                return (
-                    <div className="text-center py-16 text-gray-500">
-                        <div className="flex flex-col items-center justify-center space-y-4">
-                            <Activity className="h-16 w-16 text-gray-300" />
-                            <p className="text-xl font-semibold text-gray-400">No projects found</p>
-                            <p className="text-sm text-gray-500">
-                                Try adjusting your search criteria or filters
-                            </p>
-                            {hasActiveFilters && (
-                                <Button
-                                    variant="outline"
-                                    onClick={clearFilters}
-                                    className="mt-4"
-                                >
-                                    <X className="h-4 w-4 mr-2" />
-                                    Clear all filters
-                                </Button>
-                            )}
-                        </div>
-                    </div>
-                );
-            }
+    const pageCount = Math.max(Math.ceil(filtered.length / PAGE_SIZE), 1);
+    const visible = filtered.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
-            return filteredCountries.map((country) => {
-                const countryProjects = projectsByCountry[country].filter(project =>
-                    filteredProjects.some(filteredProject =>
-                        filteredProject["Adaptation Interventions"] === project["Adaptation Interventions"]
-                    )
-                );
-
-                if (countryProjects.length === 0) return null;
-
-                return (
-                    <div key={country} className="mb-8 last:mb-0 animate-fadeIn">
-                        <div className="bg-gradient-to-r from-blue-50 to-green-50 p-5 rounded-xl mb-4 border border-blue-100 shadow-sm">
-                            <div className="flex items-center justify-between">
-                                <div>
-                                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                                        <MapPin className="h-5 w-5 text-blue-600" />
-                                        {country}
-                                    </h3>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        {countryProjects.length} project{countryProjects.length !== 1 ? 's' : ''} •
-                                        <span className="font-semibold ml-1">
-                                            ${countryProjects.reduce((sum, p) => sum + parseFloat(p["Project Amount ($ Million)"] || "0"), 0).toLocaleString()}M
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space-y-4">
-                            {countryProjects.map((project, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-1"
-                                    onMouseEnter={() => setHoveredProject(project)}
-                                    onMouseLeave={() => setHoveredProject(null)}
-                                >
-                                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                                        <div className="lg:col-span-2">
-                                            <h4 className="font-bold text-gray-900 text-base mb-2 leading-tight">
-                                                {project["Adaptation Interventions"]}
-                                            </h4>
-                                            <p className="text-sm text-gray-500 italic">
-                                                {project.Instruments && project.Instruments !== "none"
-                                                    ? project.Instruments
-                                                    : "No specific instrument"}
-                                            </p>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <Badge variant="secondary" className="bg-blue-100 text-blue-800 border-0 text-xs font-medium px-3 py-1">
-                                                {project["Thematic Area(s)"]}
-                                            </Badge>
-                                            <p className="text-sm text-gray-600 flex items-center gap-1">
-                                                <Globe className="h-3 w-3" />
-                                                {project["Region"]}
-                                            </p>
-                                            <p className="text-sm text-gray-600">{project["Funders"]}</p>
-                                        </div>
-                                        <div className="text-right space-y-2">
-                                            <p className="font-bold text-gray-900 text-2xl">
-                                                ${parseFloat(project["Project Amount ($ Million)"]).toLocaleString()}M
-                                            </p>
-                                            <p className="text-sm text-gray-500">{project["Period"]}</p>
-                                            <Badge className={`
-                                                ${project["Implementation Status"] === "Under Implementation"
-                                                    ? "bg-green-100 text-green-800 border-green-200"
-                                                    : "bg-yellow-100 text-yellow-800 border-yellow-200"
-                                                } border text-xs font-medium px-3 py-1
-                                            `}>
-                                                {project["Implementation Status"]}
-                                            </Badge>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            });
-        } else {
-            return renderTableView();
-        }
-    };
-
-    const renderTableView = () => {
-        if (filteredProjects.length === 0) {
-            return (
-                <div className="text-center py-16 text-gray-500">
-                    <div className="flex flex-col items-center justify-center space-y-4">
-                        <Activity className="h-16 w-16 text-gray-300" />
-                        <p className="text-xl font-semibold text-gray-400">No projects found</p>
-                        <p className="text-sm text-gray-500">
-                            Try adjusting your search criteria or filters
-                        </p>
-                        {hasActiveFilters && (
-                            <Button
-                                variant="outline"
-                                onClick={clearFilters}
-                                className="mt-4"
-                            >
-                                <X className="h-4 w-4 mr-2" />
-                                Clear all filters
-                            </Button>
-                        )}
-                    </div>
-                </div>
-            );
-        }
-
-        return (
-            <div className="overflow-x-auto">
-                <Table>
-                    <TableHeader>
-                        <TableRow className="bg-gray-50">
-                            <TableHead className="font-semibold">Project</TableHead>
-                            <TableHead className="font-semibold">Region</TableHead>
-                            <TableHead className="font-semibold">Country</TableHead>
-                            <TableHead className="font-semibold">Theme</TableHead>
-                            <TableHead className="font-semibold">Funders</TableHead>
-                            <TableHead className="text-right font-semibold">Amount</TableHead>
-                            <TableHead className="font-semibold">Period</TableHead>
-                            <TableHead className="font-semibold">Status</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {filteredProjects.map((project, index) => (
-                            <TableRow
-                                key={index}
-                                className="hover:bg-blue-50 transition-colors duration-200"
-                                onMouseEnter={() => setHoveredProject(project)}
-                                onMouseLeave={() => setHoveredProject(null)}
-                            >
-                                <TableCell className="font-medium max-w-md py-4">
-                                    <div className="space-y-1">
-                                        <p className="font-semibold text-gray-900 text-sm">
-                                            {project["Adaptation Interventions"]}
-                                        </p>
-                                        <p className="text-xs text-gray-500 italic">
-                                            {project.Instruments && project.Instruments !== "none"
-                                                ? project.Instruments
-                                                : "No specific instrument"}
-                                        </p>
-                                    </div>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <span className="text-sm text-gray-700">{project["Region"]}</span>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <span className="font-medium text-gray-900">{project["Country"]}</span>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <Badge
-                                        variant="secondary"
-                                        className="bg-blue-100 text-blue-800 hover:bg-blue-200 border-0 text-xs"
-                                    >
-                                        {project["Thematic Area(s)"]}
-                                    </Badge>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <span className="text-sm text-gray-600">{project["Funders"]}</span>
-                                </TableCell>
-                                <TableCell className="text-right py-4">
-                                    <span className="font-semibold text-gray-900">
-                                        ${parseFloat(project["Project Amount ($ Million)"]).toLocaleString()}M
-                                    </span>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <span className="text-sm text-gray-700">{project["Period"]}</span>
-                                </TableCell>
-                                <TableCell className="py-4">
-                                    <Badge className={`
-                                        ${project["Implementation Status"] === "Under Implementation"
-                                            ? "bg-green-100 text-green-800 hover:bg-green-200"
-                                            : "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
-                                        } border-0 text-xs font-medium
-                                    `}>
-                                        {project["Implementation Status"]}
-                                    </Badge>
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </div>
-        );
-    };
+    const activeChips = [
+        filters.search && { key: "search", label: `“${filters.search}”` },
+        filters.region && { key: "region", label: filters.region },
+        filters.country && { key: "country", label: filters.country },
+        filters.theme && { key: "theme", label: filters.theme },
+        filters.status && { key: "status", label: filters.status },
+    ].filter(Boolean);
 
     return (
         <>
             <LamaNavbar />
             <PlatformSubNav />
+            <main className="bg-gray-50/60 min-h-screen">
 
-            <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-                <div className="container mx-auto px-4 py-8 max-w-7xl">
-                    <header className="mb-10 text-center animate-fadeIn">
-                        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-3">
-                            Climate Adaptation Projects
-                        </h1>
-                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            Track climate resilience and adaptation initiatives across Africa
-                        </p>
-                    </header>
+                {/* Header */}
+                <section className="bg-white">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-5 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+                        <div>
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Adaptation projects across Africa</h1>
+                            <p className="text-gray-500 mt-1.5 max-w-2xl">
+                                Search and filter {PROJECTS.length} locally led adaptation interventions by place, theme and status. Click a country on the map to filter.
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-                    {/* Statistics Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-fadeIn">
-                        <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105">
-                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium text-blue-100">Total Projects</CardTitle>
-                                <Activity className="h-5 w-5 text-blue-100" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-3xl font-bold">{statistics.totalProjects}</div>
-                                <p className="text-xs text-blue-100 mt-1">Initiatives</p>
-                            </CardContent>
-                        </Card>
+                {/* Filters */}
+                <div className="sticky top-14 sm:top-16 z-30 bg-white/95 backdrop-blur border-y border-gray-200">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 grid grid-cols-2 md:grid-cols-6 gap-2">
+                        <label className="relative col-span-2">
+                            <span className="sr-only">Search projects</span>
+                            <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                            <input
+                                value={filters.search}
+                                onChange={(e) => setFilter("search", e.target.value)}
+                                placeholder="Search title, country or funder"
+                                className="w-full h-10 rounded-lg border border-gray-200 bg-white pl-9 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500"
+                            />
+                        </label>
+                        <FilterSelect label="Region" value={filters.region} onChange={(v) => setFilter("region", v)} options={REGIONS} allLabel="All regions" />
+                        <FilterSelect label="Country" value={filters.country} onChange={(v) => setFilter("country", v)} options={COUNTRIES} allLabel="All countries" />
+                        <FilterSelect label="Theme" value={filters.theme} onChange={(v) => setFilter("theme", v)} options={THEMES} allLabel="All themes" />
+                        <FilterSelect
+                            label="Status"
+                            value={filters.status}
+                            onChange={(v) => setFilter("status", v)}
+                            options={["Ongoing", "Approved"].map(s => ({ value: s, count: PROJECTS.filter(p => p.status === s).length }))}
+                            allLabel="Any status"
+                        />
+                    </div>
+                </div>
 
-                        <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105">
-                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium text-green-100">Total Funding</CardTitle>
-                                <DollarSign className="h-5 w-5 text-green-100" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-3xl font-bold">
-                                    ${statistics.totalFunding.toFixed(1)}M
-                                </div>
-                                <p className="text-xs text-green-100 mt-1">Investment committed</p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105">
-                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium text-orange-100">
-                                    {selectedPeriod === "all" ? "Countries" : "Active Countries"}
-                                </CardTitle>
-                                <Globe className="h-5 w-5 text-orange-100" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-3xl font-bold">{statistics.uniqueCountries}</div>
-                                <p className="text-xs text-orange-100 mt-1">
-                                    {selectedPeriod === "all" ? "Regional coverage" : "Countries in period"}
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105">
-                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium text-purple-100">Active Projects</CardTitle>
-                                <MapPin className="h-5 w-5 text-purple-100" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-3xl font-bold">{statistics.activeProjects}</div>
-                                <p className="text-xs text-purple-100 mt-1">Currently running</p>
-                            </CardContent>
-                        </Card>
+                <section className="max-w-6xl mx-auto px-4 sm:px-6 py-5">
+                    {/* Results bar */}
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-4">
+                        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+                            <p><span className="font-bold text-gray-900">{filtered.length}</span> <span className="text-gray-500">projects</span></p>
+                            <p><span className="font-bold text-gray-900">{summary.countries}</span> <span className="text-gray-500">{summary.countries === 1 ? "country" : "countries"}</span></p>
+                            <p><span className="font-bold text-gray-900">{formatMoney(summary.amount)}</span> <span className="text-gray-500">total</span></p>
+                            <p><span className="font-bold text-gray-900">{summary.ongoing}</span> <span className="text-gray-500">ongoing</span></p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <label className="text-xs text-gray-500 flex items-center gap-2">
+                                Sort
+                                <select
+                                    value={sort}
+                                    onChange={(e) => { setSort(e.target.value); setPage(0); }}
+                                    className="h-9 rounded-lg border border-gray-200 bg-white px-2.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                                >
+                                    {Object.entries(SORTS).map(([key, s]) => <option key={key} value={key}>{s.label}</option>)}
+                                </select>
+                            </label>
+                            <div className="inline-flex gap-1 rounded-lg bg-gray-100 p-1" role="group" aria-label="View">
+                                {[{ key: "cards", icon: LayoutList, label: "Cards" }, { key: "table", icon: TableIcon, label: "Table" }].map(({ key, icon: Icon, label }) => (
+                                    <button
+                                        key={key}
+                                        onClick={() => setView(key)}
+                                        aria-pressed={view === key}
+                                        className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-sm font-medium transition-all ${view === key ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900"}`}
+                                    >
+                                        <Icon className="w-4 h-4" />{label}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Filters */}
-                    <Card className="bg-white shadow-xl mb-8 border-0 overflow-hidden">
-                        <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                    <Filter className="h-5 w-5 text-blue-600" />
-                                    <CardTitle className="text-xl font-bold text-gray-900">Search & Filter Projects</CardTitle>
-                                    {hasActiveFilters && (
-                                        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
-                                            {[searchQuery ? 1 : 0,
-                                            selectedCountry !== "all" ? 1 : 0,
-                                            selectedTheme !== "all" ? 1 : 0,
-                                            selectedRegion !== "all" ? 1 : 0,
-                                            selectedPeriod !== "all" ? 1 : 0].reduce((a, b) => a + b, 0)} active
-                                        </Badge>
-                                    )}
-                                </div>
-                                <div className="flex gap-2">
-                                    {hasActiveFilters && (
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            onClick={clearFilters}
-                                            className="hover:bg-red-50 hover:text-red-600 hover:border-red-300"
-                                        >
-                                            <X className="h-4 w-4 mr-1" />
-                                            Clear
-                                        </Button>
-                                    )}
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        onClick={() => setShowFilters(!showFilters)}
-                                    >
-                                        {showFilters ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                                    </Button>
-                                </div>
-                            </div>
-                        </CardHeader>
-                        {showFilters && (
-                            <CardContent className="pt-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-700 flex items-center gap-1">
-                                            <Search className="h-4 w-4" />
-                                            Search Projects
-                                        </label>
-                                        <Input
-                                            placeholder="Search by title, country, or funder..."
-                                            value={searchQuery}
-                                            onChange={(e) => setSearchQuery(e.target.value)}
-                                            className="w-full border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
-                                        />
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-700">
-                                            Region
-                                        </label>
-                                        <Select value={selectedRegion} onValueChange={setSelectedRegion}>
-                                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-                                                <SelectValue placeholder="Select region" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectItem value="all">All Regions</SelectItem>
-                                                {regions.map((region) => (
-                                                    <SelectItem key={region} value={region}>
-                                                        {region}
-                                                    </SelectItem>
-                                                ))}
-                                            </SelectContent>
-                                        </Select>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-700">
-                                            Country
-                                        </label>
-                                        <Select value={selectedCountry} onValueChange={setSelectedCountry}>
-                                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-                                                <SelectValue placeholder="Select country" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectItem value="all">All Countries</SelectItem>
-                                                {countries.map((country) => (
-                                                    <SelectItem key={country} value={country}>
-                                                        {country}
-                                                    </SelectItem>
-                                                ))}
-                                            </SelectContent>
-                                        </Select>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-700">
-                                            Thematic Area
-                                        </label>
-                                        <Select value={selectedTheme} onValueChange={setSelectedTheme}>
-                                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-                                                <SelectValue placeholder="Select theme" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectItem value="all">All Themes</SelectItem>
-                                                {themes.map((theme) => (
-                                                    <SelectItem key={theme} value={theme}>
-                                                        {theme}
-                                                    </SelectItem>
-                                                ))}
-                                            </SelectContent>
-                                        </Select>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-700">
-                                            Period
-                                        </label>
-                                        <Select value={selectedPeriod} onValueChange={setSelectedPeriod}>
-                                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-                                                <SelectValue placeholder="Select period" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectItem value="all">All Periods</SelectItem>
-                                                {periods.map((period) => (
-                                                    <SelectItem key={period} value={period}>
-                                                        {period}
-                                                    </SelectItem>
-                                                ))}
-                                            </SelectContent>
-                                        </Select>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        )}
-                    </Card>
-
-                    {/* Interactive Map */}
-                    {isClient && (
-                        <Card className="bg-white shadow-xl mb-8 border-0 overflow-hidden">
-                            <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <CardTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                                            <MapPin className="h-5 w-5 text-blue-600" />
-                                            Interactive Project Map
-                                        </CardTitle>
-                                        <p className="text-sm text-gray-600 mt-1">
-                                            {filteredProjects.length} project(s) • {statistics.uniqueCountries} countr{statistics.uniqueCountries !== 1 ? 'ies' : 'y'}
-                                        </p>
-                                    </div>
-                                </div>
-                            </CardHeader>
-                            <CardContent className="p-6">
-                                <InterventionsMap projects={filteredProjects} />
-                            </CardContent>
-                        </Card>
+                    {activeChips.length > 0 && (
+                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                            {activeChips.map(chip => (
+                                <button
+                                    key={chip.key}
+                                    onClick={() => setFilter(chip.key, "")}
+                                    className="inline-flex items-center gap-1 rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-xs font-medium text-emerald-800 hover:bg-emerald-100"
+                                >
+                                    {chip.label} <X className="w-3 h-3" />
+                                </button>
+                            ))}
+                            <button onClick={clearFilters} className="text-xs font-medium text-gray-500 hover:text-gray-900 underline underline-offset-2">
+                                Clear all
+                            </button>
+                        </div>
                     )}
 
-                    {/* Projects Display with View Toggle */}
-                    <DataGate variant="table" label="Interventions Database" description="Register for free to browse the full climate adaptation interventions database with map view, filters, and export.">
-                        <Card className="bg-white shadow-xl mb-8 border-0">
-                            <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-green-50 border-b">
-                                <div className="flex items-center justify-between flex-wrap gap-4">
-                                    <div className="flex items-center gap-3">
-                                        <CardTitle className="text-xl font-bold text-gray-900">
-                                            Projects {viewMode === "table" ? "Table" : "List"}
-                                        </CardTitle>
-                                        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
-                                            {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
-                                        </Badge>
+                    <div className="grid lg:grid-cols-5 gap-5 items-start">
+                        {/* Map */}
+                        <div className="lg:col-span-2 lg:sticky lg:top-[9.5rem]">
+                            <InterventionsMap
+                                projects={filtered.map(p => p.raw)}
+                                selectedCountry={filters.country || null}
+                                onSelectCountry={(country) => setFilter("country", country ?? "")}
+                                highlightCountry={hoveredCountry}
+                            />
+                        </div>
+
+                        {/* Projects */}
+                        <div className="lg:col-span-3">
+                            <DataGate variant="table" label="Interventions database" description="Register for free to browse every project in the interventions database.">
+                                {filtered.length === 0 ? (
+                                    <div className="rounded-xl border border-dashed border-gray-200 bg-white py-14 text-center">
+                                        <p className="font-semibold text-gray-700">No projects match these filters</p>
+                                        <button onClick={clearFilters} className="mt-3 text-sm font-medium text-emerald-700 hover:underline">Clear all filters</button>
                                     </div>
-                                    <div className="flex gap-2">
-                                        <Button
-                                            variant={viewMode === "list" ? "default" : "outline"}
-                                            onClick={() => setViewMode("list")}
-                                            className="hover:bg-blue-50"
-                                            size="sm"
-                                        >
-                                            <List className="h-4 w-4 mr-2" />
-                                            List
-                                        </Button>
-                                        <Button
-                                            variant={viewMode === "table" ? "default" : "outline"}
-                                            onClick={() => setViewMode("table")}
-                                            className="hover:bg-blue-50"
-                                            size="sm"
-                                        >
-                                            <TableIcon className="h-4 w-4 mr-2" />
-                                            Table
-                                        </Button>
-                                        <Button
-                                            variant="outline"
-                                            onClick={() => setShowTable(!showTable)}
-                                            className="hover:bg-blue-50"
-                                            size="sm"
-                                        >
-                                            {showTable ? (
-                                                <>
-                                                    <ChevronUp className="h-4 w-4 mr-2" />
-                                                    Hide Projects
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <ChevronDown className="h-4 w-4 mr-2" />
-                                                    Show Projects
-                                                </>
-                                            )}
-                                        </Button>
+                                ) : view === "cards" ? (
+                                    <ul className="rounded-xl border border-gray-200 bg-white divide-y divide-gray-100 overflow-hidden">
+                                        {visible.map(p => <ProjectRow key={p.id} project={p} onHover={setHoveredCountry} />)}
+                                    </ul>
+                                ) : (
+                                    <div className="rounded-xl border border-gray-200 bg-white overflow-x-auto">
+                                        <table className="w-full text-sm">
+                                            <thead>
+                                                <tr className="border-b border-gray-200 text-left text-xs uppercase tracking-wide text-gray-500">
+                                                    <th className="py-3 px-4 font-semibold">Project</th>
+                                                    <th className="py-3 px-4 font-semibold">Country</th>
+                                                    <th className="py-3 px-4 font-semibold">Theme</th>
+                                                    <th className="py-3 px-4 font-semibold text-right">Amount</th>
+                                                    <th className="py-3 px-4 font-semibold">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {visible.map(p => (
+                                                    <tr key={p.id} className="border-b border-gray-50 last:border-0 align-top hover:bg-gray-50/60">
+                                                        <td className="py-3 px-4 text-gray-900 min-w-[16rem]">
+                                                            {p.title}
+                                                            {p.funder && <p className="text-xs text-gray-500 mt-0.5">{p.funder}</p>}
+                                                        </td>
+                                                        <td className="py-3 px-4 text-gray-700 whitespace-nowrap">{p.country}</td>
+                                                        <td className="py-3 px-4 text-gray-700">{p.theme}</td>
+                                                        <td className="py-3 px-4 text-gray-900 font-semibold text-right tabular-nums whitespace-nowrap">{p.amount > 0 ? formatMoney(p.amount) : "—"}</td>
+                                                        <td className="py-3 px-4"><StatusPill status={p.status} /></td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
                                     </div>
-                                </div>
-                            </CardHeader>
-                            {showTable && (
-                                <CardContent className="pt-6">
-                                    {viewMode === "list" ? renderListView() : renderTableView()}
-                                </CardContent>
-                            )}
-                        </Card>
-                    </DataGate>
-                </div>
-            </div>
+                                )}
+
+                                {filtered.length > PAGE_SIZE && (
+                                    <div className="mt-4 flex items-center justify-between text-sm">
+                                        <p className="text-gray-500 tabular-nums">
+                                            {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, filtered.length)} of {filtered.length}
+                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <button
+                                                onClick={() => setPage(p => p - 1)}
+                                                disabled={page === 0}
+                                                className="inline-flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-gray-700 hover:bg-gray-50 disabled:opacity-40"
+                                            >
+                                                <ChevronLeft className="w-4 h-4" /> Previous
+                                            </button>
+                                            <button
+                                                onClick={() => setPage(p => p + 1)}
+                                                disabled={page >= pageCount - 1}
+                                                className="inline-flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-gray-700 hover:bg-gray-50 disabled:opacity-40"
+                                            >
+                                                Next <ChevronRight className="w-4 h-4" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+                            </DataGate>
+                        </div>
+                    </div>
+                </section>
+            </main>
             <LamaFooter />
-
-            <style jsx>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(10px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .animate-fadeIn {
-                    animation: fadeIn 0.5s ease-out;
-                }
-            `}</style>
         </>
     );
 }

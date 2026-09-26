@@ -1,0 +1,3389 @@
+{
+ "meta": {
+  "title": "LAMA household survey — Glazoué, Benin",
+  "place": "Glazoué commune, Collines department, Benin",
+  "respondents": 200,
+  "fieldwork": {
+   "from": "2026-04-15",
+   "to": "2026-04-18"
+  },
+  "source": "Summarised from the anonymised English survey file (no personal data)",
+  "excluded": [
+   "B-5 production in tonnes — contains impossible values (up to 400,000 t), likely a unit error"
+  ]
+ },
+ "groupings": {
+  "gender": {
+   "label": "Gender",
+   "groups": [
+    {
+     "key": "Woman",
+     "label": "Women",
+     "n": 66
+    },
+    {
+     "key": "Man",
+     "label": "Men",
+     "n": 134
+    }
+   ]
+  },
+  "age": {
+   "label": "Age group",
+   "groups": [
+    {
+     "key": "18–35",
+     "label": "18–35 years",
+     "n": 88
+    },
+    {
+     "key": "36–50",
+     "label": "36–50 years",
+     "n": 72
+    },
+    {
+     "key": "51+",
+     "label": "51 years and over",
+     "n": 40
+    }
+   ]
+  }
+ },
+ "income": {
+  "overall": 800000,
+  "gender": {
+   "Woman": 500000,
+   "Man": 1200000
+  },
+  "age": {
+   "18–35": 800000,
+   "36–50": 800000,
+   "51+": 1167750
+  }
+ },
+ "questions": {
+  "arrondissement_glazoue_commune": {
+   "question": "Arrondissement (Glazoué commune)",
+   "key": "arrondissement_glazoue_commune",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Thio": 26,
+     "Assanté": 50,
+     "Aklampa": 100,
+     "Zaffé": 19,
+     "Gomé": 5
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Thio": 15,
+      "Assanté": 17,
+      "Aklampa": 21,
+      "Zaffé": 12,
+      "Gomé": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Thio": 11,
+      "Assanté": 33,
+      "Aklampa": 79,
+      "Zaffé": 7,
+      "Gomé": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Thio": 10,
+      "Assanté": 17,
+      "Aklampa": 44,
+      "Zaffé": 13,
+      "Gomé": 4
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Thio": 13,
+      "Assanté": 25,
+      "Aklampa": 27,
+      "Zaffé": 6,
+      "Gomé": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Thio": 3,
+      "Assanté": 8,
+      "Aklampa": 29
+     }
+    }
+   }
+  },
+  "A3": {
+   "question": "A-3. What is the sex of the head of household?",
+   "key": "A3",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Man": 158,
+     "Woman": 42
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Woman": 40,
+      "Man": 26
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Man": 132,
+      "Woman": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Man": 72,
+      "Woman": 16
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Man": 57,
+      "Woman": 15
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Woman": 11,
+      "Man": 29
+     }
+    }
+   }
+  },
+  "A5": {
+   "question": "A-5. What is your occupation?",
+   "key": "A5",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Informal sector": 148,
+     "Formal sector": 52
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Informal sector": 55,
+      "Formal sector": 11
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Informal sector": 93,
+      "Formal sector": 41
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Informal sector": 57,
+      "Formal sector": 31
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Informal sector": 60,
+      "Formal sector": 12
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Informal sector": 31,
+      "Formal sector": 9
+     }
+    }
+   }
+  },
+  "A6": {
+   "question": "A-6. What is your marital status?",
+   "key": "A6",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Married": 161,
+     "Widowed": 21,
+     "Single": 12,
+     "Divorced": 3,
+     "Separated": 3
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Widowed": 16,
+      "Married": 44,
+      "Single": 4,
+      "Separated": 1,
+      "Divorced": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Married": 117,
+      "Single": 8,
+      "Widowed": 5,
+      "Divorced": 2,
+      "Separated": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Married": 75,
+      "Single": 10,
+      "Widowed": 1,
+      "Divorced": 1,
+      "Separated": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Married": 60,
+      "Widowed": 9,
+      "Single": 2,
+      "Divorced": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Widowed": 11,
+      "Married": 26,
+      "Separated": 2,
+      "Divorced": 1
+     }
+    }
+   }
+  },
+  "A7": {
+   "question": "A-7. What is your highest level of education?",
+   "key": "A7",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Primary school": 80,
+     "University / college": 70,
+     "No formal education": 45,
+     "Technical secondary / vocational training": 5
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "University / college": 8,
+      "Primary school": 32,
+      "No formal education": 25,
+      "Technical secondary / vocational training": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Primary school": 48,
+      "University / college": 62,
+      "No formal education": 20,
+      "Technical secondary / vocational training": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "No formal education": 19,
+      "Primary school": 35,
+      "University / college": 31,
+      "Technical secondary / vocational training": 3
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Primary school": 34,
+      "University / college": 23,
+      "No formal education": 13,
+      "Technical secondary / vocational training": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No formal education": 13,
+      "Primary school": 11,
+      "University / college": 16
+     }
+    }
+   }
+  },
+  "B1": {
+   "question": "B-1. Do you own agricultural land?",
+   "key": "B1",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Yes": 196,
+     "No": 4
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Yes": 66
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Yes": 130,
+      "No": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Yes": 87,
+      "No": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Yes": 71,
+      "No": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Yes": 38,
+      "No": 2
+     }
+    }
+   }
+  },
+  "B1_if_yes_what_is_your_ownership_status": {
+   "question": "B-1 › If yes, what is your ownership status?",
+   "key": "B1_if_yes_what_is_your_ownership_status",
+   "type": "single",
+   "overall": {
+    "base": 195,
+    "counts": {
+     "Inheritance": 178,
+     "Gift": 14,
+     "Purchase": 1,
+     "Loan or rental": 1,
+     "Community / family plot": 1
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 65,
+     "counts": {
+      "Inheritance": 57,
+      "Gift": 8
+     }
+    },
+    "Man": {
+     "base": 130,
+     "counts": {
+      "Inheritance": 121,
+      "Gift": 6,
+      "Purchase": 1,
+      "Loan or rental": 1,
+      "Community / family plot": 1
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 87,
+     "counts": {
+      "Inheritance": 81,
+      "Purchase": 1,
+      "Gift": 4,
+      "Community / family plot": 1
+     }
+    },
+    "36–50": {
+     "base": 70,
+     "counts": {
+      "Inheritance": 62,
+      "Gift": 7,
+      "Loan or rental": 1
+     }
+    },
+    "51+": {
+     "base": 38,
+     "counts": {
+      "Inheritance": 35,
+      "Gift": 3
+     }
+    }
+   }
+  },
+  "B3": {
+   "question": "B-3. Which crops do you grow?",
+   "key": "B3",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Cashew": 116,
+     "Soybean": 192,
+     "Rice": 96,
+     "Maize": 185,
+     "Cassava": 84,
+     "Yam": 47,
+     "Cowpea": 117,
+     "Other": 102
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Cashew": 39,
+      "Soybean": 61,
+      "Rice": 29,
+      "Maize": 56,
+      "Cassava": 22,
+      "Yam": 11,
+      "Cowpea": 31,
+      "Other": 25
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Cashew": 77,
+      "Soybean": 131,
+      "Rice": 67,
+      "Maize": 129,
+      "Cassava": 62,
+      "Yam": 36,
+      "Cowpea": 86,
+      "Other": 77
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Cashew": 44,
+      "Soybean": 85,
+      "Rice": 44,
+      "Maize": 81,
+      "Cassava": 38,
+      "Cowpea": 39,
+      "Yam": 21,
+      "Other": 40
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Cashew": 40,
+      "Soybean": 67,
+      "Rice": 36,
+      "Maize": 66,
+      "Cassava": 30,
+      "Yam": 14,
+      "Cowpea": 45,
+      "Other": 39
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Cashew": 32,
+      "Soybean": 40,
+      "Maize": 38,
+      "Rice": 16,
+      "Cassava": 16,
+      "Yam": 12,
+      "Cowpea": 33,
+      "Other": 23
+     }
+    }
+   }
+  },
+  "B4": {
+   "question": "B-4. What is your main crop?",
+   "key": "B4",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Soybean": 117,
+     "Cassava": 3,
+     "Maize": 33,
+     "Yam": 3,
+     "Other": 29,
+     "Rice": 13,
+     "Cashew": 2
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Cassava": 2,
+      "Maize": 13,
+      "Soybean": 38,
+      "Other": 7,
+      "Rice": 5,
+      "Cashew": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Soybean": 79,
+      "Maize": 20,
+      "Yam": 3,
+      "Cassava": 1,
+      "Other": 22,
+      "Rice": 8,
+      "Cashew": 1
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Soybean": 53,
+      "Maize": 14,
+      "Other": 12,
+      "Rice": 7,
+      "Yam": 1,
+      "Cashew": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Soybean": 41,
+      "Cassava": 2,
+      "Maize": 15,
+      "Yam": 1,
+      "Rice": 4,
+      "Other": 8,
+      "Cashew": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Soybean": 23,
+      "Yam": 1,
+      "Cassava": 1,
+      "Other": 9,
+      "Maize": 4,
+      "Rice": 2
+     }
+    }
+   }
+  },
+  "B7": {
+   "question": "B-7. How does the land tenure system in your community limit women's participation in climate adaptation?",
+   "key": "B7",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Women have limited or temporary access to land (no tenure security)": 83,
+     "Customary rules prevent women from inheriting land": 70,
+     "Access to land is controlled by men (household heads, traditional authorities)": 68,
+     "Women are not allowed to own land": 92,
+     "Women do not take part in decisions on land use": 37,
+     "Lack of land titles prevents women from accessing climate finance or support": 54,
+     "Women are excluded from climate adaptation training or programmes": 11,
+     "Land available to women is poorer or less productive": 9,
+     "Household duties limit women's ability to manage or claim land": 12,
+     "Other": 53,
+     "Social norms discourage women from claiming land rights": 10,
+     "Local policies do not address women's land needs": 3
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Access to land is controlled by men (household heads, traditional authorities)": 24,
+      "Women have limited or temporary access to land (no tenure security)": 36,
+      "Customary rules prevent women from inheriting land": 28,
+      "Women are not allowed to own land": 40,
+      "Women do not take part in decisions on land use": 8,
+      "Other": 13,
+      "Lack of land titles prevents women from accessing climate finance or support": 11,
+      "Land available to women is poorer or less productive": 5,
+      "Household duties limit women's ability to manage or claim land": 2,
+      "Social norms discourage women from claiming land rights": 4,
+      "Local policies do not address women's land needs": 3,
+      "Women are excluded from climate adaptation training or programmes": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Women have limited or temporary access to land (no tenure security)": 47,
+      "Customary rules prevent women from inheriting land": 42,
+      "Women are not allowed to own land": 52,
+      "Access to land is controlled by men (household heads, traditional authorities)": 44,
+      "Women do not take part in decisions on land use": 29,
+      "Lack of land titles prevents women from accessing climate finance or support": 43,
+      "Women are excluded from climate adaptation training or programmes": 10,
+      "Land available to women is poorer or less productive": 4,
+      "Household duties limit women's ability to manage or claim land": 10,
+      "Other": 40,
+      "Social norms discourage women from claiming land rights": 6
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Women have limited or temporary access to land (no tenure security)": 35,
+      "Customary rules prevent women from inheriting land": 25,
+      "Women are not allowed to own land": 40,
+      "Access to land is controlled by men (household heads, traditional authorities)": 24,
+      "Women do not take part in decisions on land use": 17,
+      "Other": 17,
+      "Local policies do not address women's land needs": 1,
+      "Household duties limit women's ability to manage or claim land": 5,
+      "Lack of land titles prevents women from accessing climate finance or support": 29,
+      "Land available to women is poorer or less productive": 2,
+      "Women are excluded from climate adaptation training or programmes": 2,
+      "Social norms discourage women from claiming land rights": 6
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Women have limited or temporary access to land (no tenure security)": 38,
+      "Customary rules prevent women from inheriting land": 37,
+      "Access to land is controlled by men (household heads, traditional authorities)": 33,
+      "Women are not allowed to own land": 38,
+      "Women do not take part in decisions on land use": 16,
+      "Lack of land titles prevents women from accessing climate finance or support": 15,
+      "Women are excluded from climate adaptation training or programmes": 6,
+      "Land available to women is poorer or less productive": 6,
+      "Household duties limit women's ability to manage or claim land": 4,
+      "Other": 16,
+      "Social norms discourage women from claiming land rights": 2,
+      "Local policies do not address women's land needs": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Women are not allowed to own land": 14,
+      "Women have limited or temporary access to land (no tenure security)": 10,
+      "Customary rules prevent women from inheriting land": 8,
+      "Access to land is controlled by men (household heads, traditional authorities)": 11,
+      "Women are excluded from climate adaptation training or programmes": 3,
+      "Household duties limit women's ability to manage or claim land": 3,
+      "Other": 20,
+      "Women do not take part in decisions on land use": 4,
+      "Lack of land titles prevents women from accessing climate finance or support": 10,
+      "Land available to women is poorer or less productive": 1,
+      "Social norms discourage women from claiming land rights": 2,
+      "Local policies do not address women's land needs": 1
+     }
+    }
+   }
+  },
+  "B9": {
+   "question": "B-9. Do you use fertiliser on your farm?",
+   "key": "B9",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Yes": 155,
+     "No": 45
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Yes": 40,
+      "No": 26
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Yes": 115,
+      "No": 19
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Yes": 68,
+      "No": 20
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Yes": 55,
+      "No": 17
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No": 8,
+      "Yes": 32
+     }
+    }
+   }
+  },
+  "B9_if_yes": {
+   "question": "B-9 › If yes,",
+   "key": "B9_if_yes",
+   "type": "single",
+   "overall": {
+    "base": 155,
+    "counts": {
+     "Both": 71,
+     "Inorganic": 84
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 40,
+     "counts": {
+      "Both": 24,
+      "Inorganic": 16
+     }
+    },
+    "Man": {
+     "base": 115,
+     "counts": {
+      "Both": 47,
+      "Inorganic": 68
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 68,
+     "counts": {
+      "Both": 27,
+      "Inorganic": 41
+     }
+    },
+    "36–50": {
+     "base": 55,
+     "counts": {
+      "Both": 33,
+      "Inorganic": 22
+     }
+    },
+    "51+": {
+     "base": 32,
+     "counts": {
+      "Both": 11,
+      "Inorganic": 21
+     }
+    }
+   }
+  },
+  "B10": {
+   "question": "B-10. Roughly how much do you spend on your farm per year? (FCFA)",
+   "key": "B10",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Over 880,000 FCFA": 45,
+     "440,000–880,000 FCFA": 49,
+     "130,000–220,000 FCFA": 54,
+     "220,000–440,000 FCFA": 34,
+     "Under 130,000 FCFA": 18
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "440,000–880,000 FCFA": 9,
+      "Over 880,000 FCFA": 5,
+      "130,000–220,000 FCFA": 23,
+      "220,000–440,000 FCFA": 13,
+      "Under 130,000 FCFA": 16
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Over 880,000 FCFA": 40,
+      "130,000–220,000 FCFA": 31,
+      "220,000–440,000 FCFA": 21,
+      "440,000–880,000 FCFA": 40,
+      "Under 130,000 FCFA": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Over 880,000 FCFA": 14,
+      "130,000–220,000 FCFA": 27,
+      "440,000–880,000 FCFA": 19,
+      "220,000–440,000 FCFA": 15,
+      "Under 130,000 FCFA": 13
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Over 880,000 FCFA": 17,
+      "440,000–880,000 FCFA": 19,
+      "130,000–220,000 FCFA": 19,
+      "220,000–440,000 FCFA": 13,
+      "Under 130,000 FCFA": 4
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "440,000–880,000 FCFA": 11,
+      "220,000–440,000 FCFA": 6,
+      "Over 880,000 FCFA": 14,
+      "130,000–220,000 FCFA": 8,
+      "Under 130,000 FCFA": 1
+     }
+    }
+   }
+  },
+  "C1": {
+   "question": "C-1. Which vulnerable group(s) do you belong to? (multiple answers possible)",
+   "key": "C1",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Casual or migrant workers": 28,
+     "Widows / widowers": 22,
+     "Older people": 42,
+     "People with disabilities": 6,
+     "Adolescent girls and young women": 27,
+     "Single mothers": 18,
+     "Orphans and vulnerable children": 18,
+     "Child-headed households": 8,
+     "Other (specify)": 62,
+     "People living with HIV": 1
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Widows / widowers": 14,
+      "Older people": 12,
+      "Casual or migrant workers": 3,
+      "Adolescent girls and young women": 15,
+      "Single mothers": 13,
+      "Child-headed households": 2,
+      "Other (specify)": 13,
+      "Orphans and vulnerable children": 1,
+      "People with disabilities": 1,
+      "People living with HIV": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Casual or migrant workers": 25,
+      "People with disabilities": 5,
+      "Orphans and vulnerable children": 17,
+      "Child-headed households": 6,
+      "Widows / widowers": 8,
+      "Adolescent girls and young women": 12,
+      "Older people": 30,
+      "Other (specify)": 49,
+      "Single mothers": 5
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Casual or migrant workers": 13,
+      "Adolescent girls and young women": 22,
+      "Orphans and vulnerable children": 9,
+      "Single mothers": 10,
+      "Widows / widowers": 1,
+      "Child-headed households": 5,
+      "Other (specify)": 35,
+      "People with disabilities": 2,
+      "Older people": 3,
+      "People living with HIV": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Casual or migrant workers": 14,
+      "Widows / widowers": 11,
+      "Older people": 14,
+      "People with disabilities": 4,
+      "Single mothers": 7,
+      "Orphans and vulnerable children": 8,
+      "Child-headed households": 3,
+      "Adolescent girls and young women": 4,
+      "Other (specify)": 22
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Adolescent girls and young women": 1,
+      "Widows / widowers": 10,
+      "Casual or migrant workers": 1,
+      "Older people": 25,
+      "Orphans and vulnerable children": 1,
+      "Other (specify)": 5,
+      "Single mothers": 1
+     }
+    }
+   }
+  },
+  "C2": {
+   "question": "C-2. How has climate change increased the vulnerability of individuals or communities?",
+   "key": "C2",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "On access to natural resources": 71,
+     "On food security": 69,
+     "On income and the economy": 93,
+     "On vulnerable groups": 9,
+     "On living conditions and housing": 57,
+     "On health": 57,
+     "On livelihoods (farming, livestock, fishing)": 187,
+     "On resilience and adaptive capacity": 10
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "On access to natural resources": 22,
+      "On living conditions and housing": 19,
+      "On food security": 22,
+      "On income and the economy": 31,
+      "On health": 24,
+      "On livelihoods (farming, livestock, fishing)": 60,
+      "On vulnerable groups": 2,
+      "On resilience and adaptive capacity": 2
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "On access to natural resources": 49,
+      "On food security": 47,
+      "On income and the economy": 62,
+      "On vulnerable groups": 7,
+      "On livelihoods (farming, livestock, fishing)": 127,
+      "On living conditions and housing": 38,
+      "On health": 33,
+      "On resilience and adaptive capacity": 8
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "On livelihoods (farming, livestock, fishing)": 83,
+      "On access to natural resources": 20,
+      "On living conditions and housing": 23,
+      "On food security": 27,
+      "On income and the economy": 34,
+      "On health": 27,
+      "On vulnerable groups": 1,
+      "On resilience and adaptive capacity": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "On access to natural resources": 31,
+      "On food security": 30,
+      "On income and the economy": 36,
+      "On vulnerable groups": 5,
+      "On living conditions and housing": 18,
+      "On health": 23,
+      "On livelihoods (farming, livestock, fishing)": 67,
+      "On resilience and adaptive capacity": 5
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "On livelihoods (farming, livestock, fishing)": 37,
+      "On living conditions and housing": 16,
+      "On income and the economy": 23,
+      "On access to natural resources": 20,
+      "On food security": 12,
+      "On health": 7,
+      "On vulnerable groups": 3,
+      "On resilience and adaptive capacity": 3
+     }
+    }
+   }
+  },
+  "C3": {
+   "question": "C-3. Have you ever been consulted in climate adaptation planning in your community?",
+   "key": "C3",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "No": 195,
+     "Partially": 1,
+     "Yes": 4
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "No": 66
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "No": 129,
+      "Partially": 1,
+      "Yes": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "No": 87,
+      "Yes": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "No": 69,
+      "Partially": 1,
+      "Yes": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No": 39,
+      "Yes": 1
+     }
+    }
+   }
+  },
+  "C4": {
+   "question": "C-4. What barriers prevent marginalised groups from taking part in adaptation programmes?",
+   "key": "C4",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Lack of information": 197,
+     "Cultural barriers": 86,
+     "Financial constraints": 93,
+     "Lack of leadership opportunities": 49,
+     "Other (specify)": 2
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Lack of information": 65,
+      "Cultural barriers": 31,
+      "Financial constraints": 35,
+      "Lack of leadership opportunities": 19
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Lack of information": 132,
+      "Cultural barriers": 55,
+      "Financial constraints": 58,
+      "Lack of leadership opportunities": 30,
+      "Other (specify)": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Lack of information": 86,
+      "Cultural barriers": 34,
+      "Financial constraints": 32,
+      "Lack of leadership opportunities": 23
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Lack of information": 71,
+      "Cultural barriers": 39,
+      "Financial constraints": 46,
+      "Lack of leadership opportunities": 17,
+      "Other (specify)": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Lack of information": 40,
+      "Cultural barriers": 13,
+      "Lack of leadership opportunities": 9,
+      "Financial constraints": 15
+     }
+    }
+   }
+  },
+  "D1": {
+   "question": "D-1. What observable climate-related changes have you noticed?",
+   "key": "D1",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Prolonged drought": 192,
+     "Reduced crop yields": 134,
+     "Heat waves": 175,
+     "Lower productivity": 171,
+     "Changing rainfall patterns": 88,
+     "Floods": 7,
+     "Livestock deaths": 10,
+     "Rising food prices": 49,
+     "Damaged infrastructure": 14,
+     "Rivers drying up": 62,
+     "Population displacement": 10,
+     "Other": 3
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Prolonged drought": 64,
+      "Reduced crop yields": 36,
+      "Heat waves": 60,
+      "Lower productivity": 55,
+      "Changing rainfall patterns": 25,
+      "Floods": 5,
+      "Rising food prices": 17,
+      "Damaged infrastructure": 5,
+      "Population displacement": 4,
+      "Rivers drying up": 14,
+      "Livestock deaths": 3
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Prolonged drought": 128,
+      "Reduced crop yields": 98,
+      "Heat waves": 115,
+      "Lower productivity": 116,
+      "Changing rainfall patterns": 63,
+      "Livestock deaths": 7,
+      "Floods": 2,
+      "Rising food prices": 32,
+      "Damaged infrastructure": 9,
+      "Rivers drying up": 48,
+      "Population displacement": 6,
+      "Other": 3
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Prolonged drought": 84,
+      "Heat waves": 74,
+      "Changing rainfall patterns": 42,
+      "Floods": 4,
+      "Reduced crop yields": 51,
+      "Lower productivity": 78,
+      "Damaged infrastructure": 5,
+      "Rising food prices": 18,
+      "Livestock deaths": 3,
+      "Rivers drying up": 33,
+      "Population displacement": 3,
+      "Other": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Prolonged drought": 69,
+      "Reduced crop yields": 52,
+      "Heat waves": 65,
+      "Lower productivity": 61,
+      "Changing rainfall patterns": 28,
+      "Floods": 3,
+      "Livestock deaths": 3,
+      "Rising food prices": 19,
+      "Damaged infrastructure": 5,
+      "Rivers drying up": 15,
+      "Population displacement": 4,
+      "Other": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Prolonged drought": 39,
+      "Heat waves": 36,
+      "Lower productivity": 32,
+      "Changing rainfall patterns": 18,
+      "Reduced crop yields": 31,
+      "Rising food prices": 12,
+      "Damaged infrastructure": 4,
+      "Rivers drying up": 14,
+      "Population displacement": 3,
+      "Livestock deaths": 4
+     }
+    }
+   }
+  },
+  "D2": {
+   "question": "D-2. What are the priority sectors for climate change adaptation?",
+   "key": "D2",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agriculture": 200,
+     "Water security": 41,
+     "Health": 47,
+     "Forests": 60,
+     "Energy": 8,
+     "Climate governance": 1
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agriculture": 66,
+      "Water security": 22,
+      "Health": 26,
+      "Forests": 14,
+      "Energy": 3
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agriculture": 134,
+      "Water security": 19,
+      "Health": 21,
+      "Forests": 46,
+      "Energy": 5,
+      "Climate governance": 1
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agriculture": 88,
+      "Water security": 23,
+      "Health": 20,
+      "Forests": 25,
+      "Energy": 3,
+      "Climate governance": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agriculture": 72,
+      "Water security": 14,
+      "Health": 24,
+      "Forests": 23,
+      "Energy": 5
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agriculture": 40,
+      "Water security": 4,
+      "Forests": 12,
+      "Health": 3
+     }
+    }
+   }
+  },
+  "E1": {
+   "question": "E-1. Do you have access to climate information services?",
+   "key": "E1",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "No": 178,
+     "Yes": 22
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "No": 62,
+      "Yes": 4
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "No": 116,
+      "Yes": 18
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "No": 78,
+      "Yes": 10
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "No": 64,
+      "Yes": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No": 36,
+      "Yes": 4
+     }
+    }
+   }
+  },
+  "E3": {
+   "question": "E-3. Do local communities take part in designing adaptation solutions?",
+   "key": "E3",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Not sure": 157,
+     "No": 41,
+     "Yes": 2
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Not sure": 52,
+      "No": 14
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Not sure": 105,
+      "No": 27,
+      "Yes": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "No": 19,
+      "Not sure": 69
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Not sure": 55,
+      "No": 15,
+      "Yes": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Not sure": 33,
+      "No": 7
+     }
+    }
+   }
+  },
+  "E4": {
+   "question": "E-4. To what extent do women's empowerment programmes influence their participation?",
+   "key": "E4",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Small extent": 149,
+     "None": 45,
+     "Large extent": 6
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Small extent": 45,
+      "None": 19,
+      "Large extent": 2
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Small extent": 104,
+      "None": 26,
+      "Large extent": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Small extent": 76,
+      "Large extent": 1,
+      "None": 11
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Small extent": 45,
+      "None": 23,
+      "Large extent": 4
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Small extent": 28,
+      "Large extent": 1,
+      "None": 11
+     }
+    }
+   }
+  },
+  "E5": {
+   "question": "E-5. Are there women in climate adaptation leadership positions?",
+   "key": "E5",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Not sure": 100,
+     "No": 51,
+     "Yes": 49
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "No": 22,
+      "Not sure": 33,
+      "Yes": 11
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Not sure": 67,
+      "No": 29,
+      "Yes": 38
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Not sure": 35,
+      "No": 23,
+      "Yes": 30
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Not sure": 44,
+      "No": 17,
+      "Yes": 11
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No": 11,
+      "Not sure": 21,
+      "Yes": 8
+     }
+    }
+   }
+  },
+  "E7": {
+   "question": "E-7. How often are local knowledge and modern scientific approaches integrated into adaptation interventions?",
+   "key": "E7",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Low": 177,
+     "None": 21,
+     "High": 2
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Low": 59,
+      "None": 7
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Low": 118,
+      "None": 14,
+      "High": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Low": 85,
+      "High": 1,
+      "None": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Low": 61,
+      "None": 11
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Low": 31,
+      "None": 8,
+      "High": 1
+     }
+    }
+   }
+  },
+  "E8": {
+   "question": "E-8. How often are local knowledge and modern science combined?",
+   "key": "E8",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Rarely": 84,
+     "Sometimes": 92,
+     "Never": 21,
+     "Always": 3
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Rarely": 30,
+      "Sometimes": 28,
+      "Never": 7,
+      "Always": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Rarely": 54,
+      "Sometimes": 64,
+      "Never": 14,
+      "Always": 2
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Sometimes": 49,
+      "Rarely": 28,
+      "Never": 10,
+      "Always": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Rarely": 31,
+      "Sometimes": 31,
+      "Never": 8,
+      "Always": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Sometimes": 12,
+      "Rarely": 25,
+      "Never": 3
+     }
+    }
+   }
+  },
+  "E9": {
+   "question": "E-9. Suggest ways for marginalised groups to take part in adaptation initiatives.",
+   "key": "E9",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Take part in community meetings and decision-making": 186,
+     "Join local environmental groups or associations": 110,
+     "Receive funding or microcredit for climate projects": 151,
+     "Take part in resilient farming or community projects": 114,
+     "Take part in awareness and advocacy campaigns": 85,
+     "Use digital tools to share ideas and solutions": 28,
+     "Access inclusive jobs in green sectors": 16,
+     "Be involved in shaping local policy": 36
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Take part in community meetings and decision-making": 62,
+      "Join local environmental groups or associations": 37,
+      "Receive funding or microcredit for climate projects": 51,
+      "Take part in awareness and advocacy campaigns": 19,
+      "Take part in resilient farming or community projects": 32,
+      "Access inclusive jobs in green sectors": 5,
+      "Be involved in shaping local policy": 8,
+      "Use digital tools to share ideas and solutions": 2
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Take part in community meetings and decision-making": 124,
+      "Join local environmental groups or associations": 73,
+      "Receive funding or microcredit for climate projects": 100,
+      "Take part in resilient farming or community projects": 82,
+      "Take part in awareness and advocacy campaigns": 66,
+      "Use digital tools to share ideas and solutions": 26,
+      "Be involved in shaping local policy": 28,
+      "Access inclusive jobs in green sectors": 11
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Take part in community meetings and decision-making": 81,
+      "Receive funding or microcredit for climate projects": 67,
+      "Take part in resilient farming or community projects": 48,
+      "Join local environmental groups or associations": 42,
+      "Take part in awareness and advocacy campaigns": 38,
+      "Access inclusive jobs in green sectors": 3,
+      "Be involved in shaping local policy": 11,
+      "Use digital tools to share ideas and solutions": 12
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Take part in community meetings and decision-making": 69,
+      "Join local environmental groups or associations": 46,
+      "Receive funding or microcredit for climate projects": 56,
+      "Take part in resilient farming or community projects": 48,
+      "Take part in awareness and advocacy campaigns": 31,
+      "Use digital tools to share ideas and solutions": 7,
+      "Be involved in shaping local policy": 10,
+      "Access inclusive jobs in green sectors": 6
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Take part in community meetings and decision-making": 36,
+      "Receive funding or microcredit for climate projects": 28,
+      "Join local environmental groups or associations": 22,
+      "Take part in resilient farming or community projects": 18,
+      "Take part in awareness and advocacy campaigns": 16,
+      "Use digital tools to share ideas and solutions": 9,
+      "Be involved in shaping local policy": 15,
+      "Access inclusive jobs in green sectors": 7
+     }
+    }
+   }
+  },
+  "F1": {
+   "question": "F-1. What adaptation practices exist in your community?",
+   "key": "F1",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Drought-tolerant crops": 110,
+     "Water harvesting": 66,
+     "Tree planting and school programmes": 73,
+     "Early warning systems": 54,
+     "Forest restoration": 94,
+     "Nature-based solutions (gabions)": 33,
+     "Irrigation": 73,
+     "Other": 38
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Drought-tolerant crops": 46,
+      "Water harvesting": 26,
+      "Early warning systems": 24,
+      "Forest restoration": 28,
+      "Nature-based solutions (gabions)": 18,
+      "Irrigation": 19,
+      "Tree planting and school programmes": 19,
+      "Other": 8
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Drought-tolerant crops": 64,
+      "Water harvesting": 40,
+      "Tree planting and school programmes": 54,
+      "Early warning systems": 30,
+      "Forest restoration": 66,
+      "Irrigation": 54,
+      "Nature-based solutions (gabions)": 15,
+      "Other": 30
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Drought-tolerant crops": 48,
+      "Water harvesting": 35,
+      "Forest restoration": 37,
+      "Irrigation": 40,
+      "Tree planting and school programmes": 18,
+      "Nature-based solutions (gabions)": 17,
+      "Early warning systems": 20,
+      "Other": 24
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Drought-tolerant crops": 47,
+      "Water harvesting": 26,
+      "Tree planting and school programmes": 33,
+      "Early warning systems": 26,
+      "Forest restoration": 35,
+      "Nature-based solutions (gabions)": 13,
+      "Irrigation": 22,
+      "Other": 9
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Drought-tolerant crops": 15,
+      "Nature-based solutions (gabions)": 3,
+      "Irrigation": 11,
+      "Early warning systems": 8,
+      "Forest restoration": 22,
+      "Water harvesting": 5,
+      "Tree planting and school programmes": 22,
+      "Other": 5
+     }
+    }
+   }
+  },
+  "F2": {
+   "question": "F-2. Who is responsible for these interventions?",
+   "key": "F2",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Donor-funded projects": 133,
+     "Individuals / communities": 129,
+     "Private sector": 36,
+     "National government": 59,
+     "Community organisations": 34,
+     "NGOs": 33,
+     "Other": 4
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Donor-funded projects": 43,
+      "Individuals / communities": 40,
+      "Private sector": 18,
+      "National government": 19,
+      "Community organisations": 15,
+      "NGOs": 10,
+      "Other": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Donor-funded projects": 90,
+      "Individuals / communities": 89,
+      "National government": 40,
+      "NGOs": 23,
+      "Community organisations": 19,
+      "Private sector": 18,
+      "Other": 3
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Donor-funded projects": 50,
+      "National government": 13,
+      "Individuals / communities": 56,
+      "NGOs": 12,
+      "Private sector": 20,
+      "Community organisations": 13,
+      "Other": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Donor-funded projects": 53,
+      "Individuals / communities": 47,
+      "Private sector": 12,
+      "National government": 29,
+      "Community organisations": 16,
+      "NGOs": 16,
+      "Other": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Donor-funded projects": 30,
+      "Private sector": 4,
+      "Individuals / communities": 26,
+      "National government": 17,
+      "Community organisations": 5,
+      "NGOs": 5
+     }
+    }
+   }
+  },
+  "F3": {
+   "question": "F-3. How effective are these interventions?",
+   "key": "F3",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Improved well-being": 140,
+     "Promotes sustainable adaptation": 99,
+     "Trains farmers in soil conservation": 42,
+     "Encourages conservation of water catchments": 40,
+     "Reduced vulnerability and stronger adaptive capacity": 139,
+     "More women in local climate adaptation leadership": 48,
+     "Promotes ecosystem-based adaptation": 75,
+     "Access to funds through sub-county budget allocations": 24,
+     "Wetland restoration projects": 17,
+     "More awareness-raising programmes": 28,
+     "Better access to health information during floods": 13,
+     "Stronger climate change policy and regulatory frameworks": 20,
+     "Promotes drought-tolerant crops": 13,
+     "Encourages organic farming for resilient crops among smallholders": 9
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Improved well-being": 53,
+      "Promotes sustainable adaptation": 32,
+      "Encourages conservation of water catchments": 14,
+      "Reduced vulnerability and stronger adaptive capacity": 41,
+      "More women in local climate adaptation leadership": 21,
+      "Promotes ecosystem-based adaptation": 28,
+      "Access to funds through sub-county budget allocations": 7,
+      "More awareness-raising programmes": 4,
+      "Better access to health information during floods": 1,
+      "Stronger climate change policy and regulatory frameworks": 8,
+      "Promotes drought-tolerant crops": 5,
+      "Trains farmers in soil conservation": 9,
+      "Wetland restoration projects": 7,
+      "Encourages organic farming for resilient crops among smallholders": 3
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Improved well-being": 87,
+      "Promotes sustainable adaptation": 67,
+      "Trains farmers in soil conservation": 33,
+      "Reduced vulnerability and stronger adaptive capacity": 98,
+      "Promotes ecosystem-based adaptation": 47,
+      "More women in local climate adaptation leadership": 27,
+      "Encourages conservation of water catchments": 26,
+      "Wetland restoration projects": 10,
+      "More awareness-raising programmes": 24,
+      "Access to funds through sub-county budget allocations": 17,
+      "Better access to health information during floods": 12,
+      "Stronger climate change policy and regulatory frameworks": 12,
+      "Encourages organic farming for resilient crops among smallholders": 6,
+      "Promotes drought-tolerant crops": 8
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Improved well-being": 53,
+      "Promotes ecosystem-based adaptation": 28,
+      "More women in local climate adaptation leadership": 15,
+      "Reduced vulnerability and stronger adaptive capacity": 61,
+      "Promotes sustainable adaptation": 36,
+      "Encourages conservation of water catchments": 17,
+      "Trains farmers in soil conservation": 12,
+      "Wetland restoration projects": 5,
+      "Encourages organic farming for resilient crops among smallholders": 5,
+      "Access to funds through sub-county budget allocations": 9,
+      "More awareness-raising programmes": 10,
+      "Promotes drought-tolerant crops": 5,
+      "Stronger climate change policy and regulatory frameworks": 4,
+      "Better access to health information during floods": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Improved well-being": 56,
+      "Promotes sustainable adaptation": 50,
+      "Trains farmers in soil conservation": 14,
+      "Encourages conservation of water catchments": 16,
+      "Reduced vulnerability and stronger adaptive capacity": 52,
+      "More women in local climate adaptation leadership": 27,
+      "Access to funds through sub-county budget allocations": 9,
+      "Promotes ecosystem-based adaptation": 33,
+      "More awareness-raising programmes": 9,
+      "Better access to health information during floods": 7,
+      "Stronger climate change policy and regulatory frameworks": 3,
+      "Encourages organic farming for resilient crops among smallholders": 1,
+      "Promotes drought-tolerant crops": 5,
+      "Wetland restoration projects": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Improved well-being": 31,
+      "Promotes sustainable adaptation": 13,
+      "Promotes ecosystem-based adaptation": 14,
+      "Reduced vulnerability and stronger adaptive capacity": 26,
+      "Trains farmers in soil conservation": 16,
+      "Wetland restoration projects": 10,
+      "More awareness-raising programmes": 9,
+      "More women in local climate adaptation leadership": 6,
+      "Encourages conservation of water catchments": 7,
+      "Better access to health information during floods": 4,
+      "Stronger climate change policy and regulatory frameworks": 13,
+      "Promotes drought-tolerant crops": 3,
+      "Encourages organic farming for resilient crops among smallholders": 3,
+      "Access to funds through sub-county budget allocations": 6
+     }
+    }
+   }
+  },
+  "F8": {
+   "question": "F-8. How often do you make joint climate adaptation decisions about your farming practices with other family members?",
+   "key": "F8",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Always": 8,
+     "Rarely": 86,
+     "Sometimes": 69,
+     "Never": 37
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Rarely": 21,
+      "Sometimes": 28,
+      "Always": 5,
+      "Never": 12
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Always": 3,
+      "Sometimes": 41,
+      "Rarely": 65,
+      "Never": 25
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Sometimes": 33,
+      "Rarely": 29,
+      "Never": 24,
+      "Always": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Always": 4,
+      "Rarely": 32,
+      "Sometimes": 32,
+      "Never": 4
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Always": 2,
+      "Rarely": 25,
+      "Sometimes": 4,
+      "Never": 9
+     }
+    }
+   }
+  },
+  "F10_1": {
+   "question": "F-10-1. Credit and grants for farmers with disabilities",
+   "key": "F10_1",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 183,
+     "Neutral": 17
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 62,
+      "Neutral": 4
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 121,
+      "Neutral": 13
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 80,
+      "Neutral": 8
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 67,
+      "Neutral": 5
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 36,
+      "Neutral": 4
+     }
+    }
+   }
+  },
+  "F10_2": {
+   "question": "F-10-2. Local groups of young climate champion leaders",
+   "key": "F10_2",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Disagree": 8,
+     "Agree": 167,
+     "Neutral": 25
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Disagree": 1,
+      "Agree": 57,
+      "Neutral": 8
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Disagree": 7,
+      "Agree": 110,
+      "Neutral": 17
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 75,
+      "Neutral": 10,
+      "Disagree": 3
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Disagree": 5,
+      "Agree": 59,
+      "Neutral": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 33,
+      "Neutral": 7
+     }
+    }
+   }
+  },
+  "F10_3": {
+   "question": "F-10-3. Formalising women's solidarity markets",
+   "key": "F10_3",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 155,
+     "Neutral": 33,
+     "Disagree": 12
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 54,
+      "Neutral": 9,
+      "Disagree": 3
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 101,
+      "Neutral": 24,
+      "Disagree": 9
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 71,
+      "Neutral": 13,
+      "Disagree": 4
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 57,
+      "Neutral": 12,
+      "Disagree": 3
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 27,
+      "Disagree": 5,
+      "Neutral": 8
+     }
+    }
+   }
+  },
+  "F10_4": {
+   "question": "F-10-4. Regular climate adaptation training for all farmers",
+   "key": "F10_4",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 178,
+     "Neutral": 17,
+     "Disagree": 5
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 62,
+      "Neutral": 4
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 116,
+      "Neutral": 13,
+      "Disagree": 5
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 82,
+      "Neutral": 5,
+      "Disagree": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 64,
+      "Neutral": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 32,
+      "Disagree": 4,
+      "Neutral": 4
+     }
+    }
+   }
+  },
+  "F10_5": {
+   "question": "F-10-5. Gender-specific seminars and workshops",
+   "key": "F10_5",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 159,
+     "Neutral": 36,
+     "Disagree": 5
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 59,
+      "Neutral": 5,
+      "Disagree": 2
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 100,
+      "Neutral": 31,
+      "Disagree": 3
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 77,
+      "Neutral": 11
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 57,
+      "Neutral": 13,
+      "Disagree": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 25,
+      "Neutral": 12,
+      "Disagree": 3
+     }
+    }
+   }
+  },
+  "F10_6": {
+   "question": "F-10-6. Enrolling all registered farmers in a climate-smart agriculture fund",
+   "key": "F10_6",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 179,
+     "Neutral": 17,
+     "Disagree": 4
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 62,
+      "Neutral": 4
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 117,
+      "Neutral": 13,
+      "Disagree": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 83,
+      "Disagree": 2,
+      "Neutral": 3
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 64,
+      "Neutral": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 32,
+      "Neutral": 6,
+      "Disagree": 2
+     }
+    }
+   }
+  },
+  "F10_7": {
+   "question": "F-10-7. Sharing indigenous knowledge among women",
+   "key": "F10_7",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Agree": 165,
+     "Disagree": 14,
+     "Neutral": 21
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Agree": 60,
+      "Disagree": 1,
+      "Neutral": 5
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Agree": 105,
+      "Disagree": 13,
+      "Neutral": 16
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Agree": 79,
+      "Disagree": 5,
+      "Neutral": 4
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Agree": 58,
+      "Disagree": 6,
+      "Neutral": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Agree": 28,
+      "Disagree": 3,
+      "Neutral": 9
+     }
+    }
+   }
+  },
+  "G1": {
+   "question": "G-1. Who decides whether climate adaptation interventions in your community are successful?",
+   "key": "G1",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Government authorities": 76,
+     "NGOs / donors": 57,
+     "Local communities": 185
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Local communities": 63,
+      "Government authorities": 21,
+      "NGOs / donors": 25
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Government authorities": 55,
+      "NGOs / donors": 32,
+      "Local communities": 122
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Local communities": 84,
+      "NGOs / donors": 23,
+      "Government authorities": 22
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Government authorities": 35,
+      "NGOs / donors": 26,
+      "Local communities": 65
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Local communities": 36,
+      "NGOs / donors": 8,
+      "Government authorities": 19
+     }
+    }
+   }
+  },
+  "G3": {
+   "question": "G-3. Which of these indicators best represent the resilient farming system you practise on your farm as the weather changes? (select all that apply)",
+   "key": "G3",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Improved soil health and fertility": 183,
+     "More stable crop yields despite climate variability": 153,
+     "Stronger biodiversity and ecosystem services": 70,
+     "Higher farmer incomes and more secure livelihoods": 62,
+     "Better water conservation and irrigation efficiency": 138,
+     "Stronger community adaptation practices": 56,
+     "Less reliance on external inputs (e.g. fertiliser, pesticides)": 95,
+     "Other": 1
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Improved soil health and fertility": 61,
+      "More stable crop yields despite climate variability": 51,
+      "Better water conservation and irrigation efficiency": 47,
+      "Stronger biodiversity and ecosystem services": 19,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 24,
+      "Higher farmer incomes and more secure livelihoods": 16,
+      "Stronger community adaptation practices": 12
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Improved soil health and fertility": 122,
+      "More stable crop yields despite climate variability": 102,
+      "Stronger biodiversity and ecosystem services": 51,
+      "Higher farmer incomes and more secure livelihoods": 46,
+      "Stronger community adaptation practices": 44,
+      "Better water conservation and irrigation efficiency": 91,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 71,
+      "Other": 1
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Improved soil health and fertility": 82,
+      "More stable crop yields despite climate variability": 69,
+      "Better water conservation and irrigation efficiency": 68,
+      "Stronger biodiversity and ecosystem services": 28,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 45,
+      "Higher farmer incomes and more secure livelihoods": 26,
+      "Stronger community adaptation practices": 22
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Improved soil health and fertility": 68,
+      "More stable crop yields despite climate variability": 60,
+      "Stronger biodiversity and ecosystem services": 27,
+      "Higher farmer incomes and more secure livelihoods": 22,
+      "Better water conservation and irrigation efficiency": 48,
+      "Stronger community adaptation practices": 20,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 29,
+      "Other": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Improved soil health and fertility": 33,
+      "More stable crop yields despite climate variability": 24,
+      "Better water conservation and irrigation efficiency": 22,
+      "Stronger biodiversity and ecosystem services": 15,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 21,
+      "Stronger community adaptation practices": 14,
+      "Higher farmer incomes and more secure livelihoods": 14
+     }
+    }
+   }
+  },
+  "g_4_ranked_indicators_1st_choice": {
+   "question": "G-4. Ranked indicators — 1st choice",
+   "key": "g_4_ranked_indicators_1st_choice",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "More stable crop yields despite climate variability": 19,
+     "Improved soil health and fertility": 129,
+     "Better water conservation and irrigation efficiency": 18,
+     "Stronger biodiversity and ecosystem services": 4,
+     "Stronger community adaptation practices": 12,
+     "Less reliance on external inputs (e.g. fertiliser, pesticides)": 11,
+     "Higher farmer incomes and more secure livelihoods": 7
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Improved soil health and fertility": 47,
+      "Better water conservation and irrigation efficiency": 7,
+      "More stable crop yields despite climate variability": 7,
+      "Stronger community adaptation practices": 3,
+      "Higher farmer incomes and more secure livelihoods": 1,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "More stable crop yields despite climate variability": 12,
+      "Stronger biodiversity and ecosystem services": 4,
+      "Stronger community adaptation practices": 9,
+      "Improved soil health and fertility": 82,
+      "Better water conservation and irrigation efficiency": 11,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 10,
+      "Higher farmer incomes and more secure livelihoods": 6
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Better water conservation and irrigation efficiency": 13,
+      "Improved soil health and fertility": 62,
+      "More stable crop yields despite climate variability": 2,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 3,
+      "Stronger biodiversity and ecosystem services": 2,
+      "Stronger community adaptation practices": 4,
+      "Higher farmer incomes and more secure livelihoods": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "More stable crop yields despite climate variability": 15,
+      "Improved soil health and fertility": 45,
+      "Better water conservation and irrigation efficiency": 2,
+      "Stronger biodiversity and ecosystem services": 1,
+      "Stronger community adaptation practices": 5,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 3,
+      "Higher farmer incomes and more secure livelihoods": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Improved soil health and fertility": 22,
+      "More stable crop yields despite climate variability": 2,
+      "Less reliance on external inputs (e.g. fertiliser, pesticides)": 5,
+      "Better water conservation and irrigation efficiency": 3,
+      "Higher farmer incomes and more secure livelihoods": 4,
+      "Stronger community adaptation practices": 3,
+      "Stronger biodiversity and ecosystem services": 1
+     }
+    }
+   }
+  },
+  "G6": {
+   "question": "G-6. Which of these opportunities and capacities does your household or community have to support local leadership in adaptation? (select all that apply)",
+   "key": "G6",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Access to traditional knowledge and indigenous practices": 167,
+     "Land and natural resources available for climate-smart farming": 146,
+     "Local government or NGO support for adaptation initiatives": 34,
+     "Technical skills and experience in sustainable farming or conservation": 60,
+     "Financial resources or credit for adaptation investments": 46,
+     "Membership of community groups or cooperatives": 147,
+     "Strong social networks and collaboration in the community": 36,
+     "Other": 7
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Access to traditional knowledge and indigenous practices": 61,
+      "Land and natural resources available for climate-smart farming": 50,
+      "Technical skills and experience in sustainable farming or conservation": 17,
+      "Financial resources or credit for adaptation investments": 13,
+      "Membership of community groups or cooperatives": 49,
+      "Strong social networks and collaboration in the community": 8,
+      "Local government or NGO support for adaptation initiatives": 7,
+      "Other": 2
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Access to traditional knowledge and indigenous practices": 106,
+      "Land and natural resources available for climate-smart farming": 96,
+      "Local government or NGO support for adaptation initiatives": 27,
+      "Membership of community groups or cooperatives": 98,
+      "Financial resources or credit for adaptation investments": 33,
+      "Technical skills and experience in sustainable farming or conservation": 43,
+      "Strong social networks and collaboration in the community": 28,
+      "Other": 5
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Access to traditional knowledge and indigenous practices": 77,
+      "Land and natural resources available for climate-smart farming": 71,
+      "Membership of community groups or cooperatives": 72,
+      "Technical skills and experience in sustainable farming or conservation": 22,
+      "Local government or NGO support for adaptation initiatives": 14,
+      "Financial resources or credit for adaptation investments": 16,
+      "Other": 2,
+      "Strong social networks and collaboration in the community": 11
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Access to traditional knowledge and indigenous practices": 61,
+      "Land and natural resources available for climate-smart farming": 52,
+      "Local government or NGO support for adaptation initiatives": 10,
+      "Technical skills and experience in sustainable farming or conservation": 26,
+      "Financial resources or credit for adaptation investments": 19,
+      "Membership of community groups or cooperatives": 53,
+      "Strong social networks and collaboration in the community": 15,
+      "Other": 4
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Access to traditional knowledge and indigenous practices": 29,
+      "Land and natural resources available for climate-smart farming": 23,
+      "Membership of community groups or cooperatives": 22,
+      "Financial resources or credit for adaptation investments": 11,
+      "Technical skills and experience in sustainable farming or conservation": 12,
+      "Strong social networks and collaboration in the community": 10,
+      "Local government or NGO support for adaptation initiatives": 10,
+      "Other": 1
+     }
+    }
+   }
+  },
+  "G8": {
+   "question": "G-8. Which of these local actions would best support your role in promoting adaptation? (select all that apply)",
+   "key": "G8",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Provide grants or support for climate-smart farming": 185,
+     "Improve access to climate information and early warning": 115,
+     "Facilitate training and capacity-building programmes": 97,
+     "Promote sustainable land and water management": 90,
+     "Strengthen local governance and policy implementation": 99,
+     "Support community-led adaptation initiatives": 104,
+     "Encourage public-private partnerships for resilience projects": 24
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Provide grants or support for climate-smart farming": 62,
+      "Strengthen local governance and policy implementation": 37,
+      "Support community-led adaptation initiatives": 27,
+      "Facilitate training and capacity-building programmes": 26,
+      "Improve access to climate information and early warning": 45,
+      "Promote sustainable land and water management": 20,
+      "Encourage public-private partnerships for resilience projects": 7
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Provide grants or support for climate-smart farming": 123,
+      "Improve access to climate information and early warning": 70,
+      "Facilitate training and capacity-building programmes": 71,
+      "Promote sustainable land and water management": 70,
+      "Support community-led adaptation initiatives": 77,
+      "Strengthen local governance and policy implementation": 62,
+      "Encourage public-private partnerships for resilience projects": 17
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Provide grants or support for climate-smart farming": 84,
+      "Strengthen local governance and policy implementation": 38,
+      "Support community-led adaptation initiatives": 49,
+      "Improve access to climate information and early warning": 48,
+      "Facilitate training and capacity-building programmes": 44,
+      "Promote sustainable land and water management": 42,
+      "Encourage public-private partnerships for resilience projects": 7
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Provide grants or support for climate-smart farming": 67,
+      "Improve access to climate information and early warning": 50,
+      "Facilitate training and capacity-building programmes": 34,
+      "Promote sustainable land and water management": 33,
+      "Strengthen local governance and policy implementation": 42,
+      "Support community-led adaptation initiatives": 36,
+      "Encourage public-private partnerships for resilience projects": 8
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Provide grants or support for climate-smart farming": 34,
+      "Improve access to climate information and early warning": 17,
+      "Strengthen local governance and policy implementation": 19,
+      "Support community-led adaptation initiatives": 19,
+      "Facilitate training and capacity-building programmes": 19,
+      "Promote sustainable land and water management": 15,
+      "Encourage public-private partnerships for resilience projects": 9
+     }
+    }
+   }
+  },
+  "G9": {
+   "question": "G-9. Which indicators would you use to measure the success of locally led adaptation in your community?",
+   "key": "G9",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Higher crop yields": 188,
+     "Better access to water": 145,
+     "Less impact from extreme weather": 62,
+     "Less population displacement": 67,
+     "Other": 3
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Higher crop yields": 59,
+      "Better access to water": 47,
+      "Less impact from extreme weather": 22,
+      "Less population displacement": 27
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Higher crop yields": 129,
+      "Better access to water": 98,
+      "Less population displacement": 40,
+      "Less impact from extreme weather": 40,
+      "Other": 3
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Higher crop yields": 84,
+      "Less impact from extreme weather": 18,
+      "Better access to water": 65,
+      "Less population displacement": 26
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Higher crop yields": 69,
+      "Better access to water": 59,
+      "Less impact from extreme weather": 25,
+      "Less population displacement": 29,
+      "Other": 2
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Higher crop yields": 35,
+      "Less impact from extreme weather": 19,
+      "Less population displacement": 12,
+      "Better access to water": 21,
+      "Other": 1
+     }
+    }
+   }
+  },
+  "H1": {
+   "question": "H-1. What is the main source of climate adaptation funding in your community?",
+   "key": "H1",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "National government": 78,
+     "NGOs / donors": 17,
+     "Self-financing": 105
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "NGOs / donors": 10,
+      "National government": 22,
+      "Self-financing": 34
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "National government": 56,
+      "NGOs / donors": 7,
+      "Self-financing": 71
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "NGOs / donors": 8,
+      "Self-financing": 51,
+      "National government": 29
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "National government": 27,
+      "NGOs / donors": 6,
+      "Self-financing": 39
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "National government": 22,
+      "NGOs / donors": 3,
+      "Self-financing": 15
+     }
+    }
+   }
+  },
+  "H2": {
+   "question": "H-2. How have local financial groups (cooperatives) enabled women, youth and farmers with disabilities in your community to take part in climate adaptation?",
+   "key": "H2",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Crop diversification": 185,
+     "Enrolment in crop insurance": 21,
+     "Land acquisition": 117,
+     "Not informed / not aware": 12,
+     "Other": 2
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Crop diversification": 64,
+      "Enrolment in crop insurance": 7,
+      "Land acquisition": 45,
+      "Not informed / not aware": 2,
+      "Other": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Crop diversification": 121,
+      "Enrolment in crop insurance": 14,
+      "Land acquisition": 72,
+      "Not informed / not aware": 10,
+      "Other": 1
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Crop diversification": 84,
+      "Enrolment in crop insurance": 7,
+      "Land acquisition": 51,
+      "Not informed / not aware": 4,
+      "Other": 1
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Crop diversification": 64,
+      "Enrolment in crop insurance": 13,
+      "Land acquisition": 51,
+      "Not informed / not aware": 5,
+      "Other": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Crop diversification": 37,
+      "Land acquisition": 15,
+      "Enrolment in crop insurance": 1,
+      "Not informed / not aware": 3
+     }
+    }
+   }
+  },
+  "H5": {
+   "question": "H-5. What difficulties does your community face in accessing climate adaptation finance?",
+   "key": "H5",
+   "type": "multi",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Lack of information on funding opportunities": 170,
+     "Limited technical capacity to write project proposals": 73,
+     "Unable to meet funding requirements": 115,
+     "Bureaucracy": 54
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Limited technical capacity to write project proposals": 26,
+      "Lack of information on funding opportunities": 50,
+      "Unable to meet funding requirements": 40,
+      "Bureaucracy": 16
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Lack of information on funding opportunities": 120,
+      "Limited technical capacity to write project proposals": 47,
+      "Bureaucracy": 38,
+      "Unable to meet funding requirements": 75
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Unable to meet funding requirements": 46,
+      "Limited technical capacity to write project proposals": 24,
+      "Bureaucracy": 17,
+      "Lack of information on funding opportunities": 76
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Lack of information on funding opportunities": 57,
+      "Limited technical capacity to write project proposals": 29,
+      "Unable to meet funding requirements": 45,
+      "Bureaucracy": 24
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Lack of information on funding opportunities": 37,
+      "Limited technical capacity to write project proposals": 20,
+      "Bureaucracy": 13,
+      "Unable to meet funding requirements": 24
+     }
+    }
+   }
+  },
+  "I1": {
+   "question": "I-1. Which climate adaptation strategies should be prioritised for long-term sustainability?",
+   "key": "I1",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "Nature-based solutions": 5,
+     "Livelihood diversification": 35,
+     "Farmer capacity building": 110,
+     "Access to climate finance": 45,
+     "Early warning systems": 5
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "Livelihood diversification": 17,
+      "Farmer capacity building": 35,
+      "Access to climate finance": 12,
+      "Nature-based solutions": 1,
+      "Early warning systems": 1
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "Nature-based solutions": 4,
+      "Livelihood diversification": 18,
+      "Farmer capacity building": 75,
+      "Access to climate finance": 33,
+      "Early warning systems": 4
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "Farmer capacity building": 49,
+      "Livelihood diversification": 13,
+      "Access to climate finance": 22,
+      "Nature-based solutions": 2,
+      "Early warning systems": 2
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "Nature-based solutions": 3,
+      "Livelihood diversification": 16,
+      "Farmer capacity building": 37,
+      "Access to climate finance": 15,
+      "Early warning systems": 1
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "Farmer capacity building": 24,
+      "Livelihood diversification": 6,
+      "Access to climate finance": 8,
+      "Early warning systems": 2
+     }
+    }
+   }
+  },
+  "B2_bands": {
+   "question": "B-2. What is the size of your land? (hectares)",
+   "key": "B2_bands",
+   "type": "single",
+   "overall": {
+    "base": 196,
+    "counts": {
+     "Up to 5 ha": 76,
+     "11–15 ha": 20,
+     "6–10 ha": 61,
+     "Over 15 ha": 39
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "11–15 ha": 7,
+      "Up to 5 ha": 44,
+      "6–10 ha": 12,
+      "Over 15 ha": 3
+     }
+    },
+    "Man": {
+     "base": 130,
+     "counts": {
+      "Up to 5 ha": 32,
+      "6–10 ha": 49,
+      "Over 15 ha": 36,
+      "11–15 ha": 13
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 87,
+     "counts": {
+      "Up to 5 ha": 38,
+      "6–10 ha": 30,
+      "Over 15 ha": 10,
+      "11–15 ha": 9
+     }
+    },
+    "36–50": {
+     "base": 71,
+     "counts": {
+      "Up to 5 ha": 27,
+      "11–15 ha": 10,
+      "6–10 ha": 22,
+      "Over 15 ha": 12
+     }
+    },
+    "51+": {
+     "base": 38,
+     "counts": {
+      "Up to 5 ha": 11,
+      "6–10 ha": 9,
+      "Over 15 ha": 17,
+      "11–15 ha": 1
+     }
+    }
+   }
+  },
+  "H3_all": {
+   "question": "H-3. Do you have access to financing?",
+   "note": "Combines the two versions of this question in the survey form",
+   "key": "H3_all",
+   "type": "single",
+   "overall": {
+    "base": 200,
+    "counts": {
+     "No": 115,
+     "Yes": 85
+    }
+   },
+   "gender": {
+    "Woman": {
+     "base": 66,
+     "counts": {
+      "No": 45,
+      "Yes": 21
+     }
+    },
+    "Man": {
+     "base": 134,
+     "counts": {
+      "No": 70,
+      "Yes": 64
+     }
+    }
+   },
+   "age": {
+    "18–35": {
+     "base": 88,
+     "counts": {
+      "No": 46,
+      "Yes": 42
+     }
+    },
+    "36–50": {
+     "base": 72,
+     "counts": {
+      "No": 46,
+      "Yes": 26
+     }
+    },
+    "51+": {
+     "base": 40,
+     "counts": {
+      "No": 23,
+      "Yes": 17
+     }
+    }
+   }
+  }
+ }
+}

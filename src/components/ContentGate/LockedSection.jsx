@@ -50,7 +50,7 @@ export default function LockedSection({ children }) {
       </div>
 
       {/* ── Form flows naturally below the map preview ── */}
-      <div className="w-full bg-white flex flex-col items-center px-4 pt-4 pb-20">
+      <div className="w-full bg-white flex flex-col items-center px-4 pt-4 pb-12">
         <div
           className={`flex flex-col items-center gap-2 mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
@@ -59,7 +59,7 @@ export default function LockedSection({ children }) {
             <Lock className="w-6 h-6 text-green-700" />
           </div>
           <p className="text-sm font-medium text-gray-600 text-center max-w-xs leading-relaxed bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-sm">
-            Register below to unlock the full map, research data, impact stories, and more.
+            Register below to unlock the full project map and climate data platforms.
           </p>
         </div>
 

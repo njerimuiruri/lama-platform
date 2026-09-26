@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import { BarChart2, Map, Wrench } from "lucide-react";
 
 const NAV_ITEMS = [
-  { label: "Interactive Dashboard", href: "/dashboard/sitedashboard", icon: BarChart2 },
-  { label: "LLA Interventions Database", href: "/resources/interventions-database", icon: Map },
-  { label: "Tools & Frameworks", href: "/resources/tools-frameworks", icon: Wrench },
+  { label: "Interactive dashboard", href: "/dashboard/sitedashboard", icon: BarChart2 },
+  { label: "Interventions database", href: "/resources/interventions-database", icon: Map },
+  { label: "Tools & frameworks", href: "/resources/tools-frameworks", icon: Wrench },
 ];
 
 export default function PlatformSubNav() {
@@ -14,27 +14,26 @@ export default function PlatformSubNav() {
 
   return (
     <div className="bg-white border-b border-gray-200">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-wrap gap-2 py-4">
-          {NAV_ITEMS.map(({ label, href, icon: Icon }) => {
-            const active = pathname === href;
-            return (
-              <Link key={href} href={href}>
-                <span
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap border
-                    ${active
-                      ? "bg-green-600 text-white border-green-600 shadow-md"
-                      : "bg-white text-gray-600 border-gray-200 hover:bg-green-50 hover:text-green-700 hover:border-green-300"
-                    }`}
-                >
-                  <Icon className="w-4 h-4 flex-shrink-0" />
-                  {label}
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 flex gap-6 overflow-x-auto" aria-label="Platform components">
+        {NAV_ITEMS.map(({ label, href, icon: Icon }) => {
+          // Both survey dashboards (Kenya, Benin) belong to the Interactive dashboard tab
+          const active = pathname === href || (href.startsWith("/dashboard") && pathname?.startsWith("/dashboard"));
+          return (
+            <Link
+              key={href}
+              href={href}
+              aria-current={active ? "page" : undefined}
+              className={`flex-shrink-0 inline-flex items-center gap-2 py-3.5 text-sm font-medium border-b-2 -mb-px transition-colors ${active
+                ? "border-emerald-600 text-gray-900"
+                : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300"
+                }`}
+            >
+              <Icon className={`w-4 h-4 ${active ? "text-emerald-600" : ""}`} />
+              {label}
+            </Link>
+          );
+        })}
+      </nav>
     </div>
   );
 }

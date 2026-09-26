@@ -65,6 +65,12 @@ const LamaNavbar = () => {
         {
           name: "Interactive Dashboard",
           href: "/dashboard/sitedashboard",
+          description: "Kenya community survey",
+        },
+        {
+          name: "Benin Household Survey",
+          href: "/dashboard/benin",
+          description: "Glazoué, Benin",
         },
         {
           name: "LLA Interventions Database",
@@ -180,6 +186,11 @@ const LamaNavbar = () => {
           name: "Diaries",
           href: "/stakeholders/diaries-blogs",
           description: "LAMA Diaries & Blogs",
+        },
+        {
+          name: "Impact Stories",
+          href: "/impact-stories",
+          description: "Community videos on locally led adaptation",
         },
       ],
     },

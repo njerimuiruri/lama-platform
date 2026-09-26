@@ -100,12 +100,13 @@
   * {
     @apply border-border;
   }
+  /* clip (not hidden) stops sideways scroll without breaking position: sticky */
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
 }

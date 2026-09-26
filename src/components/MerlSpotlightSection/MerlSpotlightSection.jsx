@@ -19,39 +19,29 @@ const highlights = [
 
 export default function MerlSpotlightSection() {
   return (
-    <section className="bg-white border-t border-gray-100" style={{ padding: "80px 24px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <section id="partnerships" className="bg-white border-t border-gray-100 scroll-mt-28 py-10 lg:py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Top label row */}
-        <div className="flex items-center gap-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
-              Partnership Spotlight
-            </span>
-          </div>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
+            Partnership Spotlight
+          </span>
           <div className="flex-1 h-px bg-gray-100" />
           <span className="text-xs text-gray-400">LAMA in Action · Kenya 2025</span>
         </div>
 
         {/* Main grid */}
-        <div className="grid gap-16" style={{ gridTemplateColumns: "1fr 360px" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-12">
 
           {/* LEFT */}
           <div>
-            <h2
-              className="font-bold text-gray-900 mb-7 leading-tight"
-              style={{
-                fontFamily: "'Georgia', serif",
-                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                letterSpacing: "-0.01em",
-              }}
-            >
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5 leading-tight">
               LAMA Platform Engaged in Kenya&apos;s National
               Climate Monitoring, Evaluation, Reporting &amp; Learning Initiative
             </h2>
 
-            <p className="text-gray-600 leading-relaxed mb-8" style={{ fontSize: 15.5, lineHeight: 1.9 }}>
+            <p className="text-gray-600 leading-relaxed mb-6">
               Kenya&apos;s Ministry of Environment, Climate Change, Natural Resources and Forestry (MECCF)
               has formed a landmark multi-partner initiative — co-led with{" "}
               <strong className="text-gray-900 font-semibold">SouthSouthNorth (SSN)</strong>,{" "}
@@ -69,11 +59,11 @@ export default function MerlSpotlightSection() {
             </p>
 
             {/* Deliverables */}
-            <div className="mb-9">
+            <div className="mb-6">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
                 Key Deliverables
               </p>
-              <div className="grid grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {highlights.map((item) => (
                   <div
                     key={item}
