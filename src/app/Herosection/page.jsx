@@ -29,7 +29,13 @@ function useCountUp(target, duration = 1400) {
     return value;
 }
 
-const StatCounter = ({ value, format, label, icon: Icon, delay }) => {
+// Inline number that counts up to `value`
+const CountUp = ({ value, duration }) => {
+    const current = useCountUp(value, duration);
+    return <>{value ? Math.round(current).toLocaleString() : '—'}</>;
+};
+
+const StatCounter =({ value, format, label, icon: Icon, delay }) => {
     const current = useCountUp(value);
     return (
         <div className="hero-rise" style={{ animationDelay: delay }}>
@@ -145,7 +151,7 @@ const LAMAHeroSection = () => {
 
                     {/* Right: live data snapshot */}
                     <div className="lg:col-span-5 relative hero-rise" style={{ animationDelay: '200ms' }}>
-                        <div className="relative rounded-2xl border border-gray-100 bg-white/90 backdrop-blur shadow-xl shadow-emerald-900/5 p-5 sm:p-6">
+                        <div className="relative rounded-2xl border border-gray-100 bg-white/90 backdrop-blur shadow-xl shadow-emerald-900/5 p-5 sm:p-6 sm:pt-12">
                             <div className="flex items-start justify-between">
                                 <div>
                                     <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Indicator records</p>
@@ -167,7 +173,7 @@ const LAMAHeroSection = () => {
                                             <span className="flex items-center gap-2 text-gray-700">
                                                 <Icon className="w-4 h-4 text-emerald-600" />{label}
                                             </span>
-                                            <span className="font-semibold text-gray-900 tabular-nums">{value ? value.toLocaleString() : '—'}</span>
+                                            <span className="font-semibold text-gray-900 tabular-nums"><CountUp value={value} /></span>
                                         </div>
                                         <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
                                             <div
@@ -185,7 +191,7 @@ const LAMAHeroSection = () => {
                                 <div className="grid grid-cols-3 gap-2">
                                     {projects.top.map(({ name, count }) => (
                                         <div key={name} className="rounded-xl bg-gray-50 px-3 py-2.5">
-                                            <p className="text-lg font-bold text-gray-900 tabular-nums leading-none">{count}</p>
+                                            <p className="text-lg font-bold text-gray-900 tabular-nums leading-none"><CountUp value={count} /></p>
                                             <p className="text-xs text-gray-500 mt-1 truncate">{name}</p>
                                         </div>
                                     ))}
@@ -201,13 +207,13 @@ const LAMAHeroSection = () => {
                             </Link>
                         </div>
 
-                        {/* Floating chip */}
-                        <div className="hero-float hidden sm:flex absolute -top-4 -left-4 items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-lg px-3 py-2">
+                        {/* Countries chip */}
+                        <div className="hidden sm:flex absolute -top-4 -left-4 items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-lg px-3 py-2">
                             <span className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center">
                                 <MapPin className="w-4 h-4" />
                             </span>
                             <span className="text-xs leading-tight">
-                                <span className="block font-bold text-gray-900">{projects.countries} countries</span>
+                                <span className="block font-bold text-gray-900 tabular-nums"><CountUp value={projects.countries} /> countries</span>
                                 <span className="text-gray-500">across Africa</span>
                             </span>
                         </div>
@@ -226,19 +232,17 @@ const LAMAHeroSection = () => {
                 }
                 .hero-rise { opacity: 0; animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
                 .hero-bar { transform-origin: left; transform: scaleX(0); animation: heroBar 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-                .hero-float { animation: heroFloat 5s ease-in-out infinite; }
                 .hero-glow { animation: heroDrift 14s ease-in-out infinite alternate; }
                 .hero-glow-slow { animation: heroDrift 18s ease-in-out infinite alternate-reverse; }
                 .hero-shimmer { background-size: 200% auto; animation: heroShimmer 6s linear infinite; }
 
                 @keyframes heroRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
                 @keyframes heroBar { to { transform: scaleX(1); } }
-                @keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
                 @keyframes heroDrift { from { transform: translate(0, 0) scale(1); } to { transform: translate(-40px, 30px) scale(1.08); } }
                 @keyframes heroShimmer { to { background-position: 200% center; } }
 
                 @media (prefers-reduced-motion: reduce) {
-                    .hero-rise, .hero-bar, .hero-float, .hero-glow, .hero-glow-slow, .hero-shimmer { animation: none; opacity: 1; transform: none; }
+                    .hero-rise, .hero-bar, .hero-glow, .hero-glow-slow, .hero-shimmer { animation: none; opacity: 1; transform: none; }
                 }
             `}</style>
         </section>
